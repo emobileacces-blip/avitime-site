@@ -676,6 +676,68 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
   .panel.grow .meter i,.panel.grow .hbar .fill,.panel.grow .prog i b,.panel.grow .fbar i,.panel.grow .col i{animation:none}
   .toast{transition:opacity 150ms ease}
 }
+/* Visuels Google + IA */
+.ia-visuals{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:28px;margin-top:44px;align-items:start}
+@media (max-width:980px){.ia-visuals{grid-template-columns:minmax(0,1fr)}}
+.ia-step{font-family:var(--font-mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#F5F5F3;margin:0 0 12px;display:flex;align-items:center;gap:10px}
+.ia-step span{display:inline-flex;width:24px;height:24px;border-radius:50%;background:var(--hl);color:#0A0A0A;align-items:center;justify-content:center;font-weight:700}
+.serp{background:#fff;color:#202124;border-radius:20px;padding:16px;box-shadow:0 20px 50px rgba(0,0,0,.35);font-family:Arial,Helvetica,sans-serif;text-align:left}
+.serp-bar{display:flex;align-items:center;gap:10px;border:1px solid #dfe1e5;border-radius:999px;padding:8px 14px;margin-bottom:14px}
+.serp-g{font-weight:700;color:#5f6368;font-size:14px}
+.serp-q{flex:1;font-size:14px;color:#202124}
+.serp-ico{width:18px;height:18px;fill:none;stroke:#5f6368;stroke-width:2}
+.serp-site{display:flex;gap:10px;align-items:center}
+.serp-fav{width:28px;height:28px;border-radius:50%;background:#FFEBDD;color:#B34100;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex:none}
+.serp-site b{display:block;font-size:14px;font-weight:400}
+.serp-site small{display:block;font-size:12px;color:#4d5156}
+.serp .serp-title{color:#1a0dab;font-size:20px;margin:8px 0 4px;line-height:1.3}
+.serp .serp-stars{font-size:13.5px;color:#4d5156;margin:0;display:flex;align-items:center;gap:6px;flex-wrap:wrap;background:#FFF6D6;border-radius:8px;padding:4px 6px;box-shadow:0 0 0 2px #FF6A13}
+.serp-stars b{color:#202124;font-weight:400}
+.stars{display:inline-flex;gap:1px}
+.stars svg{width:15px;height:15px;fill:#F5B400}
+.stars .half svg{fill:#dadce0}
+.serp-snip{font-size:14px;color:#4d5156;margin:6px 0 0;line-height:1.5}
+.serp-tag{margin-top:14px;display:flex;gap:8px;align-items:center;font-size:13px;color:#8A3300;background:#FFEBDD;border-radius:12px;padding:8px 12px;font-family:var(--font-sans)}
+.serp-tag span{color:#FF6A13}
+.serp-sm{padding:12px;box-shadow:none;border:1px solid var(--line)}
+.serp-sm .serp-title{font-size:15px}
+.gain-card .serp p.serp-stars{font-size:12.5px;color:#4d5156}
+.serp-sm .serp-snip{display:none}
+.serp-sm .serp-bar{padding:6px 12px;margin-bottom:10px}
+.ai-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.ai-grid{grid-template-columns:minmax(0,1fr)}}
+.ai-card{background:#161615;border:1px solid rgba(245,245,243,.12);border-radius:18px;padding:14px 16px;text-align:left}
+.ai-card header{display:flex;align-items:center;gap:8px;margin-bottom:10px;color:#F5F5F3}
+.ai-ico{display:inline-flex;width:26px;height:26px;border-radius:8px;align-items:center;justify-content:center;flex:none}
+.ai-ico svg{width:16px;height:16px;fill:#0A0A0A}
+.ai-card.c1 .ai-ico{background:#9FE3C6}.ai-card.c2 .ai-ico{background:#A9C7FF}.ai-card.c3 .ai-ico{background:#F4B79A}.ai-card.c4 .ai-ico{background:#9BE0E8}
+.ai-q{margin:0 0 8px;margin-left:auto;background:#2A2A28;color:#F5F5F3;border-radius:12px 12px 4px 12px;padding:7px 10px;font-size:13px;width:fit-content;max-width:90%}
+.ai-a{margin:0;background:#F5F5F3;color:#0A0A0A;border-radius:12px 12px 12px 4px;padding:9px 11px;font-size:13.5px;line-height:1.5}
+.ai-src{margin:8px 0 0;font-size:11.5px;color:#8A8A84}
+/* Section commerçants : « Ce que vous obtenez » */
+.gain{margin:40px 0 44px}
+.gain-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:14px}
+@media (max-width:900px){.gain-grid{grid-template-columns:minmax(0,1fr)}}
+.gain-card{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.gain-card h3{margin:8px 0 0;font-size:19px;letter-spacing:-.01em}
+.gain-card p{margin:0;font-size:14.5px;color:var(--ink-2)}
+.gain-vis{background:var(--bg-2);border-radius:18px;padding:14px;min-height:200px;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.mini-pp{display:flex;gap:12px;align-items:center;background:#fff;border-radius:14px;padding:10px;color:#0A0A0A}
+.mini-img{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#FFB27A,#FF6A13);flex:none}
+.mini-lines b{display:block;font-size:14px}
+.mini-lines small{display:block;font-size:12px;color:#5E5E58}
+.mini-stars{display:inline-flex;gap:1px}
+.mini-stars svg{width:14px;height:14px;fill:#F5B400}
+.mini-stars.sm svg{width:12px;height:12px}
+.mini-review{background:#fff;border-radius:14px;padding:10px;color:#0A0A0A}
+.mini-review p{margin:4px 0;font-size:13px;color:#0A0A0A}
+.mini-review em{font-style:normal;font-size:11px;color:#8A3300;background:#FFEBDD;border-radius:999px;padding:2px 8px}
+.mini-chat{display:grid;gap:8px}
+.mc-q{margin:0 0 0 auto;background:#0A0A0A;color:#fff;border-radius:12px 12px 4px 12px;padding:7px 10px;font-size:13px;width:fit-content}
+.mc-a{margin:0;background:#fff;color:#0A0A0A;border-radius:12px 12px 12px 4px;padding:9px 11px;font-size:13px;line-height:1.45;display:flex;gap:8px;align-items:flex-start}
+.ai-ico.sm{width:22px;height:22px;background:#F4B79A}
+.ai-ico.sm svg{width:13px;height:13px}
+.mc-names{margin:0;font-family:var(--font-mono);font-size:11px;color:var(--ink-2);text-align:center}
 #google-ia{background:#0A0A0A;color:#F5F5F3}
 #google-ia .eyebrow{color:var(--hl)}
 #google-ia .sec-title{color:#F5F5F3;max-width:22ch;margin-inline:auto}
@@ -815,15 +877,44 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
       <h2 class="sec-title" id="gia-titre">Demain, vos clients demanderont à une IA quoi acheter. Sera-t-elle capable de parler de vos produits&nbsp;?</h2>
       <p class="sec-lede">ChatGPT, Gemini, Claude ou Perplexity répondent déjà à « quel produit choisir ? ». Pour recommander un produit, ils s’appuient sur ce que de vrais utilisateurs en disent : expériences, points forts, points faibles. Un produit sans avis n’a rien à leur offrir. Avitime remplit vos fiches d’expériences vérifiées, structurées et lisibles par les IA comme par Google.</p>
 
-      <div class="ia-demo" role="figure" aria-label="Exemple illustratif de réponse d’un assistant IA qui s’appuie sur des avis de testeurs">
-        <div class="ia-q"><span>Quel coussin déco offrir à quelqu’un qui adore les renards ?</span></div>
-        <div class="ia-a">
-          <p class="ia-who">Assistant IA</p>
-          <p>D’après les <b>avis de testeurs vérifiés</b> publiés sur la boutique, le <b>Coussin renard</b> est apprécié pour son tissu doux et ses couleurs fidèles à la photo. Les testeurs le conseillent pour un salon ou une chambre d’enfant.</p>
-          <p class="ia-cons">Point faible signalé : le garnissage est un peu ferme au début.</p>
-          <p class="ia-src">Sources : avis « Produit offert pour test — Testeur Avitime vérifié » · ma-boutique.fr</p>
+      <div class="ia-visuals">
+        <div class="ia-col">
+          <p class="ia-step"><span>1</span> Sur Google</p>
+          <div class="serp" role="figure" aria-label="Exemple de résultat Google avec les étoiles des avis sous le lien">
+  <div class="serp-bar"><span class="serp-g">Google</span><span class="serp-q">coussin renard avis</span><svg class="serp-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg></div>
+  <div class="serp-res">
+    <div class="serp-site"><span class="serp-fav">M</span><span><b>Ma Boutique</b><small>https://ma-boutique.fr › coussin-renard</small></span></div>
+    <p class="serp-title">Coussin renard – Déco douce pour le salon</p>
+    <p class="serp-stars"><span class="stars"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><span class="half"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg></span></span> <b>Note : 4,6</b> · 32 avis · 18,90 € · En stock</p>
+    <p class="serp-snip">Coussin en tissu doux, motif renard imprimé. Avis de testeurs vérifiés : « couleurs fidèles à la photo »…</p>
+  </div>
+  <div class="serp-tag"><span>★</span> Les étoiles sous le lien bleu : ajoutées automatiquement par le module Avitime</div>
+</div>
         </div>
-        <p class="ia-note">Exemple illustratif.</p>
+        <div class="ia-col">
+          <p class="ia-step"><span>2</span> Dans les assistants IA</p>
+          <div class="ai-grid" role="figure" aria-label="Exemples illustratifs de réponses d’assistants IA qui s’appuient sur des avis de testeurs"><article class="ai-card c1">
+  <header><span class="ai-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l1.9 5.6 5.6 1.9-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.9z"/><path d="M18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg></span><b>ChatGPT</b></header>
+  <p class="ai-q">Quel coussin offrir à un fan de renards ?</p>
+  <p class="ai-a">D’après les <b>avis de testeurs vérifiés</b>, le Coussin renard de Ma Boutique est apprécié pour son tissu doux. Point faible : garnissage un peu ferme.</p>
+  <p class="ai-src">Source : ma-boutique.fr · avis Avitime</p>
+</article><article class="ai-card c2">
+  <header><span class="ai-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l1.9 5.6 5.6 1.9-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.9z"/><path d="M18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg></span><b>Gemini</b></header>
+  <p class="ai-q">Ce coussin renard vaut-il le coup ?</p>
+  <p class="ai-a">Note de <b>4,6/5 sur 32 avis</b> de testeurs. Les couleurs sont fidèles à la photo ; idéal pour une chambre d’enfant.</p>
+  <p class="ai-src">Source : avis « Produit offert pour test »</p>
+</article><article class="ai-card c3">
+  <header><span class="ai-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l1.9 5.6 5.6 1.9-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.9z"/><path d="M18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg></span><b>Claude</b></header>
+  <p class="ai-q">Avis sur le coussin renard de Ma Boutique ?</p>
+  <p class="ai-a">Les testeurs soulignent la <b>douceur du tissu</b> et la bonne tenue au lavage. Plusieurs le recommandent comme cadeau.</p>
+  <p class="ai-src">Source : avis vérifiés sur la fiche produit</p>
+</article><article class="ai-card c4">
+  <header><span class="ai-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l1.9 5.6 5.6 1.9-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.9z"/><path d="M18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg></span><b>Perplexity</b></header>
+  <p class="ai-q">Meilleur coussin déco renard 2026</p>
+  <p class="ai-a"><b>Coussin renard (Ma Boutique)</b> : 4,6/5, avis détaillés avec photos. Points forts : douceur, couleurs. Point faible : fermeté.</p>
+  <p class="ai-src">Sources : ma-boutique.fr</p>
+</article></div><p class="ia-note">Exemples illustratifs : noms cités à titre d’exemple, sans lien avec ces services.</p>
+        </div>
       </div>
 
       <h3 class="ia-h3">Les quatre piliers de confiance de Google (E-E-A-T), nourris par vos avis</h3>
@@ -1012,6 +1103,47 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
       <p class="eyebrow center">Deux espaces</p>
       <h2 class="sec-title">D’un côté les boutiques. De l’autre, de vrais consommateurs.</h2>
       <p class="sec-lede">Chacun a son propre espace. Avitime garde la main sur ce qui compte : la sélection, la commande, la publication.</p>
+      <div class="gain">
+        <p class="eyebrow center">Ce que vous obtenez</p>
+        <div class="gain-grid">
+          <article class="gain-card">
+            <div class="gain-vis">
+              <div class="mini-pp">
+                <div class="mini-img"></div>
+                <div class="mini-lines"><b>Coussin renard</b><span class="mini-stars"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg></span><small>4,6/5 · 32 avis vérifiés</small></div>
+              </div>
+              <div class="mini-review"><span class="mini-stars sm"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg></span><p>« Tissu très doux, couleurs fidèles. »</p><em>✓ Produit offert pour test</em></div>
+            </div>
+            <h3>De vrais avis sur vos fiches</h3>
+            <p>Avec photos, points forts et points faibles, affichés automatiquement par le module.</p>
+          </article>
+          <article class="gain-card">
+            <div class="gain-vis"><div class="serp serp-sm" role="figure" aria-label="Exemple de résultat Google avec les étoiles des avis sous le lien">
+  <div class="serp-bar"><span class="serp-g">Google</span><span class="serp-q">coussin renard avis</span><svg class="serp-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg></div>
+  <div class="serp-res">
+    <div class="serp-site"><span class="serp-fav">M</span><span><b>Ma Boutique</b><small>https://ma-boutique.fr › coussin-renard</small></span></div>
+    <p class="serp-title">Coussin renard – Déco douce pour le salon</p>
+    <p class="serp-stars"><span class="stars"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><span class="half"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg></span></span> <b>Note : 4,6</b> · 32 avis · 18,90 € · En stock</p>
+    <p class="serp-snip">Coussin en tissu doux, motif renard imprimé. Avis de testeurs vérifiés : « couleurs fidèles à la photo »…</p>
+  </div>
+  
+</div></div>
+            <h3>Les étoiles dans Google</h3>
+            <p>Vos fiches deviennent éligibles aux étoiles sous le lien bleu : plus visibles, plus cliquées.</p>
+          </article>
+          <article class="gain-card">
+            <div class="gain-vis">
+              <div class="mini-chat">
+                <p class="mc-q">Quel coussin renard choisir ?</p>
+                <p class="mc-a"><span class="ai-ico sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l1.9 5.6 5.6 1.9-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.9z"/><path d="M18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg></span><span>D’après les avis de testeurs vérifiés, le <b>Coussin renard</b> de Ma Boutique est apprécié pour son tissu doux…</span></p>
+                <p class="mc-names">ChatGPT · Gemini · Claude · Perplexity</p>
+              </div>
+            </div>
+            <h3>Cité par les IA</h3>
+            <p>Des avis structurés et lisibles que les assistants IA peuvent reprendre dans leurs réponses.</p>
+          </article>
+        </div>
+      </div>
       <div class="duo-grid">
         <article class="tile dark">
           <p class="eyebrow">Pour les commerçants</p>

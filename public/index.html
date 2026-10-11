@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/css/style.css?v=1d67a85acc">
+<link rel="stylesheet" href="assets/css/style.css?v=a9d901b668">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "Avitime", "url": "https://avitime.fr/", "inLanguage": "fr-FR"}, {"@type": "Organization", "name": "Avitime", "url": "https://avitime.fr/", "logo": "https://avitime.fr/assets/img/icon-512.png", "description": "Avitime fait tester des produits de boutiques en ligne par des consommateurs sélectionnés, puis publie leurs avis de façon transparente et traçable."}, {"@type": "VideoObject", "name": "Avitime en 40 secondes", "description": "Présentation du fonctionnement d’Avitime : sélection des testeurs, commande à 0 €, livraison, test et publication de l’avis.", "thumbnailUrl": "https://avitime.fr/assets/video/avitime-intro-poster.jpg", "contentUrl": "https://avitime.fr/assets/video/avitime-intro.mp4", "uploadDate": "2026-10-11", "duration": "PT42S"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Les faux avis sont-ils interdits ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. En France, publier ou faire publier de faux avis, se faire passer pour un consommateur ou présenter des avis comme vérifiés sans les vérifier sont des pratiques commerciales trompeuses. Selon la DGCCRF, elles sont punies de deux ans d’emprisonnement et de 300 000 € d’amende, montant qui peut être porté à 10 % du chiffre d’affaires annuel moyen."}}, {"@type": "Question", "name": "Combien d’avis une boutique va-t-elle obtenir ?", "acceptedAnswer": {"@type": "Answer", "text": "Avitime ne garantit aucun volume d’avis. Chaque produit offert est réellement commandé et livré à un testeur sélectionné, qui s’engage à publier un avis dans le délai prévu. Le tableau de bord montre exactement combien de missions aboutissent."}}, {"@type": "Question", "name": "Une boutique peut-elle choisir ses testeurs ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Elle définit les critères de la campagne (pays, catégorie, exclusions), mais la sélection finale revient à Avitime. C’est ce qui garantit l’indépendance des avis."}}, {"@type": "Question", "name": "Que se passe-t-il si un avis est négatif ?", "acceptedAnswer": {"@type": "Answer", "text": "Il est publié, comme un avis positif, s’il est authentique et conforme aux règles de modération. Le testeur garde le produit et n’est jamais pénalisé pour sa note."}}, {"@type": "Question", "name": "Qui expédie les produits ?", "acceptedAnswer": {"@type": "Answer", "text": "La boutique, avec ses transporteurs habituels. Avitime ne stocke ni n’expédie de produits."}}, {"@type": "Question", "name": "Quelles plateformes sont compatibles ?", "acceptedAnswer": {"@type": "Answer", "text": "PrestaShop au lancement, via un module natif. Shopify, WooCommerce et d’autres plateformes viendront dans un second temps."}}, {"@type": "Question", "name": "Je suis testeur : combien ça coûte ?", "acceptedAnswer": {"@type": "Answer", "text": "Rien. L’inscription est gratuite, le produit et la livraison sont offerts, et aucun abonnement n’est demandé."}}, {"@type": "Question", "name": "Quels produits peuvent être testés ?", "acceptedAnswer": {"@type": "Answer", "text": "Le pilote commence par des accessoires non réglementés. Les catégories sensibles (santé, compléments, nicotine, alcool, produits pour mineurs…) suivent une politique d’éligibilité stricte."}}]}</script>
 </head>
@@ -122,15 +122,44 @@
 <p class="eyebrow center">Avis, Google et IA</p>
 <h2 class="sec-title" id="gia-titre">Demain, vos clients demanderont à une IA quoi acheter. Sera-t-elle capable de parler de vos produits ?</h2>
 <p class="sec-lede">ChatGPT, Gemini, Claude ou Perplexity répondent déjà à « quel produit choisir ? ». Pour recommander un produit, ils s’appuient sur ce que de vrais utilisateurs en disent : expériences, points forts, points faibles. Un produit sans avis n’a rien à leur offrir. Avitime remplit vos fiches d’expériences vérifiées, structurées et lisibles par les IA comme par Google.</p>
-<div aria-label="Exemple illustratif de réponse d’un assistant IA qui s’appuie sur des avis de testeurs" class="ia-demo" role="figure">
-<div class="ia-q"><span>Quel coussin déco offrir à quelqu’un qui adore les renards ?</span></div>
-<div class="ia-a">
-<p class="ia-who">Assistant IA</p>
-<p>D’après les <b>avis de testeurs vérifiés</b> publiés sur la boutique, le <b>Coussin renard</b> est apprécié pour son tissu doux et ses couleurs fidèles à la photo. Les testeurs le conseillent pour un salon ou une chambre d’enfant.</p>
-<p class="ia-cons">Point faible signalé : le garnissage est un peu ferme au début.</p>
-<p class="ia-src">Sources : avis « Produit offert pour test — Testeur Avitime vérifié » · ma-boutique.fr</p>
+<div class="ia-visuals">
+<div class="ia-col">
+<p class="ia-step"><span>1</span> Sur Google</p>
+<div aria-label="Exemple de résultat Google avec les étoiles des avis sous le lien" class="serp" role="figure">
+<div class="serp-bar"><span class="serp-g">Google</span><span class="serp-q">coussin renard avis</span><svg aria-hidden="true" class="serp-ico" viewbox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5L21 21"></path></svg></div>
+<div class="serp-res">
+<div class="serp-site"><span class="serp-fav">M</span><span><b>Ma Boutique</b><small>https://ma-boutique.fr › coussin-renard</small></span></div>
+<p class="serp-title">Coussin renard – Déco douce pour le salon</p>
+<p class="serp-stars"><span class="stars"><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg><span class="half"><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg></span></span> <b>Note : 4,6</b> · 32 avis · 18,90 € · En stock</p>
+<p class="serp-snip">Coussin en tissu doux, motif renard imprimé. Avis de testeurs vérifiés : « couleurs fidèles à la photo »…</p>
 </div>
-<p class="ia-note">Exemple illustratif.</p>
+<div class="serp-tag"><span>★</span> Les étoiles sous le lien bleu : ajoutées automatiquement par le module Avitime</div>
+</div>
+</div>
+<div class="ia-col">
+<p class="ia-step"><span>2</span> Dans les assistants IA</p>
+<div aria-label="Exemples illustratifs de réponses d’assistants IA qui s’appuient sur des avis de testeurs" class="ai-grid" role="figure"><article class="ai-card c1">
+<header><span class="ai-ico"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2.5l1.9 5.6 5.6 1.9-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.9z"></path><path d="M18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"></path></svg></span><b>ChatGPT</b></header>
+<p class="ai-q">Quel coussin offrir à un fan de renards ?</p>
+<p class="ai-a">D’après les <b>avis de testeurs vérifiés</b>, le Coussin renard de Ma Boutique est apprécié pour son tissu doux. Point faible : garnissage un peu ferme.</p>
+<p class="ai-src">Source : ma-boutique.fr · avis Avitime</p>
+</article><article class="ai-card c2">
+<header><span class="ai-ico"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2.5l1.9 5.6 5.6 1.9-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.9z"></path><path d="M18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"></path></svg></span><b>Gemini</b></header>
+<p class="ai-q">Ce coussin renard vaut-il le coup ?</p>
+<p class="ai-a">Note de <b>4,6/5 sur 32 avis</b> de testeurs. Les couleurs sont fidèles à la photo ; idéal pour une chambre d’enfant.</p>
+<p class="ai-src">Source : avis « Produit offert pour test »</p>
+</article><article class="ai-card c3">
+<header><span class="ai-ico"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2.5l1.9 5.6 5.6 1.9-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.9z"></path><path d="M18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"></path></svg></span><b>Claude</b></header>
+<p class="ai-q">Avis sur le coussin renard de Ma Boutique ?</p>
+<p class="ai-a">Les testeurs soulignent la <b>douceur du tissu</b> et la bonne tenue au lavage. Plusieurs le recommandent comme cadeau.</p>
+<p class="ai-src">Source : avis vérifiés sur la fiche produit</p>
+</article><article class="ai-card c4">
+<header><span class="ai-ico"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2.5l1.9 5.6 5.6 1.9-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.9z"></path><path d="M18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"></path></svg></span><b>Perplexity</b></header>
+<p class="ai-q">Meilleur coussin déco renard 2026</p>
+<p class="ai-a"><b>Coussin renard (Ma Boutique)</b> : 4,6/5, avis détaillés avec photos. Points forts : douceur, couleurs. Point faible : fermeté.</p>
+<p class="ai-src">Sources : ma-boutique.fr</p>
+</article></div><p class="ia-note">Exemples illustratifs : noms cités à titre d’exemple, sans lien avec ces services.</p>
+</div>
 </div>
 <h3 class="ia-h3">Les quatre piliers de confiance de Google (E-E-A-T), nourris par vos avis</h3>
 <div class="eeat-grid">
@@ -314,6 +343,46 @@
 <p class="eyebrow center">Deux espaces</p>
 <h2 class="sec-title">D’un côté les boutiques. De l’autre, de vrais consommateurs.</h2>
 <p class="sec-lede">Chacun a son propre espace. Avitime garde la main sur ce qui compte : la sélection, la commande, la publication.</p>
+<div class="gain">
+<p class="eyebrow center">Ce que vous obtenez</p>
+<div class="gain-grid">
+<article class="gain-card">
+<div class="gain-vis">
+<div class="mini-pp">
+<div class="mini-img"></div>
+<div class="mini-lines"><b>Coussin renard</b><span class="mini-stars"><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg></span><small>4,6/5 · 32 avis vérifiés</small></div>
+</div>
+<div class="mini-review"><span class="mini-stars sm"><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg></span><p>« Tissu très doux, couleurs fidèles. »</p><em>✓ Produit offert pour test</em></div>
+</div>
+<h3>De vrais avis sur vos fiches</h3>
+<p>Avec photos, points forts et points faibles, affichés automatiquement par le module.</p>
+</article>
+<article class="gain-card">
+<div class="gain-vis"><div aria-label="Exemple de résultat Google avec les étoiles des avis sous le lien" class="serp serp-sm" role="figure">
+<div class="serp-bar"><span class="serp-g">Google</span><span class="serp-q">coussin renard avis</span><svg aria-hidden="true" class="serp-ico" viewbox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5L21 21"></path></svg></div>
+<div class="serp-res">
+<div class="serp-site"><span class="serp-fav">M</span><span><b>Ma Boutique</b><small>https://ma-boutique.fr › coussin-renard</small></span></div>
+<p class="serp-title">Coussin renard – Déco douce pour le salon</p>
+<p class="serp-stars"><span class="stars"><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg><span class="half"><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"></path></svg></span></span> <b>Note : 4,6</b> · 32 avis · 18,90 € · En stock</p>
+<p class="serp-snip">Coussin en tissu doux, motif renard imprimé. Avis de testeurs vérifiés : « couleurs fidèles à la photo »…</p>
+</div>
+</div></div>
+<h3>Les étoiles dans Google</h3>
+<p>Vos fiches deviennent éligibles aux étoiles sous le lien bleu : plus visibles, plus cliquées.</p>
+</article>
+<article class="gain-card">
+<div class="gain-vis">
+<div class="mini-chat">
+<p class="mc-q">Quel coussin renard choisir ?</p>
+<p class="mc-a"><span class="ai-ico sm"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2.5l1.9 5.6 5.6 1.9-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.9z"></path><path d="M18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"></path></svg></span><span>D’après les avis de testeurs vérifiés, le <b>Coussin renard</b> de Ma Boutique est apprécié pour son tissu doux…</span></p>
+<p class="mc-names">ChatGPT · Gemini · Claude · Perplexity</p>
+</div>
+</div>
+<h3>Cité par les IA</h3>
+<p>Des avis structurés et lisibles que les assistants IA peuvent reprendre dans leurs réponses.</p>
+</article>
+</div>
+</div>
 <div class="duo-grid">
 <article class="tile dark">
 <p class="eyebrow">Pour les commerçants</p>
@@ -422,6 +491,6 @@
 <nav aria-label="Pages légales"><a href="a-propos.html">À propos</a><a href="a-propos.html#methode">Méthode de vérification</a><a href="mentions-legales.html">Mentions légales</a><a href="cgv.html">CGV commerçants</a><a href="cgu-testeurs.html">CGU testeurs</a><a href="confidentialite.html">Confidentialité</a></nav>
 </div>
 </footer>
-<script src="assets/js/main.js?v=1d67a85acc" defer></script>
+<script src="assets/js/main.js?v=a9d901b668" defer></script>
 </body>
 </html>
