@@ -2,6 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /espace-commercant
 Disallow: /espace-testeur
-Disallow: /demo/
 
 Sitemap: https://avitime.fr/sitemap.xml

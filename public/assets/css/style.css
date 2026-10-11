@@ -660,3 +660,14 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
   .panel.grow .meter i,.panel.grow .hbar .fill,.panel.grow .prog i b,.panel.grow .fbar i,.panel.grow .col i{animation:none}
   .toast{transition:opacity 150ms ease}
 }
+#google-ia .truth-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:720px){#google-ia .truth-grid{grid-template-columns:minmax(0,1fr)}}
+.zero-card{margin-top:auto;display:flex;gap:14px;align-items:center;background:rgba(245,245,243,.06);border:1px dashed var(--band-line);border-radius:18px;padding:14px 16px}
+.zero-card .zc-img{width:56px;height:56px;border-radius:12px;background:rgba(245,245,243,.12);flex:none}
+.zero-card b{display:block;font-weight:600}
+.zero-card .zc-price{display:block;font-size:14px;color:var(--band-mute)}
+.zero-card .zc-stars{display:block;font-size:14px;color:var(--band-mute)}
+.zero-card em{font-style:normal;margin-left:4px}
+.steps.timeline li{grid-template-columns:52px 1fr}
+.checks.no-ico{list-style:disc;padding-left:20px;display:grid;gap:10px;margin:12px 0 0}
+.checks.no-ico li{display:list-item}
