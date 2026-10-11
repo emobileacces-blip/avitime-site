@@ -1,0 +1,26 @@
+# Site vitrine Avitime — https://avitime.fr
+# Au démarrage, le conteneur télécharge la dernière version de ce dépôt (dossier public/) et la sert avec nginx.
+# Mettre à jour le site = pousser sur la branche master, puis redéployer le projet « avitime-site » sur le VPS.
+services:
+  web:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    command:
+      - sh
+      - -c
+      - >
+        apk add --no-cache git >/dev/null &&
+        rm -rf /tmp/site && git clone --depth 1 --branch master https://github.com/emobileacces-blip/avitime-site /tmp/site &&
+        rm -rf /usr/share/nginx/html/* && cp -r /tmp/site/public/. /usr/share/nginx/html/ &&
+        cp /tmp/site/nginx.conf /etc/nginx/conf.d/default.conf &&
+        exec nginx -g 'daemon off;'
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.avitime-site.rule=Host(`avitime.fr`) || Host(`www.avitime.fr`)
+      - traefik.http.routers.avitime-site.entrypoints=websecure
+      - traefik.http.routers.avitime-site.tls.certresolver=letsencrypt
+      - traefik.http.routers.avitime-site.middlewares=avitime-www
+      - traefik.http.middlewares.avitime-www.redirectregex.regex=^https://www\.avitime\.fr/(.*)
+      - traefik.http.middlewares.avitime-www.redirectregex.replacement=https://avitime.fr/$${1}
+      - traefik.http.middlewares.avitime-www.redirectregex.permanent=true
+      - traefik.http.services.avitime-site.loadbalancer.server.port=80

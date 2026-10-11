@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /espace-commercant
+Disallow: /espace-testeur
+
+Sitemap: https://avitime.fr/sitemap.xml
