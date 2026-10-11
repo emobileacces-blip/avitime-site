@@ -676,8 +676,32 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
   .panel.grow .meter i,.panel.grow .hbar .fill,.panel.grow .prog i b,.panel.grow .fbar i,.panel.grow .col i{animation:none}
   .toast{transition:opacity 150ms ease}
 }
-#google-ia .truth-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-@media (max-width:720px){#google-ia .truth-grid{grid-template-columns:minmax(0,1fr)}}
+#google-ia{background:#0A0A0A;color:#F5F5F3}
+#google-ia .eyebrow{color:var(--hl)}
+#google-ia .sec-title{color:#F5F5F3;max-width:22ch;margin-inline:auto}
+#google-ia .sec-lede{color:#C9C9C3}
+.ia-demo{max-width:720px;margin:36px auto 0;display:grid;gap:12px}
+.ia-q{display:flex;justify-content:flex-end}
+.ia-q span{background:#2A2A28;color:#F5F5F3;border-radius:18px 18px 4px 18px;padding:12px 16px;max-width:80%;font-size:15.5px}
+.ia-a{background:#F5F5F3;color:#0A0A0A;border-radius:18px 18px 18px 4px;padding:16px 18px;font-size:15.5px;line-height:1.55}
+.ia-a p{margin:0 0 8px}
+.ia-who{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#B34100}
+.ia-cons{color:#A33A2B}
+.ia-src{font-size:12.5px;color:#5E5E58;margin:0!important;border-top:1px solid rgba(10,10,10,.1);padding-top:8px}
+.ia-note{font-size:12px;color:#8A8A84;text-align:center;margin:0}
+.ia-h3{text-align:center;color:#F5F5F3;font-size:clamp(20px,2.4vw,26px);margin:56px auto 20px;max-width:760px}
+.eeat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:980px){.eeat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.eeat-grid{grid-template-columns:minmax(0,1fr)}}
+.eeat{background:#161615;border:1px solid rgba(245,245,243,.12);border-radius:22px;padding:22px}
+.eeat-l{display:inline-flex;width:40px;height:40px;border-radius:12px;background:var(--hl);color:#0A0A0A;align-items:center;justify-content:center;font-size:20px;font-weight:700}
+.eeat h4{margin:14px 0 6px;font-size:18px;color:#F5F5F3}
+.eeat p{margin:0;font-size:14.5px;color:#C9C9C3;line-height:1.55}
+.ia-tech{max-width:760px;margin:28px auto 0;border:1px dashed rgba(245,245,243,.25);border-radius:16px;padding:14px 18px;font-size:14.5px;color:#C9C9C3;text-align:center}
+.ia-tech p{margin:0}.ia-tech b{color:#F5F5F3}
+#google-ia .ctas{margin-top:28px}
+#google-ia .btn{background:var(--hl);color:#0A0A0A}
+.fine-print{max-width:760px;margin:18px auto 0;text-align:center;font-size:13px;color:#8A8A84}
 .zero-card{margin-top:auto;display:flex;gap:14px;align-items:center;background:rgba(245,245,243,.06);border:1px dashed var(--band-line);border-radius:18px;padding:14px 16px}
 .zero-card .zc-img{width:56px;height:56px;border-radius:12px;background:rgba(245,245,243,.12);flex:none}
 .zero-card b{display:block;font-weight:600}
@@ -720,7 +744,7 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
     <div class="wrap">
       <p class="eyebrow rise">Tests produits · Avis vérifiés</p>
       <h1><span class="w" style="animation-delay:80ms">Vos</span> <span class="w" style="animation-delay:140ms">produits</span> <span class="w" style="animation-delay:200ms">méritent</span> <span class="w" style="animation-delay:260ms">de</span> <span class="w grad" style="animation-delay:340ms">vrais avis.</span></h1>
-      <p class="lede rise d2">Avitime fait tester des produits par des consommateurs sélectionnés, puis publie leurs avis sur la fiche produit. Transparents, traçables, même quand ils sont critiques.</p>
+      <p class="lede rise d2">Avitime fait tester vos produits par des consommateurs sélectionnés, puis publie leurs avis sur vos fiches produits. Des avis vrais et traçables, qui rassurent vos clients et nourrissent Google comme les IA (ChatGPT, Gemini, Claude).</p>
       <div class="ctas rise d3">
         <a class="btn" href="#connexion">Je suis commerçant</a>
         <a class="link" href="#testeurs">Je veux devenir testeur</a>
@@ -782,6 +806,39 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
           <p class="fine-note">Délais indicatifs : ils dépendent de vos expéditions et du temps de test. Les avis négatifs sont publiés comme les positifs.</p>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="sec ia" id="google-ia" aria-labelledby="gia-titre">
+    <div class="wrap">
+      <p class="eyebrow center">Avis, Google et IA</p>
+      <h2 class="sec-title" id="gia-titre">Demain, vos clients demanderont à une IA quoi acheter. Sera-t-elle capable de parler de vos produits&nbsp;?</h2>
+      <p class="sec-lede">ChatGPT, Gemini, Claude ou Perplexity répondent déjà à « quel produit choisir ? ». Pour recommander un produit, ils s’appuient sur ce que de vrais utilisateurs en disent : expériences, points forts, points faibles. Un produit sans avis n’a rien à leur offrir. Avitime remplit vos fiches d’expériences vérifiées, structurées et lisibles par les IA comme par Google.</p>
+
+      <div class="ia-demo" role="figure" aria-label="Exemple illustratif de réponse d’un assistant IA qui s’appuie sur des avis de testeurs">
+        <div class="ia-q"><span>Quel coussin déco offrir à quelqu’un qui adore les renards ?</span></div>
+        <div class="ia-a">
+          <p class="ia-who">Assistant IA</p>
+          <p>D’après les <b>avis de testeurs vérifiés</b> publiés sur la boutique, le <b>Coussin renard</b> est apprécié pour son tissu doux et ses couleurs fidèles à la photo. Les testeurs le conseillent pour un salon ou une chambre d’enfant.</p>
+          <p class="ia-cons">Point faible signalé : le garnissage est un peu ferme au début.</p>
+          <p class="ia-src">Sources : avis « Produit offert pour test — Testeur Avitime vérifié » · ma-boutique.fr</p>
+        </div>
+        <p class="ia-note">Exemple illustratif.</p>
+      </div>
+
+      <h3 class="ia-h3">Les quatre piliers de confiance de Google (E-E-A-T), nourris par vos avis</h3>
+      <div class="eeat-grid">
+        <article class="eeat"><b class="eeat-l">E</b><h4>Expérience</h4><p>Chaque avis raconte une vraie utilisation : durée, contexte, photos. C’est le signal que Google et les IA recherchent en premier, et le plus difficile à obtenir pour une boutique neuve.</p></article>
+        <article class="eeat"><b class="eeat-l">E</b><h4>Expertise</h4><p>Points forts, points faibles, « idéal pour » : des informations précises et utiles, structurées pour être reprises telles quelles dans une réponse d’IA.</p></article>
+        <article class="eeat"><b class="eeat-l">A</b><h4>Autorité</h4><p>Des avis réguliers, publiés sur votre propre site, avec la note moyenne et les étoiles éligibles dans Google : votre marque devient une référence sur ses produits.</p></article>
+        <article class="eeat"><b class="eeat-l">T</b><h4>Fiabilité</h4><p>Commande réelle, livraison tracée, mention « Produit offert pour test », avis négatifs publiés : des avis crédibles, que les moteurs et les IA peuvent prendre au sérieux.</p></article>
+      </div>
+
+      <div class="ia-tech">
+        <p><b>Automatique avec le module :</b> données structurées Product, Review et AggregateRating sur chaque fiche, points forts et faibles balisés, avis affichés en HTML lisible par les robots d’indexation et les IA.</p>
+      </div>
+      <div class="ctas" style="justify-content:center"><a class="btn" href="#connexion">Rendre mes produits visibles</a></div>
+      <p class="fine-print">Google et les assistants IA décident seuls de leurs résultats : personne ne peut garantir un classement. Avitime vous donne ce qu’ils recherchent — du contenu d’expérience authentique, vérifié et bien structuré — sans jamais tricher.</p>
     </div>
   </section>
 
@@ -983,21 +1040,6 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
           <a class="btn" href="#testeurs">Devenir testeur</a>
         </article>
       </div>
-    </div>
-  </section>
-
-  <section class="sec truth" id="google-ia" aria-labelledby="gia-titre">
-    <div class="wrap">
-      <p class="eyebrow center">Avis, Google et IA</p>
-      <h2 class="sec-title" id="gia-titre">Des avis qui parlent aussi aux moteurs de recherche et aux IA.</h2>
-      <p class="sec-lede">Google valorise l’expérience réelle (le premier « E » de E-E-A-T). ChatGPT, Gemini, Perplexity ou Claude lisent les avis pour répondre à « quel produit choisir ? ». Les avis Avitime sont conçus pour être compris par les uns comme par les autres.</p>
-      <div class="truth-grid">
-        <article class="truth-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/></svg><h3>De l’expérience vécue</h3><p>Chaque avis raconte une vraie utilisation : durée, contexte, photos. C’est le contenu « Expérience » que Google cherche à mettre en avant.</p></article>
-        <article class="truth-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.5 6 .7-4.4 4.1 1.2 6L12 16.4l-5.4 2.9 1.2-6L3.4 9.2l6-.7z"/></svg><h3>Éligible aux étoiles Google</h3><p>Le module ajoute automatiquement les données structurées (Product, Review, AggregateRating) à vos fiches produits : elles deviennent éligibles aux étoiles dans les résultats.</p></article>
-        <article class="truth-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h9"/></svg><h3>Lisible par les IA</h3><p>Points forts, points faibles, « idéal pour » : des informations structurées, publiées sur votre propre site, faciles à reprendre pour un assistant IA.</p></article>
-        <article class="truth-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z"/><path d="M9 12.2l2.2 2.1 4-4.3" stroke-linecap="round"/></svg><h3>Crédible, donc durable</h3><p>Commande réelle, livraison tracée, mention « Produit offert pour test » : des avis authentiques, conformes aux règles de Google et à la loi française.</p></article>
-      </div>
-      <p class="sec-lede" style="margin-top:28px;font-size:15px">Soyons honnêtes : ni Google ni les assistants IA ne garantissent un classement ou un affichage. Avitime vous donne ce qu’ils recherchent — du contenu d’expérience authentique, vérifié et bien structuré — sans jamais tricher.</p>
     </div>
   </section>
 
