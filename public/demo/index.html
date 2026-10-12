@@ -1636,7 +1636,7 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
       </ul>
 
       <h2 id="cgu-11">11. Grades, XP et fiabilité</h2>
-      <p>Les grades (Bronze, Argent, Gold, Black) déterminent le nombre de produits qu’un Testeur peut recevoir : 5 par mois en Bronze, 15 par mois en Argent, 25 par mois en Gold et 2 par jour en Black. On monte de grade grâce aux avis publiés dans les délais (Argent à 3 avis, Gold à 10, Black à 25). L’XP récompense la participation. Le score de fiabilité mesure le respect des délais et des règles ; il ne dépend jamais de la note donnée ni du caractère positif d’un avis. Les seuils sont indicatifs et peuvent évoluer. Un nouveau Testeur conserve une chance équitable d’être sélectionné.</p>
+      <p>Les grades (Bronze, Argent, Gold, Black) déterminent le nombre de produits qu’un Testeur peut recevoir : 5 par mois en Bronze, 15 par mois en Argent, 25 par mois en Gold et 2 par jour en Black. On monte de grade grâce aux avis publiés dans les délais. L’XP récompense la participation. Le score de fiabilité mesure le respect des délais et des règles ; il ne dépend jamais de la note donnée ni du caractère positif d’un avis. Les seuils sont indicatifs et peuvent évoluer. Un nouveau Testeur conserve une chance équitable d’être sélectionné.</p>
 
       <h2 id="cgu-12">12. Droits sur les avis et les médias</h2>
       <p>Le Testeur reste l’auteur de son avis. En le publiant, il autorise Avitime et la boutique concernée à l’afficher, avec ses photos et vidéos, sur la fiche du produit testé et sur le site Avitime, sous un pseudonyme ou son prénom, pour la durée de commercialisation du produit. Il garantit être l’auteur des médias publiés et que ceux-ci ne montrent pas de tiers identifiables sans leur accord. <span class="todo">À valider : durée et étendue de la licence</span></p>
@@ -1784,9 +1784,9 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
       <p class="sec-lede">L’XP récompense la participation. Le score de fiabilité mesure le respect de la procédure : délais, preuves, réponses utiles. Jamais la note donnée au produit.</p>
       <div class="grades-row">
         <article class="grade"><div class="medal m-cui" aria-hidden="true">B</div><div class="gtxt"><h3>Bronze</h3><p class="req">Dès l’admission</p></div><dl><div><dt>Produits</dt><dd>5 / mois</dd></div></dl></article>
-        <article class="grade"><div class="medal m-arg" aria-hidden="true">A</div><div class="gtxt"><h3>Argent</h3><p class="req">3 avis publiés dans les délais</p></div><dl><div><dt>Produits</dt><dd>15 / mois</dd></div></dl></article>
-        <article class="grade"><div class="medal m-gol" aria-hidden="true">G</div><div class="gtxt"><h3>Gold</h3><p class="req">10 avis publiés dans les délais</p></div><dl><div><dt>Produits</dt><dd>25 / mois</dd></div></dl></article>
-        <article class="grade"><div class="medal m-bla" aria-hidden="true">B</div><div class="gtxt"><h3>Black</h3><p class="req">25 avis publiés dans les délais</p></div><dl><div><dt>Produits</dt><dd>2 / jour</dd></div></dl></article>
+        <article class="grade"><div class="medal m-arg" aria-hidden="true">A</div><div class="gtxt"><h3>Argent</h3><p class="req">Avis publiés dans les délais</p></div><dl><div><dt>Produits</dt><dd>15 / mois</dd></div></dl></article>
+        <article class="grade"><div class="medal m-gol" aria-hidden="true">G</div><div class="gtxt"><h3>Gold</h3><p class="req">Encore plus d’avis publiés</p></div><dl><div><dt>Produits</dt><dd>25 / mois</dd></div></dl></article>
+        <article class="grade"><div class="medal m-bla" aria-hidden="true">B</div><div class="gtxt"><h3>Black</h3><p class="req">Les testeurs les plus fidèles</p></div><dl><div><dt>Produits</dt><dd>2 / jour</dd></div></dl></article>
       </div>
       <p class="note">Un même foyer (même adresse) partage la limite du meilleur grade. Seuils indicatifs, ajustés avec les données du pilote. Un nouveau testeur garde toujours une chance équitable d’être sélectionné.</p>
     </div>
@@ -2680,7 +2680,7 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
     function render() {
       const active = st.m >= 0 && st.m < 7 && !st.excluded ? 1 : 0;
       $('tKpis').innerHTML = [
-        ['Grade', 'Bronze', st.tests >= 3 ? 'Argent atteignable' : `${st.tests}/3 avis pour Argent`],
+        ['Grade', 'Bronze', `${st.tests} avis publié(s)`],
         ['Candidatures aujourd’hui', `${st.applied.length}/${MAX_APPLY}`, 'remises à zéro chaque jour'],
         ['Missions actives', `${active}/1`, 'plafond du grade Bronze'],
         ['Produits reçus en 2026', ((st.received || []).reduce((a, x) => a + x.val, 0)).toFixed(2).replace('.', ',') + ' €', `${(st.received || []).length} colis · valeur TTC`]
@@ -2800,8 +2800,8 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
       $('fDoc').innerHTML = `<div class="attest"><p class="mono muted" style="margin:0">Aperçu · document de démonstration</p><b>Récapitulatif annuel 2026 · Avitime</b><span>Édité par SPARKMOTION AGENCY LTD, opérateur de la plateforme Avitime</span><dl class="kv"><div><dt>Testeur</dt><dd>${esc(st.first || 'Testeur')}</dd></div><div><dt>Numéro fiscal</dt><dd>${st.fiscal ? '•••• ' + esc(st.fiscal.last) : 'non renseigné'}</dd></div><div><dt>Produits reçus</dt><dd>${list.length}</dd></div><div><dt>Valeur totale TTC</dt><dd>${eurF(total)}</dd></div></dl><span class="muted" style="font-size:12.5px">Ces montants sont transmis à l’administration fiscale. Ils correspondent à la valeur publique des produits reçus en contrepartie de vos tests.</span></div>`;
     }
     function renderGrade() {
-      const G = [['Bronze', 'Dès l’admission', '5 / mois'], ['Argent', '3 avis publiés dans les délais', '15 / mois'], ['Gold', '10 avis publiés dans les délais', '25 / mois'], ['Black', '25 avis publiés dans les délais', '2 / jour']];
-      $('tGrade').innerHTML = `<div class="tbl-wrap"><table><thead><tr><th>Grade</th><th>Condition</th><th>Produits</th></tr></thead><tbody>${G.map((g, i) => `<tr${i === 0 ? ' style="background:var(--hl-soft)"' : ''}><td><b style="font-weight:600">${g[0]}</b>${i === 0 ? ' <span class="chip c-info">Actuel</span>' : ''}</td><td class="muted">${g[1]}</td><td>${g[2]}</td></tr>`).join('')}</tbody></table></div><p class="quota-note">Progression vers Argent : ${st.tests}/3 avis publiés. Seuils indicatifs, ajustés pendant le pilote.</p>`;
+      const G = [['Bronze', 'Dès l’admission', '5 / mois'], ['Argent', 'Avis publiés dans les délais', '15 / mois'], ['Gold', 'Encore plus d’avis publiés', '25 / mois'], ['Black', 'Les testeurs les plus fidèles', '2 / jour']];
+      $('tGrade').innerHTML = `<div class="tbl-wrap"><table><thead><tr><th>Grade</th><th>Condition</th><th>Produits</th></tr></thead><tbody>${G.map((g, i) => `<tr${i === 0 ? ' style="background:var(--hl-soft)"' : ''}><td><b style="font-weight:600">${g[0]}</b>${i === 0 ? ' <span class="chip c-info">Actuel</span>' : ''}</td><td class="muted">${g[1]}</td><td>${g[2]}</td></tr>`).join('')}</tbody></table></div><p class="quota-note">Vous montez de grade en publiant vos avis dans les délais (${st.tests} publié(s) pour l’instant). Seuils indicatifs, ajustés pendant le pilote.</p>`;
       $('tScore').innerHTML = st.tests ? `<div class="quota-top"><b>100</b><span>sur 100</span></div><ul class="feed" style="margin-top:12px"><li><time>+</time><div><b>Mission terminée dans les délais</b><br><span>${esc(camp() ? camp().name : '')}</span></div></li></ul>` : '<div class="quota-top"><b style="font-size:30px">Nouveau testeur</b></div><p class="quota-note">Votre score se construira avec vos premières missions. Un nouveau testeur garde toujours une chance équitable d’être sélectionné.</p>';
     }
     function wire() {
