@@ -1,6 +1,7 @@
 /* Avitime — static site scripts: intro video, scroll film, scroll reveals. */
 (() => {
   const $ = id => document.getElementById(id);
+  const EN = (document.documentElement.lang || '').startsWith('en'), tr = (fr, en) => (EN ? en : fr);
   const views = { home: { hidden: !document.getElementById('concept') } };
   /* ---------- Video ---------- */
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -8,10 +9,10 @@
     const v = $('reel'), b = $('reelBtn');
     if (!v) return { pause() {}, sync() {} };
     let userPaused = reduce;
-    const ui = () => { const p = v.paused; $('icPause').hidden = p; $('icPlay').hidden = !p; b.setAttribute('aria-label', p ? 'Lire la vidéo' : 'Mettre la vidéo en pause'); };
+    const ui = () => { const p = v.paused; $('icPause').hidden = p; $('icPlay').hidden = !p; b.setAttribute('aria-label', p ? tr('Lire la vidéo', 'Play the video') : tr('Mettre la vidéo en pause', 'Pause the video')); };
     v.addEventListener('play', ui); v.addEventListener('pause', ui);
     const sb = $('soundBtn');
-    sb.addEventListener('click', () => { v.muted = !v.muted; sb.setAttribute('aria-pressed', String(!v.muted)); sb.setAttribute('aria-label', v.muted ? 'Activer le son' : 'Couper le son'); $('icMuted').hidden = !v.muted; $('icSound').hidden = v.muted; if (!v.muted) { if (v.currentTime > 1) v.currentTime = 0; userPaused = false; v.play().catch(() => {}); } });
+    sb.addEventListener('click', () => { v.muted = !v.muted; sb.setAttribute('aria-pressed', String(!v.muted)); sb.setAttribute('aria-label', v.muted ? tr('Activer le son', 'Turn sound on') : tr('Couper le son', 'Turn sound off')); $('icMuted').hidden = !v.muted; $('icSound').hidden = v.muted; if (!v.muted) { if (v.currentTime > 1) v.currentTime = 0; userPaused = false; v.play().catch(() => {}); } });
     b.addEventListener('click', () => { if (v.paused) { userPaused = false; v.play().catch(() => {}); } else { userPaused = true; v.pause(); } });
     const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && !userPaused) v.play().catch(() => {}); else v.pause(); }), { threshold: .25 }) : null;
     if (io) io.observe(v);
@@ -42,7 +43,7 @@
     }
     const SELPOS = testers[SEL], elig = testers.filter(t => t.elig);
     const chips = [];
-    [['Âge', 58], ['Pays', 62], ['Catégorie', 88], ['Anti-doublon', 104]].reduce((x, [label, w]) => {
+    (EN ? [['Age', 52], ['Country', 76], ['Category', 88], ['No duplicates', 116]] : [['Âge', 58], ['Pays', 62], ['Catégorie', 88], ['Anti-doublon', 104]]).reduce((x, [label, w]) => {
       const g = mk('g', { opacity: 0 }, $('chips'));
       mk('rect', { x, y: 112, width: w, height: 26, rx: 13, class: 's-2' }, g);
       const u = mk('use', { href: '#check', x: x + 9, y: 118, width: 14, height: 14 }, g); u.style.color = 'var(--hl)';
@@ -50,7 +51,7 @@
       chips.push(g); return x + w + 8;
     }, 575);
     const status = [];
-    [['Commandé', 360], ['Expédié', 500], ['Livré', 640]].forEach(([label, cx]) => {
+    [[tr('Commandé', 'Ordered'), 360], [tr('Expédié', 'Shipped'), 500], [tr('Livré', 'Delivered'), 640]].forEach(([label, cx]) => {
       const g = mk('g', {}, $('status'));
       mk('rect', { x: cx - 56, y: 504, width: 112, height: 32, rx: 16, class: 's-2' }, g);
       const on = mk('rect', { x: cx - 56, y: 504, width: 112, height: 32, rx: 16, class: 's-hl', opacity: 0 }, g);
@@ -58,7 +59,7 @@
       status.push({ on, t });
     });
     const facts = [];
-    ['Avis négatif ? Publié aussi.', 'Le produit reste au testeur.', 'L’IA reformule, sans inventer.'].forEach((label, i) => {
+    (EN ? ['Negative review? Published too.', 'The tester keeps the product.', 'AI rephrases, never invents.'] : ['Avis négatif ? Publié aussi.', 'Le produit reste au testeur.', 'L’IA reformule, sans inventer.']).forEach((label, i) => {
       const y = 190 + i * 66, g = mk('g', { opacity: 0 }, $('facts'));
       mk('rect', { x: 672, y, width: 262, height: 44, rx: 22, class: 's-2' }, g);
       mk('circle', { cx: 694, cy: y + 22, r: 10, class: 's-hl' }, g);
@@ -76,7 +77,7 @@
     const cam = (p, K) => { for (let i = 0; i < K.length - 1; i++) { const a = K[i], b = K[i + 1]; if (p <= b[0]) { const t = ease(ramp(p, a[0], b[0])); return a.slice(1).map((v, j) => lerp(v, b[j + 1], t)); } } return K[K.length - 1].slice(1); };
     let box = { w: 1, h: 1 };
     const measure = () => { box = { w: stageWrap.clientWidth || 1, h: stageWrap.clientHeight || 1 }; };
-    const fmt = v => v.toFixed(2).replace('.', ',') + ' €';
+    const fmt = v => (EN ? '€' + v.toFixed(2) : v.toFixed(2).replace('.', ',') + ' €');
 
     function render(p) {
       const narrow = box.w / box.h < 1.05;
