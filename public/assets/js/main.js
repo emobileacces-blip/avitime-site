@@ -1,4 +1,4 @@
-/* Avitime — static site scripts: intro video, scroll film, scroll reveals. */
+/* Avitime — static site scripts: intro video, auto-playing concept film, scroll reveals. */
 (() => {
   const $ = id => document.getElementById(id);
   const EN = (document.documentElement.lang || '').startsWith('en'), tr = (fr, en) => (EN ? en : fr);
@@ -142,18 +142,39 @@
       });
       segs.forEach((s, i) => { s.querySelector('b').style.width = (ramp(p, S[i], S[i + 1]) * 100).toFixed(1) + '%'; });
     }
-    const progress = () => { const r = filmEl.getBoundingClientRect(); const total = filmEl.offsetHeight - sticky.offsetHeight; return total > 0 ? clamp(-r.top / total) : 0; };
-    let ticking = false;
-    const request = () => { if (views.home.hidden) return; if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; render(progress()); }); } };
-    window.addEventListener('scroll', request, { passive: true });
+    /* Lecture automatique (plus de défilement capturé) : l'animation avance toute seule quand la section est visible,
+       se met en pause hors de l'écran, et les segments permettent d'aller directement à une étape. */
+    const DUR = 42000, HOLD = 3500;
+    let p = 0, raf = 0, last = 0, inView = false, userPaused = reduce, holdUntil = 0;
+    const playBtn = $('filmPlay');
+    const syncBtn = () => {
+      if (!playBtn) return;
+      const playing = !userPaused;
+      playBtn.querySelector('.ic-pause').style.display = playing ? '' : 'none';
+      playBtn.querySelector('.ic-play').style.display = playing ? 'none' : '';
+      playBtn.setAttribute('aria-label', playing ? tr('Mettre l’animation en pause', 'Pause the animation') : tr('Lire l’animation', 'Play the animation'));
+    };
+    const loop = t => {
+      raf = 0;
+      if (userPaused || !inView || views.home.hidden) { last = 0; return; }
+      const dt = last ? Math.min(t - last, 100) : 0; last = t;
+      if (holdUntil) { if (t >= holdUntil) { holdUntil = 0; p = 0; } }
+      else { p += dt / DUR; if (p >= 1) { p = 1; holdUntil = t + HOLD; } }
+      render(p);
+      raf = requestAnimationFrame(loop);
+    };
+    const kick = () => { if (!raf && inView && !userPaused) { last = 0; raf = requestAnimationFrame(loop); } };
+    const request = () => { if (views.home.hidden) return; requestAnimationFrame(() => render(p)); };
     window.addEventListener('resize', () => { measure(); request(); });
     if ('ResizeObserver' in window) new ResizeObserver(() => { measure(); request(); }).observe(stageWrap);
-    segs.forEach((s, i) => s.addEventListener('click', () => {
-      const total = filmEl.offsetHeight - sticky.offsetHeight;
-      const target = i === 0 ? 0 : (i === 5 ? .95 : (S[i] + S[i + 1]) / 2 + .03);
-      window.scrollTo({ top: filmEl.getBoundingClientRect().top + window.scrollY + total * target, behavior: reduce ? 'auto' : 'smooth' });
-    }));
-    measure(); render(0);
+    if ('IntersectionObserver' in window) new IntersectionObserver(es => es.forEach(e => { inView = e.isIntersecting; if (inView) kick(); }), { threshold: .3 }).observe(filmEl);
+    else { inView = true; }
+    // Étape : on se place à la fin de l'étape (état « posé »), puis la lecture reprend depuis là.
+    const settle = i => (i === segs.length - 1 ? .97 : S[i + 1] - .015);
+    segs.forEach((s, i) => s.addEventListener('click', () => { holdUntil = 0; p = reduce || userPaused ? settle(i) : S[i] + .001; render(p); kick(); }));
+    if (playBtn) playBtn.addEventListener('click', () => { userPaused = !userPaused; syncBtn(); if (!userPaused && p >= 1) p = 0; kick(); });
+    syncBtn();
+    measure(); render(reduce ? settle(0) : 0);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { measure(); request(); });
     return { measure, request };
   })();
