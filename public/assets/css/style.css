@@ -775,3 +775,11 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
 /* Pour qui ? */
 .pq-grid{margin-top:48px}
 .pq-card a{color:var(--hl-ink);text-decoration:underline;text-underline-offset:2px}
+/* Pub ou avis ? */
+.ico-list{list-style:none;margin:22px 0 26px;padding:0;display:flex;flex-direction:column;gap:16px}
+.ico-list li{display:flex;gap:14px;align-items:flex-start}
+.ico-list .ic{flex:none;width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:var(--hl);color:#0A0A0A}
+.ico-list .ic svg{width:22px;height:22px}
+.tile.dark .ico-list .ic{background:rgba(255,106,19,.14);color:#FF6A13;box-shadow:inset 0 0 0 1px rgba(255,106,19,.35)}
+.ico-list strong{display:block;font-weight:600;font-size:16.5px;line-height:1.3}
+.ico-list span{display:block;font-size:14.5px;opacity:.78;margin-top:2px}
