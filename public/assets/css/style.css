@@ -772,3 +772,6 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
 .film-play{appearance:none;border:1px solid var(--stage-line);background:none;color:var(--stage-ink);width:34px;height:34px;border-radius:50%;display:inline-grid;place-items:center;cursor:pointer;margin-left:8px}
 .film-play svg{width:14px;height:14px}
 .film-play:hover{border-color:var(--hl)}
+/* Pour qui ? */
+.pq-grid{margin-top:48px}
+.pq-card a{color:var(--hl-ink);text-decoration:underline;text-underline-offset:2px}

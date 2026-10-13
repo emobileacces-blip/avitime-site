@@ -36,6 +36,8 @@ FAQ=[
 ("Which platforms are supported?","PrestaShop and WooCommerce, with a dedicated module and extension you download from your merchant account. Shopify: the Avitime app is being reviewed for the Shopify App Store. More platforms will follow."),
 ("I am a tester: how much does it cost?","Nothing. Sign-up is free, the product and shipping are free, and there is no subscription."),
 ("Which products can be tested?","The pilot starts with non-regulated accessories. Sensitive categories (health, supplements, nicotine, alcohol, products for minors…) follow a strict eligibility policy."),
+("Is dropshipping accepted?","Yes. The tester orders from your store like any customer, your supplier ships, and the review deadline starts at delivery. The product tested must be exactly the one your customers receive."),
+("Can I have an online course or a digital product tested?","Not yet: today Avitime works with physical products that are ordered and delivered. A flow for digital products (online courses, e-books, software) is in preparation. Write to us at contact@avitime.fr to be notified."),
 ]
 m=re.search(r'<script type="application/ld\+json">\{"@context": "https://schema.org", "@type": "FAQPage".*?</script>',s)
 faq_ld={"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in FAQ]}
@@ -210,6 +212,27 @@ R('<li><span class="n">02</span><div><strong>Candidatez ou recevez des invitatio
 R('<li><span class="n">03</span><div><strong>Commandez à 0 €</strong><span>Un lien sécurisé ouvre la boutique. Livraison comprise.</span></div></li>','<li><span class="n">03</span><div><strong>Order at €0</strong><span>A secure link opens the store. Shipping included.</span></div></li>')
 R('<li><span class="n">04</span><div><strong>Donnez votre avis</strong><span>Après une vraie période d’utilisation. Toutes les notes de 1 à 5 sont acceptées.</span></div></li>','<li><span class="n">04</span><div><strong>Give your review</strong><span>After a real period of use. Every rating from 1 to 5 is accepted.</span></div></li>')
 R(f'<a class="btn" href="/devenir-testeur">Devenir testeur</a>\n</article>',f'<a class="btn" href="{TEST}">Become a tester</a>\n</article>')
+# ---------- who is it for ----------
+R('<p class="eyebrow center">Pour qui ?</p>','<p class="eyebrow center">Who is it for?</p>')
+R('Toutes les boutiques en ligne peuvent rejoindre Avitime.','Every kind of online store can join Avitime.')
+R('Grande ou petite, généraliste ou spécialisée : si vous vendez en ligne avec PrestaShop, WooCommerce ou Shopify, Avitime s’adapte à votre modèle. Une seule règle : le produit testé est exactement celui que reçoivent vos clients.','Big or small, general or specialist: if you sell online with PrestaShop, WooCommerce or Shopify, Avitime adapts to your model. One rule: the product tested is exactly the one your customers receive.')
+R('<span class="integ-status live">Compatible</span>','<span class="integ-status live">Compatible</span>',5)
+R('<span class="integ-status">Bientôt</span>','<span class="integ-status">Coming soon</span>')
+R('<h3>Boutiques multi-produits</h3>','<h3>Multi-product stores</h3>')
+R('Mode, déco, high-tech, sport, maison… Faites tester vos best-sellers ou vos nouveautés, campagne par campagne, produit par produit.','Fashion, decor, tech, sport, home… Have your best-sellers or new arrivals tested, campaign by campaign, product by product.')
+R('<h3>Marques mono-produit</h3>','<h3>Single-product brands</h3>')
+R('Un seul produit phare ? Ses avis font toute la différence : plusieurs testeurs aux profils variés, et une fiche produit qui rassure enfin.','One hero product? Its reviews make all the difference: several testers with varied profiles, and a product page that finally reassures.')
+R('<h3>Dropshipping</h3>','<h3>Dropshipping</h3>')
+R('Le testeur commande sur votre boutique comme un client, votre fournisseur expédie. Le délai d’avis démarre à la livraison, même quand elle prend du temps.','The tester orders from your store like any customer, and your supplier ships. The review deadline starts at delivery, even when delivery takes a while.')
+R('<h3>Créateurs, artisans, marques de niche</h3>','<h3>Makers, artisans, niche brands</h3>')
+R('Fait main, petites séries, produits locaux : de vrais retours pour prouver la qualité de votre travail face aux grandes enseignes.','Handmade, small batches, local products: real feedback to prove the quality of your work against the big retailers.')
+R('<h3>Boutiques qui démarrent</h3>','<h3>Stores just starting out</h3>')
+R('Vos premiers avis vérifiés dès les premières semaines, sans attendre les premières ventes. Idéal pour lancer une boutique ou un nouveau produit.','Your first verified reviews within weeks, without waiting for your first sales. Ideal for launching a store or a new product.')
+R('<h3>Produits numériques</h3>','<h3>Digital products</h3>')
+R('Formations en ligne, e-books, logiciels, abonnements : un parcours adapté est en préparation, avec un accès offert et un avis après une vraie période d’utilisation. Vous vendez une formation ? Écrivez-nous à','Online courses, e-books, software, subscriptions: a dedicated flow is in preparation, with free access and a review after a real period of use. Selling a course? Write to us at')
+R('Catégories sensibles (santé, compléments alimentaires, nicotine, alcool, produits pour mineurs…) : politique d’éligibilité stricte, étudiée au cas par cas.','Sensitive categories (health, food supplements, nicotine, alcohol, products for minors…): strict eligibility policy, assessed case by case.')
+R(f'<a class="btn" href="/espace-commercant">Lancer mes premiers tests</a>',f'<a class="btn" href="{MERCH}">Launch my first tests</a>')
+R('aria-labelledby="pq-titre"','aria-labelledby="pq-titre"')
 # ---------- integrations ----------
 R('<p class="eyebrow center">Pour les commerçants · Intégrations</p>','<p class="eyebrow center">For merchants · Integrations</p>')
 R('<h2 class="sec-title">Votre boutique est déjà compatible.</h2>','<h2 class="sec-title">Your store is already compatible.</h2>')
