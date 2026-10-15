@@ -100,6 +100,78 @@ BYLINE = """<div class="gd-by"><div class="av" aria-hidden="true">CQ</div><p><b>
 
 GUIDES = [
  {
+  "slug": "avis-clients-ia",
+  "seo_title": "Avis clients et IA : être recommandé par ChatGPT et Gemini",
+  "seo_desc": "Vos clients demandent désormais à une IA quoi acheter. Pourquoi les avis clients décident si ChatGPT, Gemini ou Google recommandent vos produits.",
+  "title": "Avis clients et IA : pourquoi vos avis décident si ChatGPT recommande vos produits",
+  "desc": "Les acheteurs demandent de plus en plus à une IA quoi acheter. Ce que ces assistants regardent, pourquoi les avis clients comptent autant, et comment préparer vos fiches produits.",
+  "kicker": "Guide · IA et visibilité",
+  "lede": "« Quel est le meilleur coussin en lin pour un salon ? » Cette question, vos clients ne la tapent plus seulement dans Google : ils la posent à ChatGPT, à Gemini ou au mode IA de Google. Et pour répondre, ces assistants s’appuient sur ce que disent les clients. Une boutique sans avis a peu de chances d’être citée.",
+  "read": 7,
+  "body": """
+<nav class="gd-toc" aria-label="Sommaire"><p>Au sommaire</p><ol>
+<li><a href="#achat-ia">Les acheteurs passent par l’IA</a></li>
+<li><a href="#comment">Comment une IA choisit un produit</a></li>
+<li><a href="#pourquoi">Pourquoi les avis pèsent autant</a></li>
+<li><a href="#quels-avis">Les avis qui comptent pour une IA</a></li>
+<li><a href="#checklist">Préparer vos fiches produits</a></li>
+</ol></nav>
+
+<div class="gd-key"><p><b>L’essentiel :</b> une IA conversationnelle ne « voit » pas votre produit. Elle lit ce qui est écrit à son sujet. Des avis clients nombreux, détaillés et authentiques sur vos fiches produits lui donnent la matière pour vous recommander, et pour expliquer pourquoi.</p></div>
+
+<h2 id="achat-ia">1. Les acheteurs passent désormais par l’IA</h2>
+<p>Le changement est rapide. D’après le premier baromètre GEO de Valiuz, mené auprès de 13 grandes enseignes (Decathlon, Leroy Merlin, Boulanger, Kiabi…), <b>le trafic venu des IA génératives a été multiplié par 18</b> entre décembre 2024 et décembre 2025. Plus de 90 % de ce trafic vient de ChatGPT.</p>
+<p>Deux chiffres de ce baromètre comptent particulièrement pour une petite boutique :</p>
+<ul>
+<li><b>72 % de ces visiteurs sont nouveaux</b> : l’IA envoie des clients qui ne connaissaient pas l’enseigne ;</li>
+<li><b>90 % arrivent directement sur une fiche produit</b> : l’IA ne recommande pas un site, elle recommande un produit précis.</li>
+</ul>
+<p>Autrement dit, être cité par une IA, c’est être présenté à un acheteur qui a déjà décidé quoi chercher, au moment où il compare.</p>
+
+<h2 id="comment">2. Comment une IA choisit un produit à recommander</h2>
+<p>Chaque assistant a sa méthode, mais le principe est proche. L’IA découpe la question en sous-questions (prix, matière, usage, avis, disponibilité…), puis va chercher des réponses dans les pages qu’elle peut lire : fiches produits, comparatifs, forums, avis.</p>
+<p>OpenAI le dit clairement pour ChatGPT : les produits proposés sont choisis selon la pertinence pour la demande, à partir de données structurées fournies par les marchands et par des tiers. Les <b>résumés d’avis sont rédigés par le modèle à partir de sites publics</b>, pour faire ressortir ce que les acheteurs aiment et n’aiment pas. Et ces résultats produits ne sont pas des publicités : on ne peut pas y acheter sa place.</p>
+<p>Côté Google, le mode IA s’appuie sur le Shopping Graph, une immense base de fiches produits qui inclut les prix, la disponibilité et les avis.</p>
+
+<h2 id="pourquoi">3. Pourquoi les avis pèsent autant</h2>
+<p>Pour recommander un produit, une IA doit pouvoir dire <b>pour qui il est fait, ce qu’il vaut à l’usage et quels sont ses défauts</b>. Ces informations, la fiche produit les donne rarement. Les avis clients, si.</p>
+<ul>
+<li><b>Ils apportent des faits d’usage</b> : « tient bien au lavage », « taille petit », « idéal pour un petit balcon ». C’est exactement ce que l’acheteur demande à l’IA.</li>
+<li><b>Ils permettent de comparer</b> : sans avis, deux produits se ressemblent ; avec des avis, l’IA peut expliquer pourquoi choisir l’un plutôt que l’autre.</li>
+<li><b>Ils rassurent</b> : l’IA reprend souvent ce que « les clients soulignent ». Un produit sans avis ne lui donne rien à citer.</li>
+</ul>
+<p>Et l’effet ne se limite pas à l’IA. Une étude du Spiegel Research Center (Northwestern University) a montré qu’un produit avec <b>cinq avis</b> a une probabilité d’achat <b>270 % plus élevée</b> qu’un produit sans avis. Les premiers avis sont donc ceux qui comptent le plus.</p>
+
+<h2 id="quels-avis">4. Les avis qui comptent pour une IA</h2>
+<ul>
+<li><b>Des avis détaillés</b> plutôt qu’un simple « super produit ». Un avis qui raconte le contexte, la durée d’utilisation, les points forts et les limites est bien plus utile.</li>
+<li><b>Des avis visibles sur la fiche produit</b>, en texte lisible par un robot, pas seulement dans une fenêtre qui s’ouvre au clic.</li>
+<li><b>Des avis récents et réguliers</b>, qui montrent que le produit se vend et que l’information est à jour.</li>
+<li><b>Des avis authentiques</b>, positifs comme critiques. Une page remplie de cinq étoiles identiques paraît suspecte, aux acheteurs comme aux systèmes de détection. Et les faux avis sont lourdement sanctionnés : voir notre guide <a href="/guides/faux-avis-loi.html">Faux avis en ligne : ce que dit la loi</a>.</li>
+</ul>
+<p>Selon le Spiegel Research Center, la probabilité d’achat culmine d’ailleurs pour une note moyenne <b>entre 4,0 et 4,7</b> : une note parfaite inspire moins confiance qu’une note réaliste.</p>
+
+<h2 id="checklist">5. Préparer vos fiches produits pour l’IA</h2>
+<ol>
+<li><b>Obtenez vos premiers avis</b>, même cinq par produit : demandez-les à vos clients après la livraison, ou faites tester vos produits de façon transparente (voir <a href="/guides/premiers-avis-clients.html">notre guide</a>).</li>
+<li><b>Affichez les avis en texte</b> sur la fiche produit, avec le balisage de données structurées (Product, Review, AggregateRating) que lisent les moteurs.</li>
+<li><b>Décrivez précisément vos produits</b> : matière, dimensions, usage, entretien. L’IA croise la description et les avis.</li>
+<li><b>Répondez aux avis</b>, surtout aux critiques : vos réponses deviennent elles aussi une information publique.</li>
+<li><b>Restez transparent</b> : un avis obtenu avec un produit offert doit le dire. C’est la loi, et c’est aussi ce qui rend l’avis crédible.</li>
+</ol>
+<p>C’est ce que fait Avitime : des testeurs sélectionnés par Avitime utilisent réellement vos produits, puis publient sur vos fiches des avis argumentés (avantages, limites, durée d’utilisation), avec la mention « Produit offert pour test — Testeur Avitime vérifié ». <a href="/#google-ia">Voir comment les avis nourrissent Google et les IA</a>.</p>
+
+<h2 id="sources">Sources</h2>
+<ul class="gd-src">
+<li>OpenAI, <a href="https://help.openai.com/en/articles/11128490-improving-shopping-results-from-chatgpt-search" rel="noopener" target="_blank">« Improving shopping results from ChatGPT search »</a> (centre d’aide OpenAI)</li>
+<li>E-Commerce Nation, <a href="https://www.ecommerce-nation.fr/?p=125702" rel="noopener" target="_blank">« Baromètre GEO : le trafic e-commerce issu des IA génératives multiplié par 18 en un an »</a> (baromètre Valiuz, février 2026)</li>
+<li>Spiegel Research Center, Northwestern University, <a href="https://spiegel.medill.northwestern.edu/How-Online-Reviews-Influence-Sales" rel="noopener" target="_blank">« How Online Reviews Influence Sales »</a> (2017)</li>
+<li>Channable, <a href="https://www.channable.com/blog/google-shopping-ai-mode" rel="noopener" target="_blank">« Google AI Mode for Shopping »</a> (fonctionnement du mode IA et du Shopping Graph)</li>
+</ul>
+<p class="gd-note">Article d’information générale, à jour au 15 octobre 2026. Le fonctionnement des assistants IA évolue vite : les principes restent, les détails changent.</p>
+"""
+ },
+ {
   "slug": "faux-avis-loi",
   "seo_title": "Faux avis en ligne : ce que dit la loi en France (2026)",
   "seo_desc": "Faux avis, avis achetés, avis « vérifiés » sans vérification : ce que dit le Code de la consommation, les sanctions et les mentions obligatoires.",
