@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Avis clients PrestaShop : afficher de vrais avis vérifiés</title>
+<meta name="description" content="Comment afficher des avis clients sur PrestaShop : le module natif Commentaires produits, ses limites, les étoiles dans Google et les avis vérifiés.">
+<link rel="canonical" href="https://avitime.fr/guides/avis-clients-prestashop.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Avitime">
+<meta property="og:title" content="Avis clients PrestaShop : afficher de vrais avis vérifiés">
+<meta property="og:description" content="Comment afficher des avis clients sur PrestaShop : le module natif Commentaires produits, ses limites, les étoiles dans Google et les avis vérifiés.">
+<meta property="og:url" content="https://avitime.fr/guides/avis-clients-prestashop.html">
+<meta property="og:image" content="https://avitime.fr/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/icon-180.png">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css?v=ecab95069c">
+<style>
+.gd-hero{padding-block:clamp(56px,8vw,96px) 24px;text-align:left}
+.gd-wrap{max-width:760px;margin-inline:auto;padding-inline:22px}
+.gd-hero h1{font-size:clamp(34px,5vw,56px);letter-spacing:-.045em;line-height:1.05;margin:14px 0 0;text-wrap:balance}
+.gd-lede{font-size:clamp(18px,2vw,21px);color:var(--ink-2);line-height:1.5;margin:20px 0 0}
+.gd-by{display:flex;gap:14px;align-items:center;margin-top:28px;padding-top:20px;border-top:1px solid var(--line)}
+.gd-by .av{width:44px;height:44px;border-radius:50%;background:var(--bg-2);display:grid;place-items:center;font-weight:700;color:var(--hl-ink);box-shadow:0 0 0 2px var(--hl);flex:none}
+.gd-by p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.4}
+.gd-by b{color:var(--ink)}
+.gd-body{padding-block:8px 72px}
+.gd-body h2{font-size:clamp(24px,3vw,32px);letter-spacing:-.035em;line-height:1.12;margin:48px 0 14px}
+.gd-body h3{font-size:20px;letter-spacing:-.02em;margin:28px 0 8px}
+.gd-body p,.gd-body li{font-size:17.5px;line-height:1.65;color:var(--ink-2)}
+.gd-body p b,.gd-body li b{color:var(--ink)}
+.gd-body ul,.gd-body ol{padding-left:22px;display:grid;gap:6px}
+.gd-key{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--hl);border-radius:16px;padding:18px 22px;margin:26px 0}
+.gd-key p{margin:0}
+.gd-toc{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 22px;margin:8px 0 8px}
+.gd-toc p{margin:0 0 8px;font-family:var(--font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--hl-ink)}
+.gd-toc ol{margin:0;font-size:15.5px}
+.gd-toc a,.gd-body a{color:var(--hl-ink)}
+.gd-src{font-size:14px!important}
+.gd-src li{font-size:14px!important;line-height:1.5!important}
+.gd-note{font-size:13.5px!important;font-family:var(--font-mono);color:var(--ink-2)}
+.gd-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:36px}
+@media (max-width:700px){.gd-cards{grid-template-columns:minmax(0,1fr)}}
+.gd-card{display:block;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px;text-decoration:none;color:inherit;transition:border-color .2s ease}
+.gd-card:hover{border-color:var(--hl)}
+.gd-card h2{font-size:22px;letter-spacing:-.03em;margin:8px 0 8px;line-height:1.15}
+.gd-card p{margin:0;color:var(--ink-2);font-size:15.5px;line-height:1.5}
+.gd-related{border-top:1px solid var(--line);margin-top:48px;padding-top:28px}
+.gd-related h2{margin-top:0}
+.gd-related .gd-cards{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:16px}
+@media (max-width:860px){.gd-related .gd-cards{grid-template-columns:minmax(0,1fr)}}
+.gd-related .gd-card h2{font-size:18px;margin:6px 0 0}
+.gd-cta{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;background:var(--band);color:var(--band-ink);border-radius:22px;padding:22px 26px;margin-top:36px}
+.gd-cta p{margin:0;color:var(--band-ink)!important;font-size:16px!important;flex:1 1 280px}
+.gd-cta .btn{background:var(--hl);color:#0A0A0A!important;text-decoration:none}
+.gd-cta p b{color:var(--band-ink)!important}
+.gd-body .gd-card,.gd-body .gd-card h2{color:var(--ink);text-decoration:none}
+</style>
+</head>
+<body>
+<header class="nav" id="top-nav">
+<div class="wrap">
+<a class="brand" href="/"><img alt="Avitime, accueil" height="40" src="/assets/img/avitime-logo-96.png" width="168"/></a>
+<nav aria-label="Navigation principale" class="nav-links">
+<a href="/#concept">Le concept</a>
+<a href="/#commercants">Commerçants</a>
+<a href="/devenir-testeur">Testeurs</a>
+<a href="/guides/" aria-current="page">Guides</a>
+<a href="/a-propos.html">À propos</a>
+</nav>
+<div class="nav-actions">
+<a class="ghost" href="/espace-commercant">Espace commerçant</a>
+<a class="btn-sm" href="/devenir-testeur">Devenir testeur</a>
+</div>
+</div>
+</header>
+<main id="contenu">
+<article>
+<section class="gd-hero"><div class="gd-wrap">
+<p class="eyebrow"><a href="/guides/" style="color:inherit;text-decoration:none">Guides</a> · PrestaShop</p>
+<h1>Avis clients sur PrestaShop : comment afficher de vrais avis vérifiés</h1>
+<p class="gd-lede">PrestaShop sait afficher des avis clients, mais pas les obtenir à votre place. Voici ce que fait le module natif, ce qui lui manque, et comment remplir vos fiches produits d’avis réels et vérifiables.</p>
+<div class="gd-by"><div class="av" aria-hidden="true">CQ</div><p><b>Cyril Quémy</b>, fondateur d’Avitime<br>Publié le 15 octobre 2026 · lecture 6 min</p></div>
+</div></section>
+<section class="gd-body"><div class="gd-wrap">
+<nav class="gd-toc" aria-label="Sommaire"><p>Au sommaire</p><ol>
+<li><a href="#natif">Le module natif « Commentaires produits »</a></li>
+<li><a href="#limites">Ce qui lui manque</a></li>
+<li><a href="#google">Les étoiles dans Google</a></li>
+<li><a href="#obtenir">Obtenir vos premiers avis</a></li>
+<li><a href="#avitime">Avitime sur PrestaShop</a></li>
+</ol></nav>
+
+<div class="gd-key"><p><b>L’essentiel :</b> le module gratuit de PrestaShop suffit pour afficher et modérer des avis. Il ne sait ni les demander à vos clients, ni prouver qu’un avis vient d’un acheteur. C’est souvent là que les boutiques restent bloquées à zéro avis.</p></div>
+
+<h2 id="natif">1. Le module natif « Commentaires produits »</h2>
+<p>PrestaShop propose un module gratuit, <b>Commentaires produits</b> (productcomments). Selon la version de votre boutique, il est déjà installé ou se trouve dans le catalogue de modules. Il permet :</p>
+<ul>
+<li>une <b>note sur 5 étoiles</b>, avec des critères que vous définissez (qualité, rapport qualité-prix…) ;</li>
+<li>une <b>modération</b> : par défaut, un avis n’apparaît qu’après votre validation dans le back-office ;</li>
+<li>d’autoriser ou non les <b>visiteurs non connectés</b> à laisser un avis (désactivé par défaut) ;</li>
+<li>un vote « cet avis est-il utile ? ».</li>
+</ul>
+
+<h2 id="limites">2. Ce qui lui manque</h2>
+<ul>
+<li><b>Aucune demande d’avis automatique</b> après l’achat : il faut que le client pense à revenir sur la fiche produit. Résultat, peu d’avis.</li>
+<li><b>Pas de distinction entre acheteur et simple visiteur</b> : le module ne vérifie pas que l’auteur a acheté le produit, donc pas de badge « achat vérifié ».</li>
+<li><b>Pas de photos</b> dans les avis.</li>
+<li><b>Pas de balisage pour les étoiles dans Google</b> : cela dépend de votre thème ou d’un module SEO.</li>
+</ul>
+<p>Or la loi impose d’indiquer si vos avis sont contrôlés et comment (voir <a href="/guides/faux-avis-loi.html">Faux avis en ligne : ce que dit la loi</a>). Avec le module seul, vous ne pouvez pas affirmer que vos avis sont « vérifiés ».</p>
+
+<h2 id="google">3. Les étoiles dans les résultats Google</h2>
+<p>Pour que Google puisse afficher des étoiles sous vos produits, la fiche doit contenir des <b>données structurées</b> (Product, avec Review ou AggregateRating) qui décrivent les avis réellement visibles sur la page. Vérifiez si votre thème les génère, sinon ajoutez-les avec un module SEO. Google reste libre de les afficher ou non.</p>
+<p>Ces mêmes données aident les assistants IA à comprendre vos produits : voir <a href="/guides/avis-clients-ia.html">Avis clients et IA</a>.</p>
+
+<h2 id="obtenir">4. Obtenir vos premiers avis</h2>
+<ol>
+<li><b>Demandez un avis par e-mail</b> à chaque client, quelques jours après la livraison, avec un lien direct vers la fiche produit.</li>
+<li><b>Répondez aux avis</b>, y compris aux critiques (voir <a href="/guides/repondre-avis-negatifs.html">Répondre aux avis négatifs</a>).</li>
+<li><b>Faites tester vos produits</b> en toute transparence pour amorcer les premiers avis (voir <a href="/guides/premiers-avis-clients.html">Obtenir ses premiers avis clients</a>).</li>
+</ol>
+
+<h2 id="avitime">5. Avitime sur PrestaShop</h2>
+<p>Avitime a un <b>module PrestaShop</b> (versions 1.7.7 à 9). Des testeurs sélectionnés par Avitime commandent vos produits à 0 € : la commande arrive dans votre back-office avec l’état « Testeur Avitime », vous l’expédiez comme d’habitude, puis le testeur publie un avis argumenté avec la mention « Produit offert pour test — Testeur Avitime vérifié ». Chaque avis est relié à une vraie commande et à une livraison. <a href="/#commercants">Voir l’offre commerçants</a>.</p>
+
+<h2 id="sources">Sources</h2>
+<ul class="gd-src">
+<li>PrestaShop, module <a href="https://github.com/PrestaShop/productcomments" rel="noopener" target="_blank">productcomments</a> (dépôt officiel)</li>
+<li>MyPresta, <a href="https://mypresta.rocks/blog/product-reviews-prestashop-built-in-vs-third-party" rel="noopener" target="_blank">« Product reviews in PrestaShop: built-in vs third-party »</a></li>
+<li>Google Search Central, <a href="https://developers.google.com/search/docs/appearance/structured-data/review-snippet" rel="noopener" target="_blank">données structurées des extraits d’avis</a></li>
+</ul>
+<p class="gd-note">Article d’information générale, à jour au 15 octobre 2026. PrestaShop est une marque de son propriétaire ; Avitime est un service indépendant.</p>
+<div class="gd-cta"><p><b>Vos produits méritent de vrais avis.</b> Avitime les fait tester par de vrais consommateurs, sur PrestaShop, WooCommerce et Shopify.</p><a class="btn" href="/#commercants">Découvrir l’offre commerçants</a></div><aside class="gd-related" aria-label="À lire aussi"><h2>À lire aussi</h2><div class="gd-cards"><a class="gd-card" href="/guides/avis-clients-woocommerce.html"><p class="eyebrow">Guide · WooCommerce</p><h2>Avis clients sur WooCommerce : les bons réglages et les avis vérifiés</h2></a><a class="gd-card" href="/guides/combien-avis-clients.html"><p class="eyebrow">Guide · E-commerce</p><h2>Combien d’avis clients faut-il pour vendre ? Les chiffres qui comptent</h2></a><a class="gd-card" href="/guides/avis-clients-ia.html"><p class="eyebrow">Guide · IA et visibilité</p><h2>Avis clients et IA : pourquoi vos avis décident si ChatGPT recommande vos produits</h2></a></div><p style="margin-top:18px"><a href="/guides/">Tous les guides</a></p></aside></div></section>
+</article>
+</main>
+<footer>
+<div class="wrap">
+<span>Avitime · En France, sur PrestaShop, WooCommerce et Shopify.</span>
+<nav aria-label="Pages légales"><a href="/a-propos.html">À propos</a><a href="/guides/">Guides</a><a href="/a-propos.html#methode">Méthode de vérification</a><a href="/mentions-legales.html">Mentions légales</a><a href="/cgv.html">CGV commerçants</a><a href="/cgu-testeurs.html">CGU testeurs</a><a href="/confidentialite.html">Confidentialité</a></nav>
+<nav aria-label="Réseaux sociaux"><a href="https://www.instagram.com/avitime_fr/" rel="me noopener" target="_blank">Instagram</a><a href="https://www.tiktok.com/@avitime_fr" rel="me noopener" target="_blank">TikTok</a></nav>
+</div>
+</footer>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Avis clients sur PrestaShop : comment afficher de vrais avis vérifiés", "description": "Le module natif « Commentaires produits », ce qu’il fait et ce qu’il ne fait pas, les étoiles dans Google, et comment obtenir des avis vérifiés sur une boutique PrestaShop.", "inLanguage": "fr-FR", "datePublished": "2026-10-15", "dateModified": "2026-10-15", "author": {"@type": "Person", "name": "Cyril Quémy", "jobTitle": "Fondateur d’Avitime", "url": "https://avitime.fr/a-propos.html"}, "publisher": {"@type": "Organization", "name": "Avitime", "url": "https://avitime.fr/", "logo": {"@type": "ImageObject", "url": "https://avitime.fr/assets/img/icon-512.png"}, "sameAs": ["https://www.instagram.com/avitime_fr/", "https://www.tiktok.com/@avitime_fr"]}, "mainEntityOfPage": "https://avitime.fr/guides/avis-clients-prestashop.html", "image": "https://avitime.fr/assets/img/og-image.jpg"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://avitime.fr/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://avitime.fr/guides/"}, {"@type": "ListItem", "position": 3, "name": "Avis clients sur PrestaShop : comment afficher de vrais avis vérifiés", "item": "https://avitime.fr/guides/avis-clients-prestashop.html"}]}]}</script>
+<script src="/assets/js/main.js?v=19d91e0a16" defer></script>
+</body>
+</html>
