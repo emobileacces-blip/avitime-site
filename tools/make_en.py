@@ -289,10 +289,11 @@ s=s[:a]+'<div class="faq">\n'+''.join(f'<details><summary>{q}</summary><p>{x}</p
 # ---------- final / footer ----------
 R('<h2 class="sec-title">Lancez vos premiers tests, ou devenez testeur.</h2>\n<div class="ctas">\n<a class="btn" href="/espace-commercant">Espace commerçant</a>\n<a class="link" href="/devenir-testeur">Devenir testeur</a>',
   f'<h2 class="sec-title">Launch your first tests, or become a tester.</h2>\n<div class="ctas">\n<a class="btn" href="{MERCH}">Merchant account</a>\n<a class="link" href="{TEST}">Become a tester</a>')
-R('<span>Avitime · En France, sur PrestaShop, WooCommerce et Shopify.</span>','<span>Avitime · Verified tester reviews for PrestaShop, WooCommerce and Shopify stores.</span>')
-R('<nav aria-label="Pages légales"><a href="a-propos.html">À propos</a><a href="a-propos.html#methode">Méthode de vérification</a><a href="mentions-legales.html">Mentions légales</a><a href="cgv.html">CGV commerçants</a><a href="cgu-testeurs.html">CGU testeurs</a><a href="confidentialite.html">Confidentialité</a></nav>',
-  '<nav aria-label="Legal pages"><a href="terms.html">Merchant terms</a><a href="tester-terms.html">Tester terms</a><a href="privacy.html">Privacy</a><a href="../mentions-legales.html" hreflang="fr" lang="fr">Mentions légales</a><a href="../a-propos.html" hreflang="fr">About (FR)</a><a href="/" hreflang="fr" lang="fr">Version française</a></nav>')
 R('<main class="view" id="contenu">','<main class="view" id="content">')
+import os as _os
+sys.path.insert(0,_os.path.dirname(_os.path.abspath(__file__)))
+from site_footer import replace_footer
+s=replace_footer(s,'en')
 open(DST,'w').write(s)
 print('MISSING:',len(missing)); [print(' -',m) for m in missing]
 # leftover French detection

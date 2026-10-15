@@ -1,5 +1,7 @@
 """Guides signés (E-E-A-T) : /guides/ — générés depuis ce script (même en-tête et pied de page que le site)."""
-import json, os, html
+import json, os, html, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from site_footer import footer
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public")
 OUT = os.path.join(ROOT, "guides"); os.makedirs(OUT, exist_ok=True)
 IG, TT = "https://www.instagram.com/avitime_fr/", "https://www.tiktok.com/@avitime_fr"
@@ -29,7 +31,7 @@ HEAD = """<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=ecab95069c">
+<link rel="stylesheet" href="/assets/css/style.css?v=d602f768bd">
 <style>
 .gd-hero{{padding-block:clamp(56px,8vw,96px) 24px;text-align:left}}
 .gd-wrap{{max-width:760px;margin-inline:auto;padding-inline:22px}}
@@ -93,13 +95,7 @@ HEAD = """<!doctype html>
 """
 
 FOOT = f"""</main>
-<footer>
-<div class="wrap">
-<span>Avitime · En France, sur PrestaShop, WooCommerce et Shopify.</span>
-<nav aria-label="Pages légales"><a href="/a-propos.html">À propos</a><a href="/guides/">Guides</a><a href="/a-propos.html#methode">Méthode de vérification</a><a href="/mentions-legales.html">Mentions légales</a><a href="/cgv.html">CGV commerçants</a><a href="/cgu-testeurs.html">CGU testeurs</a><a href="/confidentialite.html">Confidentialité</a></nav>
-<nav aria-label="Réseaux sociaux"><a href="{IG}" rel="me noopener" target="_blank">Instagram</a><a href="{TT}" rel="me noopener" target="_blank">TikTok</a></nav>
-</div>
-</footer>
+{footer("fr")}
 <script type="application/ld+json">{{ld}}</script>
 <script src="/assets/js/main.js?v=19d91e0a16" defer></script>
 </body>
