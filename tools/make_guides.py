@@ -101,6 +101,8 @@ BYLINE = """<div class="gd-by"><div class="av" aria-hidden="true">CQ</div><p><b>
 GUIDES = [
  {
   "slug": "faux-avis-loi",
+  "seo_title": "Faux avis en ligne : ce que dit la loi en France (2026)",
+  "seo_desc": "Faux avis, avis achetés, avis « vérifiés » sans vérification : ce que dit le Code de la consommation, les sanctions et les mentions obligatoires.",
   "title": "Faux avis en ligne : ce que dit la loi en France (2026)",
   "desc": "Faux avis, avis achetés, avis « vérifiés » sans vérification : ce que prévoit le Code de la consommation, les sanctions encourues et les informations obligatoires pour une boutique qui publie des avis.",
   "kicker": "Guide · Réglementation",
@@ -167,6 +169,8 @@ GUIDES = [
  },
  {
   "slug": "premiers-avis-clients",
+  "seo_title": "Premiers avis clients : comment les obtenir sans tricher",
+  "seo_desc": "Boutique en ligne sans avis ? Les méthodes honnêtes pour obtenir vos premiers avis clients : demande après livraison, tests produits transparents.",
   "title": "Comment obtenir ses premiers avis clients quand on lance sa boutique",
   "desc": "Boutique en ligne sans avis ? Les méthodes honnêtes pour obtenir vos premiers avis clients : demande après livraison, tests produits transparents, réponses aux avis, et les erreurs qui coûtent cher.",
   "kicker": "Guide · E-commerce",
@@ -236,7 +240,7 @@ def page_guide(g):
             {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://avitime.fr/"},
             {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://avitime.fr/guides/"},
             {"@type": "ListItem", "position": 3, "name": g["title"], "item": f"https://avitime.fr{path}"}]}]}
-    out = HEAD.format(title=html.escape(g["title"]), desc=html.escape(g["desc"]), path=path, ogtype="article", guides_current=' aria-current="page"')
+    out = HEAD.format(title=html.escape(g["seo_title"]), desc=html.escape(g["seo_desc"]), path=path, ogtype="article", guides_current=' aria-current="page"')
     out += (f'<article>\n<section class="gd-hero"><div class="gd-wrap">\n<p class="eyebrow"><a href="/guides/" style="color:inherit;text-decoration:none">Guides</a> · {g["kicker"].split("· ")[1]}</p>\n'
             f'<h1>{g["title"]}</h1>\n<p class="gd-lede">{g["lede"]}</p>\n'
             + BYLINE.format(pub="15 octobre 2026", read=g["read"]) + '\n</div></section>\n'
@@ -248,7 +252,7 @@ def page_index():
     path = "/guides/"
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Guides Avitime", "inLanguage": "fr-FR",
           "url": "https://avitime.fr/guides/", "hasPart": [{"@type": "Article", "headline": g["title"], "url": f"https://avitime.fr/guides/{g['slug']}.html", "author": AUTHOR} for g in GUIDES]}
-    out = HEAD.format(title="Guides Avitime : avis clients, tests produits et réglementation", desc="Les guides d’Avitime pour les boutiques en ligne : obtenir ses premiers avis clients, comprendre la loi sur les faux avis, publier des avis transparents.", path=path, ogtype="website", guides_current=' aria-current="page"')
+    out = HEAD.format(title="Guides Avitime : avis clients et réglementation", desc="Guides pour les boutiques en ligne : obtenir ses premiers avis clients, comprendre la loi sur les faux avis et publier des avis transparents.", path=path, ogtype="website", guides_current=' aria-current="page"')
     cards = "".join(f'<a class="gd-card" href="/guides/{g["slug"]}.html"><p class="eyebrow">{g["kicker"]}</p><h2>{g["title"]}</h2><p>{g["desc"]}</p></a>' for g in GUIDES)
     out += ('<section class="gd-hero"><div class="gd-wrap" style="max-width:960px">\n<p class="eyebrow">Guides</p>\n'
             '<h1>Avis clients : nos guides pour les boutiques en ligne</h1>\n'
