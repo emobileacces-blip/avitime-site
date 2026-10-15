@@ -79,6 +79,9 @@
 .tt-safe p{margin:0;color:var(--ink-2);font-size:15.5px;line-height:1.55}
 .final .tt-pills li{background:transparent;border-color:var(--band-line);color:var(--band-mute)}
 .final .tt-pills li b{color:var(--band-ink)}
+.tt-video{max-width:960px;margin:0 auto}
+.tt-video video{width:100%;aspect-ratio:16/9;display:block;border-radius:24px;background:#0A0A0A;box-shadow:0 40px 90px -50px rgba(0,0,0,.6)}
+.tt-video figcaption{font-size:13px;color:var(--ink-2);text-align:center;margin-top:12px;font-family:var(--font-mono)}
 </style>
 </head>
 <body>
@@ -114,7 +117,7 @@
 <p class="lede">Des boutiques en ligne font tester leurs produits. Vous candidatez, Avitime sélectionne, vous recevez le produit gratuitement, vous l’utilisez, puis vous publiez un avis honnête. Voici le guide complet.</p>
 <div class="ctas">
 <a class="btn" href="https://app.avitime.fr/inscription">M’inscrire gratuitement</a>
-<a class="link" href="#guide">Lire le guide en 7 étapes</a>
+<a class="link" href="#video">Voir le tuto en vidéo</a>
 </div>
 <ul class="tt-pills" aria-label="L’essentiel">
 <li><b>0&nbsp;€</b> d’inscription</li>
@@ -123,6 +126,18 @@
 <li>Résidant en <b>France</b></li>
 <li><b>100 places</b> pour cette vague</li>
 </ul>
+</div>
+</section>
+
+<section class="sec" id="video" style="padding-top:0;padding-bottom:clamp(56px,7vw,88px)">
+<div class="wrap">
+<figure class="tt-video">
+<video controls playsinline preload="none" poster="assets/video/tuto-testeur-poster.jpg" aria-label="Vidéo : comment devenir testeur Avitime, le tuto en 7 étapes (45 secondes)">
+<source src="assets/video/tuto-testeur.mp4" type="video/mp4">
+<track kind="subtitles" src="assets/video/tuto-testeur.fr.vtt" srclang="fr" label="Français" default>
+</video>
+<figcaption>Le tuto en vidéo · 45 secondes · sous-titres disponibles</figcaption>
+</figure>
 </div>
 </section>
 
@@ -406,6 +421,7 @@
 </footer>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
+{"@type":"VideoObject","name":"Comment devenir testeur Avitime : le tuto en 7 étapes","description":"Le parcours du testeur Avitime en 45 secondes, avec les vraies captures de l’espace testeur : inscription, profil, candidature, sélection, commande à 0 €, test et avis.","thumbnailUrl":"https://avitime.fr/assets/video/tuto-testeur-poster.jpg","contentUrl":"https://avitime.fr/assets/video/tuto-testeur.mp4","uploadDate":"2026-10-15T18:00:00+02:00","duration":"PT45S","inLanguage":"fr-FR"},
 {"@type":"HowTo","name":"Devenir testeur Avitime","description":"Le parcours complet du testeur Avitime : inscription, profil, candidature, sélection, commande à 0 €, test et avis.","inLanguage":"fr-FR","totalTime":"P30D","estimatedCost":{"@type":"MonetaryAmount","currency":"EUR","value":"0"},
 "step":[
 {"@type":"HowToStep","position":1,"name":"Créez votre compte testeur","text":"Sur www.avitime.fr, cliquez sur Devenir testeur, choisissez Testeur, indiquez prénom, nom, e-mail et mot de passe, acceptez le règlement, puis cliquez sur Créer mon compte.","url":"https://avitime.fr/devenir-testeur#etape-1","image":"https://avitime.fr/assets/img/tuto/etape-1-inscription.webp"},
