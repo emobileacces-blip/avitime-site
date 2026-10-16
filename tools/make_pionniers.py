@@ -1,7 +1,7 @@
 """Page « Programme pionniers » : /pionniers (FR). Générée par ce script ; ne pas éditer le HTML à la main.
 
-Règles : aucun prix public (le tarif pionnier est donné en privé), contrepartie affichée, et jamais d'avis demandé
-en échange du tarif sur Trustpilot, Google, l'App Store Shopify ou WordPress.org.
+Règles : aucun prix public (seul le « premier mois offert » est affiché), contrepartie affichée, et jamais d'avis demandé
+en échange du mois offert sur Trustpilot, Google, l'App Store Shopify ou WordPress.org.
 """
 import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -9,9 +9,9 @@ from make_guides import HEAD, FOOT, AUTHOR, PUBLISHER
 
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public")
 PATH = "/pionniers"
-TITLE = "Programme pionniers Avitime : 10 boutiques pour lancer les premiers tests"
+TITLE = "Programme pionniers Avitime : 1er mois offert aux 10 premières boutiques"
 DESC = ("Avitime démarre et cherche 10 boutiques PrestaShop, WooCommerce ou Shopify pour ses premières campagnes de test : "
-        "tarif pionnier, accompagnement par le fondateur, étude de cas validée par vous.")
+        "premier mois d’abonnement offert, accompagnement par le fondateur, étude de cas validée par vous.")
 APPLY = "/contact?profil=boutique&sujet=Programme%20pionniers#formulaire"
 
 CSS = """<style>
@@ -36,7 +36,7 @@ BODY = f"""<article>
 <section class="gd-hero"><div class="gd-wrap">
 <p class="eyebrow">Programme pionniers</p>
 <h1>10 boutiques pour lancer les premiers tests Avitime</h1>
-<p class="gd-lede">Avitime démarre. Nous cherchons dix boutiques en ligne pour mener les premières campagnes de test avec nous : un tarif pionnier, un accompagnement personnel, et de vrais avis sur vos fiches produit.</p>
+<p class="gd-lede">Avitime démarre. Nous cherchons dix boutiques en ligne pour mener les premières campagnes de test avec nous : le premier mois d’abonnement offert, un accompagnement personnel, et de vrais avis sur vos fiches produit.</p>
 <div class="gd-by"><div class="av" aria-hidden="true">CQ</div><p><b>Cyril Quémy</b>, fondateur d’Avitime<br>Je réponds moi-même à chaque candidature.</p></div>
 </div></section>
 <section class="gd-body"><div class="gd-wrap">
@@ -44,7 +44,7 @@ BODY = f"""<article>
 <h2>L’échange, en clair</h2>
 <div class="pi-cols">
 <div class="pi-col"><h3>Ce que vous recevez</h3><ul>
-<li><b>Votre première campagne à tarif pionnier.</b> Les conditions vous sont envoyées après notre échange.</li>
+<li><b>Votre premier mois d’abonnement offert</b>, pour lancer votre première campagne sans rien payer. Selon le déroulé, il peut être prolongé d’un mois, au cas par cas.</li>
 <li><b>Un accompagnement par le fondateur :</b> installation du module ou de l’extension, choix du produit, suivi des testeurs.</li>
 <li><b>Vos premiers avis vérifiés</b>, publiés sur vos fiches avec la mention « Produit offert pour test ».</li>
 </ul></div>
@@ -53,8 +53,8 @@ BODY = f"""<article>
 <li><b>Votre accord pour une étude de cas</b> sur avitime.fr, avec vos vrais chiffres. Vous la relisez et la validez avant publication, ou vous refusez.</li>
 </ul></div>
 </div>
-<div class="gd-key pi-never"><p><b>Ce que nous ne vous demanderons jamais :</b> un avis sur Avitime, positif ou non, sur Trustpilot, Google, l’App Store Shopify ou WordPress.org. Le tarif pionnier n’en dépend pas. Plus tard, nous vous proposerons de donner votre avis, comme à tous nos clients, avec le même message neutre : libre à vous de le faire ou non, et de dire ce que vous pensez.</p></div>
-<p>Pourquoi tant de précautions ? Parce qu’un avis obtenu contre une remise n’est plus un avis libre, et que les plateformes d’avis l’interdisent. C’est la règle que nous appliquons à nos testeurs : la contrepartie est toujours affichée, et elle ne dépend jamais de la note. Nous l’appliquons aussi à nous-mêmes.</p>
+<div class="gd-key pi-never"><p><b>Ce que nous ne vous demanderons jamais :</b> un avis sur Avitime, positif ou non, sur Trustpilot, Google, l’App Store Shopify ou WordPress.org. Le mois offert n’en dépend pas. Plus tard, nous vous proposerons de donner votre avis, comme à tous nos clients, avec le même message neutre : libre à vous de le faire ou non, et de dire ce que vous pensez.</p></div>
+<p>Pourquoi tant de précautions ? Parce qu’un avis obtenu contre un mois offert n’est plus un avis libre, et que les plateformes d’avis l’interdisent. C’est la règle que nous appliquons à nos testeurs : la contrepartie est toujours affichée, et elle ne dépend jamais de la note. Nous l’appliquons aussi à nous-mêmes.</p>
 
 <h2>Qui peut candidater</h2>
 <ul>
@@ -67,7 +67,7 @@ BODY = f"""<article>
 <h2>Comment ça se passe</h2>
 <ol class="pi-steps">
 <li><b>Vous candidatez</b>Deux minutes par le formulaire de contact : votre boutique et le produit que vous aimeriez faire tester.</li>
-<li><b>On échange 15 minutes</b>Je vous explique le fonctionnement et le tarif pionnier. Vous décidez ensuite, sans engagement.</li>
+<li><b>On échange 15 minutes</b>Je vous explique le fonctionnement et je vous donne votre code « premier mois offert ». Vous décidez ensuite, sans engagement.</li>
 <li><b>On lance votre campagne</b>Installation du module, choix du produit, sélection des testeurs par Avitime.</li>
 <li><b>Vous recevez vos avis</b>Les testeurs publient leurs avis sur vos fiches. Puis on prépare ensemble votre étude de cas.</li>
 </ol>
