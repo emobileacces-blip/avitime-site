@@ -144,6 +144,8 @@ JS = """<script>
   if(q.get('%(sent_q)s')==='1'&&sent){sent.classList.add('on');f.hidden=true;var a=document.getElementById('ct-alert');if(a)a.hidden=true;}
   var err=q.get('erreur'), msgs=%(errors)s, box=document.getElementById('ct-alert');
   if(err&&msgs[err]&&box){box.textContent=msgs[err];box.classList.add('on');}
+  var pre=q.get('sujet'), si=f.querySelector('input[name=sujet]'); if(pre&&si&&!si.value) si.value=pre.slice(0,150);
+  var pr=q.get('profil'); if(pr&&/^[a-z]+$/.test(pr)){var r=f.querySelector('input[name=profil][value="'+pr+'"]'); if(r) r.checked=true;}
   var shop=document.getElementById('ct-shop');
   function sync(){var v=(f.querySelector('input[name=profil]:checked')||{}).value; if(shop) shop.hidden=(v!=='boutique');}
   f.addEventListener('change',function(e){if(e.target.name==='profil')sync();}); sync();

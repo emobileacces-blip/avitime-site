@@ -29,7 +29,7 @@ T = {
         pitch="De vrais avis clients, écrits par de vrais testeurs. Chaque avis porte la mention « Produit offert pour test ».",
         compat="Compatible avec", col1="Avitime", col2="Informations légales", col3="Suivez-nous",
         links1=[("/a-propos.html", "À propos", ""), ("/a-propos.html#methode", "Méthode de vérification", ""),
-                ("/guides/", "Guides", ""), ("/contact", "Contact", ""), ("/devenir-testeur", "Devenir testeur", ""),
+                ("/guides/", "Guides", ""), ("/pionniers", "Programme pionniers", ""), ("/contact", "Contact", ""), ("/devenir-testeur", "Devenir testeur", ""),
                 ("/espace-commercant", "Espace commerçant", "")],
         links2=[("/mentions-legales.html", "Mentions légales", ""), ("/cgv.html", "CGV commerçants", ""),
                 ("/cgu-testeurs.html", "CGU testeurs", ""), ("/confidentialite.html", "Confidentialité", "")],

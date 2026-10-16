@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://avitime.fr/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://avitime.fr/</loc><lastmod>2026-10-16</lastmod></url>
   <url><loc>https://avitime.fr/en/</loc><lastmod>2026-10-12</lastmod></url>
   <url><loc>https://avitime.fr/devenir-testeur</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://avitime.fr/a-propos.html</loc><lastmod>2026-10-11</lastmod></url>
@@ -25,4 +25,5 @@
   <url><loc>https://avitime.fr/en/contact</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://avitime.fr/guides/comparatif-solutions-avis-clients.html</loc><lastmod>2026-10-16</lastmod></url>
   <url><loc>https://avitime.fr/guides/statistiques-avis-clients.html</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://avitime.fr/pionniers</loc><lastmod>2026-10-16</lastmod></url>
 </urlset>

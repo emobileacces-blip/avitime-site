@@ -64,6 +64,12 @@
 .gd-cta .btn{background:var(--hl);color:#0A0A0A!important;text-decoration:none}
 .gd-cta p b{color:var(--band-ink)!important}
 .gd-body .gd-card,.gd-body .gd-card h2{color:var(--ink);text-decoration:none}
+.gd-tbl{margin:18px 0 8px;border:1px solid var(--line);border-radius:18px;overflow-x:auto}
+.gd-tbl table{min-width:640px}
+.gd-tbl table{font-size:15px}
+.gd-tbl th{text-align:left;background:var(--bg-2);padding:12px 14px;font-size:13.5px;letter-spacing:.01em}
+.gd-tbl td{padding:12px 14px;border-top:1px solid var(--line);vertical-align:top;color:var(--ink-2);line-height:1.45}
+.gd-tbl td:first-child{color:var(--ink);font-weight:600}
 </style>
 <style>
 .ct-hero{padding-block:clamp(56px,8vw,96px) 8px}
@@ -216,6 +222,8 @@
   if(q.get('sent')==='1'&&sent){sent.classList.add('on');f.hidden=true;var a=document.getElementById('ct-alert');if(a)a.hidden=true;}
   var err=q.get('erreur'), msgs={"invalide": "Some information is missing or the email address is not valid. Please check the form and try again.", "limite": "You sent several messages in a short time. Please try again in an hour, or email us at contact@avitime.fr.", "serveur": "Your message could not be sent because of a technical problem. Please try again, or email us at contact@avitime.fr."}, box=document.getElementById('ct-alert');
   if(err&&msgs[err]&&box){box.textContent=msgs[err];box.classList.add('on');}
+  var pre=q.get('sujet'), si=f.querySelector('input[name=sujet]'); if(pre&&si&&!si.value) si.value=pre.slice(0,150);
+  var pr=q.get('profil'); if(pr&&/^[a-z]+$/.test(pr)){var r=f.querySelector('input[name=profil][value="'+pr+'"]'); if(r) r.checked=true;}
   var shop=document.getElementById('ct-shop');
   function sync(){var v=(f.querySelector('input[name=profil]:checked')||{}).value; if(shop) shop.hidden=(v!=='boutique');}
   f.addEventListener('change',function(e){if(e.target.name==='profil')sync();}); sync();
