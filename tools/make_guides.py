@@ -1,12 +1,12 @@
 """Guides signés (E-E-A-T) : /guides/ — générés depuis ce script (même en-tête et pied de page que le site)."""
 import json, os, html, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from site_footer import footer
+from site_footer import footer, SAME_AS
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public")
 OUT = os.path.join(ROOT, "guides"); os.makedirs(OUT, exist_ok=True)
 IG, TT = "https://www.instagram.com/avitime_fr/", "https://www.tiktok.com/@avitime_fr"
 AUTHOR = {"@type": "Person", "name": "Cyril Quémy", "jobTitle": "Fondateur d’Avitime", "url": "https://avitime.fr/a-propos.html"}
-PUBLISHER = {"@type": "Organization", "name": "Avitime", "url": "https://avitime.fr/", "logo": {"@type": "ImageObject", "url": "https://avitime.fr/assets/img/icon-512.png"}, "sameAs": [IG, TT]}
+PUBLISHER = {"@type": "Organization", "name": "Avitime", "url": "https://avitime.fr/", "logo": {"@type": "ImageObject", "url": "https://avitime.fr/assets/img/icon-512.png"}, "sameAs": SAME_AS}
 
 HEAD = """<!doctype html>
 <html lang="fr">

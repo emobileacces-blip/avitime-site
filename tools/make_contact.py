@@ -6,7 +6,7 @@ Pour un test local : CONTACT_ACTION=http://localhost:3999/api/contact python3 to
 import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from make_guides import HEAD
-from site_footer import footer, ICON_IG, ICON_TT, ICON_MAIL, IG, TT
+from site_footer import footer, ICON_IG, ICON_TT, ICON_MAIL, IG, TT, SAME_AS
 
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public")
 ACTION = os.environ.get("CONTACT_ACTION", "https://app.avitime.fr/api/contact")
@@ -194,7 +194,7 @@ def page(lang):
     ld = {"@context": "https://schema.org", "@type": "ContactPage", "name": t["ld_name"], "url": "https://avitime.fr" + t["path"],
           "inLanguage": "fr-FR" if lang == "fr" else "en",
           "mainEntity": {"@type": "Organization", "name": "Avitime", "url": "https://avitime.fr/",
-                         "legalName": "SPARKMOTION AGENCY LTD", "email": "contact@avitime.fr", "sameAs": [IG, TT],
+                         "legalName": "SPARKMOTION AGENCY LTD", "email": "contact@avitime.fr", "sameAs": SAME_AS,
                          "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "email": "contact@avitime.fr",
                                           "availableLanguage": ["French", "English"]}}}
     body = f"""<section class="ct-hero"><div class="ct-wrap">
