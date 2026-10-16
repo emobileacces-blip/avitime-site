@@ -10,10 +10,11 @@ import sys
 IG = "https://www.instagram.com/avitime_fr/"
 TT = "https://www.tiktok.com/@avitime_fr"
 LI = "https://www.linkedin.com/company/avitime/"
+FB = "https://www.facebook.com/profile.php?id=61595261199682"
 YT = "https://www.youtube.com/@avitime_fr"
 TP = "https://fr.trustpilot.com/review/avitime.fr"
 # Profils officiels de la marque (balisage schema.org « sameAs »).
-SAME_AS = [IG, TT, LI, YT, TP]
+SAME_AS = [IG, TT, FB, LI, YT, TP]
 
 ICON_IG = ('<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" '
            'fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" '
@@ -24,6 +25,8 @@ ICON_TT = ('<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path 
            '-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 '
            '4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 '
            '2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>')
+ICON_FB = ('<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 21.5v-8h2.7l.4-3.2h-3.1V8.3'
+           'c0-.9.3-1.6 1.6-1.6h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.4v3.2h2.7v8z"/></svg>')
 ICON_LI = ('<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 '
            '2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.5 4.77 5.75v5.7h-4v-5.05c0-1.2'
            '-.02-2.75-1.7-2.75-1.7 0-1.95 1.3-1.95 2.66v5.14h-4z"/></svg>')
@@ -45,7 +48,7 @@ T = {
         links2=[("/mentions-legales.html", "Mentions légales", ""), ("/cgv.html", "CGV commerçants", ""),
                 ("/cgu-testeurs.html", "CGU testeurs", ""), ("/confidentialite.html", "Confidentialité", "")],
         social_label="Réseaux sociaux", ig_aria="Avitime sur Instagram (@avitime_fr)", tt_aria="Avitime sur TikTok (@avitime_fr)",
-        li_aria="Avitime sur LinkedIn", yt_aria="Avitime sur YouTube (@avitime_fr)",
+        fb_aria="Avitime sur Facebook", li_aria="Avitime sur LinkedIn", yt_aria="Avitime sur YouTube (@avitime_fr)",
         legal="© 2026 Avitime · édité par SPARKMOTION AGENCY LTD",
         other=("/en/", "English version", 'hreflang="en" lang="en"'),
     ),
@@ -59,7 +62,7 @@ T = {
         links2=[("/en/terms.html", "Merchant terms", ""), ("/en/tester-terms.html", "Tester terms", ""),
                 ("/en/privacy.html", "Privacy", ""), ("/mentions-legales.html", "Mentions légales", 'hreflang="fr" lang="fr"')],
         social_label="Social media", ig_aria="Avitime on Instagram (@avitime_fr)", tt_aria="Avitime on TikTok (@avitime_fr)",
-        li_aria="Avitime on LinkedIn", yt_aria="Avitime on YouTube (@avitime_fr)",
+        fb_aria="Avitime on Facebook", li_aria="Avitime on LinkedIn", yt_aria="Avitime on YouTube (@avitime_fr)",
         legal="© 2026 Avitime · published by SPARKMOTION AGENCY LTD",
         other=("/", "Version française", 'hreflang="fr" lang="fr"'),
     ),
@@ -91,6 +94,7 @@ def footer(lang="fr"):
 <ul class="foot-social" aria-label="{t['social_label']}">
 <li><a class="soc" href="{IG}" rel="me noopener" target="_blank" aria-label="{t['ig_aria']}">{ICON_IG}<span>Instagram</span></a></li>
 <li><a class="soc" href="{TT}" rel="me noopener" target="_blank" aria-label="{t['tt_aria']}">{ICON_TT}<span>TikTok</span></a></li>
+<li><a class="soc" href="{FB}" rel="me noopener" target="_blank" aria-label="{t['fb_aria']}">{ICON_FB}<span>Facebook</span></a></li>
 <li><a class="soc" href="{LI}" rel="me noopener" target="_blank" aria-label="{t['li_aria']}">{ICON_LI}<span>LinkedIn</span></a></li>
 <li><a class="soc" href="{YT}" rel="me noopener" target="_blank" aria-label="{t['yt_aria']}">{ICON_YT}<span>YouTube</span></a></li>
 </ul>
