@@ -57,7 +57,6 @@ BODY = f"""<article>
 </ul></div>
 </div>
 <div class="gd-key pi-never"><p><b>Ce que nous ne vous demanderons jamais :</b> un avis sur Avitime, positif ou non, sur Trustpilot, Google, l’App Store Shopify ou WordPress.org. Les tests offerts n’en dépendent pas. Plus tard, nous vous proposerons de donner votre avis, comme à tous nos clients, avec le même message neutre : libre à vous de le faire ou non, et de dire ce que vous pensez.</p></div>
-<p>Et nous offrons des <b>tests</b>, pas des avis : un testeur peut mettre 2 étoiles comme 5, et toutes les notes sont publiées. C’est la règle que nous appliquons à nos testeurs : la contrepartie est toujours affichée, et elle ne dépend jamais de la note. Nous l’appliquons aussi à nous-mêmes.</p>
 
 <h2>Qui peut en profiter</h2>
 <ul>
