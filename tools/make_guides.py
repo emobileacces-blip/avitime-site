@@ -388,6 +388,44 @@ for _g in GUIDES:
         _g["read"] = 6
         _g["mod_iso"] = "2026-10-20"
 
+# --- 20/10/2026, audit Search Console : le comparatif sort sur « plateforme d'avis clients », « solution avis client »,
+# « alternative avis vérifiés » (positions 60 à 95) → titre aligné sur ces recherches + 2 sections + questions fréquentes
+_COMP_ALT = '''<h2 id="alternative">7. Quelle alternative à Avis Vérifiés ou Trustpilot pour une petite boutique ?</h2>
+<p>Les grandes plateformes de collecte sont pensées pour des boutiques qui ont déjà des commandes régulières. Quand vous démarrez, d’autres options, souvent gratuites, font très bien le travail :</p>
+<ul>
+<li><b>Les avis intégrés à votre boutique.</b> PrestaShop propose un module natif « Commentaires produits », WooCommerce gère les avis et le libellé « propriétaire vérifié » dans ses réglages. Voir nos guides <a href="/guides/avis-clients-prestashop.html">PrestaShop</a> et <a href="/guides/avis-clients-woocommerce.html">WooCommerce</a>. Sur Shopify, l’application d’avis officielle a été retirée en 2024 : il faut passer par une application tierce (voir <a href="/guides/avis-clients-shopify.html">notre guide Shopify</a>).</li>
+<li><b>Google Avis clients</b>, le programme gratuit de Google Merchant Center, pour collecter des avis après achat.</li>
+<li><b>Une simple demande par e-mail</b> quelques jours après la livraison, avec un lien direct vers la fiche produit (voir <a href="/guides/premiers-avis-clients.html">obtenir ses premiers avis</a>).</li>
+<li><b>Des tests produits transparents</b> pour les tout premiers avis, quand les ventes sont encore rares : c’est ce que fait Avitime.</li>
+</ul>
+<p>La bonne alternative n’est donc pas forcément une plateforme de plus, mais la bonne combinaison : un affichage des avis intégré à votre boutique, une demande systématique après achat, et des testeurs pour amorcer.</p>
+
+<h2 id="faq">8. Questions fréquentes</h2>
+<h3>Qu’est-ce qu’une plateforme d’avis clients ?</h3>
+<p>C’est un service qui recueille les avis de vos clients, les modère selon des règles publiées, puis les affiche sur votre site, sur sa propre page et parfois dans Google. Certaines collectent après chaque commande, d’autres sont ouvertes à tous les consommateurs.</p>
+<h3>Une plateforme d’avis est-elle obligatoire ?</h3>
+<p>Non. En revanche, dès que vous affichez des avis, la loi vous impose d’indiquer s’ils sont contrôlés et comment, de les dater, et de signaler ceux qui ont été obtenus avec une contrepartie. Voir <a href="/guides/faux-avis-loi.html">ce que dit la loi</a>.</p>
+<h3>Peut-on offrir un produit en échange d’un avis ?</h3>
+<p>Oui, à condition que l’avis reste libre, quelle que soit la note, et que la contrepartie soit clairement indiquée à côté de l’avis. Payer pour obtenir une bonne note, en revanche, revient à fabriquer de faux avis.</p>
+<h3>Combien coûte une solution d’avis clients ?</h3>
+<p>Cela va de gratuit (avis intégrés à la boutique, Google Avis clients) à plusieurs dizaines ou centaines d’euros par mois pour les plateformes complètes. Les tarifs évoluent souvent : comparez sur le site de chaque service.</p>
+
+'''
+for _g in GUIDES:
+    if _g["slug"] == "comparatif-solutions-avis-clients":
+        _b = _g["body"]
+        _b = _b.replace('<li><a href="#choisir">Comment choisir</a></li>',
+                        '<li><a href="#choisir">Comment choisir</a></li>\n<li><a href="#alternative">Quelle alternative pour une petite boutique</a></li>\n<li><a href="#faq">Questions fréquentes</a></li>', 1)
+        _b = _b.replace('<h3>Sources</h3>', _COMP_ALT + '<h3>Sources</h3>', 1)
+        _b = _b.replace('à jour au 16 octobre 2026.', 'mis à jour le 20 octobre 2026.', 1)
+        assert _b.count('id="alternative"') == 1 and _b.count('id="faq"') == 1 and '20 octobre 2026' in _b
+        _g["body"] = _b
+        _g["seo_title"] = "Plateformes d’avis clients : le comparatif honnête (2026)"
+        _g["seo_desc"] = ("Avis Vérifiés, Trustpilot, Google, clubs de testeurs, Avitime : quelle plateforme d’avis clients choisir, "
+                          "et quelles alternatives pour une petite boutique ?")
+        _g["read"] = 10
+        _g["mod_iso"] = "2026-10-20"
+
 BY_SLUG = {}
 
 def cta_block(g):
