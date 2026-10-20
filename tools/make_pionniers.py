@@ -11,9 +11,9 @@ from make_guides import HEAD, FOOT, AUTHOR, PUBLISHER
 
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public")
 PATH = "/pionniers"
-TITLE = "Programme pionniers Avitime : 10 tests offerts aux 10 premières boutiques"
-DESC = ("Avitime démarre : les 10 premières boutiques PrestaShop, WooCommerce ou Shopify font tester leurs produits par 10 testeurs "
-        "sans abonnement. Automatique, sans appel et sans code promo.")
+TITLE = "Programme pionniers Avitime : 10 tests produits offerts"  # ≤ 60 caractères (audit SEO du 20/10)
+DESC = ("Les 10 premières boutiques PrestaShop, WooCommerce ou Shopify font tester leurs produits par 10 testeurs Avitime, "
+        "sans abonnement ni code promo.")  # ≤ 160 caractères
 APPLY = "https://app.avitime.fr/inscription?type=commercant"
 QUESTION = "/contact?profil=boutique&sujet=Programme%20pionniers#formulaire"
 

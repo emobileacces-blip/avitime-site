@@ -326,6 +326,68 @@ GUIDES = [
 from guide_referencement import GUIDE as _G_REF
 GUIDES.append(_G_REF)
 
+# --- 20/10/2026, audit SEO : maillage interne (guides plateformes, référencement et statistiques peu liés)
+RELATED_20_10 = {
+    "avis-clients-ia": ["combien-avis-clients", "statistiques-avis-clients", "referencement-boutique-en-ligne"],
+    "faux-avis-loi": ["premiers-avis-clients", "statistiques-avis-clients", "arnaques-testeur-produits"],
+    "premiers-avis-clients": ["combien-avis-clients", "avis-clients-prestashop", "avis-clients-woocommerce"],
+    "avis-clients-prestashop": ["avis-clients-woocommerce", "avis-clients-shopify", "referencement-boutique-en-ligne"],
+    "avis-clients-woocommerce": ["avis-clients-prestashop", "avis-clients-shopify", "referencement-boutique-en-ligne"],
+    "avis-clients-shopify": ["avis-clients-prestashop", "comparatif-solutions-avis-clients", "referencement-boutique-en-ligne"],
+    "repondre-avis-negatifs": ["combien-avis-clients", "statistiques-avis-clients", "referencement-boutique-en-ligne"],
+    "combien-avis-clients": ["statistiques-avis-clients", "premiers-avis-clients", "comparatif-solutions-avis-clients"],
+    "comparatif-solutions-avis-clients": ["combien-avis-clients", "avis-clients-prestashop", "statistiques-avis-clients"],
+    "referencement-boutique-en-ligne": ["combien-avis-clients", "avis-clients-prestashop", "avis-clients-ia"],
+}
+for _g in GUIDES:
+    if _g["slug"] in RELATED_20_10:
+        _g["related"] = RELATED_20_10[_g["slug"]]
+
+# --- 20/10/2026 : « Combien d'avis » devient le guide pilier du thème avis clients (chiffres sourcés + liens vers tous les guides)
+_COMBIEN_LECTURE = '''<h2 id="lecture">4. Combien d’avis vos clients lisent-ils ?</h2>
+<p>Le baromètre 2024 d’Avis Vérifiés by Skeepers, mené auprès de <b>72 000 consommateurs</b> en France, en Espagne et en Italie, montre que les avis comptent avant chaque achat :</p>
+<ul>
+<li><b>75 %</b> des consommateurs lisent les avis avant d’acheter ;</li>
+<li><b>40 %</b> en lisent entre 1 et 5, <b>34 %</b> entre 6 et 10, et <b>26 %</b> plus de 10 ;</li>
+<li><b>65 %</b> font confiance au <b>nombre d’avis</b>, et plus de <b>72 %</b> à la note moyenne ;</li>
+<li><b>63 %</b> regardent comment la marque répond aux avis négatifs.</li>
+</ul>
+<p>Autrement dit, la plupart de vos clients liront au moins quelques avis : avec zéro avis, il n’y a rien à lire, et la fiche ne rassure pas.</p>
+
+<h2 id="google">5. Et pour les étoiles dans Google ?</h2>
+<p>Deux cas différents. La <b>note de votre boutique</b> (les étoiles du marchand dans Google Shopping) demande en général <b>au moins 100 avis</b>, selon Google Merchant Center. Les <b>étoiles d’une fiche produit</b> dans les résultats de recherche dépendent, elles, des avis affichés en texte sur la page et de leurs données structurées : Google n’impose pas de nombre minimum, mais ne garantit jamais leur affichage. Détails dans notre <a href="/guides/referencement-boutique-en-ligne.html#etoiles">guide du référencement</a>.</p>
+
+'''
+_COMBIEN_HUB = '''<h2 id="guides">7. Tous nos guides sur les avis clients</h2>
+<ul>
+<li><a href="/guides/premiers-avis-clients.html">Obtenir ses premiers avis clients sans tricher</a> : les méthodes honnêtes, étape par étape.</li>
+<li><a href="/guides/statistiques-avis-clients.html">Statistiques avis clients 2026</a> : tous les chiffres clés, avec leurs sources.</li>
+<li><a href="/guides/repondre-avis-negatifs.html">Répondre à un avis négatif</a> : la méthode en 4 étapes et des exemples.</li>
+<li><a href="/guides/faux-avis-loi.html">Faux avis : ce que dit la loi</a> : les mentions obligatoires et les sanctions.</li>
+<li><a href="/guides/avis-clients-ia.html">Avis clients et IA</a> : pourquoi ChatGPT et Gemini lisent vos avis.</li>
+<li><a href="/guides/comparatif-solutions-avis-clients.html">Comparatif des solutions d’avis clients</a> : collecte, clubs de testeurs, échantillonnage.</li>
+<li>Par plateforme : <a href="/guides/avis-clients-prestashop.html">PrestaShop</a>, <a href="/guides/avis-clients-woocommerce.html">WooCommerce</a> et <a href="/guides/avis-clients-shopify.html">Shopify</a>.</li>
+</ul>
+
+'''
+for _g in GUIDES:
+    if _g["slug"] == "combien-avis-clients":
+        _b = _g["body"]
+        _b = _b.replace('<li><a href="#viser">Ce qu’il faut viser</a></li>',
+                        '<li><a href="#lecture">Combien d’avis vos clients lisent</a></li>\n<li><a href="#google">Les étoiles dans Google</a></li>\n'
+                        '<li><a href="#viser">Ce qu’il faut viser</a></li>\n<li><a href="#guides">Tous nos guides sur les avis clients</a></li>', 1)
+        _b = _b.replace('<h2 id="viser">4. Ce qu’il faut viser</h2>', _COMBIEN_LECTURE + '<h2 id="viser">6. Ce qu’il faut viser</h2>', 1)
+        _b = _b.replace('<h2 id="sources">Sources</h2>', _COMBIEN_HUB + '<h2 id="sources">Sources</h2>', 1)
+        _b = _b.replace('<ul class="gd-src">\n',
+                        '<ul class="gd-src">\n<li>Avis Vérifiés by Skeepers, baromètre 2024, présenté par CB News : <a href="https://www.cbnews.fr/etudes/75-consommateurs-consultent-les-avis-ligne-avant-achat" rel="noopener" target="_blank">« 75 % des consommateurs consultent les avis en ligne avant l’achat »</a> (juillet 2024)</li>\n', 1)
+        _b = _b.replace('(2017)</li>\n</ul>',
+                        '(2017)</li>\n<li>Google, <a href="https://support.google.com/merchants/answer/190657?hl=fr" rel="noopener" target="_blank">« Présentation des notes de magasin »</a> (Merchant Center)</li>\n</ul>', 1)
+        _b = _b.replace('Article d’information générale, à jour au 15 octobre 2026.', 'Article d’information générale, mis à jour le 20 octobre 2026. Avitime est l’éditeur de ce guide.', 1)
+        assert _b.count('id="lecture"') == 1 and _b.count('id="guides"') == 1 and 'cbnews' in _b and 'merchants/answer' in _b and '20 octobre 2026' in _b
+        _g["body"] = _b
+        _g["read"] = 6
+        _g["mod_iso"] = "2026-10-20"
+
 BY_SLUG = {}
 
 def cta_block(g):
@@ -346,7 +408,7 @@ def page_guide(g):
     path = f"/guides/{g['slug']}.html"
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "Article", "headline": g["title"], "description": g["desc"], "inLanguage": "fr-FR",
-         "datePublished": g.get("pub_iso", "2026-10-15"), "dateModified": g.get("pub_iso", "2026-10-15"), "author": AUTHOR, "publisher": PUBLISHER,
+         "datePublished": g.get("pub_iso", "2026-10-15"), "dateModified": g.get("mod_iso", g.get("pub_iso", "2026-10-15")), "author": AUTHOR, "publisher": PUBLISHER,
          "mainEntityOfPage": f"https://avitime.fr{path}", "image": "https://avitime.fr/assets/img/og-image.jpg"},
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://avitime.fr/"},
