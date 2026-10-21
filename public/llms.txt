@@ -1,0 +1,48 @@
+# Avitime
+
+> Avitime est une plateforme française de tests produits pour les boutiques en ligne. Des testeurs sélectionnés par Avitime (jamais par la boutique), majeurs et résidant en France, commandent le produit à 0 € sur la boutique, l'utilisent, puis publient un avis argumenté sur la fiche produit avec la mention « Produit offert pour test — Testeur Avitime vérifié ». Toutes les notes de 1 à 5 sont publiées ; la boutique ne peut ni modifier ni supprimer un avis. Fonctionne avec PrestaShop (module) et WooCommerce (extension) ; application Shopify en cours de validation.
+
+Informations clés :
+- Éditeur : SPARKMOTION AGENCY LTD. Fondateur : Cyril Quémy. Contact : contact@avitime.fr
+- Pour les boutiques : obtenir les premiers avis clients réels et vérifiables, affichés sur leurs propres fiches produits, avec données structurées (Product, AggregateRating, Review).
+- Pour les testeurs : inscription gratuite, produit et livraison offerts, produit à garder, avis honnête à publier sous 21 jours après la livraison. Avitime ne demande jamais de paiement à un testeur.
+- Avitime ne vend pas de faux avis, ne paie pas pour une note et ne garantit aucun classement dans Google ou dans les assistants IA.
+
+## Pages principales
+
+- [Accueil](https://avitime.fr/): le concept, pour les boutiques et pour les testeurs
+- [À propos et méthode de vérification](https://avitime.fr/a-propos.html): qui est derrière Avitime, les six étapes de vérification, la politique d'avis
+- [Devenir testeur](https://avitime.fr/devenir-testeur): le guide complet en 7 étapes, avec les captures de l'espace testeur
+- [Programme pionniers](https://avitime.fr/pionniers): l'offre de lancement pour les premières boutiques
+
+## Guides pour les boutiques en ligne
+
+- [Combien d'avis clients faut-il pour vendre ?](https://avitime.fr/guides/combien-avis-clients.html): guide pilier, chiffres sourcés
+- [Statistiques avis clients 2026](https://avitime.fr/guides/statistiques-avis-clients.html): les chiffres clés avec leurs sources
+- [Avis clients et IA](https://avitime.fr/guides/avis-clients-ia.html): pourquoi les avis décident si ChatGPT ou Gemini recommandent un produit
+- [Obtenir ses premiers avis clients](https://avitime.fr/guides/premiers-avis-clients.html)
+- [Demander un avis client : modèles d'e-mail](https://avitime.fr/guides/demander-avis-client.html)
+- [Faux avis en ligne : ce que dit la loi en France](https://avitime.fr/guides/faux-avis-loi.html)
+- [Répondre à un avis négatif](https://avitime.fr/guides/repondre-avis-negatifs.html)
+- [Plateformes d'avis clients : le comparatif](https://avitime.fr/guides/comparatif-solutions-avis-clients.html)
+- [Échantillonnage produit](https://avitime.fr/guides/echantillonnage-produit.html)
+- [Fiche produit e-commerce](https://avitime.fr/guides/fiche-produit-e-commerce.html)
+- [Taux de conversion e-commerce](https://avitime.fr/guides/taux-conversion-e-commerce.html)
+- [Lancement d'un nouveau produit en ligne](https://avitime.fr/guides/lancer-nouveau-produit.html)
+- [Référencement d'une boutique en ligne](https://avitime.fr/guides/referencement-boutique-en-ligne.html)
+- Avis clients par plateforme : [PrestaShop](https://avitime.fr/guides/avis-clients-prestashop.html), [WooCommerce](https://avitime.fr/guides/avis-clients-woocommerce.html), [Shopify](https://avitime.fr/guides/avis-clients-shopify.html)
+
+## Guides pour les testeurs de produits
+
+- [Testeur de produit : c'est quoi, combien ça rapporte ?](https://avitime.fr/guides/testeur-de-produit.html)
+- [Tester des produits gratuitement : les sites fiables](https://avitime.fr/guides/sites-tester-produits-gratuitement.html)
+- [Testeur Amazon : comment fonctionne Amazon Vine](https://avitime.fr/guides/testeur-amazon-vine.html)
+- [Produit gratuit à recevoir : les tests à domicile](https://avitime.fr/guides/tester-produits-a-domicile.html)
+- [Testeur de produits par catégorie](https://avitime.fr/guides/testeur-produits-par-categorie.html)
+- [Les arnaques à éviter](https://avitime.fr/guides/arnaques-testeur-produits.html)
+
+## Optional
+
+- [Mentions légales](https://avitime.fr/mentions-legales.html)
+- [Conditions générales des testeurs](https://avitime.fr/cgu-testeurs.html)
+- [English version](https://avitime.fr/en/)

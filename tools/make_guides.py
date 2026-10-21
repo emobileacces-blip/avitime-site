@@ -5,7 +5,7 @@ from site_footer import footer, SAME_AS
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public")
 OUT = os.path.join(ROOT, "guides"); os.makedirs(OUT, exist_ok=True)
 IG, TT = "https://www.instagram.com/avitime_fr/", "https://www.tiktok.com/@avitime_fr"
-AUTHOR = {"@type": "Person", "name": "Cyril Quémy", "jobTitle": "Fondateur d’Avitime", "url": "https://avitime.fr/a-propos.html"}
+AUTHOR = {"@type": "Person", "@id": "https://avitime.fr/a-propos.html#fondateur", "name": "Cyril Quémy", "jobTitle": "Fondateur d’Avitime", "url": "https://avitime.fr/a-propos.html#fondateur", "description": "Concepteur de sites e-commerce pour des commerçants, fondateur d’Avitime", "knowsAbout": ["avis clients", "e-commerce", "référencement des boutiques en ligne", "tests de produits"]}
 PUBLISHER = {"@type": "Organization", "name": "Avitime", "url": "https://avitime.fr/", "logo": {"@type": "ImageObject", "url": "https://avitime.fr/assets/img/icon-512.png"}, "sameAs": SAME_AS}
 
 HEAD = """<!doctype html>
@@ -106,7 +106,7 @@ FOOT = f"""</main>
 </html>
 """
 
-BYLINE = """<div class="gd-by"><div class="av" aria-hidden="true" style="overflow:hidden"><img src="/assets/img/cyril-quemy-tete.webp" alt="" width="44" height="44" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div><p><b>Cyril Quémy</b>, fondateur d’Avitime<br>Publié le {pub} · lecture {read} min</p></div>"""
+BYLINE = """<div class="gd-by"><div class="av" aria-hidden="true" style="overflow:hidden"><img src="/assets/img/cyril-quemy-tete.webp" alt="" width="44" height="44" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div><p><a href="/a-propos.html#fondateur" style="color:inherit"><b>Cyril Quémy</b></a>, fondateur d’Avitime<br>Publié le {pub} · lecture {read} min</p></div>"""
 
 GUIDES = [
  {
