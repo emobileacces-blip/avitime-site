@@ -269,9 +269,9 @@ GUIDES_BOUTIQUES = [
  dict(PUB, **{
   "slug": "lancer-nouveau-produit",
   "related": ["premiers-avis-clients", "echantillonnage-produit", "fiche-produit-e-commerce"],
-  "seo_title": "Lancer un nouveau produit en ligne : plan et exemple",
-  "seo_desc": "Le plan de lancement d’un nouveau produit pour une boutique en ligne : tester la demande, préparer la fiche, obtenir les premiers avis et suivre les ventes.",
-  "title": "Lancer un nouveau produit en ligne : le plan en 6 étapes, avec un exemple",
+  "seo_title": "Lancement d’un nouveau produit en ligne : plan et exemple",
+  "seo_desc": "Lancement d’un nouveau produit en ligne : le plan en 6 étapes pour une petite boutique, un exemple de calendrier et un message de lancement à adapter.",
+  "title": "Lancement d’un nouveau produit en ligne : le plan en 6 étapes, avec un exemple",
   "desc": "Tester la demande, préparer la fiche, obtenir les premiers avis avant le lancement, annoncer, puis mesurer : un plan simple pour une petite boutique, et un exemple de calendrier.",
   "kicker": "Guide · E-commerce",
   "lede": "Un nouveau produit en ligne démarre avec un handicap : personne ne le connaît, et sa fiche n’a aucun avis. Voici un plan en six étapes pour une petite boutique, avec un exemple de calendrier, pour que le lancement ne se joue pas à pile ou face.",
