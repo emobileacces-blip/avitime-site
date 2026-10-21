@@ -20,6 +20,8 @@ Informations clés :
 - [Combien d'avis clients faut-il pour vendre ?](https://avitime.fr/guides/combien-avis-clients.html): guide pilier, chiffres sourcés
 - [Statistiques avis clients 2026](https://avitime.fr/guides/statistiques-avis-clients.html): les chiffres clés avec leurs sources
 - [Avis clients et IA](https://avitime.fr/guides/avis-clients-ia.html): pourquoi les avis décident si ChatGPT ou Gemini recommandent un produit
+- [GEO et SEO : la différence](https://avitime.fr/guides/geo-seo.html): être cité par ChatGPT, Gemini ou Perplexity, et le rôle des avis clients
+- [E-E-A-T pour une boutique en ligne](https://avitime.fr/guides/eeat-e-commerce.html): ce que Google attend, la confiance avant tout
 - [Obtenir ses premiers avis clients](https://avitime.fr/guides/premiers-avis-clients.html)
 - [Demander un avis client : modèles d'e-mail](https://avitime.fr/guides/demander-avis-client.html)
 - [Faux avis en ligne : ce que dit la loi en France](https://avitime.fr/guides/faux-avis-loi.html)

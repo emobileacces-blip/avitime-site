@@ -332,6 +332,9 @@ GUIDES.extend(GUIDES_TESTEURS)
 # --- 21/10/2026 : 5 guides boutiques (mots-clés Haloscan)
 from guides_boutiques import GUIDES_BOUTIQUES, BOUTIQUE_SLUGS
 GUIDES.extend(GUIDES_BOUTIQUES)
+# --- 21/10/2026 : guides GEO et E-E-A-T (mots-clés Haloscan : geo seo 2 900, eeat 1 100)
+from guides_geo import GUIDES_GEO, GEO_SLUGS
+GUIDES.extend(GUIDES_GEO)
 
 # --- 20/10/2026, audit SEO : maillage interne (guides plateformes, référencement et statistiques peu liés)
 RELATED_20_10 = {
@@ -345,6 +348,8 @@ RELATED_20_10 = {
     "combien-avis-clients": ["statistiques-avis-clients", "premiers-avis-clients", "comparatif-solutions-avis-clients"],
     "comparatif-solutions-avis-clients": ["combien-avis-clients", "avis-clients-prestashop", "statistiques-avis-clients"],
     "referencement-boutique-en-ligne": ["combien-avis-clients", "avis-clients-prestashop", "avis-clients-ia"],
+    # 21/10 : cluster IA / GEO / E-E-A-T
+    "avis-clients-ia": ["geo-seo", "eeat-e-commerce", "combien-avis-clients"],
     # 21/10 : guides boutiques reliés aux nouveaux guides (demande d'avis, fiche produit, conversion, échantillonnage)
     "premiers-avis-clients": ["demander-avis-client", "echantillonnage-produit", "combien-avis-clients"],
     "referencement-boutique-en-ligne": ["fiche-produit-e-commerce", "combien-avis-clients", "avis-clients-ia"],
@@ -383,6 +388,7 @@ _COMBIEN_HUB = '''<h2 id="guides">7. Tous nos guides sur les avis clients</h2>
 <li><a href="/guides/repondre-avis-negatifs.html">Répondre à un avis négatif</a> : la méthode en 4 étapes et des exemples.</li>
 <li><a href="/guides/faux-avis-loi.html">Faux avis : ce que dit la loi</a> : les mentions obligatoires et les sanctions.</li>
 <li><a href="/guides/avis-clients-ia.html">Avis clients et IA</a> : pourquoi ChatGPT et Gemini lisent vos avis.</li>
+<li><a href="/guides/geo-seo.html">GEO et SEO</a> et <a href="/guides/eeat-e-commerce.html">E-E-A-T</a> : être cité par les IA et mériter la confiance de Google.</li>
 <li><a href="/guides/comparatif-solutions-avis-clients.html">Comparatif des solutions d’avis clients</a> : collecte, clubs de testeurs, échantillonnage.</li>
 <li>Par plateforme : <a href="/guides/avis-clients-prestashop.html">PrestaShop</a>, <a href="/guides/avis-clients-woocommerce.html">WooCommerce</a> et <a href="/guides/avis-clients-shopify.html">Shopify</a>.</li>
 </ul>
