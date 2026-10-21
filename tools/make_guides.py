@@ -329,6 +329,9 @@ GUIDES.append(_G_REF)
 # --- 21/10/2026 : 5 guides pour les testeurs (mots-clés Haloscan), cluster autour de /devenir-testeur
 from guides_testeurs import GUIDES_TESTEURS, TESTEUR_SLUGS
 GUIDES.extend(GUIDES_TESTEURS)
+# --- 21/10/2026 : 5 guides boutiques (mots-clés Haloscan)
+from guides_boutiques import GUIDES_BOUTIQUES, BOUTIQUE_SLUGS
+GUIDES.extend(GUIDES_BOUTIQUES)
 
 # --- 20/10/2026, audit SEO : maillage interne (guides plateformes, référencement et statistiques peu liés)
 RELATED_20_10 = {
@@ -342,6 +345,12 @@ RELATED_20_10 = {
     "combien-avis-clients": ["statistiques-avis-clients", "premiers-avis-clients", "comparatif-solutions-avis-clients"],
     "comparatif-solutions-avis-clients": ["combien-avis-clients", "avis-clients-prestashop", "statistiques-avis-clients"],
     "referencement-boutique-en-ligne": ["combien-avis-clients", "avis-clients-prestashop", "avis-clients-ia"],
+    # 21/10 : guides boutiques reliés aux nouveaux guides (demande d'avis, fiche produit, conversion, échantillonnage)
+    "premiers-avis-clients": ["demander-avis-client", "echantillonnage-produit", "combien-avis-clients"],
+    "referencement-boutique-en-ligne": ["fiche-produit-e-commerce", "combien-avis-clients", "avis-clients-ia"],
+    "combien-avis-clients": ["taux-conversion-e-commerce", "statistiques-avis-clients", "premiers-avis-clients"],
+    "comparatif-solutions-avis-clients": ["echantillonnage-produit", "combien-avis-clients", "statistiques-avis-clients"],
+    "repondre-avis-negatifs": ["demander-avis-client", "combien-avis-clients", "statistiques-avis-clients"],
     # 21/10 : le guide arnaques rejoint le cluster testeurs
     "arnaques-testeur-produits": ["sites-tester-produits-gratuitement", "testeur-de-produit", "tester-produits-a-domicile"],
 }
@@ -368,6 +377,9 @@ _COMBIEN_HUB = '''<h2 id="guides">7. Tous nos guides sur les avis clients</h2>
 <ul>
 <li><a href="/guides/premiers-avis-clients.html">Obtenir ses premiers avis clients sans tricher</a> : les méthodes honnêtes, étape par étape.</li>
 <li><a href="/guides/statistiques-avis-clients.html">Statistiques avis clients 2026</a> : tous les chiffres clés, avec leurs sources.</li>
+<li><a href="/guides/demander-avis-client.html">Demander un avis client</a> : le bon moment et des modèles d’e-mail.</li>
+<li><a href="/guides/echantillonnage-produit.html">Échantillonnage produit</a> : faire tester ses produits, dans les règles.</li>
+<li><a href="/guides/taux-conversion-e-commerce.html">Taux de conversion e-commerce</a> : le calcul et le rôle des avis.</li>
 <li><a href="/guides/repondre-avis-negatifs.html">Répondre à un avis négatif</a> : la méthode en 4 étapes et des exemples.</li>
 <li><a href="/guides/faux-avis-loi.html">Faux avis : ce que dit la loi</a> : les mentions obligatoires et les sanctions.</li>
 <li><a href="/guides/avis-clients-ia.html">Avis clients et IA</a> : pourquoi ChatGPT et Gemini lisent vos avis.</li>
