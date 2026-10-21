@@ -326,6 +326,10 @@ GUIDES = [
 from guide_referencement import GUIDE as _G_REF
 GUIDES.append(_G_REF)
 
+# --- 21/10/2026 : 5 guides pour les testeurs (mots-clés Haloscan), cluster autour de /devenir-testeur
+from guides_testeurs import GUIDES_TESTEURS, TESTEUR_SLUGS
+GUIDES.extend(GUIDES_TESTEURS)
+
 # --- 20/10/2026, audit SEO : maillage interne (guides plateformes, référencement et statistiques peu liés)
 RELATED_20_10 = {
     "avis-clients-ia": ["combien-avis-clients", "statistiques-avis-clients", "referencement-boutique-en-ligne"],
@@ -338,6 +342,8 @@ RELATED_20_10 = {
     "combien-avis-clients": ["statistiques-avis-clients", "premiers-avis-clients", "comparatif-solutions-avis-clients"],
     "comparatif-solutions-avis-clients": ["combien-avis-clients", "avis-clients-prestashop", "statistiques-avis-clients"],
     "referencement-boutique-en-ligne": ["combien-avis-clients", "avis-clients-prestashop", "avis-clients-ia"],
+    # 21/10 : le guide arnaques rejoint le cluster testeurs
+    "arnaques-testeur-produits": ["sites-tester-produits-gratuitement", "testeur-de-produit", "tester-produits-a-domicile"],
 }
 for _g in GUIDES:
     if _g["slug"] in RELATED_20_10:
@@ -429,7 +435,7 @@ for _g in GUIDES:
 BY_SLUG = {}
 
 def cta_block(g):
-    if g["slug"] == "arnaques-testeur-produits":
+    if g["slug"] == "arnaques-testeur-produits" or g["slug"] in TESTEUR_SLUGS:
         return ('<div class="gd-cta"><p><b>Testeur Avitime :</b> gratuit, produit et livraison offerts, jamais rien à payer.</p>'
                 '<a class="btn" href="/devenir-testeur">Devenir testeur</a></div>')
     return ('<div class="gd-cta"><p><b>Vos produits méritent de vrais avis.</b> Avitime les fait tester par de vrais consommateurs, '
@@ -464,9 +470,9 @@ def page_index():
     path = "/guides/"
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Guides Avitime", "inLanguage": "fr-FR",
           "url": "https://avitime.fr/guides/", "hasPart": [{"@type": "Article", "headline": g["title"], "url": f"https://avitime.fr/guides/{g['slug']}.html", "author": AUTHOR} for g in GUIDES]}
-    out = HEAD.format(title="Guides Avitime : avis clients et réglementation", desc="Guides pour les boutiques en ligne : obtenir ses premiers avis clients, comprendre la loi sur les faux avis et publier des avis transparents.", path=path, ogtype="website", guides_current=' aria-current="page"')
+    out = HEAD.format(title="Guides Avitime : avis clients et tests de produits", desc="Guides pour les boutiques en ligne (premiers avis clients, loi sur les faux avis) et pour les testeurs de produits : sites fiables, Amazon Vine, arnaques.", path=path, ogtype="website", guides_current=' aria-current="page"')
     card = lambda g: f'<a class="gd-card" href="/guides/{g["slug"]}.html"><p class="eyebrow">{g["kicker"]}</p><h2>{g["title"]}</h2><p>{g["desc"]}</p></a>'
-    pour_testeurs = [g for g in GUIDES if g["slug"] in ("arnaques-testeur-produits",)]
+    pour_testeurs = [g for g in GUIDES if g["slug"] in TESTEUR_SLUGS] + [g for g in GUIDES if g["slug"] == "arnaques-testeur-produits"]
     pour_boutiques = [g for g in GUIDES if g not in pour_testeurs]
     cards = ('<h2 style="font-size:24px;letter-spacing:-.03em;margin:44px 0 0">Pour les boutiques en ligne</h2>'
              f'<div class="gd-cards" style="margin-top:18px">{"".join(card(g) for g in pour_boutiques)}</div>'
@@ -474,8 +480,8 @@ def page_index():
              f'<div class="gd-cards" style="margin-top:18px">{"".join(card(g) for g in pour_testeurs)}'
              '<a class="gd-card" href="/devenir-testeur"><p class="eyebrow">Guide · Testeurs</p><h2>Devenir testeur Avitime : le guide complet en 7 étapes</h2><p>Inscription gratuite, candidature, commande à 0 €, test et avis, avec les vraies captures de l’espace testeur.</p></a></div>')
     out += ('<section class="gd-hero"><div class="gd-wrap" style="max-width:960px">\n<p class="eyebrow">Guides</p>\n'
-            '<h1>Avis clients : nos guides pour les boutiques en ligne</h1>\n'
-            '<p class="gd-lede">Des articles courts et sourcés pour obtenir de vrais avis, rester dans les règles et rassurer vos clients. Écrits par Cyril Quémy, fondateur d’Avitime.</p>\n'
+            '<h1>Nos guides : avis clients et tests de produits</h1>\n'
+            '<p class="gd-lede">Des articles courts et sourcés : pour les boutiques, obtenir de vrais avis et rester dans les règles ; pour les testeurs, tester des produits sans se faire avoir. Écrits par Cyril Quémy, fondateur d’Avitime.</p>\n'
             f'{cards}\n</div></section>\n<div style="height:72px"></div>\n')
     out += FOOT.replace("{ld}", json.dumps(ld, ensure_ascii=False))
     open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(out)
