@@ -5,7 +5,7 @@ from site_footer import footer, SAME_AS
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public")
 OUT = os.path.join(ROOT, "guides"); os.makedirs(OUT, exist_ok=True)
 IG, TT = "https://www.instagram.com/avitime_fr/", "https://www.tiktok.com/@avitime_fr"
-AUTHOR = {"@type": "Person", "@id": "https://avitime.fr/a-propos.html#fondateur", "name": "Cyril Quémy", "jobTitle": "Fondateur d’Avitime", "url": "https://avitime.fr/a-propos.html#fondateur", "description": "Concepteur de sites e-commerce pour des commerçants, fondateur d’Avitime", "knowsAbout": ["avis clients", "e-commerce", "référencement des boutiques en ligne", "tests de produits"]}
+AUTHOR = {"@type": "Person", "@id": "https://avitime.fr/a-propos.html#fondateur", "name": "Cyril Quémy", "jobTitle": "Fondateur d’Avitime", "url": "https://avitime.fr/a-propos.html#fondateur", "description": "Concepteur de sites e-commerce pour des commerçants, fondateur d’Avitime", "knowsAbout": ["avis clients", "e-commerce", "référencement des boutiques en ligne", "tests de produits"], "sameAs": ["https://www.linkedin.com/in/cyril-quemy-940752194/"]}
 PUBLISHER = {"@type": "Organization", "name": "Avitime", "url": "https://avitime.fr/", "logo": {"@type": "ImageObject", "url": "https://avitime.fr/assets/img/icon-512.png"}, "sameAs": SAME_AS}
 
 HEAD = """<!doctype html>
