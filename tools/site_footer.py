@@ -101,7 +101,7 @@ def footer(lang="fr"):
 <a class="foot-mail" href="mailto:contact@avitime.fr">{ICON_MAIL}<span>contact@avitime.fr</span></a>
 </div>
 </div>
-<div class="foot-bottom"><span>{t['legal']}</span><a href="{o_href}" {o_extra}>{o_label}</a></div>
+<div class="foot-bottom"><span>{t['legal']}</span><a href="https://francesaas.fr/saas/avitime" target="_blank" rel="noopener" title="Profil du SaaS Avitime sur FranceSaaS.fr"><img src="https://francesaas.fr/badge-francesaas.svg" alt="Badge FranceSaaS" width="200" height="44" style="height:auto;"></a><a href="{o_href}" {o_extra}>{o_label}</a></div>
 </div>
 </footer>"""
 
