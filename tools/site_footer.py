@@ -19,7 +19,8 @@ CAPTERRA = "https://www.capterra.com/p/10270314/Avitime/"
 GETAPP = "https://www.getapp.com/all-software/a/avitime/"
 SOFTWAREADVICE = "https://www.softwareadvice.com/product/777663-Avitime/"
 LFDN = "https://www.lafabriquedunet.fr/logiciel/avitime"
-SAME_AS = [IG, TT, FB, LI, YT, TP, CAPTERRA, GETAPP, SOFTWAREADVICE, LFDN]
+G2 = "https://www.g2.com/products/avitime/reviews"
+SAME_AS = [IG, TT, FB, LI, YT, TP, G2, CAPTERRA, GETAPP, SOFTWAREADVICE, LFDN]
 
 ICON_IG = ('<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" '
            'fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" '
