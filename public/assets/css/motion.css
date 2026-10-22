@@ -1,0 +1,131 @@
+/* Avitime — couche d'animation (aperçu v2). Additive : ne modifie aucun texte, désactivée si prefers-reduced-motion. */
+@property --m-angle{syntax:"<angle>";inherits:false;initial-value:0deg}
+
+/* 1. Barre de progression de lecture */
+.m-progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:60;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--grad-a),var(--hl),var(--star));pointer-events:none}
+
+/* 2. Hero : trame de points + 2e halo + pastilles flottantes */
+.hero::after{content:"";position:absolute;inset:0;z-index:-2;background-image:radial-gradient(rgba(10,10,10,.09) 1px,transparent 1.2px);background-size:22px 22px;-webkit-mask-image:radial-gradient(ellipse 60% 55% at 50% 40%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 60% 55% at 50% 40%,#000 30%,transparent 75%)}
+.hero .m-glow2{position:absolute;z-index:-1;width:520px;aspect-ratio:1;border-radius:50%;right:-120px;top:10%;background:radial-gradient(closest-side,color-mix(in srgb,var(--star) 26%,transparent),transparent);animation:m-drift2 18s var(--ease-in-out) infinite alternate;pointer-events:none}
+@keyframes m-drift2{from{transform:translate3d(0,0,0)}to{transform:translate3d(-60%,30%,0) scale(1.15)}}
+.m-chips{position:absolute;inset:0;pointer-events:none;z-index:1}
+.m-chip{position:absolute;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:16px;background:rgba(255,255,255,.82);-webkit-backdrop-filter:blur(12px) saturate(160%);backdrop-filter:blur(12px) saturate(160%);border:1px solid rgba(10,10,10,.08);box-shadow:0 12px 32px -12px rgba(10,10,10,.18),0 2px 6px rgba(10,10,10,.05);font-size:13.5px;line-height:1.25;color:var(--ink);text-align:left;opacity:0;animation:m-chip-in 900ms var(--ease-out) forwards,m-float 6s var(--ease-in-out) infinite alternate}
+.m-chip small{display:block;color:var(--ink-2);font-size:12px;margin-top:2px}
+.m-chip .m-ic{flex:none;width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:var(--hl-soft);color:var(--hl-ink)}
+.m-chip .m-ic.ok{background:var(--ok-bg);color:var(--ok)}
+.m-chip .m-st{color:var(--star);letter-spacing:1px;font-size:13px}
+.m-chip.c1{left:max(16px,calc(50% - 600px));top:24%;animation-delay:900ms,0s}
+.m-chip.c2{left:max(16px,calc(50% - 560px));top:58%;animation-delay:1150ms,1.2s}
+.m-chip.c3{right:max(16px,calc(50% - 600px));top:20%;animation-delay:1400ms,.6s}
+.m-chip.c4{right:max(16px,calc(50% - 570px));top:56%;animation-delay:1650ms,1.8s}
+@keyframes m-chip-in{from{opacity:0;scale:.9;filter:blur(4px)}to{opacity:1;scale:1;filter:none}}
+@keyframes m-float{from{transform:translateY(0)}to{transform:translateY(-10px)}}
+@media (max-width:1180px){.m-chips{display:none}}
+
+/* Pastilles plateformes */
+.m-plats{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:26px}
+.m-plats span{font:500 12.5px/1 var(--mono,ui-monospace),monospace;letter-spacing:.06em;text-transform:uppercase;padding:9px 13px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.7);color:var(--ink-2);display:inline-flex;align-items:center;gap:7px}
+.m-plats em{font:500 12.5px/1 var(--mono,ui-monospace),monospace;letter-spacing:.06em;text-transform:uppercase;font-style:normal;color:var(--ink-2);align-self:center;margin-right:4px}
+.m-plats span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px var(--ok-bg)}
+
+/* 3. Mot clé du titre : dégradé qui glisse */
+.hero h1 .grad{background-size:220% 100%!important;animation:rise 900ms var(--ease-out) both,m-sheen 7s ease-in-out 1.4s infinite!important}
+@keyframes m-sheen{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+/* 4. Boutons : reflet au survol + léger aimant */
+.btn{position:relative;overflow:hidden;isolation:isolate;will-change:transform}
+.btn::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform 700ms var(--ease-out)}
+.btn:hover::after{transform:translateX(120%)}
+.btn:hover{box-shadow:0 10px 26px -10px color-mix(in srgb,var(--hl) 70%,transparent)}
+
+/* 5. Cartes : halo qui suit la souris + élévation */
+.m-spot{position:relative;isolation:isolate;transition:transform 350ms var(--ease-out),box-shadow 350ms var(--ease-out)}
+.m-spot::before{content:"";position:absolute;inset:0;border-radius:inherit;z-index:0;pointer-events:none;opacity:0;transition:opacity 300ms ease;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--hl) 13%,transparent),transparent 60%)}
+.m-spot:hover::before{opacity:1}
+.m-spot>*{position:relative;z-index:1}
+.m-spot:hover{transform:translateY(-4px);box-shadow:0 22px 50px -24px rgba(10,10,10,.28)}
+.tile.dark.m-spot::before,.ai-card.m-spot::before,.eeat.m-spot::before{background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--hl) 22%,transparent),transparent 60%)}
+
+/* 6. Bordure lumineuse animée sur les cartes « avec Avitime » */
+.m-beam{position:relative}
+.m-beam::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;pointer-events:none;z-index:2;background:conic-gradient(from var(--m-angle),transparent 0 70%,var(--hl) 82%,var(--star) 88%,transparent 96%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);animation:m-spin 6s linear infinite}
+@keyframes m-spin{to{--m-angle:360deg}}
+
+/* 7. Apparitions : légère mise à l'échelle en plus du glissé existant */
+[data-reveal].pre{transform:translate3d(0,28px,0) scale(.985)}
+
+/* 8. Étoiles qui s'allument une à une */
+.m-stars-wait .star-on{opacity:0;transform:scale(.3)}
+.m-stars-go .star-on{animation:m-star 520ms cubic-bezier(.34,1.56,.64,1) both;animation-delay:calc(var(--si,0) * 110ms)}
+@keyframes m-star{from{opacity:0;transform:scale(.3) rotate(-25deg)}to{opacity:1;transform:none}}
+.star-on{display:inline-block}
+
+/* 9. Bandes noires : trame de points discrète */
+.sec.ia,.sec.law,.sec.final{position:relative;isolation:isolate}
+.sec.ia::before,.sec.law::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(rgba(245,245,243,.07) 1px,transparent 1.2px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,transparent,#000 20%,#000 80%,transparent);mask-image:linear-gradient(180deg,transparent,#000 20%,#000 80%,transparent)}
+
+/* 10. Menu : ombre quand on défile */
+.nav{transition:box-shadow 300ms ease}
+.nav.m-scrolled{box-shadow:0 10px 30px -12px rgba(0,0,0,.45)}
+
+/* ===== v3 ===== */
+/* Pastilles : chaque étape « s'allume » à tour de rôle (le parcours se raconte en boucle) */
+.m-chip .m-ic{position:relative}
+.m-chip .m-ic::after{content:"";position:absolute;inset:-4px;border-radius:13px;border:2px solid var(--hl);opacity:0;animation:m-ping 8s ease-out infinite}
+.m-chip .m-ic.ok::after{border-color:var(--ok)}
+.m-chip.c1 .m-ic::after{animation-delay:2.2s}.m-chip.c2 .m-ic::after{animation-delay:4.2s}.m-chip.c3 .m-ic::after{animation-delay:6.2s}.m-chip.c4 .m-ic::after{animation-delay:8.2s}
+@keyframes m-ping{0%{opacity:.9;transform:scale(.9)}12%{opacity:0;transform:scale(1.35)}100%{opacity:0;transform:scale(1.35)}}
+.m-chip .m-st{display:inline-block;background:linear-gradient(90deg,var(--star) 0 50%,#E5E5E0 50% 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:m-fill 8s ease-in-out 6.2s infinite;background-position:0 0}
+@keyframes m-fill{0%{background-position:100% 0}10%,90%{background-position:0 0}100%{background-position:0 0}}
+
+/* Bandeau défilant */
+.m-marquee{overflow:hidden;border-block:1px solid var(--line);background:var(--surface);padding-block:16px;margin:4px 0 clamp(40px,6vw,72px);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.m-track{display:flex;width:max-content;align-items:center;gap:22px;animation:m-scroll 46s linear infinite}
+.m-marquee:hover .m-track{animation-play-state:paused}
+.m-track span{font-size:15px;font-weight:500;color:var(--ink);white-space:nowrap;letter-spacing:-.01em}
+.m-track i{font-style:normal;color:var(--hl);font-size:13px}
+@keyframes m-scroll{to{transform:translateX(calc(-50% - 11px))}}
+
+/* Titres : mots qui montent un par un */
+.m-words .m-w{display:inline-block;opacity:0;transform:translateY(.45em);filter:blur(6px);transition:opacity 600ms var(--ease-out),transform 700ms var(--ease-out),filter 600ms var(--ease-out);transition-delay:calc(var(--wi) * 45ms)}
+.m-words.m-in .m-w{opacity:1;transform:none;filter:none}
+
+/* Inclinaison 3D : réponse rapide à la souris */
+.m-tilt{transition:transform 140ms ease-out,box-shadow 350ms var(--ease-out);transform-style:preserve-3d;will-change:transform}
+
+/* Frise J0 → J+30 qui se trace */
+.m-steps{position:relative}
+.m-steps::before,.m-steps::after{content:"";position:absolute;left:4px;top:24px;bottom:24px;width:2px;border-radius:2px}
+.m-steps::before{background:var(--line)}
+.m-steps::after{background:linear-gradient(var(--hl),var(--star));transform-origin:top;transform:scaleY(var(--sp,0));transition:transform 120ms linear}
+.m-steps li{padding-left:18px;position:relative}
+.m-steps li::before{content:"";position:absolute;left:0;top:22px;width:10px;height:10px;border-radius:50%;background:var(--surface);border:2px solid var(--line);transition:background-color 300ms,border-color 300ms,transform 400ms cubic-bezier(.34,1.56,.64,1)}
+.m-steps li.m-on::before{background:var(--hl);border-color:var(--hl);transform:scale(1.25)}
+.m-steps li .n{transition:color 300ms}
+
+/* Icônes : petit rebond au survol de la ligne */
+.ico-list li .ic{transition:transform 400ms cubic-bezier(.34,1.56,.64,1)}
+.ico-list li:hover .ic{transform:scale(1.12) rotate(-6deg)}
+
+/* Bande finale : aurore orange en mouvement */
+.sec.final{overflow:hidden}
+.m-aurora{position:absolute;inset:-20% -10%;z-index:-1;pointer-events:none;background:radial-gradient(40% 50% at 20% 30%,color-mix(in srgb,var(--hl) 30%,transparent),transparent 70%),radial-gradient(35% 45% at 80% 70%,color-mix(in srgb,var(--star) 22%,transparent),transparent 70%),radial-gradient(30% 40% at 60% 20%,color-mix(in srgb,var(--grad-a) 28%,transparent),transparent 70%);filter:blur(30px);animation:m-aurora 16s var(--ease-in-out) infinite alternate}
+@keyframes m-aurora{from{transform:translate3d(-4%,-2%,0) rotate(0)}to{transform:translate3d(4%,3%,0) rotate(8deg)}}
+
+/* Vidéo : halo orange qui respire derrière le lecteur */
+.reel .wrap{position:relative}
+.reel-frame{isolation:isolate}
+.reel .wrap::before{content:"";position:absolute;left:10%;right:10%;top:15%;bottom:5%;z-index:-1;border-radius:50%;background:color-mix(in srgb,var(--hl) 30%,transparent);filter:blur(70px);opacity:.45;animation:m-breathe 6s ease-in-out infinite alternate;pointer-events:none}
+@keyframes m-breathe{from{opacity:.25;transform:scale(.95)}to{opacity:.55;transform:scale(1.04)}}
+
+@media (prefers-reduced-motion:reduce){
+  .m-marquee,.m-aurora,.reel .wrap::before{display:none}
+  .m-words .m-w{opacity:1;transform:none;filter:none;transition:none}
+  .m-steps::after{transform:none}
+  .m-progress,.m-chips,.hero .m-glow2{display:none}
+  .hero h1 .grad{animation:none!important}
+  .btn::after,.m-beam::after{display:none}
+  .m-spot,.m-spot:hover{transform:none;transition:none}
+  .m-stars-wait .star-on,.m-stars-go .star-on{opacity:1;transform:none;animation:none}
+}
+@media (hover:none){.m-spot:hover{transform:none;box-shadow:none}.m-spot::before{display:none}}
