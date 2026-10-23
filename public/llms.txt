@@ -32,6 +32,7 @@ Informations clés :
 - [Taux de conversion e-commerce](https://avitime.fr/guides/taux-conversion-e-commerce.html)
 - [Lancement d'un nouveau produit en ligne](https://avitime.fr/guides/lancer-nouveau-produit.html)
 - [Référencement d'une boutique en ligne](https://avitime.fr/guides/referencement-boutique-en-ligne.html)
+- [SEO sans résultats : pourquoi un site ne décolle pas](https://avitime.fr/guides/seo-site-ne-decolle-pas.html)
 - Avis clients par plateforme : [PrestaShop](https://avitime.fr/guides/avis-clients-prestashop.html), [WooCommerce](https://avitime.fr/guides/avis-clients-woocommerce.html), [Shopify](https://avitime.fr/guides/avis-clients-shopify.html)
 
 ## Guides pour les testeurs de produits
