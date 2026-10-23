@@ -34,6 +34,7 @@ Informations clés :
 - [Référencement d'une boutique en ligne](https://avitime.fr/guides/referencement-boutique-en-ligne.html)
 - [SEO sans résultats : pourquoi un site ne décolle pas](https://avitime.fr/guides/seo-site-ne-decolle-pas.html)
 - [Site créé avec l’IA : pourquoi si peu décollent](https://avitime.fr/guides/site-cree-avec-ia.html)
+- [Boutique en ligne sans ventes : le diagnostic en 7 points](https://avitime.fr/guides/boutique-en-ligne-sans-ventes.html)
 - Avis clients par plateforme : [PrestaShop](https://avitime.fr/guides/avis-clients-prestashop.html), [WooCommerce](https://avitime.fr/guides/avis-clients-woocommerce.html), [Shopify](https://avitime.fr/guides/avis-clients-shopify.html)
 
 ## Guides pour les testeurs de produits
