@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Module avis clients PrestaShop, WooCommerce et Shopify | Avitime</title>
+<meta name="description" content="Le module Avitime pour PrestaShop, l’extension WooCommerce et l’application Shopify : commandes testeurs à 0 €, suivi et avis vérifiés sur vos fiches.">
+<link rel="canonical" href="https://avitime.fr/integrations">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Avitime">
+<meta property="og:title" content="Module avis clients PrestaShop, WooCommerce et Shopify | Avitime">
+<meta property="og:description" content="Le module Avitime pour PrestaShop, l’extension WooCommerce et l’application Shopify : commandes testeurs à 0 €, suivi et avis vérifiés sur vos fiches.">
+<meta property="og:url" content="https://avitime.fr/integrations">
+<meta property="og:image" content="https://avitime.fr/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/icon-180.png">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="preload" href="/assets/fonts/geist-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
+<link rel="stylesheet" href="/assets/css/style.css?v=d602f768bd">
+<style>
+.gd-hero{padding-block:clamp(56px,8vw,96px) 24px;text-align:left}
+.gd-wrap{max-width:760px;margin-inline:auto;padding-inline:22px}
+.gd-hero h1{font-size:clamp(34px,5vw,56px);letter-spacing:-.045em;line-height:1.05;margin:14px 0 0;text-wrap:balance}
+.gd-lede{font-size:clamp(18px,2vw,21px);color:var(--ink-2);line-height:1.5;margin:20px 0 0}
+.gd-by{display:flex;gap:14px;align-items:center;margin-top:28px;padding-top:20px;border-top:1px solid var(--line)}
+.gd-by .av{width:44px;height:44px;border-radius:50%;background:var(--bg-2);display:grid;place-items:center;font-weight:700;color:var(--hl-ink);box-shadow:0 0 0 2px var(--hl);flex:none}
+.gd-by p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.4}
+.gd-by b{color:var(--ink)}
+.gd-body{padding-block:8px 72px}
+.gd-body h2{font-size:clamp(24px,3vw,32px);letter-spacing:-.035em;line-height:1.12;margin:48px 0 14px}
+.gd-body h3{font-size:20px;letter-spacing:-.02em;margin:28px 0 8px}
+.gd-body p,.gd-body li{font-size:17.5px;line-height:1.65;color:var(--ink-2)}
+.gd-body p b,.gd-body li b{color:var(--ink)}
+.gd-body ul,.gd-body ol{padding-left:22px;display:grid;gap:6px}
+.gd-key{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--hl);border-radius:16px;padding:18px 22px;margin:26px 0}
+.gd-key p{margin:0}
+.gd-toc{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 22px;margin:8px 0 8px}
+.gd-toc p{margin:0 0 8px;font-family:var(--font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--hl-ink)}
+.gd-toc ol{margin:0;font-size:15.5px}
+.gd-toc a,.gd-body a{color:var(--hl-ink)}
+.gd-src{font-size:14px!important}
+.gd-src li{font-size:14px!important;line-height:1.5!important}
+.gd-note{font-size:13.5px!important;font-family:var(--font-mono);color:var(--ink-2)}
+.gd-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:36px}
+@media (max-width:700px){.gd-cards{grid-template-columns:minmax(0,1fr)}}
+.gd-card{display:block;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px;text-decoration:none;color:inherit;transition:border-color .2s ease}
+.gd-card:hover{border-color:var(--hl)}
+.gd-card h2{font-size:22px;letter-spacing:-.03em;margin:8px 0 8px;line-height:1.15}
+.gd-card p{margin:0;color:var(--ink-2);font-size:15.5px;line-height:1.5}
+.gd-related{border-top:1px solid var(--line);margin-top:48px;padding-top:28px}
+.gd-related h2{margin-top:0}
+.gd-related .gd-cards{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:16px}
+@media (max-width:860px){.gd-related .gd-cards{grid-template-columns:minmax(0,1fr)}}
+.gd-related .gd-card h2{font-size:18px;margin:6px 0 0}
+.gd-cta{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;background:var(--band);color:var(--band-ink);border-radius:22px;padding:22px 26px;margin-top:36px}
+.gd-cta p{margin:0;color:var(--band-ink)!important;font-size:16px!important;flex:1 1 280px}
+.gd-cta .btn{background:var(--hl);color:#0A0A0A!important;text-decoration:none}
+.gd-cta p b{color:var(--band-ink)!important}
+.gd-body .gd-card,.gd-body .gd-card h2{color:var(--ink);text-decoration:none}
+.gd-tbl{margin:18px 0 8px;border:1px solid var(--line);border-radius:18px;overflow-x:auto}
+.gd-tbl table{min-width:640px}
+.gd-tbl table{font-size:15px}
+.gd-tbl th{text-align:left;background:var(--bg-2);padding:12px 14px;font-size:13.5px;letter-spacing:.01em}
+.gd-tbl td{padding:12px 14px;border-top:1px solid var(--line);vertical-align:top;color:var(--ink-2);line-height:1.45}
+.gd-tbl td:first-child{color:var(--ink);font-weight:600}
+</style>
+<style>
+.ct-hero{padding-block:clamp(56px,8vw,96px) 8px}
+.ct-wrap{max-width:1080px;margin-inline:auto;padding-inline:22px}
+.ct-hero h1{font-size:clamp(36px,5.4vw,60px);letter-spacing:-.045em;line-height:1.03;margin:14px 0 0;text-wrap:balance;max-width:16ch}
+.ct-lede{font-size:clamp(18px,2vw,21px);color:var(--ink-2);line-height:1.5;margin:20px 0 0;max-width:56ch}
+.ct-facts{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0;padding:0;list-style:none}
+.ct-facts li{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14.5px;font-weight:500}
+.ct-facts li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--hl);flex:none}
+.ct-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;padding-block:40px 88px;align-items:start}
+@media (max-width:900px){.ct-grid{grid-template-columns:minmax(0,1fr)}}
+.ct-card{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:clamp(22px,3.4vw,36px)}
+.ct-card h2{font-size:clamp(24px,2.6vw,30px);letter-spacing:-.035em;margin:0 0 6px;line-height:1.1}
+.ct-sub{margin:0 0 22px;color:var(--ink-2);font-size:15.5px;line-height:1.5}
+.ct-form{display:grid;gap:18px}
+.ct-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:600px){.ct-row{grid-template-columns:1fr}}
+.ct-field{display:grid;gap:7px}
+.ct-field label,.ct-legend{font-size:14.5px;font-weight:600}
+.ct-field .opt{font-weight:400;color:var(--ink-2)}
+.ct-field input,.ct-field textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:13px 15px;width:100%;transition:border-color .15s ease,box-shadow .15s ease}
+.ct-field textarea{min-height:170px;resize:vertical;line-height:1.55}
+.ct-field input:focus,.ct-field textarea:focus{outline:none;border-color:var(--hl);box-shadow:0 0 0 4px color-mix(in srgb,var(--hl) 22%,transparent)}
+.ct-field .hint{font-size:13px;color:var(--ink-2)}
+.ct-who{border:0;margin:0;padding:0;display:grid;gap:9px}
+.ct-chips{display:flex;flex-wrap:wrap;gap:8px}
+.ct-chips label{position:relative;cursor:pointer}
+.ct-chips input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.ct-chips span{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:999px;padding:10px 16px;font-size:15px;font-weight:600;background:var(--bg);transition:border-color .15s ease,background-color .15s ease}
+.ct-chips input:checked+span{background:var(--hl);border-color:var(--hl);color:#0A0A0A}
+.ct-chips input:focus-visible+span{outline:3px solid var(--hl);outline-offset:2px}
+.ct-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.ct-send{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:4px}
+.ct-send .btn{background:var(--hl);color:#0A0A0A;font-weight:600}
+.ct-send p{margin:0;font-size:13.5px;color:var(--ink-2);flex:1 1 240px;line-height:1.45}
+.ct-send a,.ct-aside a.inline{color:var(--hl-ink)}
+.ct-alert{display:none;border-radius:14px;padding:13px 16px;font-size:15px;line-height:1.45;background:var(--bad-bg);color:var(--bad);margin:0 0 18px}
+.ct-alert.on{display:block}
+.ct-sent{display:none;text-align:left}
+#formulaire,#envoye,#sent{scroll-margin-top:calc(var(--nav-h) + 24px)}
+.ct-sent:target,.ct-sent.on{display:block}
+.ct-sent .tick{width:56px;height:56px;border-radius:50%;background:var(--hl);display:grid;place-items:center;margin-bottom:16px}
+.ct-sent .tick svg{width:28px;height:28px}
+.ct-sent p{color:var(--ink-2);font-size:16px;line-height:1.55}
+.ct-aside{display:grid;gap:18px}
+.ct-box{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px}
+.ct-box h2{font-size:19px;letter-spacing:-.02em;margin:0 0 4px}
+.ct-box > p{margin:0 0 14px;color:var(--ink-2);font-size:15px;line-height:1.5}
+.ct-links{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.ct-links a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 12px;margin-inline:-12px;border-radius:12px;color:var(--ink);text-decoration:none;font-weight:600;font-size:15.5px}
+.ct-links a::after{content:"→";color:var(--hl-ink);font-weight:500}
+.ct-links a:hover{background:var(--bg-2)}
+.ct-mail{display:inline-flex;align-items:center;gap:10px;font-size:17px;font-weight:700;color:var(--ink);text-decoration:none}
+.ct-mail svg{width:22px;height:22px;color:var(--hl-ink)}
+.ct-soc{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;padding:0;list-style:none}
+.ct-soc a{display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:8px 16px 8px 9px;font-weight:600;font-size:15px;text-decoration:none}
+.ct-soc svg{width:26px;height:26px;padding:4px;border-radius:50%;background:var(--hl);color:#0A0A0A}
+.ct-org{font-size:14px!important;line-height:1.55!important}
+</style>
+<style>.gd-body .faq{display:grid;gap:10px}.gd-body .faq details{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 18px}.gd-body .faq summary{cursor:pointer;font-weight:700;font-size:17.5px;color:var(--ink);line-height:1.4}.gd-body .faq details p{margin:10px 0 2px}.gd-body h2{scroll-margin-top:90px}</style>
+<style>
+.pg-ctas{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;margin:28px 0 0}
+.pg-ctas .btn{text-decoration:none}
+.pg-sec{font-weight:600;color:var(--hl-ink);text-decoration:underline;text-underline-offset:3px}
+.pg-pill{margin:18px 0 0}
+.pg-pill a{display:inline-block;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:14.5px;font-weight:600;color:var(--ink);text-decoration:none}
+.pg-pill a:hover{border-color:var(--hl)}
+.gd-body .pg-steps{gap:12px}
+.pg-fig{margin:22px 0 0}
+.pg-fig img{width:100%;height:auto;display:block;border-radius:18px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.12)}
+.pg-fig-sm{max-width:520px}
+.pg-fig figcaption{font-size:14px;color:var(--ink-2);margin-top:8px}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://avitime.fr/integrations#page", "url": "https://avitime.fr/integrations", "name": "Module avis clients PrestaShop, WooCommerce et Shopify | Avitime", "description": "Le module Avitime pour PrestaShop, l’extension WooCommerce et l’application Shopify : commandes testeurs à 0 €, suivi et avis vérifiés sur vos fiches.", "inLanguage": "fr-FR", "publisher": {"@type": "Organization", "name": "Avitime", "url": "https://avitime.fr/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://avitime.fr/"}, {"@type": "ListItem", "position": 2, "name": "Intégrations", "item": "https://avitime.fr/integrations"}]}]}</script>
+</head>
+<body>
+<header class="nav" id="top-nav">
+<div class="wrap">
+<a class="brand" href="/"><img alt="Avitime, accueil" height="40" src="/assets/img/avitime-logo-96.png" width="168"/></a>
+<nav aria-label="Navigation principale" class="nav-links">
+<a href="/#concept">Le concept</a>
+<a href="/commercants">Commerçants</a>
+<a href="/devenir-testeur">Testeurs</a>
+<a href="/guides/">Guides</a>
+<a href="/a-propos.html">À propos</a>
+</nav>
+<div class="nav-actions">
+<a class="ghost" href="/espace-commercant">Espace commerçant</a>
+<a class="btn-sm" href="/devenir-testeur">Devenir testeur</a>
+</div>
+</div>
+</header>
+<main id="contenu">
+<section class="gd-hero"><div class="gd-wrap">
+<p class="eyebrow">Intégrations</p>
+<h1>Module d’avis clients pour PrestaShop, WooCommerce et Shopify</h1>
+<p class="gd-lede">Avitime se branche sur votre boutique avec un module dédié à chaque plateforme. Installé en quelques minutes, sans une ligne de code&nbsp;: vous gardez vos produits, vos transporteurs et vos habitudes.</p>
+<p class="pg-ctas"><a class="btn" href="/espace-commercant">Connecter ma boutique</a> <a class="pg-sec" href="/commercants">Comment ça marche pour une boutique</a></p>
+</div></section>
+<section class="gd-body"><div class="gd-wrap">
+<div class="gd-tbl"><table>
+<thead><tr><th>Plateforme</th><th>Disponibilité</th><th>Versions</th><th>Où l’obtenir</th></tr></thead>
+<tbody>
+<tr><td>PrestaShop</td><td>Disponible</td><td>PrestaShop 1.7.7 à 9</td><td>Module à télécharger depuis votre espace commerçant</td></tr>
+<tr><td>WooCommerce</td><td>Disponible</td><td>WooCommerce 7 et plus, compatible HPOS et paiement en blocs</td><td>Annuaire officiel des extensions WordPress</td></tr>
+<tr><td>Shopify</td><td>En cours de validation par Shopify</td><td>Toutes les boutiques Shopify</td><td>Shopify App Store, dès la validation</td></tr>
+</tbody></table></div>
+
+<h2 id="fonctions">Ce que fait le module, sur chaque plateforme</h2>
+<ul>
+<li><b>Catalogue synchronisé automatiquement</b> : produits, variantes, stocks et images. Vous choisissez dans Avitime le produit à faire tester.</li>
+<li><b>Commandes testeurs à 0&nbsp;€ créées dans votre back-office</b>, comme une commande normale, et clairement repérées comme commandes Avitime.</li>
+<li><b>Commande vérifiée côté serveur</b> : lien à usage unique lié au testeur, au produit et à la mission, remise de 100&nbsp;% et livraison offerte réservées à ce testeur, total final contrôlé à 0&nbsp;€.</li>
+<li><b>Suivi d’expédition transmis</b> à Avitime et au testeur : le délai de test démarre à la livraison.</li>
+<li><b>Avis vérifiés affichés sur vos fiches produits</b>, avec la mention «&nbsp;Produit offert pour test — Testeur Avitime vérifié&nbsp;», et les étoiles dans un format que Google sait lire.</li>
+</ul>
+
+<h2 id="prestashop">Module PrestaShop</h2>
+<p>Chaque commande testeur arrive avec l’état «&nbsp;Testeur Avitime&nbsp;», le paiement «&nbsp;Avitime – produit offert&nbsp;» et un bandeau sur la fiche commande. Une colonne et un filtre «&nbsp;Avitime&nbsp;» les retrouvent dans la liste des commandes. L’expédition, la livraison, l’annulation, le remboursement et le numéro de suivi sont transmis à Avitime. Une page de diagnostic vérifie la connexion.</p>
+<ol>
+<li>Téléchargez le module depuis votre espace commerçant (Ma boutique).</li>
+<li>Dans votre back-office PrestaShop : Modules → Gestionnaire de modules → Téléverser un module.</li>
+<li>Cliquez sur «&nbsp;Connecter à Avitime&nbsp;». Comptez environ cinq minutes.</li>
+</ol>
+<p>Le pas-à-pas complet : <a href="/guides/avis-clients-prestashop.html">avis clients sur PrestaShop</a>.</p>
+
+<h2 id="woocommerce">Extension WooCommerce</h2>
+<p>La commande testeur est créée «&nbsp;En cours&nbsp;» à 0&nbsp;€, avec la mention «&nbsp;★ Testeur Avitime&nbsp;» dans la liste des commandes et un encadré Avitime pour saisir le suivi.</p>
+<ol>
+<li>Dans WordPress : Extensions → Ajouter, puis cherchez «&nbsp;Avitime&nbsp;».</li>
+<li>Installez et activez l’extension.</li>
+<li>Cliquez sur «&nbsp;Connecter à Avitime&nbsp;» : votre catalogue se synchronise.</li>
+</ol>
+<p><a href="https://wordpress.org/plugins/avitime-tester-reviews-for-woocommerce/" rel="noopener" target="_blank">Voir l’extension sur WordPress.org</a> · le pas-à-pas : <a href="/guides/avis-clients-woocommerce.html">avis clients sur WooCommerce</a>.</p>
+
+<h2 id="shopify">Application Shopify</h2>
+<p>L’application s’ouvre dans l’administration Shopify. Les commandes testeurs sont des commandes Shopify normales à 0&nbsp;€, étiquetées «&nbsp;avitime&nbsp;», et le bloc d’avis s’ajoute à votre thème en un clic. L’abonnement est réglé par la facturation Shopify.</p>
+<p>L’application est en cours de validation par Shopify et sera bientôt sur le Shopify App Store. Vous êtes sur Shopify&nbsp;? <a href="/contact">Écrivez-nous</a> pour être prévenu dès sa sortie. Le pas-à-pas : <a href="/guides/avis-clients-shopify.html">avis clients sur Shopify</a>.</p>
+
+<h2 id="autres">Et les autres plateformes&nbsp;?</h2>
+<p>Wix, Squarespace, une boutique sur mesure&nbsp;? D’autres plateformes suivront. <a href="/contact">Dites-nous laquelle vous utilisez</a> : c’est ce qui fixe nos priorités.</p>
+
+<h2 id="questions">Questions fréquentes</h2>
+<div class="faq">
+<details><summary>Faut-il un développeur&nbsp;?</summary><p>Non. L’installation se fait depuis votre back-office, puis un bouton «&nbsp;Connecter à Avitime&nbsp;» relie la boutique. Aucune ligne de code n’est à écrire.</p></details>
+<details><summary>Le module modifie-t-il mes prix ou mes commandes clients&nbsp;?</summary><p>Non. La remise de 100&nbsp;% et la livraison offerte ne s’appliquent qu’à la commande du testeur sélectionné, par un lien à usage unique. Vos clients ne voient aucun changement.</p></details>
+<details><summary>Puis-je désinstaller le module&nbsp;?</summary><p>Oui, à tout moment, comme n’importe quel module ou extension. Pensez d’abord à terminer vos campagnes en cours pour que les testeurs puissent publier leur avis.</p></details>
+<details><summary>Qui expédie les produits&nbsp;?</summary><p>Votre boutique, avec ses transporteurs habituels. Avitime ne stocke ni n’expédie de produits. Le dropshipping est accepté.</p></details>
+</div>
+<p>Toutes les autres réponses : <a href="/faq#boutiques">la FAQ des boutiques</a>.</p>
+<p class="gd-note">PrestaShop, WooCommerce et Shopify sont des marques de leurs propriétaires respectifs. Avitime est un service indépendant, qui n’est ni édité ni approuvé par eux.</p>
+
+<div class="gd-cta"><p><b>Votre boutique est déjà compatible.</b> Créez votre espace commerçant, installez le module et lancez votre première campagne.</p><a class="btn" href="/espace-commercant">Connecter ma boutique</a></div>
+</div></section>
+
+</main>
+<footer class="site-foot">
+<div class="wrap">
+<div class="foot-grid">
+<div class="foot-brand">
+<a class="foot-logo" href="/"><img src="/assets/img/avitime-logo-96.png" alt="Avitime, accueil" width="168" height="40" loading="lazy"></a>
+<p>De vrais avis clients, écrits par de vrais testeurs. Chaque avis porte la mention « Produit offert pour test ».</p>
+<ul class="foot-compat" aria-label="Compatible avec"><li>PrestaShop</li><li>WooCommerce</li><li>Shopify</li></ul>
+</div>
+<nav class="foot-col" aria-label="Avitime"><p class="foot-h">Avitime</p><ul><li><a href="/a-propos.html">À propos</a></li><li><a href="/a-propos.html#methode">Méthode de vérification</a></li><li><a href="/guides/">Guides</a></li><li><a href="/faq">FAQ</a></li><li><a href="/pionniers">Programme pionniers</a></li><li><a href="/contact">Contact</a></li><li><a href="/devenir-testeur">Devenir testeur</a></li><li><a href="/espace-commercant">Espace commerçant</a></li></ul></nav>
+<nav class="foot-col" aria-label="Informations légales"><p class="foot-h">Informations légales</p><ul><li><a href="/mentions-legales.html">Mentions légales</a></li><li><a href="/cgv.html">CGV commerçants</a></li><li><a href="/cgu-testeurs.html">CGU testeurs</a></li><li><a href="/confidentialite.html">Confidentialité</a></li></ul></nav>
+<div class="foot-col"><p class="foot-h">Suivez-nous</p>
+<ul class="foot-social" aria-label="Réseaux sociaux">
+<li><a class="soc" href="https://www.instagram.com/avitime_fr/" rel="me noopener" target="_blank" aria-label="Avitime sur Instagram (@avitime_fr)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor"/></svg><span>Instagram</span></a></li>
+<li><a class="soc" href="https://www.tiktok.com/@avitime_fr" rel="me noopener" target="_blank" aria-label="Avitime sur TikTok (@avitime_fr)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.53.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg><span>TikTok</span></a></li>
+<li><a class="soc" href="https://www.facebook.com/profile.php?id=61595261199682" rel="me noopener" target="_blank" aria-label="Avitime sur Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 21.5v-8h2.7l.4-3.2h-3.1V8.3c0-.9.3-1.6 1.6-1.6h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.4v3.2h2.7v8z"/></svg><span>Facebook</span></a></li>
+<li><a class="soc" href="https://www.linkedin.com/company/avitime/" rel="me noopener" target="_blank" aria-label="Avitime sur LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.5 4.77 5.75v5.7h-4v-5.05c0-1.2-.02-2.75-1.7-2.75-1.7 0-1.95 1.3-1.95 2.66v5.14h-4z"/></svg><span>LinkedIn</span></a></li>
+<li><a class="soc" href="https://www.youtube.com/@avitime_fr" rel="me noopener" target="_blank" aria-label="Avitime sur YouTube (@avitime_fr)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M22.5 7.2a2.8 2.8 0 0 0-2-2C18.7 4.7 12 4.7 12 4.7s-6.7 0-8.5.5a2.8 2.8 0 0 0-2 2C1 9 1 12 1 12s0 3 .5 4.8a2.8 2.8 0 0 0 2 2c1.8.5 8.5.5 8.5.5s6.7 0 8.5-.5a2.8 2.8 0 0 0 2-2c.5-1.8.5-4.8.5-4.8s0-3-.5-4.8zM9.8 15.1V8.9l5.7 3.1z"/></svg><span>YouTube</span></a></li>
+</ul>
+<a class="foot-mail" href="mailto:contact@avitime.fr"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>contact@avitime.fr</span></a>
+</div>
+</div>
+<div class="foot-bottom"><span>© 2026 Avitime · édité par SPARKMOTION AGENCY LTD</span><a href="https://francesaas.fr/saas/avitime" target="_blank" rel="noopener" title="Profil du SaaS Avitime sur FranceSaaS.fr"><img src="https://francesaas.fr/badge-francesaas.svg" alt="Badge FranceSaaS" width="200" height="44" style="height:auto;"></a><a href="/en/" hreflang="en" lang="en">English version</a></div>
+</div>
+</footer>
+<script src="/assets/js/main.js?v=19d91e0a16" defer></script>
+</body>
+</html>

@@ -13,6 +13,8 @@ Informations clés :
 - [Accueil](https://avitime.fr/): le concept, pour les boutiques et pour les testeurs
 - [À propos et méthode de vérification](https://avitime.fr/a-propos.html): qui est derrière Avitime, les six étapes de vérification, la politique d'avis
 - [Devenir testeur](https://avitime.fr/devenir-testeur): le guide complet en 7 étapes, avec les captures de l'espace testeur
+- [Avitime pour les boutiques](https://avitime.fr/commercants): faire tester ses produits par de vrais consommateurs, déroulement d’une campagne, règles, tarifs (programme pionniers)
+- [Intégrations](https://avitime.fr/integrations): module PrestaShop, extension WooCommerce, application Shopify
 - [FAQ Avitime](https://avitime.fr/faq): 34 questions fréquentes (boutiques, testeurs, avis, loi et Google)
 - [Programme pionniers](https://avitime.fr/pionniers): l'offre de lancement pour les premières boutiques
 
