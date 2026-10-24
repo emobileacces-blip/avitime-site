@@ -130,6 +130,41 @@
 <div class="gd-key"><p>« Bonjour Julie, votre bougie est arrivée il y a une semaine. Est-ce qu’elle vous plaît ? Votre avis, même critique, aide d’autres clients à choisir et nous aide à nous améliorer. Ça prend une minute : [lien vers l’avis]. Merci ! Léa, de la boutique. »</p></div>
 <p>D’autres modèles d’e-mail et de SMS, selon le type de produit : <a href="/guides/demander-avis-client.html">Demander un avis client</a>.</p>
 
+<div class="lead-card" id="guide">
+<div class="lead-txt">
+<p class="lead-k">Guide offert · PDF, 7 pages</p>
+<h2 class="lead-h">5 étapes pour obtenir vos premiers avis vérifiés, légalement.</h2>
+<ul class="lead-ul"><li>La méthode pour sortir du cercle « pas d’avis, pas de ventes »</li><li>Des modèles d’e-mail et de réponse à copier</li><li>Ce que disent la loi et Google (règle de juillet 2026)</li><li>Votre calendrier sur 8 semaines</li></ul>
+</div>
+<form class="lead-form" method="post" action="https://app.avitime.fr/api/guide" accept-charset="utf-8">
+<p class="lead-ok" role="status" hidden>✓ C’est envoyé ! Regardez votre boîte mail (et les courriers indésirables) : le lien vers le guide vous attend.</p>
+<p class="lead-err" role="alert" hidden></p>
+<input type="hidden" name="from" value="/guides/premiers-avis-clients.html"><input type="hidden" name="t" value="">
+<div class="lead-hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+<label class="lead-f"><span>Prénom <i>(facultatif)</i></span><input type="text" name="prenom" autocomplete="given-name" maxlength="80"></label>
+<label class="lead-f"><span>Adresse e-mail</span><input type="email" name="email" autocomplete="email" required maxlength="254" placeholder="vous@votre-boutique.fr"></label>
+<label class="lead-f"><span>Site de votre boutique <i>(facultatif)</i></span><input type="text" name="boutique" inputmode="url" maxlength="200" placeholder="https://www.ma-boutique.fr"></label>
+<label class="lead-c"><input type="checkbox" name="accept" required> <span>J’accepte de recevoir le guide par e-mail. <a href="/confidentialite.html">Confidentialité</a></span></label>
+<label class="lead-c"><input type="checkbox" name="conseils"> <span>Je veux aussi recevoir les conseils d’Avitime (1 e-mail par mois au plus, désinscription en un clic).</span></label>
+<button class="btn" type="submit">Recevoir le guide gratuit</button>
+</form>
+</div>
+<style>
+.lead-card{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center;background:#0A0A0A;color:#fff;border-radius:28px;padding:38px;margin:40px 0;scroll-margin-top:90px}
+.lead-k{margin:0;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#FF6A13!important;font-weight:700}
+.lead-h{margin:10px 0 0;font-size:clamp(24px,3vw,32px);letter-spacing:-.035em;line-height:1.12;color:#fff}
+.lead-ul{margin:16px 0 0;padding-left:20px}.lead-ul li{color:#E9E4DF!important} .lead-ul li{color:#D8D2CC;font-size:16px;line-height:1.55;margin:4px 0}
+.lead-form{display:grid;gap:12px} .lead-f{display:grid;gap:5px;font-size:14px;color:#D8D2CC} .lead-f i{font-style:normal;color:#9A918A}
+.lead-f input{min-height:46px;border-radius:12px;border:1px solid #333;background:#161412;color:#fff;padding:10px 14px;font:inherit;font-size:16px}
+.lead-c{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.45;color:#B5ADA6} .lead-c input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:#FF6A13} .lead-c a{color:#FF9B5E}
+.lead-form .btn{justify-self:start;background:#FF6A13;color:#0A0A0A}
+.lead-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.lead-ok{margin:0;background:#173D27;color:#C9F2D8!important;border-radius:12px;padding:12px 14px;font-size:15px} .lead-err{margin:0;background:#4A1D1D;color:#FFD5D5!important;border-radius:12px;padding:12px 14px;font-size:15px}
+.lead-ok[hidden],.lead-err[hidden]{display:none}
+@media (max-width:760px){.lead-card{grid-template-columns:1fr;padding:26px 20px;gap:22px}}
+</style>
+<script>(function(){var c=document.getElementById("guide");if(!c)return;var f=c.querySelector("form"),t=f.querySelector("input[name=t]");if(t)t.value=String(Date.now());var s=new URLSearchParams(location.search).get("guide");if(s==="ok"){c.querySelector(".lead-ok").hidden=false;[].forEach.call(f.querySelectorAll(".lead-f,.lead-c,.btn"),function(e){e.style.display="none"})}else if(s){var m={invalide:"Vérifiez votre adresse e-mail et cochez la case d’accord, puis réessayez.",limite:"Trop de demandes en peu de temps. Réessayez dans une heure.",serveur:"Un problème technique a empêché l’envoi. Réessayez, ou écrivez-nous à contact@avitime.fr."},e=c.querySelector(".lead-err");e.textContent=m[s]||m.serveur;e.hidden=false}})();</script>
+
 <h2 id="tester">4. Faire tester vos produits, en toute transparence</h2>
 <p>Quand une boutique démarre, elle a peu de clients : il faut parfois provoquer les premiers avis. Offrir un produit à des testeurs est légal, à trois conditions :</p>
 <ol>
@@ -188,40 +223,6 @@
 <li>Search Engine Journal, <a href="https://searchenginejournal.com/google-expands-review-guidelines-and-warns-of-manual-actions/583674" rel="noopener" target="_blank">nouvelles consignes de Google sur les avis</a> (27 juillet 2026)</li>
 </ul>
 <p class="gd-note">Article d’information générale, à jour au 23 octobre 2026.</p>
-<div class="lead-card" id="guide">
-<div class="lead-txt">
-<p class="lead-k">Guide offert · PDF, 7 pages</p>
-<h2 class="lead-h">5 étapes pour obtenir vos premiers avis vérifiés, légalement.</h2>
-<ul class="lead-ul"><li>La méthode pour sortir du cercle « pas d’avis, pas de ventes »</li><li>Des modèles d’e-mail et de réponse à copier</li><li>Ce que disent la loi et Google (règle de juillet 2026)</li><li>Votre calendrier sur 8 semaines</li></ul>
-</div>
-<form class="lead-form" method="post" action="https://app.avitime.fr/api/guide" accept-charset="utf-8">
-<p class="lead-ok" role="status" hidden>✓ C’est envoyé ! Regardez votre boîte mail (et les courriers indésirables) : le lien vers le guide vous attend.</p>
-<p class="lead-err" role="alert" hidden></p>
-<input type="hidden" name="from" value="/guides/premiers-avis-clients.html"><input type="hidden" name="t" value="">
-<div class="lead-hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-<label class="lead-f"><span>Prénom <i>(facultatif)</i></span><input type="text" name="prenom" autocomplete="given-name" maxlength="80"></label>
-<label class="lead-f"><span>Adresse e-mail</span><input type="email" name="email" autocomplete="email" required maxlength="254" placeholder="vous@votre-boutique.fr"></label>
-<label class="lead-f"><span>Site de votre boutique <i>(facultatif)</i></span><input type="text" name="boutique" inputmode="url" maxlength="200" placeholder="https://www.ma-boutique.fr"></label>
-<label class="lead-c"><input type="checkbox" name="accept" required> <span>J’accepte de recevoir le guide par e-mail. <a href="/confidentialite.html">Confidentialité</a></span></label>
-<label class="lead-c"><input type="checkbox" name="conseils"> <span>Je veux aussi recevoir les conseils d’Avitime (1 e-mail par mois au plus, désinscription en un clic).</span></label>
-<button class="btn" type="submit">Recevoir le guide gratuit</button>
-</form>
-</div>
-<style>
-.lead-card{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center;background:#0A0A0A;color:#fff;border-radius:28px;padding:38px;margin:40px 0;scroll-margin-top:90px}
-.lead-k{margin:0;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#FF6A13!important;font-weight:700}
-.lead-h{margin:10px 0 0;font-size:clamp(24px,3vw,32px);letter-spacing:-.035em;line-height:1.12;color:#fff}
-.lead-ul{margin:16px 0 0;padding-left:20px}.lead-ul li{color:#E9E4DF!important} .lead-ul li{color:#D8D2CC;font-size:16px;line-height:1.55;margin:4px 0}
-.lead-form{display:grid;gap:12px} .lead-f{display:grid;gap:5px;font-size:14px;color:#D8D2CC} .lead-f i{font-style:normal;color:#9A918A}
-.lead-f input{min-height:46px;border-radius:12px;border:1px solid #333;background:#161412;color:#fff;padding:10px 14px;font:inherit;font-size:16px}
-.lead-c{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.45;color:#B5ADA6} .lead-c input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:#FF6A13} .lead-c a{color:#FF9B5E}
-.lead-form .btn{justify-self:start;background:#FF6A13;color:#0A0A0A}
-.lead-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.lead-ok{margin:0;background:#173D27;color:#C9F2D8!important;border-radius:12px;padding:12px 14px;font-size:15px} .lead-err{margin:0;background:#4A1D1D;color:#FFD5D5!important;border-radius:12px;padding:12px 14px;font-size:15px}
-.lead-ok[hidden],.lead-err[hidden]{display:none}
-@media (max-width:760px){.lead-card{grid-template-columns:1fr;padding:26px 20px;gap:22px}}
-</style>
-<script>(function(){var c=document.getElementById("guide");if(!c)return;var f=c.querySelector("form"),t=f.querySelector("input[name=t]");if(t)t.value=String(Date.now());var s=new URLSearchParams(location.search).get("guide");if(s==="ok"){c.querySelector(".lead-ok").hidden=false;[].forEach.call(f.querySelectorAll(".lead-f,.lead-c,.btn"),function(e){e.style.display="none"})}else if(s){var m={invalide:"Vérifiez votre adresse e-mail et cochez la case d’accord, puis réessayez.",limite:"Trop de demandes en peu de temps. Réessayez dans une heure.",serveur:"Un problème technique a empêché l’envoi. Réessayez, ou écrivez-nous à contact@avitime.fr."},e=c.querySelector(".lead-err");e.textContent=m[s]||m.serveur;e.hidden=false}})();</script>
 <div class="gd-cta"><p><b>Vos produits méritent de vrais avis.</b> Avitime les fait tester par de vrais consommateurs, sur PrestaShop, WooCommerce et Shopify.</p><a class="btn" href="/#commercants">Découvrir l’offre commerçants</a></div><aside class="gd-related" aria-label="À lire aussi"><h2>À lire aussi</h2><div class="gd-cards"><a class="gd-card" href="/guides/demander-avis-client.html"><p class="eyebrow">Guide · Avis clients</p><h2>Demander un avis client : le bon moment et des modèles d’e-mail à copier</h2></a><a class="gd-card" href="/guides/echantillonnage-produit.html"><p class="eyebrow">Guide · Marketing</p><h2>Échantillonnage produit : faire tester ses produits pour vendre plus</h2></a><a class="gd-card" href="/guides/combien-avis-clients.html"><p class="eyebrow">Guide · E-commerce</p><h2>Combien d’avis clients faut-il pour vendre ? Les chiffres qui comptent</h2></a></div><p style="margin-top:18px"><a href="/guides/">Tous les guides</a></p></aside></div></section>
 </article>
 </main>
