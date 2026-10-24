@@ -153,6 +153,7 @@
 <h1>Une question ? Écrivez-nous.</h1>
 <p class="ct-lede">Boutique en ligne, testeur ou simple curieux : envoyez-nous votre message, un membre de l’équipe Avitime vous répond personnellement.</p>
 <ul class="ct-facts"><li>Réponse sous 48 h ouvrées</li><li>En français ou en anglais</li><li>Une vraie personne vous répond</li></ul>
+<p class="ct-call-link" style="margin:16px 0 0;font-size:15.5px">📞 Vous préférez en parler de vive voix ? <a class="tt-a" href="/contact?appel=1#formulaire" style="color:var(--hl);font-weight:700">Être rappelé (15 min)</a></p>
 </div></section>
 <div class="ct-wrap ct-grid">
 <section class="ct-card" id="formulaire" aria-labelledby="ct-form-h">
@@ -175,6 +176,10 @@
 <div class="ct-row">
 <div class="ct-field"><label for="ct-nom">Prénom et nom</label><input id="ct-nom" name="nom" type="text" autocomplete="name" required minlength="2" maxlength="120"></div>
 <div class="ct-field"><label for="ct-email">Adresse e-mail</label><input id="ct-email" name="email" type="email" autocomplete="email" required maxlength="254"></div>
+</div>
+<style>#ct-call[hidden]{display:none!important}</style><div class="ct-row" id="ct-call" style="align-items:end" hidden>
+<div class="ct-field"><label for="ct-tel">Téléphone</label><input id="ct-tel" name="telephone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="06 12 34 56 78"></div>
+<div class="ct-field"><label for="ct-creneau">Quand vous appeler ? <span class="opt">(facultatif)</span></label><input id="ct-creneau" name="creneau" type="text" maxlength="120" placeholder="Ex. : en semaine, entre 10 h et 12 h"></div>
 </div>
 <div class="ct-field" id="ct-shop"><label for="ct-boutique">Site de votre boutique <span class="opt">(facultatif)</span></label><input id="ct-boutique" name="boutique" type="text" inputmode="url" autocomplete="url" maxlength="200" placeholder="https://www.ma-boutique.fr"></div>
 <div class="ct-field"><label for="ct-sujet">Sujet</label><input id="ct-sujet" name="sujet" type="text" required minlength="2" maxlength="150" placeholder="Ex. : faire tester un produit"></div>
@@ -225,6 +230,7 @@
   var err=q.get('erreur'), msgs={"invalide": "Il manque une information ou l’adresse e-mail n’est pas valide. Vérifiez le formulaire et réessayez.", "limite": "Vous avez envoyé plusieurs messages en peu de temps. Réessayez dans une heure, ou écrivez-nous directement à contact@avitime.fr.", "serveur": "Votre message n’a pas pu être envoyé à cause d’un problème technique. Réessayez, ou écrivez-nous à contact@avitime.fr."}, box=document.getElementById('ct-alert');
   if(err&&msgs[err]&&box){box.textContent=msgs[err];box.classList.add('on');}
   var pre=q.get('sujet'), si=f.querySelector('input[name=sujet]'); if(pre&&si&&!si.value) si.value=pre.slice(0,150);
+  if(q.get('appel')==='1'){var c=document.getElementById('ct-call'),tel=document.getElementById('ct-tel'),h=document.getElementById('ct-form-h'),m=f.querySelector('textarea[name=message]'); if(c)c.hidden=false; if(tel)tel.required=true; if(h)h.textContent='Être rappelé (15 min)'; if(si&&!si.value)si.value='Demande d’appel (15 min)'; if(m&&!m.value)m.value='Bonjour, je souhaite être rappelé(e) pour parler d’Avitime.'; var rb=f.querySelector('input[name=profil][value="boutique"]'); if(rb&&!f.querySelector('input[name=profil]:checked'))rb.checked=true;}
   var pr=q.get('profil'); if(pr&&/^[a-z]+$/.test(pr)){var r=f.querySelector('input[name=profil][value="'+pr+'"]'); if(r) r.checked=true;}
   var shop=document.getElementById('ct-shop');
   function sync(){var v=(f.querySelector('input[name=profil]:checked')||{}).value; if(shop) shop.hidden=(v!=='boutique');}
