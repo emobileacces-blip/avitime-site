@@ -25,6 +25,9 @@ CSS = """<style>
 .pg-fig img{width:100%;height:auto;display:block;border-radius:18px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.12)}
 .pg-fig-sm{max-width:520px}
 .pg-fig figcaption{font-size:14px;color:var(--ink-2);margin-top:8px}
+.pg-video{margin:0 auto 36px;max-width:360px}
+.pg-video video{width:100%;aspect-ratio:9/16;display:block;border-radius:22px;background:#0A0A0A;box-shadow:0 30px 70px -40px rgba(0,0,0,.6)}
+.pg-video figcaption{font-size:14px;color:var(--ink-2);text-align:center;margin-top:10px}
 </style>
 """
 
@@ -33,6 +36,11 @@ PAGES = {
         "title": "Faire tester vos produits par de vrais consommateurs | Avitime",
         "desc": "Boutiques en ligne : faites tester vos produits par des consommateurs sélectionnés, à 0 € sur votre boutique, et obtenez des avis vérifiés, légalement.",
         "crumb": "Pour les boutiques",
+        "video": {"@type": "VideoObject", "name": "Vous cramez votre budget pub ? Les avis clients, le chaînon manquant",
+                  "description": "Cyril, fondateur d’Avitime, explique pourquoi une boutique sans avis clients gaspille son budget publicitaire et comment obtenir ses premiers avis vérifiés en faisant tester ses produits. Vidéo réalisée avec l’intelligence artificielle (avatar).",
+                  "thumbnailUrl": "https://avitime.fr/assets/video/commercants-budget-poster.jpg",
+                  "contentUrl": "https://avitime.fr/assets/video/commercants-budget.mp4",
+                  "uploadDate": "2026-10-26T12:00:00+01:00", "duration": "PT1M53S", "inLanguage": "fr-FR"},
     },
     "integrations": {
         "title": "Module avis clients PrestaShop, WooCommerce et Shopify | Avitime",
@@ -60,6 +68,8 @@ for slug, p in PAGES.items():
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://avitime.fr/"},
             {"@type": "ListItem", "position": 2, "name": p["crumb"], "item": url}]}]}
+    if p.get("video"):
+        ld["@graph"].append(p["video"])
     head += CSS + '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + "</script>\n"
     main = (HERE / f"{slug}.main.html").read_text().replace("[[LEAD]]", LEAD)
     foot = tpl[main_end:]
