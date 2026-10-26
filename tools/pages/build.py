@@ -37,7 +37,7 @@ PAGES = {
         "desc": "Boutiques en ligne : faites tester vos produits par des consommateurs sélectionnés, à 0 € sur votre boutique, et obtenez des avis vérifiés, légalement.",
         "crumb": "Pour les boutiques",
         "video": {"@type": "VideoObject", "name": "Vous cramez votre budget pub ? Les avis clients, le chaînon manquant",
-                  "description": "Cyril, fondateur d’Avitime, explique pourquoi une boutique sans avis clients gaspille son budget publicitaire et comment obtenir ses premiers avis vérifiés en faisant tester ses produits. Vidéo réalisée avec l’intelligence artificielle (avatar).",
+                  "description": "Cyril, fondateur d’Avitime, explique pourquoi une boutique sans avis clients gaspille son budget publicitaire et comment obtenir ses premiers avis vérifiés en faisant tester ses produits.",
                   "thumbnailUrl": "https://avitime.fr/assets/video/commercants-budget-poster.jpg",
                   "contentUrl": "https://avitime.fr/assets/video/commercants-budget.mp4",
                   "uploadDate": "2026-10-26T12:00:00+01:00", "duration": "PT1M53S", "inLanguage": "fr-FR"},
