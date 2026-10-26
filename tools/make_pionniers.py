@@ -1,9 +1,12 @@
-"""Page « Programme pionniers » : /pionniers (FR). Générée par ce script ; ne pas éditer le HTML à la main.
+"""Page « Vos 5 premiers tests offerts » : /pionniers (FR, URL conservée : des e-mails déjà envoyés pointent dessus).
+Générée par ce script ; ne pas éditer le HTML à la main.
 
-Règles : aucun prix public (seuls les « 10 tests offerts » sont affichés), contrepartie affichée, et jamais d'avis demandé
+Règles : aucun prix public (seuls les « 5 tests offerts » sont affichés), contrepartie affichée, et jamais d'avis demandé
 en échange des tests offerts sur Trustpilot, Google, l'App Store Shopify ou WordPress.org.
-Décision du 17/10/2026 : 10 tests offerts aux 10 premières boutiques, automatiques (sans appel ni code), y compris Shopify.
-On dit « tests offerts », jamais « avis offerts » : aucun volume d'avis n'est garanti.
+Décision du 26/10/2026 (remplace le programme pionniers du 17/10 : 10 tests aux 10 premières boutiques) : « En ce moment :
+vos 5 premiers tests offerts », pour toutes les nouvelles boutiques, sans limite de places, sans abonnement ni code, y compris
+Shopify. Offre « en ce moment », sans date de fin promise. Les produits envoyés aux testeurs restent à la charge de la boutique.
+On dit « tests offerts », jamais « avis offerts » : aucun volume d'avis n'est garanti, toutes les notes sont publiées.
 """
 import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -11,11 +14,11 @@ from make_guides import HEAD, FOOT, AUTHOR, PUBLISHER
 
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public")
 PATH = "/pionniers"
-TITLE = "Programme pionniers Avitime : 10 tests produits offerts"  # ≤ 60 caractères (audit SEO du 20/10)
-DESC = ("Les 10 premières boutiques PrestaShop, WooCommerce ou Shopify font tester leurs produits par 10 testeurs Avitime, "
+TITLE = "Avitime : vos 5 premiers tests produits offerts"  # ≤ 60 caractères (audit SEO du 20/10)
+DESC = ("En ce moment, toute nouvelle boutique PrestaShop, WooCommerce ou Shopify fait tester ses produits par 5 testeurs Avitime, "
         "sans abonnement ni code promo.")  # ≤ 160 caractères
 APPLY = "https://app.avitime.fr/inscription?type=commercant"
-QUESTION = "/contact?profil=boutique&sujet=Programme%20pionniers#formulaire"
+QUESTION = "/contact?profil=boutique&sujet=Tests%20offerts#formulaire"
 
 CSS = """<style>
 .pi-steps{counter-reset:pi;list-style:none;padding:0!important;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px!important;margin:18px 0 8px}
@@ -37,9 +40,9 @@ CSS = """<style>
 
 BODY = f"""<article>
 <section class="gd-hero"><div class="gd-wrap">
-<p class="eyebrow">Programme pionniers</p>
-<h1>10 tests offerts aux 10 premières boutiques</h1>
-<p class="gd-lede">Avitime démarre. Les dix premières boutiques qui lancent une campagne font tester leurs produits par 10 testeurs, sans abonnement. Pas d’appel, pas de code promo : la place est attribuée automatiquement à votre première campagne.</p>
+<p class="eyebrow">En ce moment</p>
+<h1>Vos 5 premiers tests offerts</h1>
+<p class="gd-lede">En ce moment, toute nouvelle boutique fait tester ses produits par 5 testeurs Avitime, sans abonnement. Pas d’appel, pas de code promo, pas de limite de places : les tests offerts s’appliquent automatiquement à votre première campagne.</p>
 <div class="gd-by"><div class="av" aria-hidden="true">CQ</div><p><b>Cyril Quémy</b>, fondateur d’Avitime<br>Une question ? Je réponds moi-même à chaque message.</p></div>
 </div></section>
 <section class="gd-body"><div class="gd-wrap">
@@ -47,9 +50,9 @@ BODY = f"""<article>
 <h2>L’échange, en clair</h2>
 <div class="pi-cols">
 <div class="pi-col"><h3>Ce que vous recevez</h3><ul>
-<li><b>10 tests offerts</b>, sans abonnement : jusqu’à 10 testeurs, sur une seule campagne ou répartis sur plusieurs.</li>
+<li><b>5 tests offerts</b>, sans abonnement : jusqu’à 5 testeurs, sur une seule campagne ou répartis sur plusieurs.</li>
 <li><b>Des testeurs sélectionnés par Avitime</b>, qui reçoivent votre produit, l’utilisent puis donnent leur avis.</li>
-<li><b>Vos premiers avis vérifiés</b>, publiés sur vos fiches avec la mention « Produit offert pour test ».</li>
+<li><b>Les avis des testeurs</b>, publiés sur vos fiches avec la mention « Produit offert pour test », quelle que soit la note.</li>
 </ul></div>
 <div class="pi-col"><h3>Ce qui reste à votre charge</h3><ul>
 <li><b>Les produits envoyés aux testeurs</b> : c’est vous qui les offrez et les expédiez, comme pour toute campagne Avitime.</li>
@@ -59,6 +62,7 @@ BODY = f"""<article>
 <div class="gd-key pi-never"><p><b>Ce que nous ne vous demanderons jamais :</b> un avis sur Avitime, positif ou non, sur Trustpilot, Google, l’App Store Shopify ou WordPress.org. Les tests offerts n’en dépendent pas. Plus tard, nous vous proposerons de donner votre avis, comme à tous nos clients, avec le même message neutre : libre à vous de le faire ou non, et de dire ce que vous pensez.</p></div>
 
 <h2>Qui peut en profiter</h2>
+<p>L’offre est ouverte à toutes les nouvelles boutiques, sans limite de places. Il suffit d’être :</p>
 <ul>
 <li>Une boutique <b>PrestaShop, WooCommerce ou Shopify</b> (l’application Shopify est en cours de validation : vous pouvez déjà créer votre compte).</li>
 <li>Qui <b>livre en France</b>, puisque les testeurs Avitime y résident.</li>
@@ -69,15 +73,23 @@ BODY = f"""<article>
 <h2>Comment ça se passe</h2>
 <ol class="pi-steps">
 <li><b>Vous créez votre compte</b>Deux minutes, avec votre SIRET ou votre numéro de TVA, puis vous reliez votre boutique.</li>
-<li><b>Vous lancez votre campagne</b>Sans choisir de formule : tant qu’il reste des places, la vôtre est attribuée automatiquement, avec 10 tests offerts.</li>
+<li><b>Vous lancez votre campagne</b>Sans choisir de formule ni saisir de code : vos 5 tests offerts s’appliquent automatiquement.</li>
 <li><b>Avitime sélectionne les testeurs</b>Vous leur envoyez le produit ; ils le testent puis donnent leur avis.</li>
-<li><b>Vous recevez vos avis</b>Ils sont publiés sur vos fiches produit. Vos 10 tests utilisés, vous choisissez une formule si vous voulez continuer.</li>
+<li><b>Vous recevez les avis</b>Ils sont publiés sur vos fiches produit, quelle que soit la note. Vos 5 tests utilisés, vous choisissez une formule si vous voulez continuer.</li>
 </ol>
 
-<h2>Les études de cas</h2>
-<div class="pi-empty"><p>Avitime démarre : les premières études de cas des boutiques pionnières seront publiées ici. Elles montreront de vrais chiffres (nombre d’avis, délai, notes obtenues), y compris quand tout ne s’est pas passé comme prévu.</p></div>
+<h2>Les conditions</h2>
+<ul>
+<li><b>5 tests offerts par boutique</b>, soit 5 testeurs au total, sans abonnement, sans engagement et sans code promo.</li>
+<li><b>Les produits envoyés aux testeurs restent à votre charge</b>, ainsi que leur expédition.</li>
+<li><b>Des tests offerts, pas des avis offerts</b> : chaque testeur s’engage à donner son avis, mais aucun volume d’avis n’est garanti. Les avis sont publiés quelle que soit la note, de 1 à 5 étoiles.</li>
+<li><b>Une offre valable en ce moment</b>, sans date de fin annoncée : elle peut évoluer, et cette page sera mise à jour si c’est le cas.</li>
+</ul>
 
-<div class="gd-cta"><p><b>Envie d’en faire partie ?</b> Dix places, attribuées dans l’ordre de lancement des campagnes.</p><a class="btn" href="{APPLY}">Créer mon compte commerçant</a></div>
+<h2>Les études de cas</h2>
+<div class="pi-empty"><p>Avitime démarre : les premières études de cas seront publiées ici. Elles montreront de vrais chiffres (nombre d’avis, délai, notes obtenues), y compris quand tout ne s’est pas passé comme prévu.</p></div>
+
+<div class="gd-cta"><p><b>Envie de vous lancer ?</b> Vos 5 premiers tests sont offerts, sans abonnement.</p><a class="btn" href="{APPLY}">Créer mon compte commerçant</a></div>
 <p style="margin-top:14px">Une question avant de vous lancer ? <a href="{QUESTION}">Écrivez-moi</a>.</p>
 <p class="gd-note" style="margin-top:22px">Avitime est édité par SPARKMOTION AGENCY LTD. Les testeurs sont sélectionnés par Avitime, jamais par la boutique, et toutes les notes sont publiées, de 1 à 5 étoiles. <a href="/a-propos.html#methode">Notre méthode</a> · <a href="/cgv.html">CGV commerçants</a></p>
 </div></section>
@@ -91,7 +103,7 @@ def main():
          "author": AUTHOR, "publisher": PUBLISHER},
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://avitime.fr/"},
-            {"@type": "ListItem", "position": 2, "name": "Programme pionniers", "item": "https://avitime.fr" + PATH}]}]}
+            {"@type": "ListItem", "position": 2, "name": "Tests offerts", "item": "https://avitime.fr" + PATH}]}]}
     h = HEAD.format(title=TITLE, desc=DESC, path=PATH, ogtype="website", guides_current="")
     h = h.replace("</style>\n</head>", "</style>\n" + CSS, 1)
     out = h + BODY + FOOT.replace("{ld}", json.dumps(ld, ensure_ascii=False))
