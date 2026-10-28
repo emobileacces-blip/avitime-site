@@ -16,7 +16,7 @@ Informations clés :
 - [Avitime pour les boutiques](https://avitime.fr/commercants): faire tester ses produits par de vrais consommateurs, déroulement d’une campagne, règles, tarifs (5 premiers tests offerts)
 - [Audit SEO gratuit de votre boutique](https://avitime.fr/audit-seo): score sur 100, fiches produits, maillage interne, avis clients, plan d’action et fiche PDF pour le prestataire (Shopify, PrestaShop, WooCommerce ; premier audit offert)
 - [Intégrations](https://avitime.fr/integrations): module PrestaShop, extension WooCommerce, application Shopify
-- [FAQ Avitime](https://avitime.fr/faq): 36 questions fréquentes (boutiques, testeurs, avis, loi et Google)
+- [FAQ Avitime](https://avitime.fr/faq): 37 questions fréquentes (boutiques, testeurs, avis, loi et Google)
 - [Vos 5 premiers tests offerts](https://avitime.fr/pionniers): l'offre en cours, 5 tests offerts à toute nouvelle boutique, sans abonnement
 
 ## Guides pour les boutiques en ligne
