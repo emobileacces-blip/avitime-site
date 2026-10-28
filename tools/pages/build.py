@@ -42,6 +42,12 @@ PAGES = {
                   "contentUrl": "https://avitime.fr/assets/video/commercants-budget.mp4",
                   "uploadDate": "2026-10-26T12:00:00+01:00", "duration": "PT1M53S", "inLanguage": "fr-FR"},
     },
+    "audit-seo": {
+        "title": "Audit SEO gratuit de votre boutique en ligne | Avitime",
+        "desc": "Audit SEO gratuit pour Shopify, PrestaShop et WooCommerce : score sur 100, fiches produits, maillage interne, avis clients et plan d’action clair.",
+        "crumb": "Audit SEO",
+        "faq": True,
+    },
     "integrations": {
         "title": "Module avis clients PrestaShop, WooCommerce et Shopify | Avitime",
         "desc": "Le module Avitime pour PrestaShop, l’extension WooCommerce et l’application Shopify : commandes testeurs à 0 €, suivi et avis vérifiés sur vos fiches.",
@@ -70,6 +76,12 @@ for slug, p in PAGES.items():
             {"@type": "ListItem", "position": 2, "name": p["crumb"], "item": url}]}]}
     if p.get("video"):
         ld["@graph"].append(p["video"])
+    if p.get("faq"):
+        # FAQPage tirée des <details> de la page (questions / réponses visibles, sans HTML).
+        src = (HERE / f"{slug}.main.html").read_text()
+        qa = re.findall(r"<details><summary>(.*?)</summary><p>(.*?)</p></details>", src, flags=re.S)
+        txt = lambda h: re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", h).replace("&nbsp;", "\u00a0").replace("&amp;", "&")).strip()
+        ld["@graph"].append({"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": txt(q), "acceptedAnswer": {"@type": "Answer", "text": txt(a)}} for q, a in qa]})
     head += CSS + '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + "</script>\n"
     main = (HERE / f"{slug}.main.html").read_text().replace("[[LEAD]]", LEAD)
     foot = tpl[main_end:]

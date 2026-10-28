@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://avitime.fr/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://avitime.fr/</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://avitime.fr/en/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://avitime.fr/faq</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://avitime.fr/commercants</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://avitime.fr/commercants</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://avitime.fr/audit-seo</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://avitime.fr/integrations</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://avitime.fr/devenir-testeur</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://avitime.fr/a-propos.html</loc><lastmod>2026-10-27</lastmod></url>
@@ -13,14 +14,15 @@
   <url><loc>https://avitime.fr/en/terms.html</loc></url>
   <url><loc>https://avitime.fr/en/privacy.html</loc></url>
   <url><loc>https://avitime.fr/en/tester-terms.html</loc></url>
-  <url><loc>https://avitime.fr/guides/</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://avitime.fr/guides/referencement-boutique-en-ligne.html</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://avitime.fr/guides/</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://avitime.fr/guides/audit-seo-boutique-en-ligne.html</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://avitime.fr/guides/referencement-boutique-en-ligne.html</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://avitime.fr/guides/faux-avis-loi.html</loc><lastmod>2026-10-23</lastmod></url>
   <url><loc>https://avitime.fr/guides/premiers-avis-clients.html</loc><lastmod>2026-10-23</lastmod></url>
   <url><loc>https://avitime.fr/mentions-legales.html</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://avitime.fr/guides/avis-clients-ia.html</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://avitime.fr/guides/geo-seo.html</loc><lastmod>2026-10-21</lastmod></url>
-  <url><loc>https://avitime.fr/guides/eeat-e-commerce.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://avitime.fr/guides/geo-seo.html</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://avitime.fr/guides/eeat-e-commerce.html</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://avitime.fr/guides/arnaques-testeur-produits.html</loc><lastmod>2026-10-23</lastmod></url>
   <url><loc>https://avitime.fr/guides/testeur-de-produit.html</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://avitime.fr/guides/sites-tester-produits-gratuitement.html</loc><lastmod>2026-10-21</lastmod></url>
@@ -37,12 +39,12 @@
   <url><loc>https://avitime.fr/guides/comparatif-solutions-avis-clients.html</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://avitime.fr/guides/statistiques-avis-clients.html</loc><lastmod>2026-10-16</lastmod></url>
   <url><loc>https://avitime.fr/guides/demander-avis-client.html</loc><lastmod>2026-10-21</lastmod></url>
-  <url><loc>https://avitime.fr/guides/fiche-produit-e-commerce.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://avitime.fr/guides/fiche-produit-e-commerce.html</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://avitime.fr/guides/taux-conversion-e-commerce.html</loc><lastmod>2026-10-23</lastmod></url>
   <url><loc>https://avitime.fr/guides/lancer-nouveau-produit.html</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://avitime.fr/guides/echantillonnage-produit.html</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://avitime.fr/pionniers</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://avitime.fr/guides/seo-site-ne-decolle-pas.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://avitime.fr/guides/seo-site-ne-decolle-pas.html</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://avitime.fr/guides/site-cree-avec-ia.html</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://avitime.fr/guides/boutique-en-ligne-sans-ventes.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://avitime.fr/guides/boutique-en-ligne-sans-ventes.html</loc><lastmod>2026-10-28</lastmod></url>
 </urlset>
