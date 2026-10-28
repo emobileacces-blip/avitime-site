@@ -26,6 +26,17 @@ GUIDES = [{
     "lede": "Votre boutique est en ligne, mais Google et les assistants IA la voient-ils vraiment&nbsp;? Voici les 9 points qu’un audit SEO doit passer en revue, expliqués simplement et sources à l’appui, avec ce qu’il faut corriger en premier.",
     "pub_iso": "2026-10-28", "pub_fr": "28 octobre 2026", "read": 10,
     "related": ["seo-site-ne-decolle-pas", "referencement-boutique-en-ligne", "eeat-e-commerce"],
+}, {
+    "slug": "video-testeur-produit",
+    "body": "guide-video-testeur.body.html",
+    "seo_title": "Vidéo de test produit : comment la faire et la publier",
+    "seo_desc": "Testeurs : tourner une vidéo de test produit en 60 secondes, la mention « Collaboration commerciale » obligatoire, les points gagnés et ce que la boutique peut en faire.",
+    "title": "Vidéo de test produit : comment la faire et la publier (2026)",
+    "desc": "Tourner une courte vidéo de test produit, la publier sur TikTok, Instagram ou YouTube avec la mention obligatoire, et ce que la boutique peut en faire.",
+    "topic": "Testeurs",
+    "lede": "Vous testez un produit et vous voulez le montrer en vidéo&nbsp;? Voici comment tourner une vidéo utile en 60 secondes, la mention que la loi impose quand le produit est offert, et ce que cette vidéo vous rapporte, à vous comme à la boutique.",
+    "pub_iso": "2026-10-28", "pub_fr": "28 octobre 2026", "read": 7,
+    "related": ["testeur-de-produit", "tester-produits-a-domicile", "faux-avis-loi"],
 }]
 
 
