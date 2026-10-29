@@ -49,6 +49,17 @@ GUIDES = [{
     "lede": "Avis Vérifiés et Trustpilot sont les deux noms qui reviennent quand on veut des avis clients. Mais sont-ils adaptés à une boutique qui démarre&nbsp;? Prix publics, méthode de collecte, conformité&nbsp;: voici le comparatif des principales solutions, et l’alternative quand vos fiches affichent encore zéro avis.",
     "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 9,
     "related": ["comparatif-solutions-avis-clients", "premiers-avis-clients", "faux-avis-loi"],
+}, {
+    "slug": "directive-omnibus-avis-clients",
+    "body": "guide-omnibus.body.html",
+    "seo_title": "Directive Omnibus et avis clients : obligations 2026",
+    "seo_desc": "Faux avis, avis supprimés, contrepartie, informations à afficher : ce que la directive Omnibus interdit et impose aux e-commerçants, textes de loi à l’appui.",
+    "title": "Directive Omnibus et avis clients : ce que chaque e-commerçant doit savoir (2026)",
+    "desc": "Ce que la directive Omnibus interdit (faux avis, avis déformés) et impose aux e-commerçants pour leurs avis clients, avec les textes de référence.",
+    "topic": "Juridique",
+    "lede": "Depuis le 28&nbsp;mai 2022, la directive Omnibus encadre strictement les avis clients en ligne. Qu’est-ce qui est interdit, qu’est-ce qui est obligatoire, et comment collecter des avis efficaces et conformes&nbsp;? Le point, textes de loi à l’appui.",
+    "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 10,
+    "related": ["faux-avis-loi", "alternative-avis-verifies-trustpilot", "premiers-avis-clients"],
 }]
 
 
