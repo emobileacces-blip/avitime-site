@@ -3,6 +3,7 @@ Les guides en ligne ont été retouchés après make_guides.py : ne PAS relancer
 pour les nouveaux guides.
 Usage : python3 tools/pages/build_guide.py   (depuis avitime-site/)"""
 import json
+import sys
 import re
 from pathlib import Path
 
@@ -37,6 +38,17 @@ GUIDES = [{
     "lede": "Vous testez un produit et vous voulez le montrer en vidéo&nbsp;? Voici comment tourner une vidéo utile en 60 secondes, la mention que la loi impose quand le produit est offert, et ce que cette vidéo vous rapporte, à vous comme à la boutique.",
     "pub_iso": "2026-10-28", "pub_fr": "28 octobre 2026", "read": 7,
     "related": ["testeur-de-produit", "tester-produits-a-domicile", "faux-avis-loi"],
+}, {
+    "slug": "alternative-avis-verifies-trustpilot",
+    "body": "guide-alternative-av-tp.body.html",
+    "seo_title": "Alternative à Avis Vérifiés et Trustpilot : comparatif 2026",
+    "seo_desc": "Avis Vérifiés, Trustpilot, avis Google, Bazaarvoice ou testeurs : prix publics, méthode de collecte, conformité et la bonne alternative pour une petite boutique.",
+    "title": "Alternative à Avis Vérifiés et Trustpilot : le comparatif pour les e-commerçants (2026)",
+    "desc": "Prix, méthode de collecte et limites d’Avis Vérifiés, Trustpilot, des avis Google et de Bazaarvoice, et l’alternative pour obtenir ses premiers avis sans ventes.",
+    "topic": "Comparatif",
+    "lede": "Avis Vérifiés et Trustpilot sont les deux noms qui reviennent quand on veut des avis clients. Mais sont-ils adaptés à une boutique qui démarre&nbsp;? Prix publics, méthode de collecte, conformité&nbsp;: voici le comparatif des principales solutions, et l’alternative quand vos fiches affichent encore zéro avis.",
+    "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 9,
+    "related": ["comparatif-solutions-avis-clients", "premiers-avis-clients", "faux-avis-loi"],
 }]
 
 
@@ -46,7 +58,10 @@ def card(slug):
     return f'<a class="gd-card" href="/guides/{slug}.html"><p class="eyebrow">{m.group(1)}</p><h2>{m.group(2)}</h2></a>'
 
 
+ONLY = set(sys.argv[1:])
 for g in GUIDES:
+    if ONLY and g["slug"] not in ONLY:
+        continue
     path = f"/guides/{g['slug']}.html"
     url = "https://avitime.fr" + path
     h = SHELL
