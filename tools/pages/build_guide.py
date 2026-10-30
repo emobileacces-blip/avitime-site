@@ -104,6 +104,17 @@ GUIDES = [{
     "lede": "Pourquoi certaines fiches affichent-elles des étoiles dans Google, et pas les vôtres&nbsp;? Notes des produits, note du magasin, balisage Schema.org&nbsp;: les conditions exactes de Google, les raisons les plus fréquentes d’absence, et comment obtenir vos étoiles en 6 étapes.",
     "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 11,
     "related": ["obtenir-avis-clients-boutique-en-ligne", "referencement-boutique-en-ligne", "preuve-sociale-ecommerce-conversions"],
+}, {
+    "slug": "avis-clients-shopify-gratuit",
+    "body": "guide-shopify-gratuit.body.html",
+    "seo_title": "Avis clients Shopify sans application payante (2026)",
+    "seo_desc": "Afficher des avis clients sur Shopify sans payer : les forfaits gratuits de Judge.me, Loox et Junip comparés, leurs limites (Google Shopping, volume) et comment obtenir vos premiers avis.",
+    "title": "Avis clients sur Shopify sans application payante : ce qui est possible en 2026",
+    "desc": "Shopify n’a plus d’outil d’avis gratuit depuis 2024. Les forfaits gratuits de Judge.me, Loox et Junip, ce qu’ils font, ce qu’ils ne font pas, et quand passer à autre chose.",
+    "topic": "Shopify",
+    "lede": "Peut-on afficher des avis clients sur Shopify sans payer d’application chaque mois&nbsp;? Oui, avec des limites. Ce que proposent vraiment les forfaits gratuits en 2026, ce qu’ils ne font pas, et comment obtenir vos premiers avis quand la boutique démarre.",
+    "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 11,
+    "related": ["avis-clients-shopify", "obtenir-avis-clients-boutique-en-ligne", "etoiles-google-shopping-avis-produits"],
 }]
 
 
