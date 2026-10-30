@@ -115,6 +115,17 @@ GUIDES = [{
     "lede": "Peut-on afficher des avis clients sur Shopify sans payer d’application chaque mois&nbsp;? Oui, avec des limites. Ce que proposent vraiment les forfaits gratuits en 2026, ce qu’ils ne font pas, et comment obtenir vos premiers avis quand la boutique démarre.",
     "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 11,
     "related": ["avis-clients-shopify", "obtenir-avis-clients-boutique-en-ligne", "etoiles-google-shopping-avis-produits"],
+}, {
+    "slug": "widget-avis-clients",
+    "body": "guide-widget-avis.body.html",
+    "seo_title": "Widget avis clients : choisir et installer le bon en 2026",
+    "seo_desc": "Quel widget d’avis clients choisir pour votre boutique en ligne ? Ce qu’il doit afficher, les critères de choix, le comparatif et l’installation sur PrestaShop, WooCommerce et Shopify.",
+    "title": "Widget d’avis clients : comment choisir et installer le bon sur votre boutique en ligne (2026)",
+    "desc": "Ce qu’un widget d’avis doit afficher selon la loi, les critères de choix, le comparatif des solutions et l’installation sur PrestaShop, WooCommerce et Shopify.",
+    "topic": "Avis clients",
+    "lede": "Note moyenne, dates, mention des contreparties, avis négatifs, étoiles dans Google&nbsp;: ce qu’un widget d’avis clients doit afficher, comment le choisir, où le placer, et comment l’installer sur PrestaShop, WooCommerce et Shopify.",
+    "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 13,
+    "related": ["avis-clients-shopify-gratuit", "directive-omnibus-avis-clients", "etoiles-google-shopping-avis-produits"],
 }]
 
 
