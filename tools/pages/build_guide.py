@@ -71,6 +71,17 @@ GUIDES = [{
     "lede": "Comment obtenir des avis clients rapidement quand on démarre, qu’on lance un nouveau produit ou que ses fiches affichent encore zéro étoile&nbsp;? Voici les six méthodes disponibles en 2026, leurs vraies limites et les erreurs à éviter pour rester dans les règles.",
     "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 11,
     "related": ["premiers-avis-clients", "demander-avis-client", "combien-avis-clients"],
+}, {
+    "slug": "preuve-sociale-ecommerce-conversions",
+    "body": "guide-preuve-sociale.body.html",
+    "seo_title": "Preuve sociale e-commerce : boostez vos conversions",
+    "seo_desc": "Avis, photos clients, labels, étoiles dans Google : comment la preuve sociale agit à chaque étape du parcours d’achat, et comment la construire quand on démarre.",
+    "title": "Preuve sociale en e-commerce : comment elle alimente votre parcours d’achat et augmente vos conversions (2026)",
+    "desc": "Les formats de preuve sociale, leur rôle à chaque étape du parcours d’achat, les règles de la directive Omnibus et comment construire sa preuve sociale quand on démarre.",
+    "topic": "Marketing",
+    "lede": "Avis, photos de clients, étoiles dans Google, labels&nbsp;: la preuve sociale pèse sur chaque étape du parcours d’achat. Voici ce qu’elle est, les formats qui fonctionnent, ce que la loi impose, et comment la construire quand votre boutique démarre.",
+    "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 12,
+    "related": ["avis-clients-ia", "obtenir-avis-clients-boutique-en-ligne", "statistiques-avis-clients"],
 }]
 
 
