@@ -148,6 +148,17 @@ GUIDES = [{
     "lede": "On ne teste pas seulement des produits reçus par la poste&nbsp;: formations en ligne, logiciels, outils d’IA et e-books se testent aussi gratuitement. Comment ça marche, ce qu’on attend de vous, et les fausses offres à éviter, en particulier dans le trading.",
     "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 7,
     "related": ["avis-produit-numerique-formation-saas", "testeur-de-produit", "arnaques-testeur-produits"],
+}, {
+    "slug": "avis-formation-systeme-io",
+    "body": "guide-systeme-io.body.html",
+    "seo_title": "Avis sur une formation Systeme.io : la faire tester (2026)",
+    "seo_desc": "Faire tester sa formation Systeme.io par de vrais utilisateurs, sans boutique : clé API, inscription automatique des testeurs et bloc d’avis sur la page de vente.",
+    "title": "Avis sur une formation Systeme.io : la faire tester et afficher les avis (2026)",
+    "desc": "Le pas-à-pas pour faire tester une formation Systeme.io avec Avitime : créer la clé API, inscription automatique des testeurs, avis vérifiés sur la page de vente.",
+    "topic": "Produits numériques",
+    "lede": "Votre formation est sur Systeme.io et sa page de vente n’affiche encore aucun avis&nbsp;? Voici comment la faire tester par de vrais utilisateurs, sans boutique en ligne&nbsp;: la clé API à créer, l’inscription automatique des testeurs, et le bloc d’avis à coller sur votre page.",
+    "pub_iso": "2026-10-31", "pub_fr": "31 octobre 2026", "read": 7,
+    "related": ["avis-produit-numerique-formation-saas", "directive-omnibus-avis-clients", "obtenir-avis-clients-boutique-en-ligne"],
 }]
 
 
