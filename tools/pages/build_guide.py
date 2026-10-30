@@ -126,6 +126,28 @@ GUIDES = [{
     "lede": "Note moyenne, dates, mention des contreparties, avis négatifs, étoiles dans Google&nbsp;: ce qu’un widget d’avis clients doit afficher, comment le choisir, où le placer, et comment l’installer sur PrestaShop, WooCommerce et Shopify.",
     "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 13,
     "related": ["avis-clients-shopify-gratuit", "directive-omnibus-avis-clients", "etoiles-google-shopping-avis-produits"],
+}, {
+    "slug": "avis-produit-numerique-formation-saas",
+    "body": "guide-produit-numerique.body.html",
+    "seo_title": "Avis sur une formation, un SaaS ou un outil IA : la méthode",
+    "seo_desc": "Formation en ligne (trading, marketing…), logiciel, SaaS, outil d’IA, e-book : comment obtenir ses premiers avis vérifiés en faisant tester son produit numérique, légalement.",
+    "title": "Avis sur une formation, un SaaS ou un outil d’IA : comment obtenir les premiers (2026)",
+    "desc": "Faire tester son produit numérique par de vrais utilisateurs : accès offert, durée d’utilisation avant l’avis, obligations légales et cas des formations en trading.",
+    "topic": "Produits numériques",
+    "lede": "Une formation en ligne, un logiciel ou un outil d’IA ne se touche pas avant l’achat&nbsp;: les avis sont la première preuve que cherchent vos visiteurs. Comment obtenir les premiers sans les acheter, quel accès offrir, combien de temps avant l’avis, et ce que la loi impose.",
+    "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 9,
+    "related": ["tester-formations-logiciels-gratuitement", "obtenir-avis-clients-boutique-en-ligne", "directive-omnibus-avis-clients"],
+}, {
+    "slug": "tester-formations-logiciels-gratuitement",
+    "body": "guide-testeur-numerique.body.html",
+    "seo_title": "Tester des formations et des logiciels gratuitement (2026)",
+    "seo_desc": "Formations (trading, marketing, langues…), logiciels, SaaS, outils d’IA, e-books : comment les tester gratuitement, donner un avis utile et éviter les arnaques.",
+    "title": "Tester des formations, des logiciels et des outils d’IA gratuitement (2026)",
+    "desc": "Ce qu’on peut tester (formations, SaaS, IA, e-books), comment se passe un test de produit numérique, comment donner un avis utile et les pièges à éviter.",
+    "topic": "Testeurs",
+    "lede": "On ne teste pas seulement des produits reçus par la poste&nbsp;: formations en ligne, logiciels, outils d’IA et e-books se testent aussi gratuitement. Comment ça marche, ce qu’on attend de vous, et les fausses offres à éviter, en particulier dans le trading.",
+    "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 7,
+    "related": ["avis-produit-numerique-formation-saas", "testeur-de-produit", "arnaques-testeur-produits"],
 }]
 
 

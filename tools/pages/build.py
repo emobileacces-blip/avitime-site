@@ -55,6 +55,12 @@ PAGES = {
         "crumb": "Audit SEO",
         "faq": True,
     },
+    "produits-numeriques": {
+        "title": "Faire tester une formation, un SaaS ou un outil IA | Avitime",
+        "desc": "Formations (trading, marketing…), logiciels, SaaS, outils d’IA, e-books : faites tester vos produits numériques par de vrais utilisateurs et obtenez des avis vérifiés.",
+        "crumb": "Produits numériques",
+        "faq": True,
+    },
     "integrations": {
         "title": "Module avis clients PrestaShop, WooCommerce et Shopify | Avitime",
         "desc": "Le module Avitime pour PrestaShop, l’extension WooCommerce et l’application Shopify : commandes testeurs à 0 €, suivi et avis vérifiés sur vos fiches.",

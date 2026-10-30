@@ -14,6 +14,7 @@ Informations clés :
 - [À propos et méthode de vérification](https://avitime.fr/a-propos.html): qui est derrière Avitime, les six étapes de vérification, la politique d'avis
 - [Devenir testeur](https://avitime.fr/devenir-testeur): le guide complet en 7 étapes, avec les captures de l'espace testeur
 - [Avitime pour les boutiques](https://avitime.fr/commercants): faire tester ses produits par de vrais consommateurs, déroulement d’une campagne, règles, tarifs (5 premiers tests offerts)
+- [Produits numériques](https://avitime.fr/produits-numeriques): faire tester une formation en ligne (trading, marketing, langues…), un logiciel ou SaaS, un outil d’IA, un e-book ou un abonnement ; accès donné au testeur dans son espace, avis après 7 à 30 jours d’utilisation
 - [Audit SEO gratuit de votre boutique](https://avitime.fr/audit-seo): score sur 100, fiches produits, maillage interne, avis clients, plan d’action et fiche PDF pour le prestataire (Shopify, PrestaShop, WooCommerce ; premier audit offert)
 - [Intégrations](https://avitime.fr/integrations): module PrestaShop, extension WooCommerce, application Shopify
 - [FAQ Avitime](https://avitime.fr/faq): 37 questions fréquentes (boutiques, testeurs, avis, loi et Google)
@@ -53,6 +54,8 @@ Informations clés :
 ## Guides pour les testeurs de produits
 
 - [Vidéo de test produit : comment la faire et la publier](https://avitime.fr/guides/video-testeur-produit.html): tourner une vidéo en 60 secondes, la mention « Collaboration commerciale » obligatoire, les points et ce que la boutique peut en faire
+- [Avis sur une formation, un SaaS ou un outil d’IA](https://avitime.fr/guides/avis-produit-numerique-formation-saas.html): obtenir ses premiers avis en faisant tester un produit numérique, obligations légales, cas des formations en trading
+- [Tester des formations, des logiciels et des outils d’IA gratuitement](https://avitime.fr/guides/tester-formations-logiciels-gratuitement.html): ce qu’on peut tester, déroulé, avis utile, pièges à éviter
 - [Testeur de produit : c'est quoi, combien ça rapporte ?](https://avitime.fr/guides/testeur-de-produit.html)
 - [Tester des produits gratuitement : les sites fiables](https://avitime.fr/guides/sites-tester-produits-gratuitement.html)
 - [Testeur Amazon : comment fonctionne Amazon Vine](https://avitime.fr/guides/testeur-amazon-vine.html)
