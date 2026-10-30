@@ -82,6 +82,17 @@ GUIDES = [{
     "lede": "Avis, photos de clients, étoiles dans Google, labels&nbsp;: la preuve sociale pèse sur chaque étape du parcours d’achat. Voici ce qu’elle est, les formats qui fonctionnent, ce que la loi impose, et comment la construire quand votre boutique démarre.",
     "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 12,
     "related": ["avis-clients-ia", "obtenir-avis-clients-boutique-en-ligne", "statistiques-avis-clients"],
+}, {
+    "slug": "plateformes-avis-clients-pme-comparatif",
+    "body": "guide-pme.body.html",
+    "seo_title": "Plateformes d’avis clients pour PME : prix et comparatif 2026",
+    "seo_desc": "Découvrez les plateformes d’avis clients adaptées aux PME en 2026 : comparatif honnête des tarifs, des fonctionnalités et des alternatives à Trustpilot.",
+    "title": "Plateformes d’avis clients pour PME : le comparatif des prix et des solutions (2026)",
+    "desc": "Prix publics, engagement, collecte active ou passive : Société des Avis Garantis, Avis Vérifiés, Trustpilot, Custplace, Guest Suite, Partoo, avis Google et Avitime comparés pour une PME.",
+    "topic": "Comparatif",
+    "lede": "Trustpilot, Avis Vérifiés, Société des Avis Garantis…&nbsp;: quelle plateforme d’avis clients choisir quand on est une PME ou une boutique indépendante&nbsp;? Prix publics, engagement, ce que chaque solution fait vraiment, et laquelle convient à votre situation.",
+    "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 12,
+    "related": ["alternative-avis-verifies-trustpilot", "comparatif-solutions-avis-clients", "obtenir-avis-clients-boutique-en-ligne"],
 }]
 
 
