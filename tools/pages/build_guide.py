@@ -93,6 +93,17 @@ GUIDES = [{
     "lede": "Trustpilot, Avis Vérifiés, Société des Avis Garantis…&nbsp;: quelle plateforme d’avis clients choisir quand on est une PME ou une boutique indépendante&nbsp;? Prix publics, engagement, ce que chaque solution fait vraiment, et laquelle convient à votre situation.",
     "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 12,
     "related": ["alternative-avis-verifies-trustpilot", "comparatif-solutions-avis-clients", "obtenir-avis-clients-boutique-en-ligne"],
+}, {
+    "slug": "etoiles-google-shopping-avis-produits",
+    "body": "guide-etoiles-google.body.html",
+    "seo_title": "Étoiles Google Shopping : comment les obtenir en 2026",
+    "seo_desc": "Notes des produits, note du magasin, étoiles Schema.org : les conditions de Google (50 avis, GTIN, flux mensuel, 3,5/5) et comment afficher des étoiles sur vos produits.",
+    "title": "Étoiles Google Shopping : comment les obtenir et les afficher sur vos produits (2026)",
+    "desc": "Les conditions de Google pour afficher les notes des produits, la note du magasin et les étoiles des résultats naturels, et comment les obtenir en 6 étapes.",
+    "topic": "Référencement",
+    "lede": "Pourquoi certaines fiches affichent-elles des étoiles dans Google, et pas les vôtres&nbsp;? Notes des produits, note du magasin, balisage Schema.org&nbsp;: les conditions exactes de Google, les raisons les plus fréquentes d’absence, et comment obtenir vos étoiles en 6 étapes.",
+    "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 11,
+    "related": ["obtenir-avis-clients-boutique-en-ligne", "referencement-boutique-en-ligne", "preuve-sociale-ecommerce-conversions"],
 }]
 
 

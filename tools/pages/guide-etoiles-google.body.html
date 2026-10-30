@@ -1,0 +1,150 @@
+<div class="gd-key"><p><b>L’essentiel :</b> dans Google, il existe trois sortes d’étoiles. Les <b>notes des produits</b> (annonces Shopping et fiches gratuites) demandent au moins 50 avis produits au total, des identifiants produits (GTIN, ou marque + MPN) et un flux d’avis mis à jour au moins une fois par mois. Les <b>notes du magasin</b> demandent environ 100 avis sur les 24 derniers mois et une moyenne d’au moins 3,5 sur 5. Les <b>étoiles des résultats naturels</b> viennent du balisage Schema.org de vos fiches. Dans tous les cas, Google reste libre de les afficher ou non.</p></div>
+
+<nav class="gd-toc" aria-label="Sommaire"><p>Au sommaire</p><ol>
+<li><a href="#types">Deux sortes d’étoiles dans Google Shopping</a></li>
+<li><a href="#produits">Les conditions pour les notes des produits</a></li>
+<li><a href="#magasin">Les conditions pour les notes du magasin</a></li>
+<li><a href="#absentes">Pourquoi vos étoiles ne s’affichent pas</a></li>
+<li><a href="#naturel">Les étoiles dans les résultats naturels (Schema.org)</a></li>
+<li><a href="#strategie">Obtenir vos étoiles en 6 étapes</a></li>
+<li><a href="#interdit">Ce qu’il ne faut pas faire</a></li>
+<li><a href="#recap">Le tableau récapitulatif</a></li>
+<li><a href="#faq">Questions fréquentes</a></li>
+</ol></nav>
+
+<p>Quand un internaute cherche un produit, les fiches qui affichent des étoiles attirent l’œil avant les autres. Pourtant, beaucoup d’e-commerçants ne savent pas d’où viennent ces étoiles, quelles conditions il faut remplir, ni pourquoi elles n’apparaissent pas alors que leur boutique a des avis. Ce guide fait le point, d’après la documentation de Google Merchant Center.</p>
+
+<h2 id="types">Deux sortes d’étoiles dans Google Shopping</h2>
+<p>On les confond souvent, mais ce sont deux programmes différents, qui se gèrent séparément.</p>
+<h3>Les notes des produits</h3>
+<p>Elles évaluent un article précis et s’affichent dans les annonces Shopping et dans les fiches produits gratuites de l’onglet Shopping. Elles reflètent l’avis des acheteurs sur le produit lui-même&nbsp;: qualité, conformité à la description, durabilité. Elles viennent des avis produits que vous transmettez à Google, vous-même ou par une plateforme d’avis partenaire.</p>
+<h3>Les notes du magasin</h3>
+<p>Elles évaluent l’expérience d’achat dans votre boutique&nbsp;: livraison, service client, retours. Elles peuvent apparaître dans les annonces Shopping et dans les annonces textuelles du Réseau de Recherche. Elles viennent notamment du programme gratuit Google Avis clients de Merchant Center et de plateformes d’avis partenaires.</p>
+<p>Une boutique peut donc avoir d’excellentes notes produits et une note magasin plus faible si ses délais de livraison ou son service après-vente laissent à désirer.</p>
+
+<h2 id="produits">Les conditions pour les notes des produits</h2>
+<h3>Au moins 50 avis sur l’ensemble de vos produits</h3>
+<p>Google demande <b>au moins 50 avis produits au total</b> pour afficher des notes des produits. Ce seuil porte sur l’ensemble de votre catalogue, pas sur chaque produit&nbsp;: 50 avis répartis sur dix références suffisent. Une fois le seuil atteint, l’affichage n’est pas automatique pour autant&nbsp;: il dépend aussi de la qualité de vos données.</p>
+<h3>Des identifiants produits fiables</h3>
+<p>Pour rattacher vos avis aux bons produits, Google s’appuie sur des identifiants uniques&nbsp;:</p>
+<ul>
+<li>le <b>GTIN</b> (le code-barres EAN en Europe), qui donne la meilleure correspondance&nbsp;;</li>
+<li>à défaut, la <b>marque + la référence fabricant (MPN)</b>&nbsp;;</li>
+<li>puis, moins fiables, la référence interne (SKU) et l’adresse de la fiche produit.</li>
+</ul>
+<p>Les adresses des produits dans vos avis doivent aussi correspondre au domaine déclaré dans Merchant Center. Une fiche sans GTIN, avec une marque écrite différemment dans votre boutique et dans votre flux, a peu de chances de voir ses étoiles, même avec des dizaines d’avis.</p>
+<h3>Un flux d’avis mis à jour au moins une fois par mois</h3>
+<p>Deux façons de transmettre vos avis produits à Google&nbsp;:</p>
+<ul>
+<li><b>Votre propre flux d’avis,</b> au format de Google, envoyé dans Merchant Center et mis à jour <b>au moins une fois par mois</b> avec vos nouveaux avis. Le premier flux passe par une vérification de qualité et de conformité, qui prend en général <b>2 à 4 semaines</b>.</li>
+<li><b>Une plateforme d’avis partenaire de Google,</b> qui transmet vos avis automatiquement. C’est le plus simple techniquement.</li>
+</ul>
+<h3>Les règles sur le contenu des avis</h3>
+<p>Les règles de Google pour les notes des produits imposent de transmettre <b>tous</b> vos avis, y compris les mauvaises notes, sans supprimer les anciens. Les avis doivent être sollicités honnêtement auprès de clients qui ont passé commande. Les avis obtenus avec une contrepartie (bon d’achat, réduction, produit offert) sont acceptés, à deux conditions&nbsp;: la contrepartie ne doit pas dépendre de la note, et ces avis doivent être signalés dans le flux avec l’attribut <code>is_incentivized_review</code>.</p>
+
+<h2 id="magasin">Les conditions pour les notes du magasin</h2>
+<p>Selon la page d’aide de Google mise à jour en septembre 2026, une note de magasin demande en général <b>une centaine d’avis éligibles</b>, recueillis sur les <b>24 derniers mois</b>, avec une moyenne d’<b>au moins 3,5 sur 5</b> pour apparaître dans les annonces. La note est calculée pays par pays&nbsp;: un avis compte dans le pays d’où il vient.</p>
+<h3>Google Avis clients&nbsp;: le programme gratuit</h3>
+<p>Google Avis clients est un module gratuit de Merchant Center. Après un achat, le client se voit proposer une courte enquête sur son expérience&nbsp;; ses réponses alimentent la note de votre magasin. Pour le mettre en place, activez le programme dans Merchant Center (rubrique des modules complémentaires), puis ajoutez le code de l’enquête sur votre page de confirmation de commande.</p>
+<p>Google demande de proposer l’enquête à <b>tous</b> les clients, sans tri&nbsp;: vous ne pouvez pas la réserver aux clients satisfaits.</p>
+
+<h2 id="absentes">Pourquoi vos étoiles ne s’affichent pas</h2>
+<h3>Vous n’avez pas encore 50 avis produits</h3>
+<p>C’est la cause la plus fréquente. Sous 50 avis transmis à Google, les notes des produits ne s’affichent pas, quelle que soit la qualité de vos données. <b>Solution&nbsp;:</b> une collecte active. Quand les ventes sont encore rares, un programme de testeurs permet d’obtenir des premiers avis authentiques sans attendre (voir plus bas).</p>
+<h3>Vos données produits sont incomplètes</h3>
+<p>Sans GTIN valide, ou avec une marque et des références incohérentes entre votre boutique et votre flux, Google ne peut pas rattacher vos avis à vos produits. <b>Solution&nbsp;:</b> vérifiez que chaque produit a un GTIN dans Merchant Center. Pour un produit sans GTIN (fabrication artisanale, marque propre), renseignez la marque et la référence fabricant, toujours écrites de la même façon.</p>
+<h3>Votre flux d’avis n’est plus à jour</h3>
+<p>Google exige un envoi au moins mensuel. Un flux qui n’est plus mis à jour peut faire disparaître des étoiles qui s’affichaient. <b>Solution&nbsp;:</b> automatisez l’export de vos avis, ou passez par une plateforme partenaire qui s’en charge.</p>
+<h3>Votre compte Merchant Center a des erreurs</h3>
+<p>Des erreurs dans votre flux produits (prix, disponibilité, images) peuvent bloquer vos annonces, et vos étoiles avec. <b>Solution&nbsp;:</b> consultez régulièrement les diagnostics de Merchant Center et corrigez les erreurs signalées.</p>
+<h3>Votre note de magasin n’atteint pas les seuils</h3>
+<p>Avec moins d’une centaine d’avis récents ou une moyenne sous 3,5, les étoiles du magasin ne s’affichent pas. <b>Solution&nbsp;:</b> activez Google Avis clients pour recueillir des avis réguliers, et travaillez ce qui fait la note&nbsp;: délais de livraison, service client, retours.</p>
+
+<h2 id="naturel">Les étoiles dans les résultats naturels (Schema.org)</h2>
+<p>En dehors de Shopping, des étoiles peuvent aussi s’afficher sous vos pages dans les résultats naturels de Google. Elles viennent du <b>balisage structuré Schema.org</b> placé dans le code de vos fiches produits.</p>
+<h3>Le balisage à mettre en place</h3>
+<p>Le type <code>Product</code>, avec une note agrégée (<code>aggregateRating</code>), indique à Google que votre fiche a une note moyenne et un nombre d’avis&nbsp;:</p>
+<ul>
+<li><code>name</code>&nbsp;: le nom exact du produit&nbsp;;</li>
+<li><code>aggregateRating</code>&nbsp;: <code>ratingValue</code> (la note moyenne, par exemple 4,3), <code>reviewCount</code> (le nombre d’avis), <code>bestRating</code> (5) et <code>worstRating</code> (1)&nbsp;;</li>
+<li><code>review</code>&nbsp;: les avis eux-mêmes (facultatif, mais recommandé).</li>
+</ul>
+<p><b>Points d’attention&nbsp;:</b> la note balisée doit être exactement celle qui s’affiche sur la page, et générée automatiquement à partir de vos avis. Un balisage qui ne reflète pas le contenu réel peut être ignoré, voire faire l’objet d’une action manuelle de Google. Les modules d’avis de PrestaShop, WooCommerce et Shopify, ou votre thème, génèrent souvent ce balisage&nbsp;: vérifiez-le avec l’outil de test des résultats enrichis de Google. Il n’y a pas de nombre minimum d’avis, mais Google reste libre d’afficher ou non les étoiles.</p>
+<h3>Ce que le balisage ne fait pas</h3>
+<p>Le balisage Schema.org n’alimente pas les étoiles de Google Shopping&nbsp;: ce sont deux systèmes distincts. Pour Shopping, il faut le programme des notes des produits dans Merchant Center. Voir aussi notre guide sur la <a href="/guides/fiche-produit-e-commerce.html">fiche produit e-commerce</a>.</p>
+
+<h2 id="strategie">Obtenir vos étoiles en 6 étapes</h2>
+<h3>Étape 1&nbsp;: activez Google Avis clients</h3>
+<p>C’est gratuit et rapide&nbsp;: activez le programme dans Merchant Center, ajoutez le code de l’enquête sur votre page de confirmation de commande, et laissez les avis s’accumuler pour votre note de magasin.</p>
+<h3>Étape 2&nbsp;: complétez vos données produits</h3>
+<p>Avant même de penser aux avis, vérifiez votre flux Merchant Center&nbsp;: un GTIN valide pour chaque produit, une marque écrite de façon identique partout, les références fabricant quand elles existent. Sans ces données, vos avis ne seront pas rattachés aux bons produits.</p>
+<h3>Étape 3&nbsp;: atteignez les 50 avis produits</h3>
+<p>Si vous partez de zéro, la collecte après achat peut prendre des mois. Pour aller plus vite&nbsp;:</p>
+<ul>
+<li><b>Un programme de testeurs&nbsp;:</b> une campagne Avitime sur vos produits prioritaires vous apporte des avis authentiques et détaillés, publiés sur vos fiches avec la mention «&nbsp;Produit offert pour test · Testeur Avitime vérifié&nbsp;». Chaque testeur passe une vraie commande sur votre boutique. Si vous transmettez ces avis dans votre flux d’avis Google, signalez-les avec l’attribut <code>is_incentivized_review</code>, comme Google le demande pour tout avis obtenu avec une contrepartie.</li>
+<li><b>Une demande d’avis à vos clients existants&nbsp;:</b> si vous avez déjà des clients qui n’ont pas laissé d’avis, une demande après livraison, avec une seule relance (voir <a href="/guides/demander-avis-client.html">nos modèles d’e-mail et de SMS</a>).</li>
+<li><b>Un encart dans le colis,</b> avec un QR code vers votre formulaire d’avis&nbsp;: simple et peu coûteux.</li>
+</ul>
+<p>Toutes les méthodes sont comparées dans notre guide <a href="/guides/obtenir-avis-clients-boutique-en-ligne.html">obtenir des avis clients rapidement</a>.</p>
+<h3>Étape 4&nbsp;: gardez un flux d’avis à jour</h3>
+<p>Si vous envoyez vous-même votre flux d’avis, mettez en place un export au moins mensuel. Avec une plateforme partenaire, c’est automatique.</p>
+<h3>Étape 5&nbsp;: ajoutez le balisage Schema.org</h3>
+<p>Pour viser aussi les étoiles dans les résultats naturels, vérifiez que vos fiches produits contiennent le balisage <code>Product</code> avec <code>aggregateRating</code>, et testez-le avec l’outil de test des résultats enrichis.</p>
+<h3>Étape 6&nbsp;: suivez vos résultats</h3>
+<p>Merchant Center et Google Ads vous montrent la performance de vos annonces. Repérez les produits qui manquent encore d’avis et concentrez-y votre collecte.</p>
+
+<div class="gd-cta"><p><b>Loin des 50 avis&nbsp;?</b> Faites tester vos produits par de vrais consommateurs&nbsp;: des avis détaillés, publiés sur vos fiches, contrepartie signalée. Vos 5 premiers tests sont offerts.</p><a class="btn" href="/commercants">Découvrir l’offre commerçants</a></div>
+
+<h2 id="interdit">Ce qu’il ne faut pas faire</h2>
+<h3>Gonfler artificiellement vos avis</h3>
+<p>Acheter des avis, publier de faux témoignages ou ne solliciter que les clients satisfaits est interdit par le Code de la consommation depuis la directive Omnibus, et contraire aux règles de Google. Google peut retirer les avis concernés, et des manquements graves peuvent toucher votre compte Merchant Center. Voir notre guide <a href="/guides/directive-omnibus-avis-clients.html">directive Omnibus et avis clients</a>.</p>
+<h3>Afficher une note différente dans le balisage</h3>
+<p>Le balisage doit refléter exactement la note visible sur la page. Une différence peut faire disparaître les étoiles des résultats, voire entraîner une action manuelle.</p>
+<h3>Oublier de mettre à jour le flux d’avis</h3>
+<p>Un flux envoyé une seule fois ne suffit pas&nbsp;: Google exige au moins un envoi par mois, avec tous les avis, y compris les anciens et les mauvaises notes.</p>
+<h3>Laisser les avis négatifs sans suite</h3>
+<p>Répondre à un avis négatif ne change pas la note, mais montre aux visiteurs que vous prenez les problèmes au sérieux. Et corriger la cause (livraison, service client) est ce qui fait remonter durablement la note de votre magasin. Voir notre méthode pour <a href="/guides/repondre-avis-negatifs.html">répondre à un avis négatif</a>.</p>
+
+<h2 id="recap">Le tableau récapitulatif</h2>
+<div class="tbl-wrap gd-tbl"><table>
+<thead><tr><th>Type d’étoiles</th><th>Source des avis</th><th>Conditions</th><th>Où elles apparaissent</th></tr></thead>
+<tbody>
+<tr><td>Notes des produits</td><td>Votre flux d’avis ou une plateforme partenaire</td><td>50 avis au total, GTIN ou marque + MPN, flux au moins mensuel</td><td>Annonces Shopping, fiches produits gratuites</td></tr>
+<tr><td>Note du magasin</td><td>Google Avis clients, plateformes partenaires</td><td>≈ 100 avis sur 24 mois, moyenne ≥ 3,5</td><td>Annonces Shopping, annonces textuelles</td></tr>
+<tr><td>Étoiles des résultats naturels</td><td>Balisage Schema.org de vos fiches</td><td>Balisage conforme à la page, pas de minimum</td><td>Résultats naturels de Google</td></tr>
+</tbody></table></div>
+<div class="tbl-wrap gd-tbl"><table>
+<thead><tr><th>Critère</th><th>Condition</th><th>Si ce n’est pas le cas</th></tr></thead>
+<tbody>
+<tr><td>Nombre d’avis produits</td><td>50 au total sur le catalogue</td><td>Collecte active&nbsp;: testeurs, demande après achat</td></tr>
+<tr><td>Données produits</td><td>GTIN, ou marque + MPN cohérents</td><td>Compléter le flux Merchant Center</td></tr>
+<tr><td>Mise à jour du flux d’avis</td><td>Au moins une fois par mois</td><td>Automatiser, ou passer par une plateforme partenaire</td></tr>
+<tr><td>Note du magasin</td><td>≈ 100 avis sur 24 mois, moyenne ≥ 3,5</td><td>Activer Google Avis clients, améliorer le service</td></tr>
+<tr><td>Avis avec contrepartie</td><td>Signalés avec <code>is_incentivized_review</code></td><td>Corriger le flux</td></tr>
+<tr><td>Conformité</td><td>Pas de faux avis, tous les avis transmis</td><td>Revoir la collecte</td></tr>
+</tbody></table></div>
+
+<h2 id="faq">Questions fréquentes</h2>
+<h3>Combien d’avis faut-il pour avoir des étoiles dans Google Shopping&nbsp;?</h3>
+<p>Pour les notes des produits, au moins 50 avis produits au total, sur l’ensemble de votre catalogue. Pour la note du magasin, en général une centaine d’avis sur les 24 derniers mois, avec une moyenne d’au moins 3,5 sur 5.</p>
+<h3>Quelle est la différence entre note produit et note magasin&nbsp;?</h3>
+<p>La note produit évalue un article précis et s’affiche dans les annonces Shopping et les fiches gratuites. La note magasin évalue l’expérience d’achat (livraison, service client) et peut s’afficher dans les annonces Shopping et textuelles.</p>
+<h3>Pourquoi mes étoiles n’apparaissent-elles pas dans Google Shopping&nbsp;?</h3>
+<p>Le plus souvent&nbsp;: moins de 50 avis transmis, des produits sans GTIN ou avec une marque incohérente, un flux d’avis qui n’est plus mis à jour chaque mois, ou des erreurs dans Merchant Center.</p>
+<h3>Les avis de testeurs comptent-ils pour Google Shopping&nbsp;?</h3>
+<p>Google accepte les avis obtenus avec une contrepartie si celle-ci ne dépend pas de la note et si ces avis sont signalés dans le flux avec l’attribut <code>is_incentivized_review</code>. Tous les avis doivent être transmis, y compris les mauvaises notes.</p>
+<h3>Le balisage Schema.org suffit-il pour Google Shopping&nbsp;?</h3>
+<p>Non. Le balisage Schema.org permet d’afficher des étoiles dans les résultats naturels, mais pas dans Shopping. Pour Shopping, il faut transmettre vos avis à Merchant Center, par un flux ou une plateforme partenaire.</p>
+<h3>Google Avis clients est-il gratuit&nbsp;?</h3>
+<p>Oui. C’est un module gratuit de Merchant Center&nbsp;: après l’achat, Google propose une courte enquête au client, et les réponses alimentent la note de votre magasin. L’enquête doit être proposée à tous les clients.</p>
+<h3>Combien de temps avant que les étoiles apparaissent&nbsp;?</h3>
+<p>Le premier flux d’avis passe par une vérification qui prend en général 2 à 4 semaines. Ensuite, tout dépend de votre nombre d’avis et de la qualité de vos données&nbsp;: atteindre les 50 avis est souvent l’étape la plus longue.</p>
+
+<h2 id="sources">Sources</h2>
+<ul class="gd-src">
+<li>Google Merchant Center, <a href="https://support.google.com/merchants/answer/14549080?hl=fr" rel="noopener" target="_blank">« Éligibilité au programme Product Ratings »</a> (50 avis, envoi mensuel, GTIN ou marque + MPN, vérification de 2 à 4 semaines)</li>
+<li>Google Merchant Center, <a href="https://support.google.com/merchants/answer/6098512?hl=fr" rel="noopener" target="_blank">« Règles relatives aux notes des produits »</a> (tous les avis transmis, avis avec contrepartie et attribut <code>is_incentivized_review</code>)</li>
+<li>Google Merchant Center, <a href="https://support.google.com/merchants/answer/190657?hl=fr" rel="noopener" target="_blank">« Notes de magasin Google&nbsp;: présentation »</a>, et Search Engine Roundtable, <a href="https://www.seroundtable.com/google-merchant-center-google-store-ratings-42125.html" rel="noopener" target="_blank">mise à jour des conditions</a> (septembre 2026&nbsp;: environ 100 avis, 24 mois, 3,5 sur 5)</li>
+<li>Google Search Central, données structurées des extraits d’avis (<code>Review</code>, <code>AggregateRating</code>) et outil de test des résultats enrichis</li>
+</ul>
+<p class="gd-note">Article d’information générale, à jour au 30 octobre 2026, d’après la documentation publique de Google. Les conditions de Google évoluent&nbsp;: vérifiez-les dans votre compte Merchant Center. Avitime est l’éditeur de ce guide et ne garantit aucun affichage d’étoiles ni aucun classement.</p>
