@@ -198,4 +198,22 @@
     arm();
   })();
 
+  /* ---------- Lien suivi (?src=tiktok) : la source suit le visiteur de page en page jusqu'à l'inscription.
+     Sans cookie ni stockage : elle passe seulement dans l'adresse des liens Avitime. ---------- */
+  (() => {
+    const q = new URLSearchParams(location.search);
+    const src = (q.get('src') || q.get('utm_source') || '').toLowerCase();
+    if (!/^[a-z0-9_-]{1,40}$/.test(src)) return;
+    document.querySelectorAll('a[href]').forEach(a => {
+      try {
+        const raw = a.getAttribute('href');
+        if (!raw || raw.startsWith('#')) return;
+        const u = new URL(raw, location.href);
+        if (!/^https?:$/.test(u.protocol) || (u.hostname !== location.hostname && !/(^|\.)avitime\.fr$/.test(u.hostname)) || u.searchParams.has('src')) return;
+        u.searchParams.set('src', src);
+        a.setAttribute('href', u.toString());
+      } catch (e) { /* lien illisible : laissé tel quel */ }
+    });
+  })();
+
 })();

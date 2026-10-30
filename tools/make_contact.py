@@ -245,7 +245,7 @@ def page(lang):
                "sending": "Envoi…" if lang == "fr" else "Sending…"}
     out = (head(lang, t) + body + footer(lang) + "\n"
            + f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n' + js
-           + '\n<script src="/assets/js/main.js?v=19d91e0a16" defer></script>\n</body>\n</html>\n')
+           + '\n<script src="/assets/js/main.js?v=c62e540dfe" defer></script>\n</body>\n</html>\n')
     dst = os.path.join(ROOT, "contact.html" if lang == "fr" else "en/contact.html")
     open(dst, "w", encoding="utf-8").write(out)
     return dst

@@ -101,7 +101,7 @@ HEAD = """<!doctype html>
 FOOT = f"""</main>
 {footer("fr")}
 <script type="application/ld+json">{{ld}}</script>
-<script src="/assets/js/main.js?v=19d91e0a16" defer></script>
+<script src="/assets/js/main.js?v=c62e540dfe" defer></script>
 </body>
 </html>
 """
