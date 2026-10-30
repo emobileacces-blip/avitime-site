@@ -47,7 +47,7 @@ PAGES = {
                   "description": "Démonstration filmée de l’espace commerçant Avitime : lancer l’audit SEO gratuit, lire le score, les 3 piliers (SEO, GEO, E-E-A-T) et les 5 priorités, puis créer une campagne de test produit (choix du produit, centres d’intérêt, nombre de testeurs). Avitime sélectionne les testeurs.",
                   "thumbnailUrl": "https://avitime.fr/assets/video/tuto-audit-premier-test-poster.jpg",
                   "contentUrl": "https://avitime.fr/assets/video/tuto-audit-premier-test.mp4",
-                  "uploadDate": "2026-10-30T12:30:00+01:00", "duration": "PT2M9S", "inLanguage": "fr-FR"},
+                  "uploadDate": "2026-10-30T12:30:00+01:00", "duration": "PT2M10S", "inLanguage": "fr-FR"},
     },
     "audit-seo": {
         "title": "Audit SEO gratuit de votre boutique en ligne | Avitime",
