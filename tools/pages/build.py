@@ -28,6 +28,8 @@ CSS = """<style>
 .pg-video{margin:0 auto 36px;max-width:360px}
 .pg-video video{width:100%;aspect-ratio:9/16;display:block;border-radius:22px;background:#0A0A0A;box-shadow:0 30px 70px -40px rgba(0,0,0,.6)}
 .pg-video figcaption{font-size:14px;color:var(--ink-2);text-align:center;margin-top:10px}
+.pg-video-wide{max-width:none;margin:22px 0 28px}
+.pg-video-wide video{aspect-ratio:16/9;border-radius:18px}
 </style>
 """
 
@@ -41,6 +43,11 @@ PAGES = {
                   "thumbnailUrl": "https://avitime.fr/assets/video/commercants-budget-poster.jpg",
                   "contentUrl": "https://avitime.fr/assets/video/commercants-budget.mp4",
                   "uploadDate": "2026-10-26T12:00:00+01:00", "duration": "PT1M53S", "inLanguage": "fr-FR"},
+        "video2": {"@type": "VideoObject", "name": "De l’audit SEO gratuit à vos premiers avis clients : la démo pas à pas",
+                  "description": "Démonstration filmée de l’espace commerçant Avitime : lancer l’audit SEO gratuit, lire le score, les 3 piliers (SEO, GEO, E-E-A-T) et les 5 priorités, puis créer une campagne de test produit (choix du produit, centres d’intérêt, nombre de testeurs). Avitime sélectionne les testeurs.",
+                  "thumbnailUrl": "https://avitime.fr/assets/video/tuto-audit-premier-test-poster.jpg",
+                  "contentUrl": "https://avitime.fr/assets/video/tuto-audit-premier-test.mp4",
+                  "uploadDate": "2026-10-30T12:30:00+01:00", "duration": "PT2M9S", "inLanguage": "fr-FR"},
     },
     "audit-seo": {
         "title": "Audit SEO gratuit de votre boutique en ligne | Avitime",
@@ -74,8 +81,9 @@ for slug, p in PAGES.items():
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://avitime.fr/"},
             {"@type": "ListItem", "position": 2, "name": p["crumb"], "item": url}]}]}
-    if p.get("video"):
-        ld["@graph"].append(p["video"])
+    for vk in ("video", "video2"):
+        if p.get(vk):
+            ld["@graph"].append(p[vk])
     if p.get("faq"):
         # FAQPage tirée des <details> de la page (questions / réponses visibles, sans HTML).
         src = (HERE / f"{slug}.main.html").read_text()
