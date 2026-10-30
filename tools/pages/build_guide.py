@@ -60,6 +60,17 @@ GUIDES = [{
     "lede": "Depuis le 28&nbsp;mai 2022, la directive Omnibus encadre strictement les avis clients en ligne. Qu’est-ce qui est interdit, qu’est-ce qui est obligatoire, et comment collecter des avis efficaces et conformes&nbsp;? Le point, textes de loi à l’appui.",
     "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 10,
     "related": ["faux-avis-loi", "alternative-avis-verifies-trustpilot", "premiers-avis-clients"],
+}, {
+    "slug": "obtenir-avis-clients-boutique-en-ligne",
+    "body": "guide-obtenir-avis.body.html",
+    "seo_title": "Obtenir des avis clients rapidement : méthodes et outils",
+    "seo_desc": "E-mail après livraison, SMS, encart colis, relance, communauté, testeurs : 6 méthodes pour obtenir des avis clients rapidement, et ce que la loi interdit.",
+    "title": "Obtenir des avis clients rapidement : toutes les méthodes pour votre boutique en ligne (2026)",
+    "desc": "Six méthodes pour obtenir des avis clients rapidement sur une boutique en ligne, quelle méthode selon votre situation, et les pratiques interdites.",
+    "topic": "E-commerce",
+    "lede": "Comment obtenir des avis clients rapidement quand on démarre, qu’on lance un nouveau produit ou que ses fiches affichent encore zéro étoile&nbsp;? Voici les six méthodes disponibles en 2026, leurs vraies limites et les erreurs à éviter pour rester dans les règles.",
+    "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 11,
+    "related": ["premiers-avis-clients", "demander-avis-client", "combien-avis-clients"],
 }]
 
 
