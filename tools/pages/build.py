@@ -64,7 +64,7 @@ PAGES = {
     },
     "integrations": {
         "title": "Module avis clients PrestaShop, WooCommerce et Shopify | Avitime",
-        "desc": "Le module Avitime pour PrestaShop, l’extension WooCommerce et l’application Shopify : commandes testeurs à 0 €, suivi et avis vérifiés sur vos fiches.",
+        "desc": "Le module Avitime pour PrestaShop, l’extension WooCommerce, l’application Shopify, Systeme.io et les sites sur mesure : commandes testeurs à 0 €, suivi et avis vérifiés.",
         "crumb": "Intégrations",
     },
 }

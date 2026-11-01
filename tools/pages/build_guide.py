@@ -135,7 +135,7 @@ GUIDES = [{
     "desc": "Faire tester son produit numérique par de vrais utilisateurs : accès offert, durée d’utilisation avant l’avis, obligations légales et cas des formations en trading.",
     "topic": "Produits numériques",
     "lede": "Une formation en ligne, un logiciel ou un outil d’IA ne se touche pas avant l’achat&nbsp;: les avis sont la première preuve que cherchent vos visiteurs. Comment obtenir les premiers sans les acheter, quel accès offrir, combien de temps avant l’avis, et ce que la loi impose.",
-    "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 9,
+    "pub_iso": "2026-10-30", "pub_fr": "30 octobre 2026", "read": 9, "mod_iso": "2026-11-01",
     "related": ["tester-formations-logiciels-gratuitement", "obtenir-avis-clients-boutique-en-ligne", "directive-omnibus-avis-clients"],
 }, {
     "slug": "tester-formations-logiciels-gratuitement",
@@ -160,6 +160,18 @@ GUIDES = [{
     "pub_iso": "2026-10-31", "pub_fr": "31 octobre 2026", "read": 7, "mod_iso": "2026-11-01",
     "related": ["avis-produit-numerique-formation-saas", "directive-omnibus-avis-clients", "obtenir-avis-clients-boutique-en-ligne"],
     "video": {"@type": "VideoObject", "name": "Faire tester votre formation Systeme.io, sans boutique : la démo pas à pas", "description": "Démonstration filmée : créer la clé API dans Systeme.io, la connecter à Avitime, choisir la formation, lancer la campagne de test, l’inscription automatique du testeur sélectionné, puis le bloc d’avis à coller sur la page de vente. Avitime sélectionne les testeurs. Voix de synthèse.", "thumbnailUrl": "https://avitime.fr/assets/video/tuto-systeme-io-poster.jpg", "contentUrl": "https://avitime.fr/assets/video/tuto-systeme-io.mp4", "uploadDate": "2026-11-01T11:00:00+01:00", "duration": "PT1M35S", "inLanguage": "fr-FR"},
+}, {
+    "slug": "avis-site-sur-mesure-api",
+    "body": "guide-site-sur-mesure.body.html",
+    "seo_title": "Avis clients sur un site sur mesure (Next.js, Lovable) : API",
+    "seo_desc": "Site créé avec Next.js, Lovable ou Bolt : faire tester vos produits et afficher des avis vérifiés avec la clé API Avitime et les données structurées que lit Google.",
+    "title": "Afficher des avis clients vérifiés sur un site sur mesure (Next.js, Lovable, Bolt…) : clé API et étoiles Google",
+    "desc": "Faire tester ses produits sans module, expédier soi-même les produits physiques, et afficher les avis Avitime dans son propre code avec les données structurées.",
+    "topic": "Site sur mesure",
+    "lede": "Votre site a été créé avec Lovable, Bolt ou Next.js, ou par un développeur, et il n’affiche encore aucun avis&nbsp;? Voici comment faire tester vos produits sans module, expédier vous-même les produits physiques, et afficher les avis vérifiés dans vos pages avec une clé API, au format que Google sait lire.",
+    "pub_iso": "2026-11-01", "pub_fr": "1er novembre 2026", "read": 9,
+    "related": ["widget-avis-clients", "etoiles-google-shopping-avis-produits", "avis-produit-numerique-formation-saas"],
+    "css": ".gd-body pre.gd-code{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;overflow-x:auto;font-family:var(--font-mono);font-size:13.5px;line-height:1.55;margin:16px 0 20px;white-space:pre}.gd-body pre.gd-code code{font-family:inherit;background:none;padding:0}",
 }]
 
 
@@ -202,6 +214,8 @@ for g in GUIDES:
             {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://avitime.fr/guides/"},
             {"@type": "ListItem", "position": 3, "name": g["title"], "item": url}]},
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": txt(q), "acceptedAnswer": {"@type": "Answer", "text": txt(a)}} for q, a in qa]}]}
+    if g.get("css"):
+        h = h.replace("</head>", f"<style>{g['css']}</style>\n</head>", 1)
     if g.get("video"):
         ld["@graph"].append(g["video"])
         h = h.replace("</head>", "<style>.gd-video{margin:22px 0 28px}.gd-video video{width:100%;aspect-ratio:16/9;display:block;border-radius:18px;background:#0A0A0A;box-shadow:0 30px 70px -40px rgba(0,0,0,.6)}.gd-video figcaption{font-size:14px;color:var(--ink-2);text-align:center;margin-top:10px}</style>\n</head>", 1)

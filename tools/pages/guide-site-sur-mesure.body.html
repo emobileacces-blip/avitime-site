@@ -1,0 +1,172 @@
+<div class="gd-key"><p><b>L’essentiel :</b> votre site n’est ni sur PrestaShop, ni sur WooCommerce, ni sur Shopify&nbsp;? Créé avec Lovable, Bolt ou Next.js, par un développeur, ou sur Webflow, Wix, Kajabi&nbsp;: vous pouvez quand même faire tester vos produits, physiques ou numériques, et afficher les avis vérifiés. Sans développeur, un bloc d’avis à copier-coller suffit. Si votre site est fait sur mesure, une <b>clé API</b> lui permet de récupérer les avis depuis son serveur et de les afficher dans sa propre page, avec les données structurées que Google sait lire. C’est Google qui décide ensuite d’afficher ou non les étoiles.</p></div>
+
+<nav class="gd-toc" aria-label="Sommaire"><p>Au sommaire</p><ol>
+<li><a href="#pour-qui">Pour qui&nbsp;: les sites sans module</a></li>
+<li><a href="#produits">Ajouter vos produits et lancer un test</a></li>
+<li><a href="#physique">Produit physique&nbsp;: vous expédiez vous-même</a></li>
+<li><a href="#deux-facons">Afficher les avis&nbsp;: deux façons</a></li>
+<li><a href="#cle">Étape 1&nbsp;: générer la clé API</a></li>
+<li><a href="#appel">Étape 2&nbsp;: appeler l’API depuis votre serveur</a></li>
+<li><a href="#nextjs">Exemple complet avec Next.js</a></li>
+<li><a href="#autres-langages">Exemple en PHP ou avec curl</a></li>
+<li><a href="#google">Étoiles Google&nbsp;: ce qu’il faut respecter</a></li>
+<li><a href="#faq">Questions fréquentes</a></li>
+</ol></nav>
+
+<h2 id="pour-qui">Pour qui&nbsp;: les sites sans module</h2>
+<p>De plus en plus de boutiques et de SaaS sont créés avec des outils d’IA comme Lovable, Bolt ou v0, souvent en Next.js, ou par un développeur. D’autres vendent sur Webflow, Wix, Podia ou Kajabi. Ces sites n’ont pas de module Avitime à installer, et c’est très bien&nbsp;: tout se fait depuis votre espace commerçant.</p>
+<ul>
+<li><b>Vous n’avez pas de développeur</b>&nbsp;: ajoutez vos produits à la main et collez le bloc d’avis dans votre page. Rien d’autre à faire.</li>
+<li><b>Votre site est fait sur mesure</b> (ou vous l’avez construit avec une IA qui écrit du code)&nbsp;: vous pouvez en plus afficher les avis dans le code de vos pages produits, avec une clé API.</li>
+</ul>
+
+<h2 id="produits">Ajouter vos produits et lancer un test</h2>
+<ol>
+<li>Dans votre espace commerçant, ouvrez <b>«&nbsp;Ma boutique&nbsp;»</b>, section <b>«&nbsp;Site sur mesure, Systeme.io ou autre plateforme&nbsp;»</b>, puis choisissez <b>«&nbsp;Site sur mesure ou autre plateforme&nbsp;»</b>.</li>
+<li>Indiquez le nom de votre marque et l’adresse de votre site, puis cliquez sur <b>«&nbsp;Continuer&nbsp;»</b>.</li>
+<li>Ajoutez chaque produit à faire tester&nbsp;: nom, description courte, <b>prix public</b>, page du produit et image. Chaque produit reçoit un <b>n° API</b> (1, 2, 3…), affiché à côté de son nom&nbsp;: c’est ce numéro que votre site utilisera pour récupérer ses avis.</li>
+<li>Dans <b>«&nbsp;Campagnes&nbsp;»</b>, créez une campagne&nbsp;: produit physique ou numérique, centres d’intérêt visés, nombre de testeurs. Pour un produit numérique, indiquez comment le testeur y accède (lien d’inscription gratuite, code, crédits offerts).</li>
+</ol>
+<p>C’est Avitime qui sélectionne les testeurs, jamais vous&nbsp;: c’est ce qui garantit des avis indépendants. En ce moment, vos <a href="/pionniers">5 premiers tests sont offerts</a>, sans abonnement.</p>
+
+<h2 id="physique">Produit physique&nbsp;: vous expédiez vous-même</h2>
+<p>Sans module, aucune boutique ne reçoit la commande du testeur. Avitime vous la transmet directement&nbsp;:</p>
+<ol>
+<li>Le testeur sélectionné valide sa commande à 0&nbsp;€ depuis son espace Avitime. Il est prévenu que son nom, son adresse de livraison et son téléphone vous sont transmis pour l’expédition.</li>
+<li>Vous recevez un e-mail «&nbsp;Commande testeur à expédier&nbsp;». Dans <b>«&nbsp;Commandes testeurs&nbsp;»</b>, l’adresse du testeur s’affiche dans l’encadré <b>«&nbsp;À expédier vous-même&nbsp;»</b>.</li>
+<li>Vous expédiez le produit avec votre transporteur habituel, livraison offerte, puis vous cliquez sur <b>«&nbsp;Marquer comme expédié&nbsp;»</b> en indiquant le transporteur et le numéro de suivi. Le testeur voit le suivi dans son espace.</li>
+<li>À la réception, le testeur clique sur <b>«&nbsp;J’ai bien reçu mon produit&nbsp;»</b>&nbsp;: il a ensuite 21&nbsp;jours pour publier son avis. S’il oublie de confirmer, vous pouvez cliquer sur «&nbsp;Marquer comme livré&nbsp;».</li>
+</ol>
+<p>L’adresse ne sert qu’à cette expédition&nbsp;: elle est <b>effacée de la commande dès la livraison</b>, et au plus tard 60&nbsp;jours après la commande. Vous ne devez pas contacter le testeur au sujet de son avis.</p>
+
+<h2 id="deux-facons">Afficher les avis&nbsp;: deux façons</h2>
+<div class="gd-tbl"><table>
+<thead><tr><th></th><th>Bloc d’avis à copier-coller</th><th>Clé API</th></tr></thead>
+<tbody>
+<tr><td>Pour qui</td><td>Tout le monde, sans développeur</td><td>Site fait sur mesure (Next.js, Lovable, Bolt, développeur…)</td></tr>
+<tr><td>Mise en place</td><td>Coller un code dans un bloc «&nbsp;code HTML&nbsp;»</td><td>Quelques lignes de code côté serveur</td></tr>
+<tr><td>Mise à jour</td><td>Automatique</td><td>Automatique (cache conseillé&nbsp;: 1&nbsp;heure)</td></tr>
+<tr><td>Pour Google</td><td>Les avis sont dans un cadre (iframe)&nbsp;: Google ne les compte pas comme faisant partie de votre page</td><td>Les avis font partie de votre page, avec les données structurées prêtes à l’emploi</td></tr>
+<tr><td>Apparence</td><td>Celle d’Avitime</td><td>Celle de votre site, c’est vous qui décidez</td></tr>
+</tbody></table></div>
+<p>Le bloc à copier-coller se trouve dans «&nbsp;Ma boutique&nbsp;», sous chaque produit&nbsp;: <b>«&nbsp;Afficher les avis avec un code à copier (sans développeur)&nbsp;»</b>. La suite de ce guide détaille la clé API.</p>
+
+<h2 id="cle">Étape 1&nbsp;: générer la clé API</h2>
+<ol>
+<li>Dans «&nbsp;Ma boutique&nbsp;», sous votre site, ouvrez <b>«&nbsp;Afficher les avis dans le code de votre site (clé API, étoiles Google)&nbsp;»</b>.</li>
+<li>Cliquez sur <b>«&nbsp;Générer ma clé API&nbsp;»</b>. La clé commence par <code>avt_</code>. <b>Copiez-la tout de suite</b>&nbsp;: elle n’est affichée qu’une seule fois. Avitime n’en garde qu’une empreinte.</li>
+<li>Enregistrez-la dans les <b>variables d’environnement</b> de votre site, par exemple <code>AVITIME_REVIEWS_KEY</code> (sur Vercel&nbsp;: Settings → Environment Variables&nbsp;; ailleurs&nbsp;: le fichier <code>.env</code> du serveur, jamais publié).</li>
+</ol>
+<p>La clé ne donne accès qu’aux avis publiés de vos produits, en lecture seule&nbsp;: elle ne permet ni de modifier quoi que ce soit, ni de voir vos testeurs. Elle doit tout de même rester secrète, pour que personne ne l’utilise à votre place. Perdue ou exposée par erreur&nbsp;? Cliquez sur «&nbsp;Générer une nouvelle clé API&nbsp;»&nbsp;: l’ancienne cesse aussitôt de fonctionner.</p>
+
+<h2 id="appel">Étape 2&nbsp;: appeler l’API depuis votre serveur</h2>
+<p>Votre site appelle cette adresse, avec le n° API du produit et la clé dans l’en-tête&nbsp;:</p>
+<pre class="gd-code"><code>GET https://app.avitime.fr/api/v1/site/reviews/1
+Authorization: Bearer avt_votre_cle</code></pre>
+<p>La réponse, en JSON, contient&nbsp;:</p>
+<ul>
+<li><code>product</code>&nbsp;: le n°, le nom, l’adresse et l’image du produit&nbsp;;</li>
+<li><code>count</code> et <code>average</code>&nbsp;: le nombre d’avis et la note moyenne sur 5&nbsp;;</li>
+<li><code>notice</code>&nbsp;: la mention à afficher avec les avis, «&nbsp;Produit offert pour test — Testeur Avitime vérifié&nbsp;»&nbsp;;</li>
+<li><code>reviews</code>&nbsp;: les avis publiés, du plus récent au plus ancien, avec la note (<code>rating</code>), le titre, le texte (<code>body</code>), les points forts et les points faibles (<code>pros</code>, <code>cons</code>), la date (<code>published_at</code>), le nom affiché du testeur (<code>tester.display_name</code>, par exemple «&nbsp;Julie B.&nbsp;»), les photos (<code>media</code>), la vidéo éventuelle (<code>video</code>) et votre réponse (<code>merchant_reply</code>)&nbsp;;</li>
+<li><code>jsonld</code>&nbsp;: les données structurées schema.org (Product, note moyenne et avis), prêtes à mettre telles quelles dans une balise <code>&lt;script type="application/ld+json"&gt;</code>.</li>
+</ul>
+<p>Pour un logiciel, un SaaS ou une appli, ajoutez <code>?type=software</code> à l’adresse&nbsp;: les données structurées utilisent alors le type SoftwareApplication au lieu de Product.</p>
+<p>Trois règles pratiques&nbsp;:</p>
+<ul>
+<li><b>Appelez l’API depuis le serveur</b>, jamais depuis le navigateur&nbsp;: la clé serait visible de tous. L’API refuse d’ailleurs les appels directs d’une page web (pas d’en-têtes CORS).</li>
+<li><b>Gardez la réponse en cache</b>, une heure suffit&nbsp;: les avis ne changent pas à chaque visite. La limite est de 1&nbsp;200 appels par heure.</li>
+<li><b>Sans avis</b>, la liste est vide et les données structurées ne contiennent pas de note&nbsp;: n’affichez rien, ou un message neutre.</li>
+</ul>
+
+<h2 id="nextjs">Exemple complet avec Next.js</h2>
+<p>Dans une page produit écrite comme <b>composant serveur</b> (le cas par défaut avec l’App Router, et celui que génèrent la plupart des outils d’IA), la clé reste sur le serveur&nbsp;:</p>
+<pre class="gd-code"><code>// app/produits/[slug]/page.tsx (composant serveur)
+async function getAvis(numeroApi: number) {
+  const res = await fetch(`https://app.avitime.fr/api/v1/site/reviews/${numeroApi}`, {
+    headers: { Authorization: `Bearer ${process.env.AVITIME_REVIEWS_KEY}` },
+    next: { revalidate: 3600 }, // mis en cache 1 heure
+  });
+  return res.ok ? res.json() : null;
+}
+
+export default async function PageProduit() {
+  const avis = await getAvis(1); // le n° API du produit, affiché dans Avitime
+  return (
+    &lt;main&gt;
+      {/* … votre fiche produit … */}
+      {avis?.count ? (
+        &lt;section aria-label="Avis clients"&gt;
+          &lt;script type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(avis.jsonld).replace(/&lt;/g, "\\u003c") }} /&gt;
+          &lt;h2&gt;{avis.average}/5 · {avis.count} avis&lt;/h2&gt;
+          &lt;p&gt;{avis.notice}&lt;/p&gt;
+          {avis.reviews.map((r) =&gt; (
+            &lt;article key={r.id}&gt;
+              &lt;p&gt;{"★".repeat(r.rating)}{"☆".repeat(5 - r.rating)} {r.title}&lt;/p&gt;
+              &lt;p&gt;{r.body}&lt;/p&gt;
+              &lt;p&gt;{r.tester.display_name} · {r.published_at}&lt;/p&gt;
+              {r.merchant_reply ? &lt;p&gt;Réponse de la boutique&nbsp;: {r.merchant_reply.body}&lt;/p&gt; : null}
+            &lt;/article&gt;
+          ))}
+        &lt;/section&gt;
+      ) : null}
+    &lt;/main&gt;
+  );
+}</code></pre>
+<p>Le <code>.replace(/&lt;/g, "\\u003c")</code> empêche qu’un texte d’avis contenant <code>&lt;/script&gt;</code> ne casse la page&nbsp;: gardez-le. Le reste (titres, textes) est affiché par React, qui protège déjà le contenu.</p>
+<p>Vous utilisez Lovable ou Bolt&nbsp;? Vous pouvez donner ce guide à l’outil en lui demandant d’ajouter les avis Avitime à vos pages produits, côté serveur, avec la clé dans une variable d’environnement. Vérifiez ensuite que la clé n’apparaît nulle part dans le code envoyé au navigateur.</p>
+
+<h2 id="autres-langages">Exemple en PHP ou avec curl</h2>
+<p>Pour tester la clé depuis un terminal&nbsp;:</p>
+<pre class="gd-code"><code>curl -H "Authorization: Bearer avt_votre_cle" \
+  https://app.avitime.fr/api/v1/site/reviews/1</code></pre>
+<p>En PHP, sur n’importe quel site&nbsp;:</p>
+<pre class="gd-code"><code>&lt;?php
+$ctx = stream_context_create(['http' =&gt; [
+  'header' =&gt; 'Authorization: Bearer ' . getenv('AVITIME_REVIEWS_KEY'),
+]]);
+$avis = json_decode(@file_get_contents('https://app.avitime.fr/api/v1/site/reviews/1', false, $ctx), true);
+if ($avis &amp;&amp; $avis['count'] &gt; 0) {
+  echo '&lt;script type="application/ld+json"&gt;' . json_encode($avis['jsonld'], JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) . '&lt;/script&gt;';
+  echo '&lt;p&gt;' . htmlspecialchars($avis['notice']) . '&lt;/p&gt;';
+  foreach ($avis['reviews'] as $r) {
+    echo '&lt;article&gt;&lt;b&gt;' . (int) $r['rating'] . '/5 ' . htmlspecialchars($r['title']) . '&lt;/b&gt;&lt;p&gt;'
+       . htmlspecialchars($r['body']) . '&lt;/p&gt;&lt;small&gt;' . htmlspecialchars($r['tester']['display_name']) . '&lt;/small&gt;&lt;/article&gt;';
+  }
+}</code></pre>
+<p>Pensez à mettre la réponse en cache (fichier, base de données ou cache de votre hébergeur) plutôt que d’appeler l’API à chaque visite.</p>
+
+<h2 id="google">Étoiles Google&nbsp;: ce qu’il faut respecter</h2>
+<p>Les données structurées fournies par Avitime suivent le format que Google décrit pour les extraits d’avis (Product ou SoftwareApplication, AggregateRating, Review). Pour qu’elles soient prises en compte&nbsp;:</p>
+<ul>
+<li><b>Les avis doivent être visibles sur la page</b>, pas seulement dans les données structurées. Google ignore, voire sanctionne, des notes que le visiteur ne voit pas.</li>
+<li><b>Une seule source de note par produit</b>&nbsp;: si votre page contient déjà une note issue d’un autre outil d’avis, n’en ajoutez pas une deuxième sur le même produit.</li>
+<li><b>Affichez la mention «&nbsp;Produit offert pour test&nbsp;»</b>&nbsp;: la loi impose d’indiquer qu’un avis a été donné en échange d’un produit offert. Le champ <code>notice</code> vous la donne.</li>
+<li><b>N’ajoutez jamais d’avis inventés</b> et n’en retirez aucun&nbsp;: tous les avis sont publiés, positifs comme négatifs. Vous pouvez répondre publiquement à chacun depuis votre espace.</li>
+</ul>
+<p>Même avec des données parfaites, <b>c’est Google qui décide</b> d’afficher ou non les étoiles dans ses résultats, et quand. Avitime ne peut rien promettre sur ce point&nbsp;: les données structurées lui donnent simplement ce qu’il demande. Vous pouvez vérifier votre page avec le test des résultats enrichis de Google (lien dans les sources).</p>
+
+<h2 id="faq">Questions fréquentes</h2>
+<h3>Mon site a été créé avec Lovable ou Bolt&nbsp;: puis-je utiliser Avitime&nbsp;?</h3>
+<p>Oui. Choisissez «&nbsp;Site sur mesure ou autre plateforme&nbsp;» dans «&nbsp;Ma boutique&nbsp;», ajoutez vos produits à la main, puis lancez une campagne. Pour afficher les avis, collez le bloc d’avis ou générez une clé API et demandez à l’outil d’IA de l’intégrer côté serveur.</p>
+<h3>Faut-il un développeur&nbsp;?</h3>
+<p>Non pour faire tester vos produits et afficher les avis avec le bloc à copier-coller. La clé API, elle, demande d’écrire quelques lignes de code dans votre site, ou de demander à votre développeur ou à votre outil d’IA de le faire.</p>
+<h3>Puis-je faire tester des produits physiques sans boutique PrestaShop, WooCommerce ou Shopify&nbsp;?</h3>
+<p>Oui. Quand un testeur sélectionné valide sa commande à 0&nbsp;€, son nom, son adresse et son téléphone s’affichent dans «&nbsp;Commandes testeurs&nbsp;». Vous expédiez le produit vous-même, vous indiquez le suivi, et l’adresse est effacée dès la livraison.</p>
+<h3>La clé API est-elle dangereuse si elle fuite&nbsp;?</h3>
+<p>Elle ne donne accès qu’aux avis publiés de vos produits, en lecture seule. Elle doit tout de même rester secrète. En cas de doute, générez-en une nouvelle&nbsp;: l’ancienne cesse aussitôt de fonctionner.</p>
+<h3>Les étoiles apparaîtront-elles dans Google&nbsp;?</h3>
+<p>Peut-être, mais personne ne peut le garantir&nbsp;: c’est Google qui décide. Avitime vous donne des données structurées conformes à ses consignes, et des avis vérifiés&nbsp;; à vous de les afficher visiblement sur la page du produit.</p>
+<h3>Combien coûte la clé API&nbsp;?</h3>
+<p>Rien de plus&nbsp;: elle fait partie de votre espace commerçant. En ce moment, vos 5 premiers tests sont offerts, sans abonnement.</p>
+
+<h2 id="sources">Sources</h2>
+<ul class="gd-src">
+<li>Google Search Central, <a href="https://developers.google.com/search/docs/appearance/structured-data/review-snippet?hl=fr" rel="noopener" target="_blank">données structurées pour les extraits d’avis</a> (Review, AggregateRating)</li>
+<li>Google Search Central, <a href="https://developers.google.com/search/docs/appearance/structured-data/software-app?hl=fr" rel="noopener" target="_blank">données structurées pour les applications logicielles</a> (SoftwareApplication)</li>
+<li>Google, <a href="https://search.google.com/test/rich-results?hl=fr" rel="noopener" target="_blank">test des résultats enrichis</a></li>
+<li>Next.js, <a href="https://nextjs.org/docs/app/building-your-application/data-fetching" rel="noopener" target="_blank">récupération des données côté serveur et mise en cache</a></li>
+<li>Légifrance, <a href="https://www.legifrance.gouv.fr/jorf/id/JORFARTI000035720943" rel="noopener" target="_blank">décret n°&nbsp;2017-1436 du 29&nbsp;septembre 2017 relatif aux avis en ligne de consommateurs</a> (articles D111-16 à D111-19 du code de la consommation)</li>
+<li>Avitime, <a href="/integrations#site-sur-mesure">intégrations&nbsp;: site sur mesure ou autre plateforme</a> · <a href="/cgu-testeurs.html#cgu-5-sans-boutique">CGU testeurs</a> (site sur mesure)</li>
+</ul>
