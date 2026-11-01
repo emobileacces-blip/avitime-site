@@ -1,0 +1,37 @@
+WEBVTT
+
+1
+00:00:00.350 --> 00:00:09.206
+Vous vendez une formation sur Systeme.io ? Voici comment la faire tester par de vrais utilisateurs avec Avitime, sans boutique en ligne.
+
+2
+00:00:10.206 --> 00:00:19.845
+Première étape, dans Systeme.io : ouvrez les paramètres de votre compte, puis « Clés API publiques ». Créez une clé, et copiez-la.
+
+3
+00:00:20.845 --> 00:00:33.619
+Dans votre espace Avitime, ouvrez « Ma boutique ». Choisissez « Ma formation est sur Systeme.io ». Indiquez le nom et l’adresse de votre page de vente, puis collez la clé.
+
+4
+00:00:34.619 --> 00:00:43.291
+Cliquez sur « Connecter Systeme.io ». Avitime vérifie la clé et retrouve vos formations. La clé est enregistrée chiffrée.
+
+5
+00:00:44.291 --> 00:00:52.468
+Choisissez la formation à faire tester, ajoutez une courte description et le prix public, puis cliquez sur « Ajouter ce produit ».
+
+6
+00:00:53.468 --> 00:01:03.734
+Lancez ensuite votre campagne : la durée d’utilisation avant l’avis, les centres d’intérêt et le nombre de testeurs. C’est Avitime qui sélectionne les testeurs.
+
+7
+00:01:04.734 --> 00:01:16.567
+Le testeur sélectionné accepte de vous transmettre son e-mail, puis valide sa commande à 0 €. Avitime l’inscrit à votre formation, et Systeme.io lui envoie ses identifiants.
+
+8
+00:01:17.567 --> 00:01:27.023
+Enfin, copiez le code du bloc d’avis et collez-le dans un élément HTML de votre page de vente : les avis vérifiés s’y affichent tout seuls.
+
+9
+00:01:28.023 --> 00:01:33.901
+Tout est expliqué pas à pas dans le guide Systeme.io, sur le site Avitime. À vous de jouer !

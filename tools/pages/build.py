@@ -60,6 +60,7 @@ PAGES = {
         "desc": "Formations (trading, marketing…), logiciels, SaaS, outils d’IA, e-books : faites tester vos produits numériques par de vrais utilisateurs et obtenez des avis vérifiés.",
         "crumb": "Produits numériques",
         "faq": True,
+        "video": {"@type": "VideoObject", "name": "Faire tester votre formation Systeme.io, sans boutique : la démo pas à pas", "description": "Démonstration filmée : créer la clé API dans Systeme.io, la connecter à Avitime, choisir la formation, lancer la campagne de test, l’inscription automatique du testeur sélectionné, puis le bloc d’avis à coller sur la page de vente. Avitime sélectionne les testeurs. Voix de synthèse.", "thumbnailUrl": "https://avitime.fr/assets/video/tuto-systeme-io-poster.jpg", "contentUrl": "https://avitime.fr/assets/video/tuto-systeme-io.mp4", "uploadDate": "2026-11-01T11:00:00+01:00", "duration": "PT1M35S", "inLanguage": "fr-FR"},
     },
     "integrations": {
         "title": "Module avis clients PrestaShop, WooCommerce et Shopify | Avitime",

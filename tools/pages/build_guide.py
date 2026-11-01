@@ -157,8 +157,9 @@ GUIDES = [{
     "desc": "Le pas-à-pas pour faire tester une formation Systeme.io avec Avitime : créer la clé API, inscription automatique des testeurs, avis vérifiés sur la page de vente.",
     "topic": "Produits numériques",
     "lede": "Votre formation est sur Systeme.io et sa page de vente n’affiche encore aucun avis&nbsp;? Voici comment la faire tester par de vrais utilisateurs, sans boutique en ligne&nbsp;: la clé API à créer, l’inscription automatique des testeurs, et le bloc d’avis à coller sur votre page.",
-    "pub_iso": "2026-10-31", "pub_fr": "31 octobre 2026", "read": 7,
+    "pub_iso": "2026-10-31", "pub_fr": "31 octobre 2026", "read": 7, "mod_iso": "2026-11-01",
     "related": ["avis-produit-numerique-formation-saas", "directive-omnibus-avis-clients", "obtenir-avis-clients-boutique-en-ligne"],
+    "video": {"@type": "VideoObject", "name": "Faire tester votre formation Systeme.io, sans boutique : la démo pas à pas", "description": "Démonstration filmée : créer la clé API dans Systeme.io, la connecter à Avitime, choisir la formation, lancer la campagne de test, l’inscription automatique du testeur sélectionné, puis le bloc d’avis à coller sur la page de vente. Avitime sélectionne les testeurs. Voix de synthèse.", "thumbnailUrl": "https://avitime.fr/assets/video/tuto-systeme-io-poster.jpg", "contentUrl": "https://avitime.fr/assets/video/tuto-systeme-io.mp4", "uploadDate": "2026-11-01T11:00:00+01:00", "duration": "PT1M35S", "inLanguage": "fr-FR"},
 }]
 
 
@@ -194,13 +195,16 @@ for g in GUIDES:
     txt = lambda s: re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", s).replace("&nbsp;", " ")).strip()
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "Article", "headline": g["title"], "description": g["desc"], "inLanguage": "fr-FR",
-         "datePublished": g["pub_iso"], "dateModified": g["pub_iso"], "author": AUTHOR, "publisher": PUBLISHER,
+         "datePublished": g["pub_iso"], "dateModified": g.get("mod_iso", g["pub_iso"]), "author": AUTHOR, "publisher": PUBLISHER,
          "mainEntityOfPage": url, "image": "https://avitime.fr/assets/img/og-image.jpg"},
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://avitime.fr/"},
             {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://avitime.fr/guides/"},
             {"@type": "ListItem", "position": 3, "name": g["title"], "item": url}]},
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": txt(q), "acceptedAnswer": {"@type": "Answer", "text": txt(a)}} for q, a in qa]}]}
+    if g.get("video"):
+        ld["@graph"].append(g["video"])
+        h = h.replace("</head>", "<style>.gd-video{margin:22px 0 28px}.gd-video video{width:100%;aspect-ratio:16/9;display:block;border-radius:18px;background:#0A0A0A;box-shadow:0 30px 70px -40px rgba(0,0,0,.6)}.gd-video figcaption{font-size:14px;color:var(--ink-2);text-align:center;margin-top:10px}</style>\n</head>", 1)
     h = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda _m: '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + "</script>", h, count=1, flags=re.S)
     (PUB / "guides" / f"{g['slug']}.html").write_text(h)
     print("ok", path, len(h), "faq", len(qa))
