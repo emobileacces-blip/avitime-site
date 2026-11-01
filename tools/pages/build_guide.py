@@ -222,3 +222,7 @@ for g in GUIDES:
     h = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda _m: '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + "</script>", h, count=1, flags=re.S)
     (PUB / "guides" / f"{g['slug']}.html").write_text(h)
     print("ok", path, len(h), "faq", len(qa))
+
+# Boutons de partage + « Suivre Avitime sur LinkedIn » sur tous les guides (idempotent).
+import guide_share  # noqa: E402
+guide_share.apply_all()
