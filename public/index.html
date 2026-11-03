@@ -89,6 +89,7 @@
 </div>
 <p class="rise d4" style="margin:22px 0 0"><a href="/pionniers" class="pioneer-pill" style="display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;border:1.5px solid #FF6A13;background:rgba(255,106,19,.08);color:inherit;text-decoration:none;font-weight:600;font-size:15px;line-height:1.3"><span aria-hidden="true">🚀</span><span><b>En ce moment</b> : vos 5 premiers tests offerts, sans abonnement</span><span aria-hidden="true" style="color:#FF6A13">→</span></a></p>
 <p class="eyebrow rise d4" style="margin-top:26px;color:var(--ink-2)">Compatible PrestaShop · WooCommerce · Shopify</p>
+<p id="nb-testeurs" class="rise d4" hidden style="margin:14px 0 0;font-size:15px;color:var(--ink-2)"><span aria-hidden="true">👥</span> <b></b> testeurs inscrits, prêts à tester vos produits</p>
 <figure class="hero-vis rise d3"><img src="/assets/img/hero-avis-exemple.webp" width="460" height="503" alt="Exemple illustratif : fiche produit avec la note, la répartition des étoiles et un avis de testeur portant la mention « Produit offert pour test »"><figcaption>Exemple illustratif</figcaption></figure>
 </div>
 </section>
@@ -762,5 +763,6 @@
 <div class="m-sticky" id="m-sticky" aria-label="Accès rapide" hidden><a class="ms-m" href="/espace-commercant">Je suis commerçant</a><a class="ms-t" href="/devenir-testeur">Devenir testeur</a></div>
 <style>.m-sticky{display:none}@media (max-width:720px){.m-sticky{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:60;display:flex;gap:8px;padding:8px;border-radius:999px;background:rgba(10,10,10,.92);box-shadow:0 10px 30px rgba(0,0,0,.28);transform:translateY(140%);transition:transform .25s ease}.m-sticky.on{transform:none}.m-sticky[hidden]{display:none}.m-sticky a{flex:1;text-align:center;font-weight:700;font-size:15px;line-height:1;padding:14px 10px;border-radius:999px;text-decoration:none;min-height:44px;display:flex;align-items:center;justify-content:center}.ms-m{background:#FF6A13;color:#0A0A0A}.ms-t{background:#fff;color:#0A0A0A}}@media (prefers-reduced-motion:reduce){.m-sticky{transition:none}}</style>
 <script>(function(){var b=document.getElementById("m-sticky"),h=document.getElementById("accueil"),f=document.querySelector("footer");if(!b||!h||!("IntersectionObserver" in window))return;b.hidden=false;var past=false,foot=false;function u(){b.classList.toggle("on",past&&!foot)}new IntersectionObserver(function(e){past=!e[0].isIntersecting;u()}).observe(h);if(f)new IntersectionObserver(function(e){foot=e[0].isIntersecting;u()}).observe(f)})();</script>
+<script>(function(){var e=document.getElementById("nb-testeurs");if(!e||!window.fetch)return;fetch("https://app.avitime.fr/api/public/testeurs").then(function(r){return r.json()}).then(function(d){if(!d||typeof d.testeurs!=="number"||d.testeurs<100)return;e.querySelector("b").textContent=d.testeurs+"+";e.hidden=false}).catch(function(){})})();</script>
 </body>
 </html>

@@ -171,6 +171,7 @@
 <p class="gd-lede">Avitime confie vos produits à des testeurs sélectionnés, qui les reçoivent par une vraie commande à 0&nbsp;€ sur votre boutique, les utilisent, puis publient un avis honnête sur votre fiche produit. Avec la mention «&nbsp;Produit offert pour test&nbsp;», comme la loi le demande.</p>
 <p class="pg-ctas"><a class="btn" href="/espace-commercant">Créer mon espace commerçant</a> <a href="https://cal.com/avitime/15min" target="_blank" rel="noopener" class="pg-sec">Réserver un appel de 15 min</a></p>
 <p class="pg-pill"><a href="/pionniers">En ce moment : vos 5 premiers tests offerts, sans abonnement →</a></p>
+<p id="nb-testeurs" hidden style="margin:14px 0 0;font-size:15px;color:var(--ink-2)"><span aria-hidden="true">👥</span> <b></b> testeurs inscrits, prêts à tester vos produits</p>
 </div></section>
 <section class="gd-body"><div class="gd-wrap">
 <figure class="pg-video" id="video">
@@ -336,5 +337,6 @@
 </div>
 </footer>
 <script src="/assets/js/main.js?v=c62e540dfe" defer></script>
+<script>(function(){var e=document.getElementById("nb-testeurs");if(!e||!window.fetch)return;fetch("https://app.avitime.fr/api/public/testeurs").then(function(r){return r.json()}).then(function(d){if(!d||typeof d.testeurs!=="number"||d.testeurs<100)return;e.querySelector("b").textContent=d.testeurs+"+";e.hidden=false}).catch(function(){})})();</script>
 </body>
 </html>
