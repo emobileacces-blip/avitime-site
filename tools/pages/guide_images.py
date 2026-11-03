@@ -90,6 +90,10 @@ def apply(slug: str, conf: dict):
     print(f"{slug} : en-tête {'oui' if has_cover else 'non'}, {len(conf.get('inline', []))} image(s) dans le texte")
 
 
+# Cartes de la liste des guides qui mènent vers une page du site (pas un guide) : href → nom de l'image
+EXTRA_CARDS = {"/devenir-testeur": "devenir-testeur"}
+
+
 def thumbs(page: Path):
     """Vignette (en-tête du guide) en haut de chaque carte de guide : liste des guides et « À lire aussi »."""
     s = page.read_text(encoding="utf-8")
@@ -98,17 +102,20 @@ def thumbs(page: Path):
         s = s.replace("</head>", CSS + "</head>", 1)
 
     def add(m):
-        slug = m.group(1)
+        slug = m.group(1) or EXTRA_CARDS.get(m.group(2), "")
         if not (OUT / f"{slug}-cover-760.webp").exists():
             return m.group(0)
         return (m.group(0) + f'<img class="gd-thumb" src="/assets/img/guides/{slug}-cover-760.webp" width="760" height="507" '
                 f'alt="" loading="lazy" decoding="async">')
-    s = re.sub(r'<a class="gd-card" href="/guides/([\w-]+)\.html">', add, s)
+    extra = "|".join(re.escape(h) for h in EXTRA_CARDS)
+    s = re.sub(rf'<a class="gd-card" href="(?:/guides/([\w-]+)\.html|({extra}))">', add, s)
     page.write_text(s, encoding="utf-8")
 
 
 if __name__ == "__main__":
     for slug, conf in CFG.items():
         apply(slug, conf)
+    for name in EXTRA_CARDS.values():
+        convert(SRC / f"{name}-cover.png", f"{name}-cover")
     for page in sorted((PUB / "guides").glob("*.html")):
         thumbs(page)
