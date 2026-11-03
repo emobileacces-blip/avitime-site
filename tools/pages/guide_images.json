@@ -1,9 +1,469 @@
 {
-  "testeur-de-produit": {
-    "cover": {"alt": "Illustration : une personne ouvre chez elle un colis contenant un produit à tester, ordinateur et carnet de notes à côté"},
-    "inline": [
-      {"before": "combien", "alt": "Illustration : un colis ouvert avec des produits, une carte cadeau et quelques pièces", "caption": "Un testeur reçoit surtout des produits ; les bons d’achat ou petites indemnités restent l’exception."},
-      {"before": "commencer", "alt": "Illustration : un téléphone affichant un formulaire d’inscription, avec les étapes inscription, colis et avis", "caption": "Trois étapes : s’inscrire, recevoir le produit, donner son avis honnête."}
-    ]
-  }
+ "testeur-de-produit": {
+  "cover": {
+   "alt": "Illustration : une personne ouvre chez elle un colis contenant un produit à tester, ordinateur et carnet de notes à côté"
+  },
+  "inline": [
+   {
+    "before": "combien",
+    "alt": "Illustration : un colis ouvert avec des produits, une carte cadeau et quelques pièces",
+    "caption": "Un testeur reçoit surtout des produits ; les bons d’achat ou petites indemnités restent l’exception."
+   },
+   {
+    "before": "commencer",
+    "alt": "Illustration : un téléphone affichant un formulaire d’inscription, avec les étapes inscription, colis et avis",
+    "caption": "Trois étapes : s’inscrire, recevoir le produit, donner son avis honnête."
+   }
+  ]
+ },
+ "alternative-avis-verifies-trustpilot": {
+  "cover": {
+   "alt": "Illustration : une balance compare deux solutions d’avis clients"
+  },
+  "scene": "a balance scale weighing two different abstract review widget cards decorated with star shapes, a magnifying glass resting beside it"
+ },
+ "arnaques-testeur-produits": {
+  "cover": {
+   "alt": "Illustration : un téléphone affiche un message suspect, un hameçon vise un colis cadeau"
+  },
+  "scene": "a smartphone showing an abstract suspicious message bubble with an orange warning triangle, a fishing hook dangling toward a gift parcel, a protective shield on the side"
+ },
+ "audit-seo-boutique-en-ligne": {
+  "cover": {
+   "alt": "Illustration : une loupe examine la page d’une boutique en ligne, avec une liste de contrôle et un indicateur de score"
+  },
+  "scene": "a large magnifying glass hovering over a stylized online shop web page on a laptop screen, a clipboard checklist and a round gauge dial in orange next to it",
+  "inline": [
+   {
+    "before": "avis",
+    "alt": "Illustration : un tableau de bord d’audit avec un score et des barres de progression",
+    "caption": "L’audit passe en revue chaque partie du site : avis, fiches produits, pages clés et technique.",
+    "scene": "a dashboard on a tablet with a round score gauge and several horizontal progress bars in orange and black"
+   },
+   {
+    "before": "apres",
+    "alt": "Illustration : une liste d’actions priorisées transmise à la personne qui gère le site",
+    "caption": "Après l’audit : commencer par ce qui pèse le plus, puis avancer point par point.",
+    "scene": "a person handing a prioritized checklist with small flags to another person holding a laptop"
+   }
+  ]
+ },
+ "avis-clients-ia": {
+  "cover": {
+   "alt": "Illustration : un assistant IA lit des avis clients avant de recommander un produit"
+  },
+  "scene": "a friendly glowing abstract AI assistant orb inside a chat bubble reading floating review cards with star shapes, pointing toward a product box",
+  "inline": [
+   {
+    "before": "comment",
+    "alt": "Illustration : un assistant IA lit une fiche produit et ses avis",
+    "caption": "Les assistants IA lisent vos fiches et vos avis pour décider quoi recommander.",
+    "scene": "an AI assistant orb with a small magnifying glass reading a product page and review cards with star shapes"
+   },
+   {
+    "before": "checklist",
+    "alt": "Illustration : une liste de contrôle avec des coches et des étoiles",
+    "caption": "Quelques réglages simples rendent vos avis lisibles par les IA.",
+    "scene": "a clipboard checklist with orange checkmarks and star shapes, a pen"
+   }
+  ]
+ },
+ "avis-clients-prestashop": {
+  "cover": {
+   "alt": "Illustration : une main ajoute des étoiles d’avis sous un produit d’une boutique en ligne"
+  },
+  "scene": "a laptop showing a generic online store product page, a hand placing a row of orange star shapes below the product, a small parcel nearby"
+ },
+ "avis-clients-shopify-gratuit": {
+  "cover": {
+   "alt": "Illustration : un sac de courses d’où sortent des étoiles d’avis, à côté d’une tirelire"
+  },
+  "scene": "a shopping bag with star shapes floating out of it, next to a small piggy bank and a laptop"
+ },
+ "avis-clients-shopify": {
+  "cover": {
+   "alt": "Illustration : une boutique en ligne sur ordinateur avec des étoiles d’avis qui apparaissent"
+  },
+  "scene": "an open laptop showing a generic product page, a shopping bag in front of it with star shapes rising above, a small toolbox"
+ },
+ "avis-clients-woocommerce": {
+  "cover": {
+   "alt": "Illustration : réglages et engrenages à côté d’une page produit avec des étoiles d’avis"
+  },
+  "scene": "a generic product page on a monitor with a row of star shapes, large orange gears and toggle switches beside it, suggesting settings"
+ },
+ "avis-formation-systeme-io": {
+  "cover": {
+   "alt": "Illustration : une formation en ligne sur ordinateur, avec une toque de diplômé et des étoiles"
+  },
+  "scene": "a laptop playing an online course video with a big play button, a graduation cap and a few star shapes floating around"
+ },
+ "avis-produit-numerique-formation-saas": {
+  "cover": {
+   "alt": "Illustration : fenêtres d’application, vidéo de formation et puce d’IA autour d’un ordinateur"
+  },
+  "scene": "floating app windows, a video play button, a small chip representing artificial intelligence and star shapes, arranged around a laptop"
+ },
+ "avis-site-sur-mesure-api": {
+  "cover": {
+   "alt": "Illustration : un bloc de code relié par un câble à un site qui affiche des étoiles d’avis"
+  },
+  "scene": "a code editor panel with abstract code brackets connected by a cable and plug to a website card showing star shapes"
+ },
+ "boutique-en-ligne-sans-ventes": {
+  "cover": {
+   "alt": "Illustration : un panier vide devant une boutique en ligne"
+  },
+  "scene": "an empty shopping cart standing in front of a large online shop screen, a magnifying glass on the floor, calm and hopeful mood",
+  "inline": [
+   {
+    "before": "visiteurs",
+    "alt": "Illustration : des passants devant la vitrine d’une boutique",
+    "caption": "Sans visiteurs, pas de ventes : la première question est de savoir d’où ils viennent.",
+    "scene": "a few stylized visitors walking past a shop window without entering, one stops to look"
+   },
+   {
+    "before": "confiance",
+    "alt": "Illustration : une vitrine avec des signes de confiance",
+    "caption": "Un visiteur qui ne vous connaît pas cherche des preuves de confiance avant d’acheter.",
+    "scene": "a shop window decorated with trust symbols: a shield, a padlock, star shapes and a delivery truck icon"
+   }
+  ]
+ },
+ "combien-avis-clients": {
+  "cover": {
+   "alt": "Illustration : des piles d’avis clients qui grandissent comme un graphique"
+  },
+  "scene": "stacks of review cards with star shapes growing like a bar chart from short to tall",
+  "inline": [
+   {
+    "before": "note",
+    "alt": "Illustration : cinq étoiles dont une partiellement remplie",
+    "caption": "Le nombre d’avis compte autant que la note.",
+    "scene": "five large star shapes, four filled in orange and one partially filled, floating above a product box"
+   },
+   {
+    "before": "viser",
+    "alt": "Illustration : une cible atteinte par une flèche",
+    "caption": "Se fixer un objectif réaliste, puis avancer avis après avis.",
+    "scene": "a target with an arrow in the center and small star shapes around it"
+   }
+  ]
+ },
+ "comparatif-solutions-avis-clients": {
+  "cover": {
+   "alt": "Illustration : plusieurs solutions alignées et mesurées pour être comparées"
+  },
+  "scene": "several different shaped tool boxes lined up on a shelf being measured with a tape measure, each with a small star emblem",
+  "inline": [
+   {
+    "before": "tableau",
+    "alt": "Illustration : un tableau comparatif avec des coches",
+    "caption": "Chaque solution a ses forces : le tableau les compare côte à côte.",
+    "scene": "a large comparison grid table with orange checkmarks and black dots, no text"
+   },
+   {
+    "before": "choisir",
+    "alt": "Illustration : un panneau indicateur avec plusieurs directions",
+    "caption": "La bonne solution dépend de votre situation : commandes, budget, plateforme.",
+    "scene": "a signpost with several arrows pointing in different directions in a calm landscape"
+   }
+  ]
+ },
+ "demander-avis-client": {
+  "cover": {
+   "alt": "Illustration : une enveloppe part d’un colis vers un téléphone pour demander un avis"
+  },
+  "scene": "an envelope flying from an opened parcel toward a smartphone, with a speech bubble containing a star shape",
+  "inline": [
+   {
+    "before": "modeles-email",
+    "alt": "Illustration : une enveloppe avec un sceau en forme d’étoile sur un ordinateur",
+    "caption": "Un e-mail court, envoyé au bon moment, après la livraison.",
+    "scene": "an opened envelope with a star-shaped seal on a laptop keyboard"
+   },
+   {
+    "before": "sms",
+    "alt": "Illustration : un téléphone affiche un court message",
+    "caption": "Le SMS : court et personnel, réservé aux clients qui l’ont accepté.",
+    "scene": "a smartphone showing a short abstract message bubble with a star"
+   }
+  ]
+ },
+ "directive-omnibus-avis-clients": {
+  "cover": {
+   "alt": "Illustration : un marteau de juge et un document officiel à côté d’avis clients"
+  },
+  "scene": "a judge gavel and an official document with a shield checkmark, next to a small stack of review cards with star shapes"
+ },
+ "echantillonnage-produit": {
+  "cover": {
+   "alt": "Illustration : un plateau d’échantillons de produits"
+  },
+  "scene": "small sample bottles, mini jars and mini boxes arranged on a tray, a hand picking one sample"
+ },
+ "eeat-e-commerce": {
+  "cover": {
+   "alt": "Illustration : quatre blocs empilés surmontés d’un bouclier, symbole de confiance"
+  },
+  "scene": "four sturdy blocks stacked into a podium with a shield and a checkmark on top, a small online shop window beside it",
+  "inline": [
+   {
+    "before": "qui-comment-pourquoi",
+    "alt": "Illustration : trois bulles de questions autour d’une personne",
+    "caption": "Qui a écrit cette page, comment, et pourquoi : les questions que Google se pose.",
+    "scene": "a person character surrounded by three floating question-mark bubbles"
+   },
+   {
+    "before": "avis",
+    "alt": "Illustration : des avis clients forment un bouclier de confiance",
+    "caption": "Les avis clients sont la preuve la plus directe d’une vraie expérience.",
+    "scene": "review cards with star shapes stacking up to form a shield"
+   }
+  ]
+ },
+ "etoiles-google-shopping-avis-produits": {
+  "cover": {
+   "alt": "Illustration : des résultats de recherche, l’un mis en avant par des étoiles"
+  },
+  "scene": "floating search result cards, one of them highlighted with bright orange star shapes and a small price tag"
+ },
+ "faux-avis-loi": {
+  "cover": {
+   "alt": "Illustration : un faux avis tamponné d’une croix, à côté d’un marteau de juge"
+  },
+  "scene": "a review card being stamped with a large orange cross stamp, a judge gavel and scales of justice nearby",
+  "inline": [
+   {
+    "before": "sanctions",
+    "alt": "Illustration : la balance de la justice et un marteau de juge",
+    "caption": "Les faux avis sont des pratiques commerciales trompeuses, lourdement sanctionnées.",
+    "scene": "scales of justice and a judge gavel on a desk, a stack of documents"
+   },
+   {
+    "before": "bonnes-pratiques",
+    "alt": "Illustration : une liste de bonnes pratiques avec un bouclier",
+    "caption": "Publier tous les avis et signaler ceux issus d’un produit offert : les bonnes pratiques.",
+    "scene": "a clipboard checklist with orange checkmarks and a shield"
+   }
+  ]
+ },
+ "fiche-produit-e-commerce": {
+  "cover": {
+   "alt": "Illustration : la maquette d’une fiche produit sur un bureau"
+  },
+  "scene": "a product page blueprint mockup on a designer desk: photo frame placeholder, text lines, a price tag shape, star shapes, a pencil and ruler",
+  "inline": [
+   {
+    "before": "photos",
+    "alt": "Illustration : un appareil photo photographie un produit",
+    "caption": "Des photos nettes, sous plusieurs angles et en situation.",
+    "scene": "a camera on a tripod photographing a product on a small table with a soft light box"
+   },
+   {
+    "before": "avis",
+    "alt": "Illustration : des avis clients placés près du bouton d’achat",
+    "caption": "Les avis se placent sur la fiche, au plus près du bouton d’achat.",
+    "scene": "the lower part of a product page with review cards and star shapes next to an orange add-to-cart button"
+   }
+  ]
+ },
+ "geo-seo": {
+  "cover": {
+   "alt": "Illustration : une loupe (moteur de recherche) et un assistant IA regardent le même produit"
+  },
+  "scene": "a magnifying glass and a chat bubble AI orb side by side, both looking at a product box, two paths leading to it",
+  "inline": [
+   {
+    "before": "robots",
+    "alt": "Illustration : de petits robots parcourent les pages d’un site",
+    "caption": "Les robots de Google et ceux des IA ne lisent pas votre site de la même façon.",
+    "scene": "small friendly robots walking along website pages laid out like a path, one robot with a magnifier and one with a chat bubble"
+   },
+   {
+    "before": "avis",
+    "alt": "Illustration : un assistant IA recommande un produit entouré d’avis",
+    "caption": "Les avis clients donnent aux IA de quoi parler de vos produits.",
+    "scene": "an AI chat bubble pointing at a product box surrounded by review cards with star shapes"
+   }
+  ]
+ },
+ "lancer-nouveau-produit": {
+  "cover": {
+   "alt": "Illustration : une fusée décolle d’une boîte produit"
+  },
+  "scene": "a small rocket launching from an open product box with a soft trail of smoke"
+ },
+ "obtenir-avis-clients-boutique-en-ligne": {
+  "cover": {
+   "alt": "Illustration : un flot d’avis clients arrive dans une boutique en ligne"
+  },
+  "scene": "many small review cards with star shapes flowing like a stream into an online shop window",
+  "inline": [
+   {
+    "before": "methodes",
+    "alt": "Illustration : plusieurs outils pour obtenir des avis : e-mail, téléphone, colis",
+    "caption": "Plusieurs méthodes se combinent : demande après achat, test produit, carte dans le colis…",
+    "scene": "a toolkit laid out on a table: an envelope, a smartphone, a parcel and a small card with an abstract square code pattern"
+   },
+   {
+    "before": "combien",
+    "alt": "Illustration : une plante dont les feuilles sont des étoiles",
+    "caption": "Les avis s’accumulent avec le temps : l’important est d’en recevoir régulièrement.",
+    "scene": "a young plant in a pot growing leaves shaped like stars, a watering can beside it"
+   }
+  ]
+ },
+ "plateformes-avis-clients-pme-comparatif": {
+  "cover": {
+   "alt": "Illustration : étiquettes de prix accrochées à différentes solutions d’avis"
+  },
+  "scene": "price tags of different sizes attached to small review widget boxes, a calculator and a coin on the side"
+ },
+ "premiers-avis-clients": {
+  "cover": {
+   "alt": "Illustration : une petite boutique qui ouvre et une pousse en forme d’étoile"
+  },
+  "scene": "a small new shop storefront with an awning, a young plant sprouting from a pot in front with a single star-shaped leaf",
+  "inline": [
+   {
+    "before": "tester",
+    "alt": "Illustration : un colis remis à un testeur",
+    "caption": "Faire tester son produit permet d’obtenir des premiers avis honnêtes, publiés avec la mention « Produit offert pour test ».",
+    "scene": "a hand handing a parcel to another hand, a small speech bubble with a star above"
+   },
+   {
+    "before": "repondre",
+    "alt": "Illustration : un commerçant répond à un avis depuis son ordinateur",
+    "caption": "Répondre à chaque avis, même aux moins bons, montre qu’il y a quelqu’un derrière la boutique.",
+    "scene": "a shop owner character at a laptop replying to a review speech bubble with a friendly reply bubble"
+   }
+  ]
+ },
+ "preuve-sociale-ecommerce-conversions": {
+  "cover": {
+   "alt": "Illustration : un entonnoir où passent étoiles et visiteurs jusqu’au panier"
+  },
+  "scene": "a large funnel with star shapes and small people icons flowing through it into a shopping bag"
+ },
+ "referencement-boutique-en-ligne": {
+  "cover": {
+   "alt": "Illustration : une route monte vers une boutique au sommet, symbole du référencement"
+  },
+  "scene": "a winding road climbing a gentle hill toward a small online shop with a flag at the top, an abstract search bar shape in the sky",
+  "inline": [
+   {
+    "before": "mots-cles",
+    "alt": "Illustration : des pièces de puzzle s’emboîtent dans une barre de recherche",
+    "caption": "Choisir les mots que vos clients tapent vraiment.",
+    "scene": "an abstract search bar shape with puzzle pieces fitting into it"
+   },
+   {
+    "before": "liens",
+    "alt": "Illustration : des sites reliés par des liens à une boutique en ligne",
+    "caption": "Les liens d’autres sites vers le vôtre renforcent sa crédibilité aux yeux de Google.",
+    "scene": "several website cards connected by chain links to a central online shop card"
+   }
+  ]
+ },
+ "repondre-avis-negatifs": {
+  "cover": {
+   "alt": "Illustration : un avis mécontent et une réponse calme"
+  },
+  "scene": "two speech bubbles: one small grumpy grey cloud bubble with a single star, answered by a large calm orange bubble with a handshake"
+ },
+ "seo-site-ne-decolle-pas": {
+  "cover": {
+   "alt": "Illustration : un avion en papier sur une piste, avec un sablier"
+  },
+  "scene": "a paper airplane resting on a runway, an hourglass and a stopwatch beside it, patient mood"
+ },
+ "site-cree-avec-ia": {
+  "cover": {
+   "alt": "Illustration : un bras robot assemble des sites identiques, une main humaine en rend un unique"
+  },
+  "scene": "a robotic arm assembling identical website blocks on a conveyor, one block stands out because a human hand adds a heart and a star to it"
+ },
+ "sites-tester-produits-gratuitement": {
+  "cover": {
+   "alt": "Illustration : une tablette affiche plusieurs sites, l’un marqué comme fiable"
+  },
+  "scene": "a hand holding a tablet showing several abstract website cards, one card marked with a shield and a checkmark, parcels nearby",
+  "inline": [
+   {
+    "before": "clubs",
+    "alt": "Illustration : un groupe de testeurs ouvre des colis",
+    "caption": "Clubs, marques, panels : plusieurs façons de tester des produits.",
+    "scene": "a small group of stylized people gathered around a table with parcels being opened"
+   },
+   {
+    "before": "conseils",
+    "alt": "Illustration : une loupe vérifie qu’un site est fiable",
+    "caption": "Un site sérieux ne demande jamais d’argent pour tester un produit.",
+    "scene": "a magnifying glass inspecting a website card protected by a shield with a checkmark"
+   }
+  ]
+ },
+ "statistiques-avis-clients": {
+  "cover": {
+   "alt": "Illustration : graphiques et étoiles, les chiffres des avis clients"
+  },
+  "scene": "abstract charts (bars and a pie chart) with star shapes, a magnifying glass over the bars"
+ },
+ "taux-conversion-e-commerce": {
+  "cover": {
+   "alt": "Illustration : des visiteurs entrent dans une boutique, certains repartent avec un achat"
+  },
+  "scene": "small stylized visitors walking toward an online shop doorway, a few of them leaving with shopping bags, a round gauge dial above"
+ },
+ "tester-formations-logiciels-gratuitement": {
+  "cover": {
+   "alt": "Illustration : formation et logiciel à l’écran, avec un ruban cadeau"
+  },
+  "scene": "a laptop showing an online course window and a software window, a graduation cap and a gift ribbon around the laptop"
+ },
+ "tester-produits-a-domicile": {
+  "cover": {
+   "alt": "Illustration : un colis livré devant la porte d’une maison"
+  },
+  "scene": "a cozy front doorstep with a delivered parcel on the mat, a plant and a warm open door",
+  "inline": [
+   {
+    "before": "ou",
+    "alt": "Illustration : des colis voyagent vers des maisons sur une carte",
+    "caption": "Les tests à domicile se font partout, selon les profils recherchés.",
+    "scene": "a soft map of houses with orange location pins and small parcels traveling between them"
+   },
+   {
+    "before": "bien-tester",
+    "alt": "Illustration : une personne essaie un produit et prend des notes",
+    "caption": "Bien tester : utiliser vraiment le produit, prendre des notes, rester honnête.",
+    "scene": "a person at a table trying a product and writing notes in a notebook"
+   }
+  ]
+ },
+ "testeur-amazon-vine": {
+  "cover": {
+   "alt": "Illustration : un badge de membre sur une pile de colis, entourée d’une plante grimpante"
+  },
+  "scene": "a membership ribbon badge pinned on a stack of parcels, a green vine plant curling around them"
+ },
+ "testeur-produits-par-categorie": {
+  "cover": {
+   "alt": "Illustration : étagères par catégorie : alimentation, cosmétiques, électroménager et high-tech"
+  },
+  "scene": "three shelves with categories: a food jar and a snack box, a cosmetics bottle and a cream jar, a small kitchen appliance and headphones"
+ },
+ "video-testeur-produit": {
+  "cover": {
+   "alt": "Illustration : un téléphone sur trépied filme un produit"
+  },
+  "scene": "a smartphone on a small tripod filming a product on a table, a ring light and a small microphone"
+ },
+ "widget-avis-clients": {
+  "cover": {
+   "alt": "Illustration : un module d’avis s’emboîte dans une page web comme une pièce de puzzle"
+  },
+  "scene": "a website page with a modular block being slotted into place like a puzzle piece, the block decorated with star shapes"
+ }
 }

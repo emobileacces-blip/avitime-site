@@ -27,6 +27,7 @@ CSS = """<!--gd-img:css--><style id="gd-img-css">
 .gd-cover img,.gd-fig img{display:block;width:100%;height:auto;border-radius:20px;background:var(--bg-2,#F3F2EE)}
 .gd-fig{margin:34px 0 8px}
 .gd-fig figcaption{font-size:14px;color:var(--ink-2);margin-top:10px;line-height:1.45}
+.gd-card .gd-thumb{display:block;width:calc(100% + 48px);max-width:none;height:auto;aspect-ratio:3/2;object-fit:cover;margin:-24px -24px 18px;border-radius:21px 21px 0 0;background:var(--bg-2,#F3F2EE)}
 </style><!--/gd-img:css-->"""
 
 
@@ -87,6 +88,25 @@ def apply(slug: str, conf: dict):
     print(f"{slug} : en-tête {'oui' if cover.exists() else 'non'}, {len(conf.get('inline', []))} image(s) dans le texte")
 
 
+def thumbs(page: Path):
+    """Vignette (en-tête du guide) en haut de chaque carte de guide : liste des guides et « À lire aussi »."""
+    s = page.read_text(encoding="utf-8")
+    s = re.sub(r'<img class="gd-thumb"[^>]*>', "", s)
+    if "gd-img-css" not in s:
+        s = s.replace("</head>", CSS + "</head>", 1)
+
+    def add(m):
+        slug = m.group(1)
+        if not (OUT / f"{slug}-cover-760.webp").exists():
+            return m.group(0)
+        return (m.group(0) + f'<img class="gd-thumb" src="/assets/img/guides/{slug}-cover-760.webp" width="760" height="507" '
+                f'alt="" loading="lazy" decoding="async">')
+    s = re.sub(r'<a class="gd-card" href="/guides/([\w-]+)\.html">', add, s)
+    page.write_text(s, encoding="utf-8")
+
+
 if __name__ == "__main__":
     for slug, conf in CFG.items():
         apply(slug, conf)
+    for page in sorted((PUB / "guides").glob("*.html")):
+        thumbs(page)

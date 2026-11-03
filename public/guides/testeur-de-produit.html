@@ -88,6 +88,7 @@
 .gd-cover img,.gd-fig img{display:block;width:100%;height:auto;border-radius:20px;background:var(--bg-2,#F3F2EE)}
 .gd-fig{margin:34px 0 8px}
 .gd-fig figcaption{font-size:14px;color:var(--ink-2);margin-top:10px;line-height:1.45}
+.gd-card .gd-thumb{display:block;width:calc(100% + 48px);max-width:none;height:auto;aspect-ratio:3/2;object-fit:cover;margin:-24px -24px 18px;border-radius:21px 21px 0 0;background:var(--bg-2,#F3F2EE)}
 </style><!--/gd-img:css--></head>
 <body>
 <header class="nav" id="top-nav">
@@ -217,7 +218,7 @@
 var c=b.querySelector('.gd-copy');if(c)c.addEventListener('click',function(){var d=function(){c.lastChild.textContent=' Lien copié';setTimeout(function(){c.lastChild.textContent=' Copier le lien'},2000)};
 if(navigator.clipboard)navigator.clipboard.writeText(u).then(d,function(){prompt('Copiez ce lien :',u)});else prompt('Copiez ce lien :',u)});
 var n=b.querySelector('.gd-native');if(n){if(!navigator.share){n.remove();b.querySelectorAll('.gd-net').forEach(function(e){e.style.display='inline-flex'})}
-else n.addEventListener('click',function(){navigator.share({title:t,url:u}).catch(function(){})})}})})();</script></div><!--/gd-share:bottom--><aside class="gd-related" aria-label="À lire aussi"><h2>À lire aussi</h2><div class="gd-cards"><a class="gd-card" href="/guides/sites-tester-produits-gratuitement.html"><p class="eyebrow">Guide · Testeurs</p><h2>Tester des produits gratuitement : les sites fiables en France</h2></a><a class="gd-card" href="/guides/testeur-produits-par-categorie.html"><p class="eyebrow">Guide · Testeurs</p><h2>Testeur de produits alimentaires, cosmétiques, électroménager : par où commencer</h2></a><a class="gd-card" href="/guides/arnaques-testeur-produits.html"><p class="eyebrow">Guide · Testeurs</p><h2>Testeur de produits gratuit : les arnaques à éviter</h2></a></div><p style="margin-top:18px"><a href="/guides/">Tous les guides</a></p></aside></div></section>
+else n.addEventListener('click',function(){navigator.share({title:t,url:u}).catch(function(){})})}})})();</script></div><!--/gd-share:bottom--><aside class="gd-related" aria-label="À lire aussi"><h2>À lire aussi</h2><div class="gd-cards"><a class="gd-card" href="/guides/sites-tester-produits-gratuitement.html"><img class="gd-thumb" src="/assets/img/guides/sites-tester-produits-gratuitement-cover-760.webp" width="760" height="507" alt="" loading="lazy" decoding="async"><p class="eyebrow">Guide · Testeurs</p><h2>Tester des produits gratuitement : les sites fiables en France</h2></a><a class="gd-card" href="/guides/testeur-produits-par-categorie.html"><img class="gd-thumb" src="/assets/img/guides/testeur-produits-par-categorie-cover-760.webp" width="760" height="507" alt="" loading="lazy" decoding="async"><p class="eyebrow">Guide · Testeurs</p><h2>Testeur de produits alimentaires, cosmétiques, électroménager : par où commencer</h2></a><a class="gd-card" href="/guides/arnaques-testeur-produits.html"><img class="gd-thumb" src="/assets/img/guides/arnaques-testeur-produits-cover-760.webp" width="760" height="507" alt="" loading="lazy" decoding="async"><p class="eyebrow">Guide · Testeurs</p><h2>Testeur de produits gratuit : les arnaques à éviter</h2></a></div><p style="margin-top:18px"><a href="/guides/">Tous les guides</a></p></aside></div></section>
 </article>
 </main>
 <footer class="site-foot">
