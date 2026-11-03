@@ -1,0 +1,9 @@
+{
+  "testeur-de-produit": {
+    "cover": {"alt": "Illustration : une personne ouvre chez elle un colis contenant un produit à tester, ordinateur et carnet de notes à côté"},
+    "inline": [
+      {"before": "combien", "alt": "Illustration : un colis ouvert avec des produits, une carte cadeau et quelques pièces", "caption": "Un testeur reçoit surtout des produits ; les bons d’achat ou petites indemnités restent l’exception."},
+      {"before": "commencer", "alt": "Illustration : un téléphone affichant un formulaire d’inscription, avec les étapes inscription, colis et avis", "caption": "Trois étapes : s’inscrire, recevoir le produit, donner son avis honnête."}
+    ]
+  }
+}
