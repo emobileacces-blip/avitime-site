@@ -32,6 +32,9 @@ CSS = """<!--gd-img:css--><style id="gd-img-css">
 
 
 def convert(src: Path, stem: str):
+    """PNG source → WebP/JPEG. Sans la source (PNG gardés hors dépôt), les fichiers déjà publiés sont réutilisés."""
+    if not src.exists():
+        return (OUT / f"{stem}.webp").exists()
     OUT.mkdir(parents=True, exist_ok=True)
     jobs = [(f"{stem}.webp", "scale=1200:-2", ["-c:v", "libwebp", "-quality", "80"]),
             (f"{stem}-760.webp", "scale=760:-2", ["-c:v", "libwebp", "-quality", "78"])]
@@ -42,6 +45,7 @@ def convert(src: Path, stem: str):
         if dst.exists() and dst.stat().st_mtime >= src.stat().st_mtime:
             continue
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(src), "-vf", vf, *codec, str(dst)], check=True)
+    return True
 
 
 def picture(stem: str, alt: str, eager: bool) -> str:
@@ -62,8 +66,8 @@ def apply(slug: str, conf: dict):
         s = strip(s, tag)
     s = s.replace("</head>", CSS + "</head>", 1)
     cover = SRC / f"{slug}-cover.png"
-    if cover.exists() and conf.get("cover"):
-        convert(cover, f"{slug}-cover")
+    has_cover = bool(conf.get("cover")) and convert(cover, f"{slug}-cover")
+    if has_cover:
         fig = f'<!--gd-img:cover--><figure class="gd-cover">{picture(f"{slug}-cover", conf["cover"]["alt"], True)}</figure><!--/gd-img:cover-->'
         hero = s.index('class="gd-hero"')
         end = s.index("</div></section>", hero)
@@ -74,10 +78,8 @@ def apply(slug: str, conf: dict):
             s = s.replace(f'<meta property="og:image" content="{url}">', f'<meta property="og:image" content="{url}">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="800">', 1)
         s = re.sub(r'("@type": "Article".*?"image": )"[^"]*"', lambda m: m.group(1) + f'"{url}"', s, count=1, flags=re.S)
     for n, it in enumerate(conf.get("inline", []), 1):
-        src = SRC / f"{slug}-{n}.png"
-        if not src.exists():
+        if not convert(SRC / f"{slug}-{n}.png", f"{slug}-{n}"):
             continue
-        convert(src, f"{slug}-{n}")
         cap = f'<figcaption>{escape(it["caption"])}</figcaption>' if it.get("caption") else ""
         fig = f'<!--gd-img:inline-{n}--><figure class="gd-fig">{picture(f"{slug}-{n}", it["alt"], False)}{cap}</figure><!--/gd-img:inline-{n}-->'
         m = re.search(rf'<h2 id="{re.escape(it["before"])}"', s)
@@ -85,7 +87,7 @@ def apply(slug: str, conf: dict):
             raise SystemExit(f"{slug} : titre #{it['before']} introuvable")
         s = s[:m.start()] + fig + s[m.start():]
     page.write_text(s, encoding="utf-8")
-    print(f"{slug} : en-tête {'oui' if cover.exists() else 'non'}, {len(conf.get('inline', []))} image(s) dans le texte")
+    print(f"{slug} : en-tête {'oui' if has_cover else 'non'}, {len(conf.get('inline', []))} image(s) dans le texte")
 
 
 def thumbs(page: Path):
