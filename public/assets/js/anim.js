@@ -150,7 +150,7 @@
   });
 
   /* 10. Appel final : les boutons arrivent après le titre */
-  gsap.from('.final .ctas > *, .final .btn', { y: 24, opacity: 0, duration: .6, stagger: .1, ease: ease,
+  gsap.from('.final .ctas > *', { y: 24, opacity: 0, duration: .6, stagger: .1, ease: ease,
     scrollTrigger: { trigger: '.final', start: 'top 75%', once: true } });
 
   /* 11. Bouton principal : il suit légèrement le curseur */
