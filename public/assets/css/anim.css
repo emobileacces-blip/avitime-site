@@ -1,0 +1,42 @@
+/* Avitime — couche d'animation (proposition du 04/11/2026). Même contenu, même charte ; le site bouge. */
+
+/* Le système d'apparition d'origine est remplacé par celui-ci */
+[data-reveal].pre{opacity:1;transform:none}
+
+/* Haut de page : la fiche produit vivante */
+.hero-live{perspective:1200px}
+.hl-page{transform-style:preserve-3d;will-change:transform;box-shadow:0 40px 90px -40px rgba(0,0,0,.35)}
+.hl-stars{position:relative;display:inline-block;letter-spacing:1px;font-size:15px;color:#D8D8D2;line-height:1}
+.hl-stars i{position:absolute;inset:0 auto 0 0;overflow:hidden;white-space:nowrap;color:var(--star);font-style:normal;width:var(--fill,0%)}
+.hl-stamp{display:inline-block;transform-origin:20% 50%}
+.hl-new{display:inline-block;margin-left:6px;font-size:11px;font-weight:700;color:#0A0A0A;background:var(--hl);border-radius:6px;padding:2px 6px;vertical-align:1px}
+
+/* Bandeau qui défile sous le haut de page */
+.ticker{background:#0A0A0A;color:#F5F5F3;overflow:hidden;border-block:1px solid rgba(255,255,255,.08)}
+.ticker-track{display:flex;width:max-content;animation:ticker 38s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker-track span{display:inline-flex;align-items:center;gap:18px;padding:18px 0 18px 18px;font-size:clamp(17px,2vw,22px);font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+.ticker-track span::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--hl);margin-left:0}
+@keyframes ticker{to{transform:translateX(-50%)}}
+
+/* Titres : les mots montent derrière un masque */
+.split-line{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.split-word{display:inline-block;will-change:transform}
+
+/* Chronologie J0 → J+30 : une ligne qui se trace */
+.timeline{position:relative}
+.tl-rail{position:absolute;left:0;top:0;width:2px;height:100%;background:var(--line);border-radius:2px;overflow:hidden}
+.tl-rail i{display:block;width:100%;height:100%;background:var(--hl);transform-origin:top;transform:scaleY(0)}
+.timeline .n{transition:background-color .3s,color .3s}
+.timeline li.on .n{color:var(--hl-ink)}
+
+/* Espace commerçant : les écrans se redressent au défilement */
+#apercu-espace .app-shots{perspective:1400px}
+#apercu-espace .app-shots>*{transform-origin:50% 100%;will-change:transform}
+
+/* Mouvement réduit : tout reste immobile */
+@media (prefers-reduced-motion:reduce){
+  .ticker-track{animation:none}
+  .hl-page{transform:none!important}
+}
+.hero .rise,.hero h1 .w{animation:none}

@@ -1,0 +1,2 @@
+GSAP 3.12.5 et ScrollTrigger (GreenSock), hébergés sur avitime.fr pour les animations de l'accueil (assets/js/anim.js).
+Licence « Standard no-charge » de GSAP : utilisation gratuite, y compris commerciale. https://gsap.com/standard-license
