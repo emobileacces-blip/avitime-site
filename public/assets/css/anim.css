@@ -46,3 +46,16 @@
 @media (max-width:1100px){.nav-links a[href="#concept"]{display:none}}
 @media (max-width:960px){.nav-links a[href="/guides/"]{display:none}}
 .nav .brand,.nav .brand img{flex-shrink:0}
+/* Avis sur Avitime (bloc inséré par nginx depuis la plateforme) */
+.avis-avitime .avis-moyenne{text-align:center;margin:12px 0 28px;font-size:17px;color:var(--ink-2)}
+.avis-avitime .avis-etoiles{color:var(--star);letter-spacing:2px;margin:0}
+.avis-avitime .avis-moyenne .avis-etoiles{font-size:20px;margin-right:6px}
+.avis-piste{list-style:none;margin:0;padding:4px 2px 14px;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:thin}
+.avis-piste:focus-visible{outline:2px solid var(--hl);outline-offset:4px;border-radius:12px}
+.avis-carte{flex:0 0 min(360px,86%);scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 22px 18px;display:flex;flex-direction:column;gap:12px}
+.avis-carte blockquote{margin:0;flex:1}
+.avis-carte blockquote p{margin:0;font-size:16px;line-height:1.6;color:var(--ink)}
+.avis-carte .avis-auteur{margin:0;font-size:13.5px;color:var(--ink-2)}
+.avis-avitime .avis-note{margin:18px 0 0;text-align:center;font-size:14px;color:var(--ink-2)}
+.avis-avitime .avis-note a{color:var(--hl-ink)}
+@media (prefers-reduced-motion:reduce){.avis-piste{scroll-behavior:auto}}
