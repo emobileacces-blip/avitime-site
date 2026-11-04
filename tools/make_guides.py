@@ -85,6 +85,7 @@ HEAD = """<!doctype html>
 <nav aria-label="Navigation principale" class="nav-links">
 <a href="/#concept">Le concept</a>
 <a href="/#commercants">Commerçants</a>
+<a href="/audit-seo">Audit SEO</a>
 <a href="/devenir-testeur">Testeurs</a>
 <a href="/guides/"{guides_current}>Guides</a>
 <a href="/a-propos.html">À propos</a>

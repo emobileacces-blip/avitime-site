@@ -40,3 +40,9 @@
   .hl-page{transform:none!important}
 }
 .hero .rise,.hero h1 .w{animation:none}
+
+/* Menu du haut : avec « Audit SEO », les liens secondaires (tous présents dans le pied de page) se retirent sur les écrans moyens */
+@media (max-width:1180px){.nav-links a[href$="a-propos.html"]{display:none}}
+@media (max-width:1100px){.nav-links a[href="#concept"]{display:none}}
+@media (max-width:960px){.nav-links a[href="/guides/"]{display:none}}
+.nav .brand,.nav .brand img{flex-shrink:0}
