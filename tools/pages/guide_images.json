@@ -157,7 +157,7 @@
   "scene": "several different shaped tool boxes lined up on a shelf being measured with a tape measure, each with a small star emblem",
   "inline": [
    {
-    "before": "tableau",
+    "before": "prix",
     "alt": "Illustration : un tableau comparatif avec des coches",
     "caption": "Chaque solution a ses forces : le tableau les compare côte à côte.",
     "scene": "a large comparison grid table with orange checkmarks and black dots, no text"
@@ -314,12 +314,6 @@
    }
   ]
  },
- "plateformes-avis-clients-pme-comparatif": {
-  "cover": {
-   "alt": "Illustration : étiquettes de prix accrochées à différentes solutions d’avis"
-  },
-  "scene": "price tags of different sizes attached to small review widget boxes, a calculator and a coin on the side"
- },
  "premiers-avis-clients": {
   "cover": {
    "alt": "Illustration : une petite boutique qui ouvre et une pousse en forme d’étoile"
@@ -465,5 +459,10 @@
    "alt": "Illustration : un module d’avis s’emboîte dans une page web comme une pièce de puzzle"
   },
   "scene": "a website page with a modular block being slotted into place like a puzzle piece, the block decorated with star shapes"
+ },
+ "etude-seo-petites-boutiques-2026": {
+  "cover": {
+   "alt": "Infographie de l’étude Avitime : score global moyen 50/100, 66 % sans avis sur les fiches, 74 % sans blog, visibilité IA 53 contre 68 pour Google"
+  }
  }
 }

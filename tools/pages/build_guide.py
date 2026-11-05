@@ -173,11 +173,23 @@ GUIDES = [{
     "pub_iso": "2026-11-01", "pub_fr": "1er novembre 2026", "read": 9,
     "related": ["widget-avis-clients", "etoiles-google-shopping-avis-produits", "avis-produit-numerique-formation-saas"],
     "css": ".gd-body pre.gd-code{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;overflow-x:auto;font-family:var(--font-mono);font-size:13.5px;line-height:1.55;margin:16px 0 20px;white-space:pre}.gd-body pre.gd-code code{font-family:inherit;background:none;padding:0}",
+}, {
+    "slug": "etude-seo-petites-boutiques-2026",
+    "body": "guide-etude-2026.body.html",
+    "seo_title": "Étude SEO 2026 : 73 petites boutiques en ligne auditées",
+    "seo_desc": "Score moyen 50/100, 2 boutiques sur 3 sans avis sur leurs fiches, 74 % sans blog, IA en retard sur Google : l’étude Avitime sur 73 boutiques françaises.",
+    "title": "Étude : le référencement de 73 petites boutiques en ligne françaises (novembre 2026)",
+    "desc": "Score moyen, visibilité dans Google et dans les IA, avis clients, contenu, confiance : ce que montrent 73 audits SEO de petites boutiques en ligne françaises.",
+    "topic": "Étude",
+    "lede": "Nous avons rassemblé les audits SEO de 73 petites boutiques en ligne françaises réalisés début novembre 2026. Score moyen, Google contre les IA, avis clients, contenu, confiance&nbsp;: voici ce qui freine vraiment une petite boutique, chiffres à l’appui.",
+    "pub_iso": "2026-11-05", "pub_fr": "5 novembre 2026", "read": 7,
+    "related": ["statistiques-avis-clients", "audit-seo-boutique-en-ligne", "seo-site-ne-decolle-pas"],
+    "css": ".et-bars{margin:18px 0 22px;display:grid;gap:10px}.et-row{display:grid;grid-template-columns:120px 1fr auto;gap:12px;align-items:center;font-size:15px}.et-b{height:14px;background:#EEECE6;border-radius:99px;overflow:hidden}.et-b i{display:block;height:100%;background:#FF6A13;border-radius:99px}.et-v{color:var(--ink-2,#5E5E58);white-space:nowrap}@media(max-width:560px){.et-row{grid-template-columns:1fr;gap:4px}}",
 }]
 
 
 def card(slug):
-    m = re.search(r'<a class="gd-card" href="/guides/' + re.escape(slug) + r'\.html"><p class="eyebrow">(.*?)</p><h2>(.*?)</h2>', INDEX)
+    m = re.search(r'<a class="gd-card" href="/guides/' + re.escape(slug) + r'\.html">(?:<img[^>]*>)?<p class="eyebrow">(.*?)</p><h2>(.*?)</h2>', INDEX)
     assert m, slug
     return f'<a class="gd-card" href="/guides/{slug}.html"><p class="eyebrow">{m.group(1)}</p><h2>{m.group(2)}</h2></a>'
 
@@ -228,4 +240,7 @@ for g in GUIDES:
 
 # Boutons de partage + « Suivre Avitime sur LinkedIn » sur tous les guides (idempotent).
 import guide_share  # noqa: E402
-guide_share.apply_all()
+# 05/11/2026 : seulement les guides construits ici (apply_all réécrivait les 40 guides)
+for g in GUIDES:
+    if not g.get("retired") and (not ONLY or g["slug"] in ONLY):
+        guide_share.apply_one(PUB / "guides" / f"{g['slug']}.html")

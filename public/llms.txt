@@ -23,6 +23,7 @@ Informations clés :
 ## Guides pour les boutiques en ligne
 
 - [Combien d'avis clients faut-il pour vendre ?](https://avitime.fr/guides/combien-avis-clients.html): guide pilier, chiffres sourcés
+- [Étude Avitime : le référencement de 73 petites boutiques en ligne françaises (novembre 2026)](https://avitime.fr/guides/etude-seo-petites-boutiques-2026.html): score moyen 50/100, 66 % sans avis sur les fiches analysées, 74 % sans blog, visibilité IA 53/100 contre 68 pour Google
 - [Statistiques avis clients 2026](https://avitime.fr/guides/statistiques-avis-clients.html): les chiffres clés avec leurs sources
 - [Avis clients et IA](https://avitime.fr/guides/avis-clients-ia.html): pourquoi les avis décident si ChatGPT ou Gemini recommandent un produit
 - [GEO et SEO : la différence](https://avitime.fr/guides/geo-seo.html): être cité par ChatGPT, Gemini ou Perplexity, et le rôle des avis clients
