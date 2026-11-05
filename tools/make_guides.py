@@ -236,7 +236,7 @@ GUIDES = [
 <h2 id="bonnes-pratiques">5. Obtenir des avis sans prendre de risque</h2>
 <ul>
 <li><b>Demandez un avis à tous vos clients</b> après la livraison, pas seulement à ceux qui sont satisfaits.</li>
-<li><b>Publiez tous les avis</b> authentiques, y compris les critiques, et répondez-y.</li>
+<li><b>Publiez tous les avis</b> authentiques, quelle que soit leur note, et répondez-y.</li>
 <li><b>Si vous offrez un produit</b> en échange d’un test, dites-le clairement à côté de l’avis, et ne conditionnez jamais le cadeau à une bonne note.</li>
 <li><b>Gardez une trace</b> : commande, livraison, date de l’avis. C’est ce qui permet de prouver qu’un avis est authentique.</li>
 </ul>

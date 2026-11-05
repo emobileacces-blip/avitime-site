@@ -35,8 +35,8 @@ CSS = """<style>
 
 PAGES = {
     "commercants": {
-        "title": "Faire tester vos produits par de vrais consommateurs | Avitime",
-        "desc": "Boutiques en ligne : faites tester vos produits par des consommateurs sélectionnés, à 0 € sur votre boutique, et obtenez des avis vérifiés, légalement.",
+        "title": "Faire tester ses produits par des consommateurs | Avitime",
+        "desc": "Faites tester vos produits par de vrais consommateurs, à 0 € sur votre boutique, et obtenez des avis vérifiés sur vos fiches. 5 premiers tests offerts.",
         "crumb": "Pour les boutiques",
         "video": {"@type": "VideoObject", "name": "Vous cramez votre budget pub ? Les avis clients, le chaînon manquant",
                   "description": "Cyril, fondateur d’Avitime, explique pourquoi une boutique sans avis clients gaspille son budget publicitaire et comment obtenir ses premiers avis vérifiés en faisant tester ses produits.",
@@ -50,8 +50,8 @@ PAGES = {
                   "uploadDate": "2026-10-30T12:30:00+01:00", "duration": "PT2M10S", "inLanguage": "fr-FR"},
     },
     "audit-seo": {
-        "title": "Audit SEO gratuit de votre boutique en ligne | Avitime",
-        "desc": "Audit SEO gratuit pour Shopify, PrestaShop et WooCommerce : score sur 100, fiches produits, maillage interne, avis clients et plan d’action clair.",
+        "title": "Audit SEO e-commerce gratuit : votre boutique notée sur 100",
+        "desc": "Audit SEO gratuit de votre boutique Shopify, PrestaShop ou WooCommerce : score sur 100, fiches produits, avis clients, visibilité IA et plan d’action.",
         "crumb": "Audit SEO",
         "faq": True,
     },
@@ -63,8 +63,8 @@ PAGES = {
         "video": {"@type": "VideoObject", "name": "Faire tester votre formation Systeme.io, sans boutique : la démo pas à pas", "description": "Démonstration filmée : créer la clé API dans Systeme.io, la connecter à Avitime, choisir la formation, lancer la campagne de test, l’inscription automatique du testeur sélectionné, puis le bloc d’avis à coller sur la page de vente. Avitime sélectionne les testeurs. Voix de synthèse.", "thumbnailUrl": "https://avitime.fr/assets/video/tuto-systeme-io-poster.jpg", "contentUrl": "https://avitime.fr/assets/video/tuto-systeme-io.mp4", "uploadDate": "2026-11-01T11:00:00+01:00", "duration": "PT1M35S", "inLanguage": "fr-FR"},
     },
     "integrations": {
-        "title": "Module avis clients PrestaShop, WooCommerce et Shopify | Avitime",
-        "desc": "Le module Avitime pour PrestaShop, l’extension WooCommerce, l’application Shopify, Systeme.io et les sites sur mesure : commandes testeurs à 0 €, suivi et avis vérifiés.",
+        "title": "Module avis clients PrestaShop, WooCommerce, Shopify | Avitime",
+        "desc": "Module PrestaShop, extension WooCommerce, appli Shopify, Systeme.io, sites sur mesure : commandes testeurs à 0 €, suivi des envois et avis vérifiés.",
         "crumb": "Intégrations",
     },
 }

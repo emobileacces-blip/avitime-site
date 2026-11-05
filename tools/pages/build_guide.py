@@ -19,7 +19,7 @@ PUBLISHER = {"@type": "Organization", "name": "Avitime", "url": "https://avitime
 GUIDES = [{
     "slug": "audit-seo-boutique-en-ligne",
     "body": "guide-audit-seo.body.html",
-    "seo_title": "Audit SEO d’une boutique en ligne : les 9 points à vérifier",
+    "seo_title": "Audit SEO boutique en ligne : les 9 points à vérifier (2026)",
     "seo_desc": "Avis clients, fiches produits, technique, E-E-A-T, maillage interne, backlinks : les 9 points d’un audit SEO de boutique en ligne, avec les sources de Google.",
     "title": "Audit SEO d’une boutique en ligne : les 9 points à vérifier (2026)",
     "desc": "Les 9 points d’un audit SEO de boutique en ligne, du plus négligé (avis clients, maillage interne) au plus technique, avec ce que dit Google.",
@@ -84,6 +84,7 @@ GUIDES = [{
     "related": ["avis-clients-ia", "obtenir-avis-clients-boutique-en-ligne", "statistiques-avis-clients"],
 }, {
     "slug": "plateformes-avis-clients-pme-comparatif",
+    "retired": True,  # 05/11/2026 : fondu dans comparatif-solutions-avis-clients (301 nginx), ne plus générer
     "body": "guide-pme.body.html",
     "seo_title": "Plateformes d’avis clients pour PME : prix et comparatif 2026",
     "seo_desc": "Découvrez les plateformes d’avis clients adaptées aux PME en 2026 : comparatif honnête des tarifs, des fonctionnalités et des alternatives à Trustpilot.",
@@ -183,6 +184,8 @@ def card(slug):
 
 ONLY = set(sys.argv[1:])
 for g in GUIDES:
+    if g.get("retired"):
+        continue
     if ONLY and g["slug"] not in ONLY:
         continue
     path = f"/guides/{g['slug']}.html"
