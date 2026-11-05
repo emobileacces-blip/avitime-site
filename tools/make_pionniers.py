@@ -59,7 +59,7 @@ BODY = f"""<article>
 <li><b>Si vous le voulez bien</b>, un court questionnaire à la fin de la campagne et votre accord pour une étude de cas sur avitime.fr, avec vos vrais chiffres. Vous la relisez et la validez avant publication, ou vous refusez : vos tests offerts n’en dépendent pas.</li>
 </ul></div>
 </div>
-<div class="gd-key pi-never"><p><b>Ce que nous ne vous demanderons jamais :</b> un avis sur Avitime, positif ou non, sur Trustpilot, Google, l’App Store Shopify ou WordPress.org. Les tests offerts n’en dépendent pas. Plus tard, nous vous proposerons de donner votre avis, comme à tous nos clients, avec le même message neutre : libre à vous de le faire ou non, et de dire ce que vous pensez.</p></div>
+<div class="gd-key pi-never"><p><b>Ce que nous ne vous demanderons jamais :</b> un avis sur Avitime sur Trustpilot, Google, l’App Store Shopify ou WordPress.org. Les tests offerts n’en dépendent pas. Plus tard, nous vous proposerons de donner votre avis, comme à tous nos clients, avec le même message neutre : libre à vous de le faire ou non, et de dire ce que vous pensez.</p></div>
 
 <h2>Qui peut en profiter</h2>
 <p>L’offre est ouverte à toutes les nouvelles boutiques, sans limite de places. Il suffit d’être :</p>
