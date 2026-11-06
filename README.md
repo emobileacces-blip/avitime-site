@@ -18,3 +18,5 @@ La page Intégrations est désormais générée par `tools/make_vitrine_v2.py` d
 La page Commerçants est elle aussi générée par `tools/make_vitrine_v2.py`, depuis `tools/pages/commercants.v2.html`. `tools/pages/build.py` ne doit plus être lancé pour cette page.
 
 L'index des guides est mis en forme par `tools/make_vitrine_v2.py`, qui relit les cartes dans `public/guides/index.html`. La génération de l'index par `tools/make_guides.py` ne doit plus être utilisée : elle remettrait l'ancien gabarit.
+
+La page Audit SEO est elle aussi générée par `tools/make_vitrine_v2.py`, depuis `tools/pages/audit-seo.v2.html`. `tools/pages/build.py` ne doit plus être lancé pour cette page.
