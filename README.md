@@ -22,3 +22,5 @@ L'index des guides est mis en forme par `tools/make_vitrine_v2.py`, qui relit le
 La page Audit SEO est elle aussi générée par `tools/make_vitrine_v2.py`, depuis `tools/pages/audit-seo.v2.html`. `tools/pages/build.py` ne doit plus être lancé pour cette page.
 
 Les liens de maillage dans les guides sont posés par `tools/maillage_liens.py`. Si un guide est régénéré depuis ses sources, relancez ce script, qui ne modifie rien quand les liens sont déjà en place.
+
+`tools/maillage_liens.py` renomme aussi les boutons « Découvrir l’offre commerçants » des guides et précise certains textes de liens : à relancer après toute régénération des guides.

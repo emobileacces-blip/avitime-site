@@ -371,7 +371,7 @@ GUIDES_BOUTIQUES = [
 <li><b>Il laisse une trace</b> : l’avis du testeur reste sur la fiche produit et convainc les visiteurs suivants. Cinq avis suffisent à changer la probabilité d’achat (voir <a href="/guides/combien-avis-clients.html">Combien d’avis faut-il pour vendre ?</a>).</li>
 <li><b>Il apprend</b> : les retours des testeurs vous disent ce qu’il faut corriger dans le produit ou la fiche.</li>
 </ul>
-<p>Les clubs de testeurs grand public (Sampleo, trnd…) travaillent surtout pour de grandes marques, et les retours restent sur leur plateforme ou les réseaux sociaux. Pour une boutique, l’intérêt est que l’avis soit publié <b>sur sa propre fiche produit</b>. Le comparatif des solutions est dans <a href="/guides/comparatif-solutions-avis-clients.html">notre comparatif honnête</a>.</p>
+<p>Les clubs de testeurs grand public (Sampleo, trnd…) travaillent surtout pour de grandes marques, et les retours restent sur leur plateforme ou les réseaux sociaux. Pour une boutique, l’intérêt est que l’avis soit publié <b>sur sa propre fiche produit</b>. Le comparatif des solutions est dans <a href="/guides/comparatif-solutions-avis-clients.html">notre comparatif des plateformes d’avis clients</a>.</p>
 
 <h2 id="organiser">4. Organiser un test produit</h2>
 <ol>

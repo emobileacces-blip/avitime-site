@@ -103,7 +103,7 @@
        "name": "Quelles plateformes sont compatibles ?",
        "acceptedAnswer": {
         "@type": "Answer",
-        "text": "PrestaShop et WooCommerce, avec un module et une extension dédiés. L’extension WooCommerce est disponible dans l’annuaire officiel des extensions WordPress (WordPress.org) ; le module PrestaShop se télécharge depuis votre espace commerçant. Shopify : l’application Avitime est en cours de validation sur le Shopify App Store. Systeme.io : inscription automatique du testeur à votre formation. Tout autre site, fait sur mesure (Lovable, Bolt, Next.js…) ou sur une autre plateforme (Webflow, Wix, Podia, Kajabi…) : vous ajoutez vos produits à la main, sans module, qu’ils soient physiques ou numériques. Le détail."
+        "text": "PrestaShop et WooCommerce, avec un module et une extension dédiés. L’extension WooCommerce est disponible dans l’annuaire officiel des extensions WordPress (WordPress.org) ; le module PrestaShop se télécharge depuis votre espace commerçant. Shopify : l’application Avitime est en cours de validation sur le Shopify App Store. Systeme.io : inscription automatique du testeur à votre formation. Tout autre site, fait sur mesure (Lovable, Bolt, Next.js…) ou sur une autre plateforme (Webflow, Wix, Podia, Kajabi…) : vous ajoutez vos produits à la main, sans module, qu’ils soient physiques ou numériques. Le détail pour les sites sur mesure."
        }
       },
       {
@@ -119,7 +119,7 @@
        "name": "Mon site est fait sur mesure ou sur une autre plateforme : comment faire tester mes produits ?",
        "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dans votre espace commerçant, rubrique « Ma boutique », choisissez « Site sur mesure ou autre plateforme » (site créé avec Lovable, Bolt ou Next.js, Webflow, Wix, Podia, Kajabi…) et ajoutez vos produits à la main : nom, prix public et page du produit. Produit physique : quand un testeur sélectionné valide sa commande à 0 €, son adresse s’affiche dans « Commandes testeurs », vous l’expédiez vous-même et vous indiquez le suivi. Produit numérique : indiquez dans la campagne comment le testeur y accède (lien d’inscription gratuite, code, crédits offerts). Les avis s’affichent avec un bloc à copier-coller, ou dans le code de votre site avec une clé API. Le guide."
+        "text": "Dans votre espace commerçant, rubrique « Ma boutique », choisissez « Site sur mesure ou autre plateforme » (site créé avec Lovable, Bolt ou Next.js, Webflow, Wix, Podia, Kajabi…) et ajoutez vos produits à la main : nom, prix public et page du produit. Produit physique : quand un testeur sélectionné valide sa commande à 0 €, son adresse s’affiche dans « Commandes testeurs », vous l’expédiez vous-même et vous indiquez le suivi. Produit numérique : indiquez dans la campagne comment le testeur y accède (lien d’inscription gratuite, code, crédits offerts). Les avis s’affichent avec un bloc à copier-coller, ou dans le code de votre site avec une clé API. Le guide des sites sur mesure."
        }
       },
       {
@@ -175,7 +175,7 @@
        "name": "Les testeurs peuvent-ils faire une vidéo de mon produit ?",
        "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui, s’ils le souhaitent : c’est facultatif et jamais garanti. Une fois vérifiée par Avitime, la vidéo s’affiche sous l’avis sur votre fiche produit si le testeur l’a autorisé. S’il a aussi autorisé la publicité, vous lui demandez son code de diffusion depuis votre espace, sans le contacter directement, pour la diffuser pendant 12 mois. La vidéo reste libre, comme l’avis. En savoir plus."
+        "text": "Oui, s’ils le souhaitent : c’est facultatif et jamais garanti. Une fois vérifiée par Avitime, la vidéo s’affiche sous l’avis sur votre fiche produit si le testeur l’a autorisé. S’il a aussi autorisé la publicité, vous lui demandez son code de diffusion depuis votre espace, sans le contacter directement, pour la diffuser pendant 12 mois. La vidéo reste libre, comme l’avis. Réutiliser les vidéos des testeurs."
        }
       },
       {
@@ -335,7 +335,7 @@
        "name": "Pourquoi Avitime demande-t-il mon numéro fiscal ?",
        "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Il n’est demandé ni à l’inscription ni pour commander. Comme toute plateforme en ligne, Avitime déclare chaque année la valeur des produits remis à ses testeurs (obligation européenne DAC7) : en fin d’année, seuls les testeurs qui ont reçu des produits dans l’année sont invités à l’indiquer dans leur espace, comme sur les grandes places de marché. Votre numéro fiscal est chiffré et n’est jamais transmis aux boutiques. En savoir plus."
+        "text": "Il n’est demandé ni à l’inscription ni pour commander. Comme toute plateforme en ligne, Avitime déclare chaque année la valeur des produits remis à ses testeurs (obligation européenne DAC7) : en fin d’année, seuls les testeurs qui ont reçu des produits dans l’année sont invités à l’indiquer dans leur espace, comme sur les grandes places de marché. Votre numéro fiscal est chiffré et n’est jamais transmis aux boutiques. Pourquoi ce numéro fiscal est demandé."
        }
       },
       {
