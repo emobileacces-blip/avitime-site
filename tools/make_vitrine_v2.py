@@ -72,7 +72,7 @@ def tete(titre, desc, adresse, ld, robots="", alternates=""):
 <link rel="preload" href="/assets/fonts/v2/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/v2/archivo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/style.css?v=logo1">
-<link rel="stylesheet" href="/assets/css/v2.css?v=16">
+<link rel="stylesheet" href="/assets/css/v2.css?v=18">
 {ld}</head>
 <body class="v2">
 '''
@@ -102,7 +102,7 @@ ld_faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
     {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in FAQ]}
 ld_org = {"@context": "https://schema.org", "@graph": [
     {"@type": "WebSite", "name": "Avitime", "url": "https://avitime.fr/", "inLanguage": "fr-FR"},
-    {"@type": "Organization", "name": "Avitime", "url": "https://avitime.fr/", "logo": "https://avitime.fr/assets/img/icon-512.png",
+    {"@type": "Organization", "@id": "https://avitime.fr/#organisation", "name": "Avitime", "url": "https://avitime.fr/", "logo": "https://avitime.fr/assets/img/icon-512.png",
      "description": "Avitime fait tester des produits de boutiques en ligne par des consommateurs sélectionnés, puis publie leurs avis de façon transparente et traçable.",
      "sameAs": ["https://www.instagram.com/avitime_fr/", "https://www.tiktok.com/@avitime_fr", "https://www.facebook.com/profile.php?id=61595261199682",
                 "https://www.linkedin.com/company/avitime/", "https://www.youtube.com/@avitime_fr", "https://fr.trustpilot.com/review/avitime.fr",
@@ -113,7 +113,7 @@ faq_html = "\n".join(f"<details><summary>{H.escape(q, quote=False)}</summary><p>
 
 SCRIPT_ANIM = '''<script src="/assets/js/vendor/gsap.min.js?v=3.12.5" defer></script>
 <script src="/assets/js/vendor/ScrollTrigger.min.js?v=3.12.5" defer></script>
-<script src="/assets/js/v2-anim.js?v=2" defer></script>
+<script src="/assets/js/v2-anim.js?v=3" defer></script>
 '''
 SCRIPT_FORM = '''<script>(function(){var f=document.getElementById("audit");if(!f)return;var q=new URLSearchParams(location.search);f.t.value=String(Date.now());f.src.value=(q.get("src")||q.get("utm_source")||"accueil").replace(/[^a-z0-9_-]/gi,"").slice(0,60);f.addEventListener("submit",function(){var b=f.querySelector("button");setTimeout(function(){b.disabled=true;b.textContent="Lancement de l’analyse…"},0)})})();</script>
 <script>(function(){var e=document.getElementById("nb-testeurs");if(!e||!window.fetch)return;fetch("https://app.avitime.fr/api/public/testeurs").then(function(r){return r.json()}).then(function(d){if(!d||typeof d.testeurs!=="number"||d.testeurs<100)return;e.querySelector("b").textContent=d.testeurs+"+";e.hidden=false}).catch(function(){})})();</script>
@@ -321,7 +321,7 @@ ACCUEIL = f'''<main id="contenu">
 <p class="v2-lead">Mon métier, c’est de créer des sites web pour des commerçants : plus d’une trentaine depuis 2020. Au lancement, le même problème revenait à chaque fois : zéro avis. J’ai créé Avitime pour casser ce cercle honnêtement.</p>
 <p class="v2-sign">Cyril Quémy, fondateur</p>
 <p style="margin-top:14px">Avitime est édité par SPARKMOTION AGENCY LTD, société anglaise (Companies House n° 16880032) dirigée par son fondateur.</p>
-<p style="margin-top:14px">Nous démarrons : les premiers avis de commerçants arriveront avec les premières campagnes, sans faux témoignages en attendant. En attendant, vous pouvez lire <a href="/guides/etude-seo-petites-boutiques-2026.html">notre étude sur 73 petites boutiques</a> ou <a href="https://cal.com/avitime/15min" target="_blank" rel="noopener">réserver un appel de 15 minutes</a>.</p>
+<p style="margin-top:14px">Avitime démarre avec ses premières boutiques, sans faux témoignages. Vous pouvez lire <a href="/guides/etude-seo-petites-boutiques-2026.html">notre étude sur 73 petites boutiques</a> ou <a href="https://cal.com/avitime/15min" target="_blank" rel="noopener">réserver un appel de 15 minutes</a>.</p>
 </div>
 </div></section>
 <!--# include virtual="/_avis-avitime" -->
@@ -434,6 +434,55 @@ pq = (tete("Pourquoi faire tester vos produits : avis, Google et IA | Avitime",
       + header() + "\n" + (RACINE / "tools" / "pages" / "pourquoi.main.html").read_text(encoding="utf-8") + FOOTER + "\n" + SCRIPT_ANIM + "</body>\n</html>\n")
 (PUBLIC / "pourquoi-faire-tester-vos-produits.html").write_text(typo(pq), encoding="utf-8", newline="")
 
+# --- À propos ---
+AP_URL = "https://avitime.fr/a-propos.html"
+ORG_ID = "https://avitime.fr/#organisation"
+PERS_ID = AP_URL + "#fondateur"
+FAQ_AP = [
+    ("Qui a créé Avitime ?", "Cyril Quémy, concepteur de sites e-commerce depuis 2020, a créé Avitime après avoir vu ses clients perdre des ventes faute de premiers avis. Il dirige la société éditrice, SPARKMOTION AGENCY LTD."),
+    ("Avitime est-il une société française ?", "Non. Avitime est édité par SPARKMOTION AGENCY LTD, société de droit anglais (Companies House n° 16880032). Le service est proposé en français, aux boutiques en ligne qui livrent en France."),
+    ("Avitime est-il fiable ?", "Avitime est un service récent, lancé en octobre 2026. Sa méthode, ses règles et ses conditions sont publiques : les testeurs ne paient jamais rien, la boutique ne choisit pas les testeurs, toutes les notes sont publiées et chaque avis porte la mention « Produit offert pour test ». Avitime ne promet aucun classement."),
+    ("Les testeurs Avitime sont-ils payés ?", "Non. Ils reçoivent le produit gratuitement, livraison comprise, et le gardent quel que soit leur avis. Ils ne reçoivent ni argent ni bonus lié à la note."),
+    ("Qui choisit les testeurs ?", "Avitime. La boutique définit les critères de sa campagne, mais la sélection finale est faite par Avitime, avec un tirage au sort entre profils comparables."),
+    ("Tous les avis sont-ils publiés ?", "Oui. Tout avis authentique et conforme aux règles de modération est publié."),
+    ("Comment reconnaître un avis Avitime ?", "Chaque avis porte la mention « Produit offert pour test — Testeur Avitime vérifié », affichée à côté de l’avis sur la fiche produit."),
+    ("L’IA écrit-elle les avis ?", "Non. Une aide peut poser des questions et proposer une reformulation à partir des propos du testeur. Elle n’invente aucune expérience, et le testeur valide toujours le texte final."),
+    ("Avitime garantit-il des étoiles sur Google ?", "Non. Avitime ne promet ni volume d’avis, ni classement, ni affichage d’étoiles dans les résultats de recherche."),
+]
+faq_ap_html = "\n".join(f"<details><summary>{H.escape(q, quote=False)}</summary><p>{H.escape(r, quote=False)}</p></details>" for q, r in FAQ_AP)
+ld_ap = {"@context": "https://schema.org", "@graph": [
+    {"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://avitime.fr/"},
+        {"@type": "ListItem", "position": 2, "name": "À propos", "item": AP_URL}]},
+    {"@type": "AboutPage", "url": AP_URL, "name": "À propos d’Avitime", "inLanguage": "fr-FR", "dateModified": "2026-11-06",
+     "about": {"@id": ORG_ID}, "author": {"@id": PERS_ID}, "video": {"@id": AP_URL + "#video"}},
+    {"@type": "VideoObject", "@id": AP_URL + "#video", "name": "Pourquoi j’ai créé Avitime — Cyril, fondateur",
+     "description": "Cyril, fondateur d’Avitime, créateur de sites e-commerce depuis 2020, explique pourquoi une boutique qui démarre a besoin de vrais avis avant la publicité, et comment Avitime fait tester ses produits par des testeurs vérifiés.",
+     "thumbnailUrl": "https://avitime.fr/assets/video/cyril-a-propos-poster.jpg", "contentUrl": "https://avitime.fr/assets/video/cyril-a-propos.mp4",
+     "uploadDate": "2026-10-27T12:00:00+01:00", "duration": "PT1M11S", "inLanguage": "fr-FR", "author": {"@id": PERS_ID}},
+    {"@type": "Organization", "@id": ORG_ID, "name": "Avitime",
+     "disambiguatingDescription": "Service de tests produits et d’avis consommateurs pour boutiques en ligne (avitime.fr), sans lien avec d’autres logiciels portant un nom proche.",
+     "description": "Service de tests produits et d’avis consommateurs pour les boutiques en ligne qui livrent en France : des testeurs sélectionnés reçoivent un produit offert via une commande réelle à 0 €, l’utilisent, puis publient un avis affiché avec la mention « Produit offert pour test — Testeur Avitime vérifié ».",
+     "areaServed": "FR", "knowsAbout": ["avis consommateurs", "tests produits", "e-commerce", "PrestaShop", "WooCommerce", "Shopify"],
+     "url": "https://avitime.fr/", "logo": "https://avitime.fr/assets/img/icon-512.png", "email": "contact@avitime.fr",
+     "sameAs": ld_org["@graph"][1]["sameAs"], "founder": {"@id": PERS_ID},
+     "parentOrganization": {"@type": "Organization", "name": "SPARKMOTION AGENCY LTD", "legalName": "SPARKMOTION AGENCY LTD", "identifier": "16880032",
+                            "foundingDate": "2025-11-28", "address": {"@type": "PostalAddress", "addressCountry": "GB"}}},
+    {"@type": "Person", "@id": PERS_ID, "name": "Cyril Quémy", "jobTitle": "Fondateur d’Avitime", "url": PERS_ID,
+     "image": "https://avitime.fr/assets/img/cyril-quemy-avatar.png",
+     "description": "Concepteur de sites e-commerce pour des commerçants depuis 2020 (plus d’une trentaine de sites), fondateur d’Avitime et directeur de SPARKMOTION AGENCY LTD. Il écrit et signe les guides Avitime sur les avis clients, le référencement des boutiques en ligne et les tests de produits.",
+     "worksFor": {"@id": ORG_ID}, "knowsAbout": ["avis clients", "e-commerce", "référencement des boutiques en ligne", "tests de produits", "PrestaShop", "WooCommerce", "Shopify"],
+     "sameAs": ["https://www.linkedin.com/in/cyril-quemy-940752194/"]},
+    {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in FAQ_AP]},
+]}
+ap = (tete("À propos d’Avitime : éditeur, fondateur et méthode de vérification",
+           "Qui édite Avitime, qui l’a fondé, comment chaque avis est vérifié en six étapes et ce que vous pouvez contrôler vous-même : société, méthode, règles et limites.",
+           AP_URL, jsonld(ld_ap))
+      + header(courant="/a-propos.html") + "\n"
+      + (RACINE / "tools" / "pages" / "a-propos.main.html").read_text(encoding="utf-8").replace("{{FAQ}}", faq_ap_html)
+      + FOOTER + "\n" + SCRIPT_ANIM + "</body>\n</html>\n")
+(PUBLIC / "a-propos.html").write_text(typo(ap), encoding="utf-8", newline="")
+
 # --- 404 ---
 P404 = '''<main id="contenu"><section class="v2-404"><div class="v2-w">
 <h1 class="v2-h1">Page introuvable</h1>
@@ -444,4 +493,4 @@ P404 = '''<main id="contenu"><section class="v2-404"><div class="v2-w">
 p404 = (tete("Page introuvable | Avitime", "Cette page n’existe pas ou a changé d’adresse.", "", "", robots="noindex")
         + header() + "\n" + P404 + FOOTER + "\n</body>\n</html>\n")
 (PUBLIC / "404.html").write_text(p404, encoding="utf-8", newline="")
-print("accueil, tarifs, page pourquoi et 404 générés")
+print("accueil, tarifs, page pourquoi, à propos et 404 générés")
