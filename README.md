@@ -16,3 +16,5 @@ Scripts à relancer dans cet ordre si besoin : `tools/corrections_vitrine.py`, `
 La page Intégrations est désormais générée par `tools/make_vitrine_v2.py` depuis `tools/pages/integrations.v2.html`. Ne relancez pas `tools/pages/build.py` pour cette page : il remettrait l'ancien gabarit.
 
 La page Commerçants est elle aussi générée par `tools/make_vitrine_v2.py`, depuis `tools/pages/commercants.v2.html`. `tools/pages/build.py` ne doit plus être lancé pour cette page.
+
+L'index des guides est mis en forme par `tools/make_vitrine_v2.py`, qui relit les cartes dans `public/guides/index.html`. La génération de l'index par `tools/make_guides.py` ne doit plus être utilisée : elle remettrait l'ancien gabarit.

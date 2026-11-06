@@ -72,7 +72,7 @@ def tete(titre, desc, adresse, ld, robots="", alternates=""):
 <link rel="preload" href="/assets/fonts/v2/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/v2/archivo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/style.css?v=logo1">
-<link rel="stylesheet" href="/assets/css/v2.css?v=25">
+<link rel="stylesheet" href="/assets/css/v2.css?v=26">
 {ld}</head>
 <body class="v2">
 '''
@@ -113,7 +113,7 @@ faq_html = "\n".join(f"<details><summary>{H.escape(q, quote=False)}</summary><p>
 
 SCRIPT_ANIM = '''<script src="/assets/js/vendor/gsap.min.js?v=3.12.5" defer></script>
 <script src="/assets/js/vendor/ScrollTrigger.min.js?v=3.12.5" defer></script>
-<script src="/assets/js/v2-anim.js?v=5" defer></script>
+<script src="/assets/js/v2-anim.js?v=6" defer></script>
 '''
 SCRIPT_FORM = '''<script>(function(){var f=document.getElementById("audit");if(!f)return;var q=new URLSearchParams(location.search);f.t.value=String(Date.now());f.src.value=(q.get("src")||q.get("utm_source")||"accueil").replace(/[^a-z0-9_-]/gi,"").slice(0,60);f.addEventListener("submit",function(){var b=f.querySelector("button");setTimeout(function(){b.disabled=true;b.textContent="Lancement de l’analyse…"},0)})})();</script>
 <script>(function(){var e=document.getElementById("nb-testeurs");if(!e||!window.fetch)return;fetch("https://app.avitime.fr/api/public/testeurs").then(function(r){return r.json()}).then(function(d){if(!d||typeof d.testeurs!=="number"||d.testeurs<100)return;e.querySelector("b").textContent=d.testeurs+"+";e.hidden=false}).catch(function(){})})();</script>
@@ -529,6 +529,40 @@ co = (tete(H.unescape(co_data["titre"]), H.unescape(co_data["desc"]), "https://a
       + FOOTER + "\n" + co_data["script"] + "\n" + SCRIPT_ANIM + "</body>\n</html>\n")
 (PUBLIC / "commercants.html").write_text(typo(co), encoding="utf-8", newline="")
 
+# --- Guides (index) : les cartes sont relues dans la page existante, que les scripts de guides continuent de lire ---
+gi_src = (PUBLIC / "guides" / "index.html").read_text(encoding="utf-8")
+gi_blocs = re.findall(r'<div class="gd-cards"[^>]*>(.*?</a>)</div>', gi_src, flags=re.S)
+assert len(gi_blocs) == 2
+gi_ld = re.findall(r'<script type="application/ld\+json">(.*?)</script>', gi_src, flags=re.S)
+GI_MAIN = f"""<main id="contenu" class="v2-pq v2-guides">
+<section class="v2-page-head"><div class="v2-w">
+<nav class="v2-crumb" aria-label="Fil d’Ariane"><a href="/">Accueil</a> › Guides</nav>
+<h1 class="v2-h1">Nos guides : avis clients et tests de produits</h1>
+<p class="v2-lead">Des articles courts et sourcés : pour les boutiques, obtenir de vrais avis et rester dans les règles ; pour les testeurs, tester des produits sans se faire avoir. Écrits par Cyril Quémy, fondateur d’Avitime.</p>
+</div></section>
+
+<nav class="v2-toc" aria-label="Sommaire de la page"><div class="v2-w"><ul>
+<li><a href="#boutiques">Pour les boutiques en ligne</a></li>
+<li><a href="#testeurs">Pour les testeurs</a></li>
+</ul></div></nav>
+
+<section class="v2-band"><div class="v2-w">
+<h2 class="v2-h2" id="boutiques">Pour les boutiques en ligne</h2>
+<div class="gd-cards">{gi_blocs[0]}</div>
+</div></section>
+
+<section class="v2-band v2-route-band"><div class="v2-w">
+<h2 class="v2-h2" id="testeurs">Pour les testeurs</h2>
+<div class="gd-cards">{gi_blocs[1]}</div>
+</div></section>
+</main>
+"""
+gi = (tete("Guides Avitime : avis clients et tests de produits",
+           "Guides pour les boutiques en ligne (premiers avis clients, loi sur les faux avis) et pour les testeurs de produits : sites fiables, Amazon Vine, arnaques.",
+           "https://avitime.fr/guides/", "".join(f'<script type="application/ld+json">{x}</script>\n' for x in gi_ld))
+      + header(courant="/guides/") + "\n" + GI_MAIN + FOOTER + "\n" + SCRIPT_ANIM + "</body>\n</html>\n")
+(PUBLIC / "guides" / "index.html").write_text(typo(gi), encoding="utf-8", newline="")
+
 # --- 404 ---
 P404 = '''<main id="contenu"><section class="v2-404"><div class="v2-w">
 <h1 class="v2-h1">Page introuvable</h1>
@@ -539,4 +573,4 @@ P404 = '''<main id="contenu"><section class="v2-404"><div class="v2-w">
 p404 = (tete("Page introuvable | Avitime", "Cette page n’existe pas ou a changé d’adresse.", "", "", robots="noindex")
         + header() + "\n" + P404 + FOOTER + "\n</body>\n</html>\n")
 (PUBLIC / "404.html").write_text(p404, encoding="utf-8", newline="")
-print("accueil, tarifs, pourquoi, à propos, testeurs, intégrations, FAQ, commerçants et 404 générés")
+print("accueil, tarifs, pourquoi, à propos, testeurs, intégrations, FAQ, commerçants, guides et 404 générés")

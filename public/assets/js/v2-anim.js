@@ -72,7 +72,7 @@
   /* Apparition douce à l'arrivée dans l'écran. Opacité seule, pour laisser le clavier accéder aux éléments. */
   var blocs = $$(['main .v2-band .v2-h2', 'main .v2-band > .v2-w > .v2-lead', '.v2-compare > .v2-fiche', '.v2-gains > article',
     '.v2-merchant > li', '.v2-shots > figure', '.v2-steps > li', '.v2-shot > *', '.v2-law-grid > div', '.v2-price-table',
-    '.v2-grid3 > article', '.v2-method > li', '.tt-step', '.v2-nevers > li', '.v2-figs > div', '.v2-person', '.v2-grid4 > article', '.v2-duo > *', '.v2-plat > li', '.v2-faq > details'].join(','));
+    '.v2-grid3 > article', '.v2-method > li', '.tt-step', '.v2-guides .gd-card', '.v2-nevers > li', '.v2-figs > div', '.v2-person', '.v2-grid4 > article', '.v2-duo > *', '.v2-plat > li', '.v2-faq > details'].join(','));
   gsap.set(blocs, { opacity: 0, y: 16 });
   blocs.forEach(function (el) { attentes.push({ el: el, bloc: true }); });
 
