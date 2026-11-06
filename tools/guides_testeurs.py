@@ -51,7 +51,7 @@ GUIDES_TESTEURS = [
 
 <h2 id="formes">2. Les quatre formes de test</h2>
 <ul>
-<li><b>Le produit offert contre un avis.</b> Vous recevez le produit chez vous, vous l’utilisez, puis vous publiez votre avis. C’est le modèle d’<a href="/guides/testeur-amazon-vine.html">Amazon Vine</a>, du programme de testeurs Philips ou d’Avitime. Le produit est en général à garder.</li>
+<li><b>Le produit offert contre un avis.</b> Vous recevez <a href="/guides/tester-produits-a-domicile.html">le produit chez vous</a>, vous l’utilisez, puis vous publiez votre avis. C’est le modèle d’<a href="/guides/testeur-amazon-vine.html">Amazon Vine</a>, du programme de testeurs Philips ou d’Avitime. Le produit est en général à garder.</li>
 <li><b>Les clubs de testeurs.</b> Sampleo ou trnd envoient des produits de grandes marques à leurs membres, qui en parlent autour d’eux et sur les réseaux sociaux.</li>
 <li><b>Les panels à points.</b> Des sites comme Tester des produits proposent des études et des questionnaires, récompensés en points convertibles en bons d’achat.</li>
 <li><b>Les études rémunérées.</b> Des instituts et des plateformes comme TestingTime paient votre temps pour un entretien, un test d’application ou une dégustation.</li>
@@ -154,7 +154,7 @@ GUIDES_TESTEURS = [
 <h3>Tester des produits</h3>
 <p>Ce site mélange produits envoyés par La Poste aux membres éligibles, études et questionnaires. Les participations rapportent des points : <b>20 000 points valent 10 €</b>, en chèques-cadeaux, bons d’achat ou virement. Il faut remplir ses questionnaires de profil pour accéder à certaines études.</p>
 <h3>Testez pour nous</h3>
-<p>L’inscription est « totalement gratuite », une seule par personne. On y trouve des <b>tests à domicile</b> (produits gratuits, pas systématiquement indemnisés) et des <b>dégustations en institut</b>, dédommagées par un chèque cadeau de 5 € ou 7 € par séance. Le site précise que ce n’est pas une rémunération.</p>
+<p>L’inscription est « totalement gratuite », une seule par personne. On y trouve des <b><a href="/guides/tester-produits-a-domicile.html">tests à domicile</a></b> (produits gratuits, pas systématiquement indemnisés) et des <b>dégustations en institut</b>, dédommagées par un chèque cadeau de 5 € ou 7 € par séance. Le site précise que ce n’est pas une rémunération.</p>
 <h3>TestingTime</h3>
 <p>TestingTime organise des <b>études rémunérées</b> : tests d’applications et de sites, entretiens, produits physiques. Après un court questionnaire d’inscription, vous recevez des invitations par e-mail quand votre profil correspond, et vous êtes payé pour votre temps. La France fait partie de ses principaux marchés, avec la Suisse, l’Allemagne et le Royaume-Uni.</p>
 
@@ -381,7 +381,7 @@ GUIDES_TESTEURS = [
 <h2 id="alimentaire">1. Produits alimentaires</h2>
 <p>C’est la catégorie la plus recherchée. Deux façons de tester :</p>
 <ul>
-<li><b>À domicile</b> : les clubs comme Sampleo proposent régulièrement des campagnes alimentaires de grandes marques (produits laitiers, plats, épicerie).</li>
+<li><b><a href="/guides/tester-produits-a-domicile.html">À domicile</a></b> : les clubs comme Sampleo proposent régulièrement des campagnes alimentaires de grandes marques (produits laitiers, plats, épicerie).</li>
 <li><b>En institut</b> : des dégustations à l’aveugle, souvent dans les grandes villes. Chez Testez pour nous, chaque séance est dédommagée par un chèque cadeau de 5 € ou 7 €, dans la limite de 24 par an, et une première visite sur place est nécessaire pour valider l’inscription.</li>
 </ul>
 <p>Attention aux allergies et aux régimes : indiquez-les dans votre profil, et ne candidatez qu’aux produits que vous pouvez consommer.</p>
