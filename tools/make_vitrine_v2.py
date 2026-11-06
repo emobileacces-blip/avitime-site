@@ -72,7 +72,7 @@ def tete(titre, desc, adresse, ld, robots="", alternates=""):
 <link rel="preload" href="/assets/fonts/v2/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/v2/archivo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/style.css?v=logo1">
-<link rel="stylesheet" href="/assets/css/v2.css?v=18">
+<link rel="stylesheet" href="/assets/css/v2.css?v=21">
 {ld}</head>
 <body class="v2">
 '''
@@ -113,7 +113,7 @@ faq_html = "\n".join(f"<details><summary>{H.escape(q, quote=False)}</summary><p>
 
 SCRIPT_ANIM = '''<script src="/assets/js/vendor/gsap.min.js?v=3.12.5" defer></script>
 <script src="/assets/js/vendor/ScrollTrigger.min.js?v=3.12.5" defer></script>
-<script src="/assets/js/v2-anim.js?v=3" defer></script>
+<script src="/assets/js/v2-anim.js?v=4" defer></script>
 '''
 SCRIPT_FORM = '''<script>(function(){var f=document.getElementById("audit");if(!f)return;var q=new URLSearchParams(location.search);f.t.value=String(Date.now());f.src.value=(q.get("src")||q.get("utm_source")||"accueil").replace(/[^a-z0-9_-]/gi,"").slice(0,60);f.addEventListener("submit",function(){var b=f.querySelector("button");setTimeout(function(){b.disabled=true;b.textContent="Lancement de l’analyse…"},0)})})();</script>
 <script>(function(){var e=document.getElementById("nb-testeurs");if(!e||!window.fetch)return;fetch("https://app.avitime.fr/api/public/testeurs").then(function(r){return r.json()}).then(function(d){if(!d||typeof d.testeurs!=="number"||d.testeurs<100)return;e.querySelector("b").textContent=d.testeurs+"+";e.hidden=false}).catch(function(){})})();</script>
@@ -483,6 +483,28 @@ ap = (tete("À propos d’Avitime : éditeur, fondateur et méthode de vérifica
       + FOOTER + "\n" + SCRIPT_ANIM + "</body>\n</html>\n")
 (PUBLIC / "a-propos.html").write_text(typo(ap), encoding="utf-8", newline="")
 
+# --- Devenir testeur ---
+DT_URL = "https://avitime.fr/devenir-testeur"
+dt_main = (RACINE / "tools" / "pages" / "devenir-testeur.main.html").read_text(encoding="utf-8")
+dt_ld = json.loads((RACINE / "tools" / "pages" / "devenir-testeur.ld.json").read_text(encoding="utf-8"))
+faq_dt = []
+for q, r in re.findall(r"<details><summary>(.*?)</summary>(.*?)</details>", dt_main, flags=re.S):
+    nettoie = lambda s: re.sub(r"\s+", " ", H.unescape(re.sub(r"<[^>]+>", " ", s))).replace(" .", ".").strip()
+    faq_dt.append({"@type": "Question", "name": nettoie(q), "acceptedAnswer": {"@type": "Answer", "text": nettoie(r)}})
+ld_dt = {"@context": "https://schema.org", "@graph": [
+    {"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://avitime.fr/"},
+        {"@type": "ListItem", "position": 2, "name": "Devenir testeur", "item": DT_URL}]},
+    {"@type": "WebPage", "url": DT_URL, "name": "Devenir testeur de produit gratuit à domicile, en France", "inLanguage": "fr-FR", "dateModified": "2026-11-06",
+     "author": {"@id": "https://avitime.fr/a-propos.html#fondateur"}, "publisher": {"@id": "https://avitime.fr/#organisation"}},
+    dt_ld["video"], dt_ld["howto"], {"@type": "FAQPage", "mainEntity": faq_dt}]}
+dt = (tete("Devenir testeur de produits gratuits en France | Avitime",
+           "Avec Avitime, recevez des produits gratuits chez vous, testez-les, gardez-les et donnez un avis honnête. Inscription gratuite, rien à payer, livraison offerte.",
+           DT_URL, jsonld(ld_dt))
+      + header(courant="/devenir-testeur", cta="https://app.avitime.fr/inscription").replace(">Audit gratuit</a>", ">Liste d’attente</a>") + "\n"
+      + dt_main + FOOTER + "\n" + SCRIPT_ANIM + "</body>\n</html>\n")
+(PUBLIC / "devenir-testeur.html").write_text(typo(dt), encoding="utf-8", newline="")
+
 # --- 404 ---
 P404 = '''<main id="contenu"><section class="v2-404"><div class="v2-w">
 <h1 class="v2-h1">Page introuvable</h1>
@@ -493,4 +515,4 @@ P404 = '''<main id="contenu"><section class="v2-404"><div class="v2-w">
 p404 = (tete("Page introuvable | Avitime", "Cette page n’existe pas ou a changé d’adresse.", "", "", robots="noindex")
         + header() + "\n" + P404 + FOOTER + "\n</body>\n</html>\n")
 (PUBLIC / "404.html").write_text(p404, encoding="utf-8", newline="")
-print("accueil, tarifs, page pourquoi, à propos et 404 générés")
+print("accueil, tarifs, pourquoi, à propos, testeurs et 404 générés")
