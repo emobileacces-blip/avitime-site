@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 PUB = ROOT / "public"
 HERE = Path(__file__).resolve().parent
-tpl = (PUB / "faq.html").read_text()
+tpl = (HERE / "gabarit-faq.html").read_text()
 guide = (PUB / "guides/premiers-avis-clients.html").read_text()
 a = guide.index('<div class="lead-card" id="guide">')
 b = guide.index("</script>", a) + len("</script>")

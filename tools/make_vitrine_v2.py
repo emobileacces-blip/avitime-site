@@ -72,7 +72,7 @@ def tete(titre, desc, adresse, ld, robots="", alternates=""):
 <link rel="preload" href="/assets/fonts/v2/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/v2/archivo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/style.css?v=logo1">
-<link rel="stylesheet" href="/assets/css/v2.css?v=22">
+<link rel="stylesheet" href="/assets/css/v2.css?v=24">
 {ld}</head>
 <body class="v2">
 '''
@@ -513,6 +513,14 @@ integ = (tete(H.unescape(in_data["titre"]), H.unescape(in_data["desc"]), "https:
          + FOOTER + "\n" + SCRIPT_ANIM + "</body>\n</html>\n")
 (PUBLIC / "integrations.html").write_text(typo(integ), encoding="utf-8", newline="")
 
+# --- FAQ ---
+fq_data = json.loads((RACINE / "tools" / "pages" / "faq.ld.json").read_text(encoding="utf-8"))
+fq = (tete(H.unescape(fq_data["titre"]), H.unescape(fq_data["desc"]), "https://avitime.fr/faq", "".join(jsonld(x) for x in fq_data["ld"]))
+      + header(courant="/faq") + "\n"
+      + (RACINE / "tools" / "pages" / "faq.v2.html").read_text(encoding="utf-8")
+      + FOOTER + "\n" + SCRIPT_ANIM + "</body>\n</html>\n")
+(PUBLIC / "faq.html").write_text(typo(fq), encoding="utf-8", newline="")
+
 # --- 404 ---
 P404 = '''<main id="contenu"><section class="v2-404"><div class="v2-w">
 <h1 class="v2-h1">Page introuvable</h1>
@@ -523,4 +531,4 @@ P404 = '''<main id="contenu"><section class="v2-404"><div class="v2-w">
 p404 = (tete("Page introuvable | Avitime", "Cette page n’existe pas ou a changé d’adresse.", "", "", robots="noindex")
         + header() + "\n" + P404 + FOOTER + "\n</body>\n</html>\n")
 (PUBLIC / "404.html").write_text(p404, encoding="utf-8", newline="")
-print("accueil, tarifs, pourquoi, à propos, testeurs, intégrations et 404 générés")
+print("accueil, tarifs, pourquoi, à propos, testeurs, intégrations, FAQ et 404 générés")
