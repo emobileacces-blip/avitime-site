@@ -6,3 +6,5 @@ Site vitrine public d'Avitime, en ligne sur **https://avitime.fr**.
 - `docker-compose.yaml` + `nginx.conf` : déploiement sur le VPS Hostinger (Docker + Traefik, HTTPS automatique).
 
 Ce dépôt est public car le serveur ne peut récupérer que du code public ; il ne contient que ce qui est déjà visible sur le site.
+
+Parcours commerçant : après chaque génération des pages, relancer tools/parcours_commercant.py.
