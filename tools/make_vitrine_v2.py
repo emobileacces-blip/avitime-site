@@ -72,7 +72,7 @@ def tete(titre, desc, adresse, ld, robots="", alternates=""):
 <link rel="preload" href="/assets/fonts/v2/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/v2/archivo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/style.css?v=logo1">
-<link rel="stylesheet" href="/assets/css/v2.css?v=21">
+<link rel="stylesheet" href="/assets/css/v2.css?v=22">
 {ld}</head>
 <body class="v2">
 '''
@@ -113,7 +113,7 @@ faq_html = "\n".join(f"<details><summary>{H.escape(q, quote=False)}</summary><p>
 
 SCRIPT_ANIM = '''<script src="/assets/js/vendor/gsap.min.js?v=3.12.5" defer></script>
 <script src="/assets/js/vendor/ScrollTrigger.min.js?v=3.12.5" defer></script>
-<script src="/assets/js/v2-anim.js?v=4" defer></script>
+<script src="/assets/js/v2-anim.js?v=5" defer></script>
 '''
 SCRIPT_FORM = '''<script>(function(){var f=document.getElementById("audit");if(!f)return;var q=new URLSearchParams(location.search);f.t.value=String(Date.now());f.src.value=(q.get("src")||q.get("utm_source")||"accueil").replace(/[^a-z0-9_-]/gi,"").slice(0,60);f.addEventListener("submit",function(){var b=f.querySelector("button");setTimeout(function(){b.disabled=true;b.textContent="Lancement de l’analyse…"},0)})})();</script>
 <script>(function(){var e=document.getElementById("nb-testeurs");if(!e||!window.fetch)return;fetch("https://app.avitime.fr/api/public/testeurs").then(function(r){return r.json()}).then(function(d){if(!d||typeof d.testeurs!=="number"||d.testeurs<100)return;e.querySelector("b").textContent=d.testeurs+"+";e.hidden=false}).catch(function(){})})();</script>
@@ -505,6 +505,14 @@ dt = (tete("Devenir testeur de produits gratuits en France | Avitime",
       + dt_main + FOOTER + "\n" + SCRIPT_ANIM + "</body>\n</html>\n")
 (PUBLIC / "devenir-testeur.html").write_text(typo(dt), encoding="utf-8", newline="")
 
+# --- Intégrations ---
+in_data = json.loads((RACINE / "tools" / "pages" / "integrations.ld.json").read_text(encoding="utf-8"))
+integ = (tete(H.unescape(in_data["titre"]), H.unescape(in_data["desc"]), "https://avitime.fr/integrations", "".join(jsonld(x) for x in in_data["ld"]))
+         + header(courant="/integrations", lang=lang) + "\n"
+         + (RACINE / "tools" / "pages" / "integrations.v2.html").read_text(encoding="utf-8")
+         + FOOTER + "\n" + SCRIPT_ANIM + "</body>\n</html>\n")
+(PUBLIC / "integrations.html").write_text(typo(integ), encoding="utf-8", newline="")
+
 # --- 404 ---
 P404 = '''<main id="contenu"><section class="v2-404"><div class="v2-w">
 <h1 class="v2-h1">Page introuvable</h1>
@@ -515,4 +523,4 @@ P404 = '''<main id="contenu"><section class="v2-404"><div class="v2-w">
 p404 = (tete("Page introuvable | Avitime", "Cette page n’existe pas ou a changé d’adresse.", "", "", robots="noindex")
         + header() + "\n" + P404 + FOOTER + "\n</body>\n</html>\n")
 (PUBLIC / "404.html").write_text(p404, encoding="utf-8", newline="")
-print("accueil, tarifs, pourquoi, à propos, testeurs et 404 générés")
+print("accueil, tarifs, pourquoi, à propos, testeurs, intégrations et 404 générés")

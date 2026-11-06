@@ -373,3 +373,11 @@
 
 /* État des vagues de testeurs */
 .v2-status{margin-top:14px!important;background:var(--paper);border-left:5px solid var(--ink);padding:9px 12px!important;font-size:16.5px;line-height:1.35;max-width:58ch}
+
+/* Page Intégrations */
+.v2-integ h2[id]{scroll-margin-top:84px}
+.v2-integ .v2-band>.v2-w>p{margin-top:12px;max-width:78ch}
+.v2-integ .v2-band>.v2-w>.v2-list{max-width:78ch;margin-top:14px!important}
+.v2-integ .v2-price-table{margin-top:0}
+.v2-integ .v2-final>.v2-w>.v2-lead{margin-top:0}
+.v2-integ .v2-final .v2-links{margin-top:20px}
