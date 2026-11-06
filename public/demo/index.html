@@ -11,9 +11,9 @@
 <style>*,*::before,*::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
-<div id="avt-demo-bar" role="note" style="position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;justify-content:center;background:#0A0A0A;color:#fff;border:1px solid #FF6A13;border-radius:14px;padding:10px 16px;font:500 14px/1.4 Geist,system-ui,sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.25)">
-<span><b style="color:#FF6A13">Démonstration</b> · Avitime ouvre bientôt. Rien de ce que vous saisissez ici n’est enregistré ni envoyé.</span>
-<a href="mailto:contact@avitime.fr?subject=Pr%C3%A9venez-moi%20de%20l%E2%80%99ouverture%20d%E2%80%99Avitime" style="color:#0A0A0A;background:#FF6A13;border-radius:999px;padding:5px 14px;text-decoration:none;font-weight:600">Être prévenu de l’ouverture</a>
+<div id="avt-demo-bar" role="note" style="position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;justify-content:center;background:#0A0A0A;color:#fff;border:1px solid #F98C07;border-radius:14px;padding:10px 16px;font:500 14px/1.4 Geist,system-ui,sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.25)">
+<span><b style="color:#F98C07">Démonstration</b> · Avitime ouvre bientôt. Rien de ce que vous saisissez ici n’est enregistré ni envoyé.</span>
+<a href="mailto:contact@avitime.fr?subject=Pr%C3%A9venez-moi%20de%20l%E2%80%99ouverture%20d%E2%80%99Avitime" style="color:#0A0A0A;background:#F98C07;border-radius:999px;padding:5px 14px;text-decoration:none;font-weight:600">Être prévenu de l’ouverture</a>
 <button type="button" onclick="this.parentNode.remove()" aria-label="Fermer" style="background:none;border:0;color:#fff;font-size:20px;cursor:pointer;line-height:1;padding:0 4px">×</button>
 </div>
 
@@ -24,12 +24,12 @@
 /* Layout: Apple-style public site (1080px column, full-bleed black bands, pinned scroll film) + separate merchant app shell (sidebar + panels). Palette: ink black, signal orange, star yellow. */
 :root{
   --bg:#FAFAF8; --bg-2:#F0F0EC; --surface:#FFFFFF; --ink:#0A0A0A; --ink-2:#5E5E58; --line:rgba(10,10,10,.1);
-  --accent:#0A0A0A; --accent-ink:#FFFFFF; --hl:#FF6A13; --hl-ink:#B34100; --hl-soft:#FFEBDD; --logo-bg:#0A0A0A;
+  --accent:#0A0A0A; --accent-ink:#FFFFFF; --hl:#F98C07; --hl-ink:#964A00; --hl-soft:#FFF0D2; --logo-bg:#0A0A0A;
   --grad-a:#B84000; --grad-b:#F06400;
   --band:#0A0A0A; --band-ink:#F5F5F3; --band-mute:#A3A39D; --band-line:rgba(245,245,243,.14);
   --stage:#000000; --stage-2:#1A1A1A; --stage-ink:#F5F5F3; --stage-mute:#9A9A94; --stage-line:rgba(245,245,243,.16);
   --paper:#FFFFFF; --paper-2:#F4F4F2; --paper-img:#EDEDEA; --paper-ink:#0A0A0A; --paper-mute:#6B6B66; --paper-line:#E2E2DE;
-  --paper-badge:#FFEBDD; --paper-hl:#B34100;
+  --paper-badge:#FFF0D2; --paper-hl:#964A00;
   --star:#FFB800; --kraft:#C8A27A; --tape:#A3825C;
   --ok:#1E7A4C; --ok-bg:#E3F3EA; --warn:#8A5A00; --warn-bg:#FFF1D1; --bad:#A33A2B; --bad-bg:#F9E2DD; --info:#2C5A86; --info-bg:#E3EDF7; --idle:#5E5E58; --idle-bg:#EFEFEB;
   --ease-out:cubic-bezier(0.23,1,0.32,1); --ease-in-out:cubic-bezier(0.77,0,0.175,1);
@@ -40,7 +40,7 @@
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#000000; --bg-2:#111111; --surface:#161616; --ink:#F5F5F3; --ink-2:#A3A39D; --line:rgba(245,245,243,.12);
-    --accent:#F5F5F3; --accent-ink:#0A0A0A; --hl-ink:#FF8A3D; --hl-soft:#3A1E0C; --logo-bg:#1F1F1F; --grad-a:#FF7A2A; --grad-b:#FFC24D;
+    --accent:#F5F5F3; --accent-ink:#0A0A0A; --hl-ink:#FFA63D; --hl-soft:#3A2808; --logo-bg:#1F1F1F; --grad-a:#F98C07; --grad-b:#FFC24D;
     --band:#111111; --stage:#000000;
     --ok:#6FD39E; --ok-bg:#13301F; --warn:#F2C76B; --warn-bg:#3A2E12; --bad:#F2998B; --bad-bg:#3D1F1A; --info:#9CC3EA; --info-bg:#172B3F; --idle:#A3A39D; --idle-bg:#1F1F1F;
     color-scheme:dark;
@@ -48,7 +48,7 @@
 }
 :root[data-theme="dark"]{
   --bg:#000000; --bg-2:#111111; --surface:#161616; --ink:#F5F5F3; --ink-2:#A3A39D; --line:rgba(245,245,243,.12);
-  --accent:#F5F5F3; --accent-ink:#0A0A0A; --hl-ink:#FF8A3D; --hl-soft:#3A1E0C; --logo-bg:#1F1F1F; --grad-a:#FF7A2A; --grad-b:#FFC24D;
+  --accent:#F5F5F3; --accent-ink:#0A0A0A; --hl-ink:#FFA63D; --hl-soft:#3A2808; --logo-bg:#1F1F1F; --grad-a:#F98C07; --grad-b:#FFC24D;
   --band:#111111; --stage:#000000;
   --ok:#6FD39E; --ok-bg:#13301F; --warn:#F2C76B; --warn-bg:#3A2E12; --bad:#F2998B; --bad-bg:#3D1F1A; --info:#9CC3EA; --info-bg:#172B3F; --idle:#A3A39D; --idle-bg:#1F1F1F;
   color-scheme:dark;
@@ -209,7 +209,7 @@ section{scroll-margin-top:var(--nav-h)}
 .m-cui{background:linear-gradient(140deg,#D99062,#8E4E2B);color:#FFF6EF}
 .m-arg{background:linear-gradient(140deg,#F1F3F5,#9BA2AA);color:#2B3136}
 .m-gol{background:linear-gradient(140deg,#F5DC8E,#B98A1E);color:#3A2A05}
-.m-bla{background:linear-gradient(140deg,#3A3A3A,#050505);color:#FF8A3D;box-shadow:inset 0 0 0 2px #FF6A13,0 6px 18px -8px rgba(0,0,0,.5)}
+.m-bla{background:linear-gradient(140deg,#3A3A3A,#050505);color:#FFA63D;box-shadow:inset 0 0 0 2px #F98C07,0 6px 18px -8px rgba(0,0,0,.5)}
 .grade h3{margin:0;font-size:19px;letter-spacing:-.02em;font-weight:600}
 .grade .req{font-size:12.5px;color:var(--ink-2);font-family:var(--font-mono);min-height:2.6em;margin:0}
 .grade dl{margin:10px 0 0;display:grid;gap:8px;width:100%;border-top:1px solid var(--line);padding-top:14px}
@@ -476,7 +476,7 @@ input[type=file]{font-size:14px;color:var(--ink-2)}
 .tuto-card{background:#0A0A0A;color:#F5F5F3;border-radius:28px;padding:26px;display:grid;gap:14px;box-shadow:0 30px 80px -50px rgba(0,0,0,.6)}
 .tuto-card h2{margin:0;font-size:24px;letter-spacing:-.03em;line-height:1.15}
 .tuto-card p{margin:0;color:#B9B9B3;font-size:15px}
-.tuto-card .eyebrow{color:#FF8A3D}
+.tuto-card .eyebrow{color:#FFA63D}
 .tuto-video{width:100%;aspect-ratio:16/9;border-radius:16px;display:block;background:#000}
 .tuto-steps{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .tuto-steps li{font-family:var(--font-mono);font-size:12px;border:1px solid rgba(255,138,61,.55);border-radius:999px;padding:4px 10px}
@@ -686,18 +686,18 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
 .serp-q{flex:1;font-size:14px;color:#202124}
 .serp-ico{width:18px;height:18px;fill:none;stroke:#5f6368;stroke-width:2}
 .serp-site{display:flex;gap:10px;align-items:center}
-.serp-fav{width:28px;height:28px;border-radius:50%;background:#FFEBDD;color:#B34100;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex:none}
+.serp-fav{width:28px;height:28px;border-radius:50%;background:#FFF0D2;color:#964A00;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex:none}
 .serp-site b{display:block;font-size:14px;font-weight:400}
 .serp-site small{display:block;font-size:12px;color:#4d5156}
 .serp .serp-title{color:#1a0dab;font-size:20px;margin:8px 0 4px;line-height:1.3}
-.serp .serp-stars{font-size:13.5px;color:#4d5156;margin:0;display:flex;align-items:center;gap:6px;flex-wrap:wrap;background:#FFF6D6;border-radius:8px;padding:4px 6px;box-shadow:0 0 0 2px #FF6A13}
+.serp .serp-stars{font-size:13.5px;color:#4d5156;margin:0;display:flex;align-items:center;gap:6px;flex-wrap:wrap;background:#FFF6D6;border-radius:8px;padding:4px 6px;box-shadow:0 0 0 2px #F98C07}
 .serp-stars b{color:#202124;font-weight:400}
 .stars{display:inline-flex;gap:1px}
 .stars svg{width:15px;height:15px;fill:#F5B400}
 .stars .half svg{fill:#dadce0}
 .serp-snip{font-size:14px;color:#4d5156;margin:6px 0 0;line-height:1.5}
-.serp-tag{margin-top:14px;display:flex;gap:8px;align-items:center;font-size:13px;color:#8A3300;background:#FFEBDD;border-radius:12px;padding:8px 12px;font-family:var(--font-sans)}
-.serp-tag span{color:#FF6A13}
+.serp-tag{margin-top:14px;display:flex;gap:8px;align-items:center;font-size:13px;color:#8A3300;background:#FFF0D2;border-radius:12px;padding:8px 12px;font-family:var(--font-sans)}
+.serp-tag span{color:#F98C07}
 .serp-sm{padding:12px;box-shadow:none;border:1px solid var(--line)}
 .serp-sm .serp-title{font-size:15px}
 .gain-card .serp p.serp-stars{font-size:12.5px;color:#4d5156}
@@ -722,7 +722,7 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
 .gain-card p{margin:0;font-size:14.5px;color:var(--ink-2)}
 .gain-vis{background:var(--bg-2);border-radius:18px;padding:14px;min-height:200px;display:flex;flex-direction:column;justify-content:center;gap:10px}
 .mini-pp{display:flex;gap:12px;align-items:center;background:#fff;border-radius:14px;padding:10px;color:#0A0A0A}
-.mini-img{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#FFB27A,#FF6A13);flex:none}
+.mini-img{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#FFC98A,#F98C07);flex:none}
 .mini-lines b{display:block;font-size:14px}
 .mini-lines small{display:block;font-size:12px;color:#5E5E58}
 .mini-stars{display:inline-flex;gap:1px}
@@ -730,7 +730,7 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
 .mini-stars.sm svg{width:12px;height:12px}
 .mini-review{background:#fff;border-radius:14px;padding:10px;color:#0A0A0A}
 .mini-review p{margin:4px 0;font-size:13px;color:#0A0A0A}
-.mini-review em{font-style:normal;font-size:11px;color:#8A3300;background:#FFEBDD;border-radius:999px;padding:2px 8px}
+.mini-review em{font-style:normal;font-size:11px;color:#8A3300;background:#FFF0D2;border-radius:999px;padding:2px 8px}
 .mini-chat{display:grid;gap:8px}
 .mc-q{margin:0 0 0 auto;background:#0A0A0A;color:#fff;border-radius:12px 12px 4px 12px;padding:7px 10px;font-size:13px;width:fit-content}
 .mc-a{margin:0;background:#fff;color:#0A0A0A;border-radius:12px 12px 12px 4px;padding:9px 11px;font-size:13px;line-height:1.45;display:flex;gap:8px;align-items:flex-start}
@@ -746,7 +746,7 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
 .ia-q span{background:#2A2A28;color:#F5F5F3;border-radius:18px 18px 4px 18px;padding:12px 16px;max-width:80%;font-size:15.5px}
 .ia-a{background:#F5F5F3;color:#0A0A0A;border-radius:18px 18px 18px 4px;padding:16px 18px;font-size:15.5px;line-height:1.55}
 .ia-a p{margin:0 0 8px}
-.ia-who{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#B34100}
+.ia-who{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#964A00}
 .ia-cons{color:#A33A2B}
 .ia-src{font-size:12.5px;color:#5E5E58;margin:0!important;border-top:1px solid rgba(10,10,10,.1);padding-top:8px}
 .ia-note{font-size:12px;color:#8A8A84;text-align:center;margin:0}
@@ -777,7 +777,7 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="check" viewBox="0 0 16 16"><path d="M3.5 8.4l2.9 2.8 6.1-6.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="7" fill="var(--logo-bg)"/><path d="M12 5.2l1.95 4.1 4.45.55-3.3 3.05.88 4.45L12 15.2l-3.98 2.15.88-4.45-3.3-3.05 4.45-.55z" fill="#FF6A13"/></symbol>
+    <symbol id="logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="7" fill="var(--logo-bg)"/><path d="M12 5.2l1.95 4.1 4.45.55-3.3 3.05.88 4.45L12 15.2l-3.98 2.15.88-4.45-3.3-3.05 4.45-.55z" fill="#F98C07"/></symbol>
   </defs>
 </svg>
 
@@ -983,8 +983,8 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
         <svg id="stage" viewBox="0 0 960 640" role="img" aria-label="Animation : un produit sans avis, la sélection d’un testeur par Avitime, une commande à 0 euro, la livraison, la rédaction de l’avis, puis sa publication sur la fiche produit.">
           <defs>
             <symbol id="star" viewBox="0 0 24 24"><path d="M12 2.6l2.85 6 6.55.8-4.85 4.45 1.3 6.5L12 17.2l-5.85 3.15 1.3-6.5L2.6 9.4l6.55-.8z"/></symbol>
-            <symbol id="bottle" viewBox="0 0 40 80"><rect x="11" y="0" width="18" height="12" rx="4" fill="#3A3A3A"/><rect x="6" y="9" width="28" height="71" rx="11" fill="#141414"/><rect x="6" y="40" width="28" height="6" fill="#FF6A13"/><rect x="11" y="16" width="4" height="50" rx="2" fill="#ffffff" opacity=".18"/></symbol>
-            <radialGradient id="glowGrad"><stop offset="0" stop-color="#FF6A13" stop-opacity=".22"/><stop offset="1" stop-color="#FF6A13" stop-opacity="0"/></radialGradient>
+            <symbol id="bottle" viewBox="0 0 40 80"><rect x="11" y="0" width="18" height="12" rx="4" fill="#3A3A3A"/><rect x="6" y="9" width="28" height="71" rx="11" fill="#141414"/><rect x="6" y="40" width="28" height="6" fill="#F98C07"/><rect x="11" y="16" width="4" height="50" rx="2" fill="#ffffff" opacity=".18"/></symbol>
+            <radialGradient id="glowGrad"><stop offset="0" stop-color="#F98C07" stop-opacity=".22"/><stop offset="1" stop-color="#F98C07" stop-opacity="0"/></radialGradient>
             <clipPath id="winclip"><rect width="500" height="420" rx="18"/></clipPath>
           </defs>
           <circle id="glow" cx="480" cy="320" r="380" fill="url(#glowGrad)"/>
@@ -2206,7 +2206,7 @@ dl.kv dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-
       <div class="box">
         <div class="hd"><h2>Fiche de la commande n° 10490</h2><small>Ce que vous voyez en ouvrant la commande</small></div>
         <div class="avt-banner" role="note">
-          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.5 5.3 5.8.7-4.3 4 1.1 5.7L12 16.4l-5.1 2.8 1.1-5.7-4.3-4 5.8-.7z" fill="#FF6A13"/></svg></span>
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.5 5.3 5.8.7-4.3 4 1.1 5.7L12 16.4l-5.1 2.8 1.1-5.7-4.3-4 5.8-.7z" fill="#F98C07"/></svg></span>
           <div>
             <b>Commande testeur Avitime : produit offert, 0,00 €</b>
             <p>Cette commande vient d’un testeur sélectionné par Avitime. Ce n’est pas une vente : ne l’annulez pas et ne la remboursez pas. Expédiez-la comme une commande normale, avec votre transporteur habituel, et indiquez le numéro de suivi. Le délai de test du testeur commence à la livraison.</p>

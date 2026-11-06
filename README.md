@@ -8,3 +8,7 @@ Site vitrine public d'Avitime, en ligne sur **https://avitime.fr**.
 Ce dépôt est public car le serveur ne peut récupérer que du code public ; il ne contient que ce qui est déjà visible sur le site.
 
 Parcours commerçant : après chaque génération des pages, relancer tools/parcours_commercant.py.
+
+## Refonte du site vitrine
+
+Scripts à relancer dans cet ordre si besoin : `tools/corrections_vitrine.py`, `tools/commercants_blocs.py`, `tools/couleur_logo.py`, puis `tools/make_vitrine_v2.py`. Ce dernier génère l'accueil, `/tarifs`, `/pourquoi-faire-tester-vos-produits` et la page 404.
