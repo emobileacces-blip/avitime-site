@@ -299,3 +299,53 @@
   .px-bar li{padding:0;white-space:normal;text-align:left}
   .px-bar li+li{border-left:0}
 }
+
+/* Section « Module d'avis clients pour PrestaShop, WooCommerce et Shopify » (maquette de Cyril) */
+.ig{--ig-o:#F98C07;--ig-grad:linear-gradient(180deg,#FFB02E,#F98C07 55%,#F47302);position:relative;overflow:hidden;color:#f4f4f6;
+  font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:radial-gradient(60% 80% at 72% 40%,rgba(160,70,0,.42),rgba(11,11,13,0) 65%),radial-gradient(30% 50% at 0% 60%,rgba(249,140,7,.22),rgba(11,11,13,0) 70%),#0d0d10;
+  padding:clamp(40px,4.4vw,64px) 0 clamp(36px,4vw,56px)}
+.ig *,.ig *::before,.ig *::after{box-sizing:border-box}
+.ig-w{width:min(1500px,100% - 32px);margin-inline:auto}
+.ig-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(16px,2.4vw,40px);align-items:center}
+.ig .ig-badge{display:inline-flex;align-items:center;gap:12px;margin:0;padding:9px 22px;border-radius:999px;border:1.5px solid var(--ig-o);background:rgba(249,140,7,.08);box-shadow:0 0 18px rgba(249,140,7,.25);font-weight:600;font-size:clamp(14px,1.1vw,18px);color:#fff}
+.ig-badge svg{width:24px;height:24px}
+.ig h2{margin:clamp(18px,2vw,28px) 0 0;font-weight:800;font-size:clamp(30px,3.3vw,56px);line-height:1.08;letter-spacing:-.025em;color:#fff;text-wrap:balance}
+.ig h2 span{background:var(--ig-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ig .ig-lead{margin:clamp(14px,1.4vw,20px) 0 0;max-width:46ch;font-size:clamp(15px,1.3vw,21px);line-height:1.5;color:#e4e4e8}
+.ig .ig-checks{list-style:none;margin:clamp(20px,2.2vw,30px) 0 0;padding:0;display:grid;gap:clamp(10px,1vw,15px)}
+.ig-checks li{display:flex;align-items:center;gap:16px;font-size:clamp(15px,1.25vw,20px);line-height:1.35}
+.ig-checks b{font-weight:700;color:#fff}
+.ig-checks li::before{content:"";flex:none;width:30px;height:30px;border-radius:50%;background:var(--ig-o) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%231b0b00' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/19px no-repeat;box-shadow:0 0 14px rgba(249,140,7,.45)}
+.ig .ig-more{margin:clamp(18px,2vw,26px) 0 0;display:flex;flex-direction:column;gap:6px}
+.ig .ig-more a{align-self:flex-start;color:#ffae4a;font-weight:600;font-size:clamp(14.5px,1.1vw,17px);text-decoration:underline;text-underline-offset:4px}
+.ig-more small{font-size:13px;color:#a9a9b1}
+.ig .ig-art{margin:0;position:relative}
+.ig-art a{display:block;border-radius:18px}
+.ig .ig-art img{display:block;width:100%;height:auto;-webkit-mask-image:radial-gradient(120% 115% at 55% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(120% 115% at 55% 50%,#000 62%,transparent 100%);transition:transform .25s ease}
+.ig-art a:hover img{transform:scale(1.015)}
+.ig .ig-bar{list-style:none;margin:clamp(22px,2.6vw,40px) 0 0;padding:clamp(18px,1.8vw,26px) clamp(16px,2.4vw,40px);display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;gap:16px;border-radius:24px;border:1.5px solid rgba(249,140,7,.85);background:linear-gradient(180deg,rgba(26,20,14,.92),rgba(12,11,10,.95));box-shadow:0 0 28px rgba(249,140,7,.3),inset 0 0 22px rgba(249,140,7,.08)}
+.ig-bar li{display:flex;align-items:center;gap:clamp(12px,1.3vw,22px);padding-right:clamp(12px,2vw,36px);font-size:clamp(14px,1.1vw,18px);line-height:1.4;color:#f1f1f4}
+.ig-bar li+li{border-left:1.5px solid rgba(249,140,7,.55);padding-left:clamp(12px,2vw,36px)}
+.ig-bar li:last-child{padding-right:0}
+.ig-bar b{font-weight:700;color:#fff}
+.ig-bar svg{flex:none;width:clamp(36px,3vw,52px);height:clamp(36px,3vw,52px);color:var(--ig-o);filter:drop-shadow(0 0 8px rgba(249,140,7,.45))}
+.ig .ig-fine{margin:16px 0 0;font-size:12.5px;line-height:1.5;color:#8e8e96;text-align:center}
+@media (max-width:1100px){
+  .ig .ig-bar{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:18px}
+  .ig-bar li+li{border-left:0;padding-left:0}
+  .ig-bar li{padding-right:0}
+}
+@media (max-width:860px){
+  .ig-grid{grid-template-columns:minmax(0,1fr)}
+  .ig .ig-art{margin:0 -16px}
+  .ig .ig-bar{grid-template-columns:minmax(0,1fr)}
+}
+.ig-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.ig h2{text-wrap:wrap;font-size:clamp(30px,3.1vw,54px)}
+.ig .ig-lead{max-width:52ch}
+.ig .ig-art img{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 92%,transparent 100%),linear-gradient(180deg,transparent 0,#000 12%,#000 86%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 92%,transparent 100%),linear-gradient(180deg,transparent 0,#000 12%,#000 86%,transparent 100%);mask-composite:intersect}
+@media (min-width:861px){.ig .ig-art{margin-right:-3%}}
+@media (min-width:861px){.ig-nw{white-space:nowrap}}
+@media (max-width:860px){.ig-grid{grid-template-columns:minmax(0,1fr)}.ig h2{font-size:clamp(30px,8.4vw,40px)}.ig .ig-art{margin:6px -16px 0}}
+@media (max-width:860px){.ig h2 br{display:none}}
