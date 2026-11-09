@@ -307,3 +307,65 @@
   .cmc-deco-br{opacity:.6}
 }
 .cmc-note b{font-weight:700}
+
+/* Page Commerçants : « 3. Organiser un test produit efficace » (maquette de Cyril, 09/11/2026) */
+.cmm{--cmm-o:#F98C07;--cmm-o2:#F47302;position:relative;background:#fffdf8;color:#1d1a16;font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;padding-bottom:clamp(40px,4.6vw,72px)}
+.cmm *,.cmm *::before,.cmm *::after{box-sizing:border-box}
+.cmm-hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(60% 140% at 0% -30%,rgba(249,140,7,0) 57%,rgba(249,140,7,.8) 58.4%,rgba(249,140,7,.12) 60.5%,rgba(249,140,7,0) 66%),radial-gradient(45% 80% at 85% 60%,rgba(249,140,7,.25),rgba(11,11,11,0) 70%),#0b0b0b}
+.cmm-hw{width:min(1320px,100% - 32px);margin-inline:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.62fr);gap:clamp(16px,2vw,32px);align-items:center;padding-top:clamp(28px,3vw,48px)}
+.cmm-ht{padding-bottom:clamp(28px,3vw,48px)}
+.cmm .cmm-h2{font-weight:700;font-size:clamp(28px,3.2vw,52px);line-height:1.12;letter-spacing:-.02em;color:#fff;text-wrap:balance}
+.cmm-h2 span{display:block;color:var(--cmm-o)}
+.cmm .cmm-ht p{margin-top:clamp(12px,1.2vw,18px);max-width:60ch;font-size:clamp(15px,1.2vw,20px);line-height:1.55;color:#e6e6eb}
+.cmm .cmm-art{display:block;width:100%;max-width:460px;height:auto;justify-self:end;align-self:end;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%);mask-image:linear-gradient(90deg,transparent,#000 14%)}
+.cmm-w{width:min(1320px,100% - 32px);margin-inline:auto;display:grid;gap:clamp(40px,4vw,60px);padding-top:clamp(44px,4.4vw,64px)}
+.cmm-box{position:relative;padding:clamp(48px,4.4vw,66px) clamp(14px,1.8vw,28px) clamp(18px,1.8vw,28px);border:1.5px solid #F9D7A6;border-radius:20px;background:#fff;box-shadow:0 16px 40px -28px rgba(170,90,0,.5)}
+.cmm .cmm-tab{position:absolute;left:clamp(12px,1.6vw,26px);top:clamp(-30px,-2vw,-24px);display:flex;align-items:center;gap:clamp(10px,1vw,16px);margin:0;padding:clamp(6px,.5vw,8px) clamp(22px,2.4vw,40px) clamp(6px,.5vw,8px) clamp(6px,.5vw,8px);border-radius:999px;background:linear-gradient(180deg,#FFB13B,var(--cmm-o) 60%,var(--cmm-o2));color:#1b0b00;font-weight:700;font-size:clamp(17px,1.6vw,27px);line-height:1.2;letter-spacing:-.01em;box-shadow:0 10px 22px -12px rgba(200,90,0,.7);scroll-margin-top:110px;max-width:calc(100% - 24px)}
+.cmm-tab-ic{flex:none;display:grid;place-items:center;width:clamp(44px,3.8vw,62px);height:clamp(44px,3.8vw,62px);border-radius:50%;background:#fff3e2;color:var(--cmm-o2);box-shadow:inset 0 0 0 3px rgba(249,140,7,.35)}
+.cmm-tab-ic svg{width:58%;height:58%}
+.cmm .cmm-steps{list-style:none;margin:0;padding:0;counter-reset:cmm;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,auto);grid-auto-flow:column;gap:clamp(10px,1vw,14px) clamp(14px,1.6vw,24px)}
+.cmm-steps li{counter-increment:cmm;display:flex;align-items:flex-start;gap:clamp(10px,1vw,16px);padding:clamp(12px,1.1vw,16px) clamp(12px,1.2vw,18px);border-radius:14px;background:#fff8ee}
+.cmm-steps li::before{content:counter(cmm);flex:none;display:grid;place-items:center;width:clamp(34px,2.6vw,40px);height:clamp(34px,2.6vw,40px);border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFC163,var(--cmm-o) 60%,var(--cmm-o2));color:#1b0b00;font-weight:700;font-size:clamp(15px,1.15vw,18px);box-shadow:0 4px 10px -4px rgba(200,90,0,.6)}
+.cmm-steps .cmm-ic{flex:none;width:clamp(34px,2.6vw,42px);height:clamp(34px,2.6vw,42px);color:var(--cmm-o2)}
+.cmm-ic svg{width:100%;height:100%}
+.cmm .cmm-steps p{flex:1;min-width:0;font-size:clamp(14.5px,1.05vw,17px);line-height:1.5;color:#2a2622}
+.cmm-steps b,.cmm-cols b{display:block;margin-bottom:3px;font-weight:700;color:#14110d}
+.cmm .cmm-box a{color:#C2410C;font-weight:500;text-decoration:underline;text-underline-offset:3px}
+.cmm .cmm-box a:hover{color:#7a2c05}
+.cmm-an{background:#fff6ea;border-color:#FBE3C2}
+.cmm .cmm-an-intro{font-size:clamp(15.5px,1.2vw,20px);color:#1d1a16}
+.cmm .cmm-cols{list-style:none;margin:clamp(16px,1.6vw,24px) 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.cmm-cols li{padding:0 clamp(10px,1.1vw,18px)}
+.cmm-cols li+li{border-left:1.5px solid #F3D9B4}
+.cmm-cols li:first-child{padding-left:0}
+.cmm-cols .cmm-ic{display:block;width:clamp(34px,2.6vw,42px);height:clamp(34px,2.6vw,42px);margin-bottom:clamp(10px,1vw,14px);color:var(--cmm-o2)}
+.cmm .cmm-cols p{font-size:clamp(14px,1vw,16.5px);line-height:1.5;color:#2a2622}
+.cmm-cols b{margin-bottom:8px;font-size:clamp(15px,1.1vw,18px);line-height:1.3}
+.cmm-dark{background:#0d0c0b;border-color:#2a2420}
+.cmm-dark-in{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:clamp(16px,2vw,32px);align-items:center}
+.cmm-dark-in img{display:block;width:100%;height:auto}
+.cmm .cmm-dark-in p{padding-left:clamp(16px,2vw,30px);border-left:2px solid var(--cmm-o);font-size:clamp(15px,1.15vw,19px);line-height:1.6;color:#ececf0}
+.cmm a:focus-visible{outline:3px solid #1b1714;outline-offset:3px;border-radius:4px}
+@media (max-width:1000px){.cmm .cmm-cols{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:22px}.cmm-cols li:nth-child(odd){padding-left:0;border-left:0}}
+@media (max-width:820px){
+  .cmm-hw{grid-template-columns:minmax(0,1fr)}
+  .cmm .cmm-art{max-width:320px;justify-self:center;-webkit-mask-image:none;mask-image:none}
+  .cmm-ht{padding-bottom:0}
+  .cmm .cmm-steps{grid-template-columns:minmax(0,1fr);grid-template-rows:none;grid-auto-flow:row}
+}
+@media (max-width:560px){
+  .cmm .cmm-cols{grid-template-columns:minmax(0,1fr)}
+  .cmm-cols li,.cmm-cols li:first-child{padding:0;border-left:0}
+  .cmm-cols li+li{padding-top:18px;border-top:1.5px solid #F3D9B4}
+  .cmm-dark-in{grid-template-columns:minmax(0,1fr)}
+  .cmm-dark-in img{max-width:110px}
+  .cmm .cmm-dark-in p{padding-left:16px}
+  .cmm .cmm-tab{font-size:16px;padding-right:18px}
+}
+.cmm-hero{background:radial-gradient(34% 120% at -6% -48%,rgba(249,140,7,0) 57%,rgba(249,140,7,.85) 58.4%,rgba(249,140,7,.12) 60.5%,rgba(249,140,7,0) 66%),radial-gradient(45% 80% at 85% 60%,rgba(249,140,7,.22),rgba(11,11,11,0) 70%),#0b0b0b}
+.cmm .cmm-art{-webkit-mask-image:radial-gradient(75% 80% at 58% 55%,#000 62%,transparent 100%);mask-image:radial-gradient(75% 80% at 58% 55%,#000 62%,transparent 100%)}
+.cmm-dark{background:#050505}
+.cmm-dark-in img{-webkit-mask-image:radial-gradient(60% 60% at 50% 50%,#000 70%,transparent 100%);mask-image:radial-gradient(60% 60% at 50% 50%,#000 70%,transparent 100%)}
+@media (max-width:820px){.cmm .cmm-art{-webkit-mask-image:radial-gradient(75% 80% at 50% 55%,#000 62%,transparent 100%);mask-image:radial-gradient(75% 80% at 50% 55%,#000 62%,transparent 100%)}}
+.cmm .cmm-art{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%,#000 84%,transparent 100%),linear-gradient(180deg,transparent 0,#000 18%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 16%,#000 84%,transparent 100%),linear-gradient(180deg,transparent 0,#000 18%);mask-composite:intersect}
+@media (max-width:560px){.cmm .cmm-dark-in img{max-width:110px}}
