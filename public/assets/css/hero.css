@@ -741,3 +741,48 @@
   .fq details>p{padding-left:clamp(16px,4vw,26px)}
   .fq .fq-btn::before,.fq .fq-btn::after{display:none}
 }
+
+/* Section finale « Audit SEO gratuit de votre boutique en ligne » (maquette de Cyril) */
+.au{--au-o:#F98C07;--au-grad:linear-gradient(180deg,#FFB02E,#F98C07 55%,#F47302);position:relative;overflow:hidden;color:#f2f2f5;
+  font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:radial-gradient(28% 50% at 0% 10%,rgba(249,140,7,.28),rgba(11,9,5,0) 70%),radial-gradient(28% 50% at 100% 100%,rgba(249,140,7,.3),rgba(11,9,5,0) 70%),#0b0905;padding:clamp(20px,2.4vw,36px) 0 0}
+.au *,.au *::before,.au *::after{box-sizing:border-box}
+.au-w{width:min(1640px,100% - 32px);margin-inline:auto;display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:clamp(12px,2vw,36px);align-items:end}
+.au .au-art{margin:0;align-self:end}
+.au .au-art img{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(90deg,#000 90%,transparent 100%),linear-gradient(180deg,transparent 0,#000 8%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,#000 90%,transparent 100%),linear-gradient(180deg,transparent 0,#000 8%);mask-composite:intersect}
+.au-copy{align-self:center;padding:clamp(8px,1vw,16px) 0 clamp(26px,3vw,44px)}
+.au-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(12px,2vw,36px);align-items:center;padding-left:clamp(16px,2.2vw,40px);border-left:4px solid var(--au-o)}
+.au h2{margin:0;font-weight:800;font-size:clamp(32px,3.8vw,72px);line-height:1.04;letter-spacing:-.025em;color:#fff}
+.au h2 span{background:var(--au-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--au-o)}
+.au h2 small{display:inline-block;margin-top:.1em;font-size:.72em;letter-spacing:-.02em}
+.au .au-lead{margin:clamp(12px,1.3vw,20px) 0 0;max-width:62ch;font-size:clamp(15px,1.32vw,23px);line-height:1.5;color:#ececf0}
+.au .au-ico{display:block;width:clamp(150px,13vw,260px)}
+.au-ico img{display:block;width:100%;height:auto;-webkit-mask-image:radial-gradient(closest-side,#000 80%,transparent 100%);mask-image:radial-gradient(closest-side,#000 80%,transparent 100%)}
+.au .au-feats{list-style:none;margin:clamp(18px,2vw,30px) 0 0;padding:0;display:flex;flex-wrap:wrap;row-gap:14px}
+.au-feats li{display:flex;align-items:center;gap:clamp(12px,1.4vw,24px);padding:0 clamp(14px,2.2vw,42px)}
+.au-feats li:first-child{padding-left:0}
+.au-feats li+li{border-left:2px solid rgba(249,140,7,.6)}
+.au-fi{flex:none;display:grid;place-items:center;width:clamp(56px,4.6vw,88px);height:clamp(56px,4.6vw,88px);border-radius:18px;border:2.5px solid var(--au-o);color:var(--au-o);box-shadow:0 0 18px rgba(249,140,7,.35),inset 0 0 12px rgba(249,140,7,.12)}
+.au-fi svg{width:58%;height:58%}
+.au .au-feats p{margin:0;font-weight:600;font-size:clamp(15px,1.45vw,25px);line-height:1.25;color:#fff}
+.au-feats b{display:block;font-weight:600;color:var(--au-o)}
+.au .au-cta{margin:clamp(20px,2.4vw,36px) 0 0;display:flex;flex-wrap:wrap;gap:clamp(12px,1.6vw,30px)}
+.au .au-btn,.au .au-btn2{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:clamp(58px,4.4vw,82px);padding:12px clamp(24px,2.4vw,42px);border-radius:24px;font-weight:700;font-size:clamp(17px,1.65vw,29px);text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.au .au-btn{flex:1 1 380px;background:var(--au-grad);color:#fff;box-shadow:0 12px 34px -10px rgba(249,140,7,.85)}
+.au .au-btn2{flex:1 1 420px;border:2px solid rgba(255,255,255,.85);color:#fff;background:rgba(255,255,255,.03)}
+.au .au-btn:hover,.au .au-btn2:hover{transform:translateY(-2px)}
+.au .au-btn2:hover{box-shadow:0 0 0 1px #fff}
+.au-btn svg,.au-btn2 svg{flex:none;width:clamp(24px,1.8vw,32px);height:clamp(24px,1.8vw,32px)}
+@media (max-width:1100px){
+  .au-w{grid-template-columns:minmax(0,1fr)}
+  .au .au-art{order:2;max-width:480px;width:100%;margin-inline:auto}
+  .au-copy{padding-bottom:0}
+}
+@media (max-width:700px){
+  .au-head{grid-template-columns:minmax(0,1fr);padding-left:14px}
+  .au .au-ico{display:none}
+  .au .au-feats{flex-direction:column}
+  .au-feats li,.au-feats li+li{padding:0;border-left:0}
+  .au .au-btn,.au .au-btn2{flex-basis:100%}
+}
+.au-nw{white-space:nowrap}@media (min-width:701px){.au .au-btn,.au .au-btn2{font-size:clamp(16px,1.35vw,25px);white-space:nowrap;flex-basis:auto}}
