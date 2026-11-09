@@ -216,3 +216,7 @@
 .gdh .fqh-art img{-webkit-mask-image:radial-gradient(70% 70% at 50% 50%,#000 72%,transparent 100%);mask-image:radial-gradient(70% 70% at 50% 50%,#000 72%,transparent 100%)}
 @media (max-width:760px){.gdh .fqh-w{grid-template-columns:minmax(0,1fr)}.gdh .fqh-art{max-width:380px}}
 @media (min-width:761px){.gdh .tfh-h1{font-size:clamp(24px,2.3vw,46px)}.gdh .fqh-w{grid-template-columns:minmax(0,1fr) minmax(0,.42fr)}}
+
+/* Fil d’Ariane : la page en cours reste orange mais n’est plus soulignée (ce n’est pas un lien) */
+.dth-crumb span,.fqh-crumb span{text-decoration:none}
+.dth .dth-crumb a{text-decoration:underline;text-underline-offset:4px}
