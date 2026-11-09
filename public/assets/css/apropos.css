@@ -162,3 +162,42 @@
   .po-right{padding-left:0}
 }
 .po-nw{white-space:nowrap}.po-h2 .po-nw{color:inherit}
+
+/* Page À propos : « La méthode en six étapes » (maquette de Cyril) */
+.me{--me-o:#F98C07;position:relative;overflow:hidden;color:#ececf0;font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:radial-gradient(60% 90% at -8% -20%,rgba(249,140,7,0) 58%,rgba(249,140,7,.8) 59.2%,rgba(249,140,7,.15) 61%,rgba(249,140,7,0) 66%),radial-gradient(60% 90% at 108% 120%,rgba(249,140,7,0) 58%,rgba(249,140,7,.8) 59.2%,rgba(249,140,7,.15) 61%,rgba(249,140,7,0) 66%),radial-gradient(30% 40% at 80% 10%,rgba(249,140,7,.18),rgba(6,5,4,0) 70%),#060504;
+  padding:clamp(32px,3.6vw,56px) 0 clamp(32px,3.6vw,56px)}
+.me *,.me *::before,.me *::after{box-sizing:border-box}
+.me-w{width:min(1560px,100% - 32px);margin-inline:auto}
+.me-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.42fr);gap:clamp(12px,2vw,36px);align-items:center}
+.me-head{padding-left:clamp(14px,1.6vw,26px);border-left:6px solid var(--me-o)}
+.me .me-head h2{margin:0;font-weight:800;font-size:clamp(28px,3vw,54px);line-height:1.1;letter-spacing:-.02em;color:#fff}
+.me-head h2 span{color:var(--me-o)}
+.me .me-head p{margin:clamp(10px,1vw,16px) 0 0;max-width:72ch;font-size:clamp(14.5px,1.2vw,20px);line-height:1.45;color:#e6e6ea}
+.me .me-art{margin:0}
+.me .me-art img{display:block;width:100%;height:auto;-webkit-mask-image:radial-gradient(closest-side,#000 75%,transparent 100%);mask-image:radial-gradient(closest-side,#000 75%,transparent 100%)}
+.me .me-grid{list-style:none;margin:clamp(20px,2.2vw,34px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,1.6vw,26px)}
+.me-grid>li{padding:clamp(12px,1.1vw,16px) clamp(12px,1.2vw,18px) clamp(16px,1.5vw,22px);border-radius:22px;border:2px solid rgba(249,140,7,.85);background:linear-gradient(180deg,rgba(30,20,12,.9),rgba(10,8,6,.95));box-shadow:0 0 22px rgba(249,140,7,.22),inset 0 0 18px rgba(249,140,7,.06)}
+.me .me-tag{display:inline-block;margin:0;padding:6px 20px;border-radius:999px;background:linear-gradient(180deg,#FFA526,#F47302);color:#fff;font-weight:700;font-size:clamp(14px,1.2vw,20px);box-shadow:0 6px 16px -6px rgba(249,140,7,.8)}
+.me-body{display:flex;align-items:center;gap:clamp(12px,1.4vw,22px);margin-top:clamp(12px,1.2vw,18px);padding-left:clamp(4px,.6vw,10px)}
+.me-ic{flex:none;display:grid;place-items:center;width:clamp(58px,5vw,86px);height:clamp(58px,5vw,86px);border-radius:18px;background:rgba(249,140,7,.12);color:var(--me-o);margin-right:clamp(2px,.4vw,8px);position:relative}
+.me-ic::after{content:"";position:absolute;right:calc(-1 * clamp(9px,1vw,16px));top:4%;bottom:4%;width:3px;border-radius:2px;background:var(--me-o)}
+.me-ic svg{width:58%;height:58%}
+.me-body>div{padding-left:clamp(8px,1vw,14px)}
+.me .me-body h3{margin:0;font-weight:800;font-size:clamp(17px,1.55vw,27px);line-height:1.15;color:#fff}
+.me .me-body p{margin:6px 0 0;font-size:clamp(13.5px,1.08vw,17.5px);line-height:1.42;color:#e4e4e8}
+.me .me-links{margin:clamp(22px,2.4vw,36px) 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:12px 0}
+.me .me-links a{display:inline-flex;align-items:center;gap:10px;color:var(--me-o);font-weight:700;font-size:clamp(16px,1.5vw,25px);text-decoration:underline;text-underline-offset:6px}
+.me .me-links a+a{margin-left:clamp(18px,2.6vw,44px);padding-left:clamp(18px,2.6vw,44px);border-left:2px solid var(--me-o)}
+.me-links svg{width:26px;height:26px}
+.me .me-links a:hover{color:#fff}
+@media (max-width:1180px){.me .me-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){
+  .me{background:radial-gradient(60% 30% at 100% 0%,rgba(249,140,7,.22),rgba(6,5,4,0) 70%),#060504}
+  .me-top{grid-template-columns:minmax(0,1fr)}
+  .me .me-art{max-width:420px;width:100%;margin-inline:auto}
+  .me .me-grid{grid-template-columns:minmax(0,1fr)}
+  .me .me-links{flex-direction:column;align-items:flex-start}
+  .me .me-links a+a{margin-left:0;padding-left:0;border-left:0}
+}
+.me-w{width:min(1660px,100% - 32px)}.me .me-body h3{font-size:clamp(16px,1.32vw,24px)}.me-ic{width:clamp(52px,4.2vw,76px);height:clamp(52px,4.2vw,76px)}
