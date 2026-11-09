@@ -296,3 +296,22 @@
   .ct .ct-facts dd{padding-left:clamp(58px,15vw,76px)}
 }
 @media (min-width:761px){.ct-facts>div{grid-template-columns:minmax(290px,.38fr) minmax(0,1fr)}.ct .ct-facts dt{white-space:nowrap}}
+
+/* Page À propos : « Quels sont les engagements d'Avitime ? » (maquette de Cyril), placé après « Contact » */
+.eg{--eg-o:#F98C07;position:relative;overflow:hidden;color:#121a2b;font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:radial-gradient(26% 40% at 0% 0%,rgba(253,175,15,.6),rgba(255,255,255,0) 70%),radial-gradient(30% 40% at 100% 100%,rgba(253,175,15,.6),rgba(255,255,255,0) 70%),#fffdf9;
+  padding:clamp(36px,4vw,64px) 0}
+.eg *,.eg *::before,.eg *::after{box-sizing:border-box}
+.eg-w{width:min(1560px,100% - 32px);margin-inline:auto}
+.eg-head{margin-left:clamp(0px,3vw,60px);padding-left:clamp(14px,1.6vw,28px);border-left:8px solid #FBB315}
+.eg .eg-head h2{margin:0;font-weight:800;font-size:clamp(28px,2.9vw,52px);line-height:1.1;letter-spacing:-.02em;color:#121a2b}
+.eg-head h2 span{color:#EF7A0B}
+.eg .eg-head p{margin:clamp(8px,.8vw,12px) 0 0;font-size:clamp(15px,1.4vw,24px);color:#2b3346}
+.eg .eg-grid{list-style:none;margin:clamp(24px,2.6vw,40px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.2vw,20px)}
+.eg-grid li{display:flex;align-items:center;gap:clamp(14px,1.4vw,24px);min-height:clamp(110px,8.4vw,150px);padding:clamp(14px,1.3vw,22px) clamp(16px,1.6vw,26px);border-radius:24px;background:linear-gradient(180deg,#fff,#fffaf4);border:1px solid #f6dfc4;box-shadow:0 12px 30px -22px rgba(120,60,0,.5)}
+.eg-ic{flex:none;display:grid;place-items:center;width:clamp(58px,5.2vw,92px);height:clamp(58px,5.2vw,92px);border-radius:18px;background:#fff1e3;color:var(--eg-o);position:relative;margin-right:clamp(6px,.8vw,12px)}
+.eg-ic::after{content:"";position:absolute;right:calc(-1 * clamp(12px,1.3vw,22px));top:10%;bottom:10%;width:4px;border-radius:2px;background:#FBB315}
+.eg-ic svg{width:56%;height:56%}
+.eg .eg-grid p{margin:0;padding-left:clamp(10px,1.1vw,18px);font-weight:600;font-size:clamp(15px,1.4vw,24px);line-height:1.35;color:#121a2b}
+@media (max-width:1100px){.eg .eg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:680px){.eg .eg-grid{grid-template-columns:minmax(0,1fr)}.eg-head{margin-left:0}.eg-grid li{min-height:0}}
