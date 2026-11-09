@@ -680,3 +680,23 @@
 }
 @media (max-width:640px){.cmf .v2-btn.alt{font-size:16px;gap:10px;padding:12px 16px;text-align:center}}
 @media (max-width:520px){.v2-pq .cmf{padding-bottom:96px!important}}
+
+/* Page Tarifs : « Le coût de votre campagne » (maquette de Cyril, 09/11/2026) */
+.tfc{position:relative;overflow:hidden;font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;color:#f0f0f3;
+  background:linear-gradient(90deg,transparent 3%,rgba(249,140,7,.85) 30%,rgba(255,170,60,1) 50%,rgba(249,140,7,.85) 70%,transparent 97%) center top clamp(28px,3vw,46px)/100% 2px no-repeat,
+             linear-gradient(90deg,transparent 3%,rgba(249,140,7,.85) 30%,rgba(255,170,60,1) 50%,rgba(249,140,7,.85) 70%,transparent 97%) center bottom clamp(28px,3vw,46px)/100% 2px no-repeat,
+             radial-gradient(30% 60% at 0% 0%,rgba(249,140,7,.35),rgba(11,11,11,0) 70%),radial-gradient(30% 60% at 100% 100%,rgba(249,140,7,.35),rgba(11,11,11,0) 70%),#0b0b0b;
+  padding-block:clamp(64px,7vw,110px)!important}
+.tfc .v2-w{max-width:1320px}
+.v2 main .tfc .v2-h2{font:700 clamp(30px,3.6vw,58px)/1.1 "Poppins",system-ui,sans-serif;letter-spacing:-.02em;color:#fff}
+.tfc .v2-h2::before{content:"";display:block;width:clamp(90px,8vw,140px);height:clamp(6px,.55vw,9px);margin-bottom:clamp(14px,1.4vw,20px);border-radius:6px;background:linear-gradient(90deg,#F47302,#FFA526)}
+.v2 main .tfc .v2-lead{margin-top:clamp(12px,1.2vw,18px);max-width:none;font-size:clamp(16px,1.45vw,24px);line-height:1.5;color:#ececf0}
+.tfc .v2-calc{margin-top:clamp(26px,2.8vw,40px);gap:clamp(14px,1.8vw,30px);grid-template-columns:repeat(3,minmax(0,1fr)) minmax(190px,1.1fr)}
+.tfc .v2-calc label span{margin-bottom:clamp(8px,.8vw,12px);font:700 clamp(14px,1.15vw,19px)/1.3 "Poppins",system-ui,sans-serif;color:#fff}
+.tfc .v2-calc input{min-height:clamp(52px,4.2vw,68px);padding:10px clamp(14px,1.4vw,22px);border:2px solid #F98C07;border-radius:12px;background:#faf6f0;font:500 clamp(17px,1.5vw,24px) "Poppins",system-ui,sans-serif;color:#14110d;box-shadow:0 0 18px -6px rgba(249,140,7,.6)}
+.tfc .v2-calc input:focus{outline:0;border-color:#FFB547;box-shadow:0 0 0 4px rgba(249,140,7,.35)}
+.tfc .v2-calc output{display:flex;align-items:center;min-height:clamp(52px,4.2vw,68px);padding:6px clamp(16px,1.6vw,26px);border:1.5px solid #FFB547;border-radius:12px;background:radial-gradient(60% 120% at 35% 0%,#FFC04D,#F98C07 55%,#E25E00);color:#fff;font:800 clamp(24px,2.5vw,42px)/1.1 "Poppins",system-ui,sans-serif;letter-spacing:-.01em;box-shadow:0 10px 30px -10px rgba(249,140,7,.8)}
+.v2 main .tfc .v2-fine{margin-top:clamp(14px,1.4vw,22px);font-size:clamp(13.5px,1.05vw,17px);line-height:1.55;color:#dcdce2}
+@media (max-width:1000px){.tfc .v2-calc{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.tfc .v2-calc{grid-template-columns:minmax(0,1fr)}}
+.v2 main .tfc .v2-fine{max-width:none}
