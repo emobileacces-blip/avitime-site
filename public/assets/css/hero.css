@@ -147,3 +147,6 @@
 @media (max-width:860px){.hx-art{width:auto;margin:0 -16px 4px}}
 .hx2 .hx-checks li>span{display:block}
 .hx2 .hx-platforms{margin-top:clamp(20px,2vw,30px)}
+/* la règle .v2 main ul{margin:0} du site est plus forte qu'une seule classe : on la remonte */
+.hx .hx-trust{margin:clamp(24px,2.6vw,36px) 0 0;padding:0}
+.hx .hx-platforms{padding:0}
