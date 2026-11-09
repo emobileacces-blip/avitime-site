@@ -210,3 +210,9 @@
 .fqh .fqh-art{margin:0}
 .fqh .fqh-art img{display:block;width:100%;height:auto;-webkit-mask-image:radial-gradient(closest-side,#000 76%,transparent 100%);mask-image:radial-gradient(closest-side,#000 76%,transparent 100%)}
 @media (max-width:760px){.fqh .fqh-w{grid-template-columns:minmax(0,1fr)}.fqh .fqh-art{max-width:200px;margin:0 auto;order:-1}}
+
+/* Page Guides : en-tête (maquette de Cyril), même gabarit que la FAQ avec un visuel plus large */
+.gdh .fqh-w{grid-template-columns:minmax(0,1fr) minmax(0,.48fr)}
+.gdh .fqh-art img{-webkit-mask-image:radial-gradient(70% 70% at 50% 50%,#000 72%,transparent 100%);mask-image:radial-gradient(70% 70% at 50% 50%,#000 72%,transparent 100%)}
+@media (max-width:760px){.gdh .fqh-w{grid-template-columns:minmax(0,1fr)}.gdh .fqh-art{max-width:380px}}
+@media (min-width:761px){.gdh .tfh-h1{font-size:clamp(24px,2.3vw,46px)}.gdh .fqh-w{grid-template-columns:minmax(0,1fr) minmax(0,.42fr)}}
