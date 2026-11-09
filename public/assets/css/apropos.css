@@ -213,3 +213,24 @@
 @media (max-width:860px){.qa-fi .qa-top{grid-template-columns:minmax(0,1fr)}}
 @media (min-width:861px){.qa-fi h2{font-size:clamp(24px,2.3vw,44px)}.qa-fi .qa-top{grid-template-columns:minmax(0,1fr) minmax(0,.3fr)}}
 .qa h2 .po-nw{color:inherit}
+
+/* Page À propos : « Pourquoi Avitime demande-t-il un numéro fiscal aux testeurs ? » (maquette de Cyril) */
+.nf{--nf-o:#F98C07;position:relative;overflow:hidden;color:#ececf0;font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:radial-gradient(60% 120% at -8% -40%,rgba(249,140,7,0) 58%,rgba(249,140,7,.8) 59.2%,rgba(249,140,7,.15) 61%,rgba(249,140,7,0) 66%),radial-gradient(70% 130% at 108% 140%,rgba(249,140,7,0) 58%,rgba(249,140,7,.8) 59.2%,rgba(249,140,7,.15) 61%,rgba(249,140,7,0) 66%),#060504;
+  padding:clamp(36px,4.4vw,72px) 0}
+.nf *,.nf *::before,.nf *::after{box-sizing:border-box}
+.nf-w{width:min(1560px,100% - 32px);margin-inline:auto;display:grid;grid-template-columns:minmax(0,.26fr) minmax(0,1fr);gap:clamp(18px,3vw,56px);align-items:center}
+.nf .nf-art{margin:0}
+.nf .nf-art img{display:block;width:100%;height:auto;-webkit-mask-image:radial-gradient(closest-side,#000 78%,transparent 100%);mask-image:radial-gradient(closest-side,#000 78%,transparent 100%)}
+.nf-copy{padding-left:clamp(16px,2.2vw,40px);border-left:4px solid var(--nf-o)}
+.nf .nf-copy h2{margin:0;font-weight:800;font-size:clamp(24px,2.3vw,42px);line-height:1.15;letter-spacing:-.02em;color:#fff}
+.nf-copy h2 span{color:var(--nf-o)}
+.nf .nf-copy p{margin:clamp(12px,1.3vw,20px) 0 0;max-width:none;font-size:clamp(15px,1.3vw,22px);line-height:1.6;color:#e6e6ea}
+.nf .nf-copy a{color:var(--nf-o);text-decoration:underline;text-underline-offset:4px}
+.nf .nf-copy a:hover{color:#fff}
+@media (max-width:860px){
+  .nf{background:radial-gradient(60% 30% at 100% 0%,rgba(249,140,7,.22),rgba(6,5,4,0) 70%),#060504}
+  .nf-w{grid-template-columns:minmax(0,1fr)}
+  .nf .nf-art{max-width:220px;width:100%;margin-inline:auto}
+}
+@media (min-width:1400px){.nf .nf-copy h2{font-size:clamp(28px,1.95vw,40px)}}
