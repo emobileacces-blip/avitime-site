@@ -607,3 +607,54 @@
   .lw-seal{flex-direction:column}
 }
 .lw h2{max-width:none;font-size:clamp(30px,3.3vw,60px)}.lw .lw-lead{max-width:56ch}
+
+/* Section « Quelles boutiques en ligne peuvent faire tester leurs produits ? » (maquette de Cyril) */
+.qb{--qb-o:#F98C07;--qb-o2:#E86F00;--qb-grad:linear-gradient(180deg,#FFA526,#F98C07 55%,#F47302);--qb-ink:#121a2b;position:relative;overflow:hidden;color:var(--qb-ink);
+  font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;background:#fff;padding:clamp(36px,4vw,60px) 0 clamp(30px,3.4vw,50px)}
+.qb *,.qb *::before,.qb *::after{box-sizing:border-box}
+.qb-w{width:min(1640px,100% - 32px);margin-inline:auto}
+.qb-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.42fr);gap:clamp(12px,2vw,36px);align-items:center}
+.qb .qb-badge{display:inline-flex;align-items:center;gap:10px;margin:0;padding:6px 14px;border-radius:10px;background:#fde9d2;font-weight:600;font-size:clamp(13.5px,1vw,17px)}
+.qb-badge svg{width:22px;height:22px}
+.qb h2{margin:clamp(12px,1.3vw,18px) 0 0;font-weight:800;font-size:clamp(28px,3vw,54px);line-height:1.08;letter-spacing:-.025em;color:var(--qb-ink)}
+.qb h2>span{position:relative;display:inline-block;background:var(--qb-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--qb-o2);padding-bottom:.1em}
+.qb-swoosh{position:absolute;left:4%;bottom:-.12em;width:96%;height:.3em}
+.qb .qb-lead{margin:clamp(14px,1.4vw,22px) 0 0;max-width:72ch;font-size:clamp(15px,1.25vw,21px);line-height:1.5;color:#2b3346}
+.qb .qb-art{margin:0}
+.qb .qb-art img{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%,#000 94%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 12%,#000 94%,transparent 100%)}
+.qb .qb-cards{list-style:none;margin:clamp(18px,2vw,28px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.2vw,20px)}
+.qb-cards>li{display:flex;align-items:center;gap:clamp(12px,1.4vw,26px);padding:clamp(14px,1.2vw,20px) clamp(14px,1.4vw,24px);border-radius:22px;background:linear-gradient(180deg,#fff,#fef8f3);border:1px solid #f6e7da;box-shadow:0 10px 26px -20px rgba(120,60,0,.4)}
+.qb-cards>li.qb-hl{background:linear-gradient(180deg,#fff3e5,#ffe9d2);border:2px solid rgba(249,140,7,.6);box-shadow:0 14px 32px -16px rgba(249,140,7,.6)}
+.qb-ic{flex:none;width:clamp(76px,6.4vw,118px);padding-right:clamp(12px,1.4vw,24px);border-right:2.5px solid var(--qb-o)}
+.qb-hl .qb-ic{border-right:0;padding-right:0}
+.qb-ic picture,.qb-ic img{display:block;width:100%;height:auto}
+.qb-ic img{-webkit-mask-image:radial-gradient(closest-side,#000 82%,transparent 100%);mask-image:radial-gradient(closest-side,#000 82%,transparent 100%)}
+.qb-hl .qb-ic img{-webkit-mask-image:none;mask-image:none;mix-blend-mode:multiply}
+.qb .qb-cards h3{margin:0;font-weight:800;font-size:clamp(18px,1.55vw,27px);line-height:1.15;letter-spacing:-.01em;color:var(--qb-ink)}
+.qb .qb-cards p{margin:6px 0 0;font-size:clamp(14px,1.08vw,18px);line-height:1.4;color:#2b3346}
+.qb .qb-btn{margin-top:12px;display:inline-flex;align-items:center;gap:12px;min-height:46px;padding:10px 22px;border-radius:12px;background:var(--qb-grad);color:#fff;font-weight:700;font-size:clamp(14.5px,1.1vw,18px);text-decoration:none;box-shadow:0 8px 20px -8px rgba(249,140,7,.85);transition:transform .15s ease}
+.qb .qb-btn:hover{transform:translateY(-2px)}
+.qb-btn svg{width:22px;height:22px}
+.qb .qb-bar{list-style:none;margin:clamp(16px,1.8vw,26px) 0 0;padding:clamp(14px,1.4vw,20px) clamp(16px,2vw,40px);display:flex;flex-wrap:wrap;justify-content:space-around;row-gap:12px;border-radius:999px;background:linear-gradient(90deg,#fff3e6,#fff8f1 50%,#fff3e6)}
+.qb-bar li{display:flex;align-items:center;gap:14px;padding:0 clamp(12px,2vw,40px);font-weight:800;font-size:clamp(15px,1.35vw,23px)}
+.qb-bar li+li{border-left:2px solid rgba(249,140,7,.5)}
+.qb-bar em{font-style:normal;color:var(--qb-o2)}
+.qb-bar svg{flex:none;width:clamp(30px,2.6vw,46px);height:clamp(30px,2.6vw,46px);color:var(--qb-o)}
+.qb .qb-fine{margin:clamp(12px,1.2vw,18px) 0 0;text-align:center;font-size:13px;color:#5e6372}
+@media (max-width:1180px){
+  .qb .qb-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  .qb-top{grid-template-columns:minmax(0,1fr)}
+  .qb .qb-art{max-width:420px;width:100%;margin-inline:auto}
+  .qb .qb-cards{grid-template-columns:minmax(0,1fr)}
+  .qb .qb-bar{flex-direction:column;align-items:flex-start;border-radius:22px}
+  .qb-bar li,.qb-bar li+li{padding:0;border-left:0}
+}
+.qb-cards>li.qb-hl{flex-wrap:wrap;row-gap:12px}
+.qb-hl>div{flex:1 1 0;min-width:0}
+.qb .qb-hl .qb-btn{flex:1 1 100%;justify-content:center;margin:0;white-space:nowrap;font-size:clamp(14px,1vw,17px)}
+.qb .qb-hl .qb-ic img{mix-blend-mode:normal;-webkit-mask-image:radial-gradient(closest-side,#000 80%,transparent 100%);mask-image:radial-gradient(closest-side,#000 80%,transparent 100%)}
+.qb-bar li>span{display:inline}
+@media (max-width:860px){.qb h2 br{display:none}.qb .qb-hl .qb-btn{white-space:normal}}
+@media (min-width:861px){.qb-top{grid-template-columns:minmax(0,1fr) minmax(0,.34fr)}.qb h2{font-size:clamp(26px,2.45vw,50px)}}
