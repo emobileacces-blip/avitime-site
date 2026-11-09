@@ -201,3 +201,15 @@
   .me .me-links a+a{margin-left:0;padding-left:0;border-left:0}
 }
 .me-w{width:min(1660px,100% - 32px)}.me .me-body h3{font-size:clamp(16px,1.32vw,24px)}.me-ic{width:clamp(52px,4.2vw,76px);height:clamp(52px,4.2vw,76px)}
+
+/* Page À propos : « Avitime est-il fiable ? » (même gabarit que « Qu'est-ce qu'Avitime ? ») */
+.qa-fi{background:radial-gradient(30% 45% at 100% 0%,rgba(253,175,15,.6),rgba(255,255,255,0) 70%),radial-gradient(35% 30% at 0% 0%,rgba(253,190,40,.4),rgba(255,255,255,0) 70%),radial-gradient(40% 30% at 100% 100%,rgba(253,170,20,.45),rgba(255,255,255,0) 70%),radial-gradient(30% 25% at 0% 100%,rgba(253,190,40,.35),rgba(255,255,255,0) 70%),#fffdf8}
+.qa-fi .qa-head{border-left-color:#FBB315}
+.qa-fi h2{font-size:clamp(26px,2.7vw,48px)}
+.qa.qa-fi .qa-lead{font-style:normal;font-weight:500}
+.qa-fi .qa-top{grid-template-columns:minmax(0,1fr) minmax(0,.36fr)}
+.qa-fi .qa-facts dd a{margin-right:2px}
+.qa .qa-note{margin:clamp(12px,1.2vw,18px) 0 0;font-style:italic;font-size:clamp(13.5px,1vw,16.5px);color:#4a4f5c}
+@media (max-width:860px){.qa-fi .qa-top{grid-template-columns:minmax(0,1fr)}}
+@media (min-width:861px){.qa-fi h2{font-size:clamp(24px,2.3vw,44px)}.qa-fi .qa-top{grid-template-columns:minmax(0,1fr) minmax(0,.3fr)}}
+.qa h2 .po-nw{color:inherit}
