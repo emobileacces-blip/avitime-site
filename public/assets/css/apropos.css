@@ -131,3 +131,34 @@
   .af-time span{justify-self:start}
 }
 @media (max-width:900px){.af{background:radial-gradient(60% 30% at 100% 0%,rgba(249,140,7,.22),rgba(7,6,5,0) 70%),radial-gradient(60% 25% at 0% 100%,rgba(249,140,7,.18),rgba(7,6,5,0) 70%),#070605}}@media (max-width:640px){.af .af-links{align-items:flex-start}}
+
+/* Page À propos : « Pourquoi Avitime a-t-il été créé ? » (maquette de Cyril) */
+.po{--po-o:#F98C07;--po-y:#FBB315;position:relative;overflow:hidden;color:#1d2230;font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:radial-gradient(28% 45% at 0% 0%,rgba(251,179,21,.55),rgba(255,255,255,0) 70%),radial-gradient(30% 45% at 100% 100%,rgba(251,179,21,.55),rgba(255,255,255,0) 70%),#fffdf8;
+  padding:clamp(36px,4vw,64px) 0 clamp(36px,4vw,64px)}
+.po *,.po *::before,.po *::after{box-sizing:border-box}
+.po-w{width:min(1440px,100% - 32px);margin-inline:auto;display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1fr);gap:0;align-items:start}
+.po-left{padding-right:clamp(20px,3.6vw,64px);border-right:2px solid rgba(251,179,21,.8)}
+.po-right{padding-left:clamp(20px,3.6vw,64px)}
+.po .po-h2{margin:0;padding-left:clamp(14px,1.4vw,22px);border-left:7px solid var(--po-y);font-weight:800;font-size:clamp(30px,3vw,54px);line-height:1.08;letter-spacing:-.025em;color:#121a2b}
+.po-h2 span{color:#EF6A0B}
+.po .po-cycle{list-style:none;margin:clamp(18px,2vw,30px) 0 0;padding:0;display:grid;gap:clamp(10px,1vw,14px)}
+.po-cycle li{display:flex;align-items:center;gap:clamp(14px,1.6vw,26px);padding:clamp(10px,1vw,15px) clamp(16px,1.8vw,30px);border-radius:16px;background:#fff;border:1px solid #f1e3d1;box-shadow:0 6px 18px -12px rgba(120,60,0,.4);font-weight:700;font-size:clamp(16px,1.4vw,24px);color:#121a2b}
+.po-ic{flex:none;width:clamp(30px,2.4vw,42px);height:clamp(30px,2.4vw,42px);color:var(--po-o)}
+.po-ic svg{width:100%;height:100%}
+.po-t{flex:1}
+.po-down{flex:none;width:clamp(22px,1.6vw,28px);height:clamp(22px,1.6vw,28px);color:#121a2b}
+.po-cycle li.po-last{background:linear-gradient(90deg,#FFB21A,#F98C07 55%,#EF5F0A);border-color:transparent;color:#fff;box-shadow:0 12px 26px -10px rgba(239,95,10,.75)}
+.po-last .po-ic,.po-last .po-down{color:#fff}
+.po .po-fine{margin:clamp(14px,1.4vw,20px) 0 0;font-style:italic;font-size:clamp(13.5px,1vw,16.5px);line-height:1.5;color:#5b5f6b}
+.po .po-right p{margin:clamp(12px,1.2vw,18px) 0 0;font-size:clamp(15px,1.25vw,21px);line-height:1.55;color:#1d2230}
+.po .po-right .po-quote{position:relative;margin-top:0;padding-left:clamp(62px,4.8vw,84px);font-size:clamp(16px,1.35vw,23px)}
+.po-q{position:absolute;left:0;top:-2px;display:grid;place-items:center;width:clamp(46px,3.6vw,62px);height:clamp(46px,3.6vw,62px);border-radius:50%;background:var(--po-y);color:#fff;font:800 clamp(40px,3.4vw,58px)/1 Georgia,serif;padding-top:.32em}
+.po .po-right .po-sign{display:inline-block;position:relative;margin-top:clamp(20px,2vw,30px);padding:10px 28px;border-radius:999px;background:#fff1c9;font-family:"Kalam","Segoe Print",cursive;font-weight:700;font-size:clamp(20px,1.7vw,30px);color:#121a2b}
+.po-sign::after{content:"";position:absolute;left:18%;right:4%;bottom:-6px;height:10px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 10' preserveAspectRatio='none'%3E%3Cpath d='M2 8C60 2 140 1 198 6' fill='none' stroke='%23EF6A0B' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+@media (max-width:900px){
+  .po-w{grid-template-columns:minmax(0,1fr);row-gap:30px}
+  .po-left{padding-right:0;border-right:0}
+  .po-right{padding-left:0}
+}
+.po-nw{white-space:nowrap}.po-h2 .po-nw{color:inherit}
