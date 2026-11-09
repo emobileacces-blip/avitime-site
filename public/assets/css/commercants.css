@@ -247,3 +247,33 @@
   .cmt-deco-tl{opacity:.7}
   .cmt-deco-br{opacity:.45}
 }
+
+/* Page Commerçants : « 1. Le problème » en noir et orange (maquette de Cyril, 09/11/2026) */
+.cmp{--cmp-o:#F98C07;position:relative;overflow:hidden;color:#e6e6eb;font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:radial-gradient(38% 50% at 100% 0%,rgba(249,140,7,.32),rgba(11,11,11,0) 70%),radial-gradient(30% 45% at 0% 100%,rgba(249,140,7,.28),rgba(11,11,11,0) 70%),#0b0b0b;
+  padding:clamp(40px,4.6vw,76px) 0 clamp(44px,5vw,80px)}
+.cmp *,.cmp *::before,.cmp *::after{box-sizing:border-box}
+.cmp-w{width:min(1440px,100% - 32px);margin-inline:auto}
+.cmp .cmp-h2{font-weight:800;font-size:clamp(28px,3.2vw,54px);line-height:1.1;letter-spacing:-.025em;color:#fff;text-wrap:balance}
+.cmp-h2 span{color:var(--cmp-o)}
+.cmp-h2::after{content:"";display:block;width:clamp(90px,10vw,160px);height:4px;margin-top:clamp(12px,1.2vw,18px);border-radius:2px;background:var(--cmp-o)}
+.cmp .cmp-h2+p{margin-top:clamp(16px,1.6vw,24px)}
+.cmp>.cmp-w>p{max-width:none;font-size:clamp(15.5px,1.2vw,20px);line-height:1.6;color:#e6e6eb}
+.cmp>.cmp-w>p+p{margin-top:clamp(10px,1vw,14px)}
+.cmp>.cmp-w>p a{color:var(--cmp-o);font-weight:600;text-decoration:underline;text-underline-offset:4px}
+.cmp>.cmp-w>p a:hover{color:#fff}
+.cmp .cmp-h3{margin-top:clamp(30px,3.2vw,52px);padding-left:clamp(14px,1.2vw,20px);border-left:clamp(5px,.45vw,7px) solid var(--cmp-o);font-weight:700;font-size:clamp(21px,2.1vw,36px);line-height:1.2;letter-spacing:-.015em;color:#fff;scroll-margin-top:84px;text-wrap:balance}
+.cmp-h3 span{color:var(--cmp-o)}
+.cmp>.cmp-w>.cmp-intro{margin-top:clamp(8px,.8vw,12px)}
+.cmp-cards{margin-top:clamp(22px,2.4vw,36px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,1.8vw,30px)}
+.cmp-card{padding:clamp(20px,2vw,32px) clamp(18px,2vw,34px) clamp(22px,2.2vw,34px);border:1.5px solid rgba(249,140,7,.6);border-radius:20px;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.015) 60%),#121110;box-shadow:0 0 0 1px rgba(249,140,7,.08),0 14px 36px -18px rgba(249,140,7,.45)}
+.cmp .cmp-card-h{display:flex;align-items:center;gap:clamp(14px,1.4vw,22px);font-size:clamp(18px,1.6vw,27px);line-height:1.25}
+.cmp-card-h b{flex:1;min-width:0;padding-left:clamp(14px,1.4vw,22px);border-left:2px solid rgba(249,140,7,.7);font-weight:700;color:var(--cmp-o)}
+.cmp-ic{flex:none;display:grid;place-items:center;width:clamp(52px,4.4vw,74px);height:clamp(52px,4.4vw,74px);border-radius:16px;background:rgba(249,140,7,.16);color:var(--cmp-o)}
+.cmp-ic svg{width:56%;height:56%}
+.cmp .cmp-list{list-style:none;margin:clamp(16px,1.6vw,24px) 0 0;padding:0;display:grid;gap:clamp(10px,1vw,16px)}
+.cmp-list li{position:relative;padding-left:clamp(24px,1.8vw,30px);font-size:clamp(15px,1.15vw,19px);line-height:1.5;color:#dcdce2}
+.cmp-list li::before{content:"";position:absolute;left:2px;top:.55em;width:10px;height:10px;border-radius:50%;background:var(--cmp-o);box-shadow:0 0 8px rgba(249,140,7,.6)}
+.cmp-list b{font-weight:700;color:#fff}
+.cmp>.cmp-w>.cmp-note{margin-top:clamp(26px,2.8vw,42px);padding-top:clamp(18px,1.8vw,26px);border-top:2px solid var(--cmp-o);color:#f0f0f3}
+@media (max-width:860px){.cmp-cards{grid-template-columns:minmax(0,1fr)}}
