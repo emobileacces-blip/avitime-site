@@ -658,3 +658,39 @@
 .qb-bar li>span{display:inline}
 @media (max-width:860px){.qb h2 br{display:none}.qb .qb-hl .qb-btn{white-space:normal}}
 @media (min-width:861px){.qb-top{grid-template-columns:minmax(0,1fr) minmax(0,.34fr)}.qb h2{font-size:clamp(26px,2.45vw,50px)}}
+
+/* Section « Qui est derrière Avitime ? » (maquette de Cyril) */
+.fd{--fd-o:#F98C07;--fd-grad:linear-gradient(180deg,#FFB02E,#F98C07 55%,#F47302);position:relative;overflow:hidden;color:#f2f2f5;
+  font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;background:radial-gradient(30% 50% at 100% 100%,rgba(249,140,7,.22),rgba(12,12,12,0) 70%),#0c0c0c;padding:0}
+.fd *,.fd *::before,.fd *::after{box-sizing:border-box}
+.fd-w{width:min(1640px,100% - 32px);margin-inline:auto;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);gap:clamp(16px,2.4vw,44px);align-items:center}
+.fd-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.fd .fd-art{margin:0 0 0 calc((100vw - min(1640px,100vw - 32px)) / -2);align-self:end}
+.fd .fd-art img{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent 100%);mask-image:linear-gradient(90deg,#000 88%,transparent 100%)}
+.fd-copy{padding:clamp(28px,3vw,48px) 0 clamp(24px,2.6vw,40px) clamp(18px,2.4vw,44px);border-left:2px solid rgba(249,140,7,.75)}
+.fd .fd-copy h3{margin:0;font-weight:800;font-size:clamp(24px,2.3vw,42px);line-height:1.15;letter-spacing:-.02em;color:#fff}
+.fd-copy h3 span{color:var(--fd-o)}
+.fd .fd-lead{margin:clamp(12px,1.2vw,18px) 0 0;font-size:clamp(14.5px,1.15vw,19.5px);line-height:1.5;color:#e9e9ed}
+.fd .fd-list{list-style:none;margin:clamp(18px,2vw,28px) 0 0;padding:0;display:grid;gap:clamp(14px,1.4vw,22px)}
+.fd-list li{display:flex;align-items:center;gap:clamp(14px,1.6vw,28px)}
+.fd-ic{flex:none;display:grid;place-items:center;width:clamp(56px,5vw,92px);height:clamp(56px,5vw,92px);border-radius:18px;border:2px solid var(--fd-o);background:rgba(249,140,7,.08);color:var(--fd-o);box-shadow:0 0 18px rgba(249,140,7,.35),inset 0 0 14px rgba(249,140,7,.15)}
+.fd-ic svg{width:52%;height:52%}
+.fd .fd-list h4{margin:0;font-weight:800;font-size:clamp(17px,1.55vw,27px);line-height:1.15;color:#fff}
+.fd-list h4 em{font-style:normal;color:var(--fd-o)}
+.fd .fd-list p{margin:5px 0 0;font-size:clamp(14px,1.08vw,18px);line-height:1.4;color:#e4e4e8}
+.fd-foot{margin-top:clamp(20px,2.4vw,36px);display:flex;align-items:center;flex-wrap:wrap;gap:16px clamp(16px,2vw,36px);padding:clamp(14px,1.4vw,22px) 0;border-top:1.5px solid rgba(249,140,7,.6);border-bottom:1.5px solid rgba(249,140,7,.6)}
+.fd .fd-foot img{display:block;width:clamp(120px,10vw,170px);height:auto;padding-right:clamp(16px,2vw,36px);border-right:1.5px solid rgba(249,140,7,.6)}
+.fd .fd-foot p{margin:0;display:flex;align-items:center;flex-wrap:wrap;gap:10px;font-size:clamp(14px,1.15vw,19px);color:#ececf0}
+.fd-foot p>svg{flex:none;width:26px;height:26px;color:var(--fd-o)}
+.fd .fd-foot a{display:inline-flex;align-items:center;gap:8px;color:var(--fd-o);font-weight:700;text-decoration:underline;text-underline-offset:5px}
+.fd-foot a svg{width:22px;height:22px}
+.fd .fd-fine{margin:clamp(12px,1.2vw,18px) 0 0;font-size:12.5px;line-height:1.5;color:#a9a9b1}
+.fd .fd-fine a{color:#ffae4a}
+@media (max-width:960px){
+  .fd-w{grid-template-columns:minmax(0,1fr)}
+  .fd .fd-art{margin:0 -16px;max-width:none}
+  .fd-copy{border-left:0;padding:8px 0 36px}
+  .fd .fd-foot img{border-right:0;padding-right:0}
+}
+.fd .fd-foot img{width:clamp(110px,7.6vw,140px)}.fd .fd-foot p{font-size:clamp(14px,.98vw,17px)}.fd-foot{flex-wrap:nowrap}@media (max-width:1280px){.fd-foot{flex-wrap:wrap}}
+@media (max-width:960px){.fd .fd-foot p{display:block;line-height:1.6}.fd-foot p>svg{display:inline-block;vertical-align:-7px;margin-right:8px}.fd .fd-foot a{margin-left:4px}}
