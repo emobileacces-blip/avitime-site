@@ -786,3 +786,28 @@
   .au .au-btn,.au .au-btn2{flex-basis:100%}
 }
 .au-nw{white-space:nowrap}@media (min-width:701px){.au .au-btn,.au .au-btn2{font-size:clamp(16px,1.35vw,25px);white-space:nowrap;flex-basis:auto}}
+
+/* Bandeau « Vous voulez tester des produits ? » rebrandé, placé sous le bloc audit (maquette de Cyril) */
+.tb{--tb-o:#F98C07;--tb-grad:linear-gradient(180deg,#FFA526,#F98C07 50%,#EF5F0A);position:relative;overflow:hidden;font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;color:#121a2b;
+  background:linear-gradient(180deg,#fffaf4,#fff3e6);padding:clamp(18px,2vw,30px) 0}
+.tb *,.tb *::before,.tb *::after{box-sizing:border-box}
+.tb::before,.tb::after{content:"";position:absolute;pointer-events:none;width:clamp(160px,18vw,340px);height:160%;border-radius:50%}
+.tb::before{left:-8%;top:-118%;border-bottom:clamp(10px,1.1vw,18px) solid #F9A50F;box-shadow:0 14px 0 -2px #F47302;transform:rotate(-14deg)}
+.tb::after{right:-8%;bottom:-118%;border-top:clamp(10px,1.1vw,18px) solid #F9A50F;box-shadow:0 -14px 0 -2px #F47302;transform:rotate(-14deg)}
+.tb-w{position:relative;z-index:1;width:min(1500px,100% - 32px);margin-inline:auto;display:flex;align-items:center;gap:clamp(14px,2vw,36px)}
+.tb-ic{flex:none;display:block;width:clamp(70px,7vw,130px);padding-right:clamp(14px,2vw,36px);border-right:3px solid #F47302}
+.tb-ic svg{display:block;width:100%;height:auto;overflow:visible}
+.tb-txt{flex:1;min-width:0}
+.tb .tb-t{margin:0;font-weight:800;font-size:clamp(22px,2.6vw,46px);line-height:1.1;letter-spacing:-.02em;color:#121a2b}
+.tb-t span{color:#EF6A0B}
+.tb .tb-s{margin:6px 0 0;font-size:clamp(15px,1.55vw,26px);line-height:1.3;color:#1f2433}
+.tb-s mark{background:linear-gradient(180deg,transparent 52%,rgba(250,210,20,.85) 52%,rgba(250,210,20,.85) 92%,transparent 92%);color:inherit;font-weight:800;padding:0 .1em}
+.tb .tb-btn{flex:none;display:inline-flex;align-items:center;gap:clamp(10px,1vw,16px);min-height:clamp(56px,4.4vw,80px);padding:12px clamp(26px,2.6vw,48px);border-radius:999px;background:var(--tb-grad);color:#fff;font-weight:800;font-size:clamp(17px,1.65vw,29px);text-decoration:none;box-shadow:0 10px 28px -8px rgba(239,95,10,.75);transition:transform .15s ease}
+.tb .tb-btn:hover{transform:translateY(-2px)}
+.tb-btn svg{flex:none;width:clamp(24px,2vw,36px);height:clamp(24px,2vw,36px)}
+@media (max-width:860px){
+  .tb-w{flex-wrap:wrap}
+  .tb-ic{width:64px;padding-right:14px}
+  .tb .tb-btn{flex:1 1 100%;justify-content:center}
+  .tb::before,.tb::after{display:none}
+}
