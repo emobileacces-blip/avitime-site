@@ -142,3 +142,13 @@
   .tfo .tfo-list{padding-left:0}
 }
 .tfo .tfo-table thead th,.tfo .tfo-table tbody th,.tfo .tfo-table td{font-family:"Poppins",system-ui,sans-serif;letter-spacing:0;text-transform:none}.tfo .tfo-table thead th{font-size:clamp(14px,1.15vw,20px);font-weight:700}.tfo .tfo-table td{font-size:clamp(14.5px,1.2vw,20px)}
+
+/* Page Intégrations : en-tête (maquette de Cyril), même gabarit que le bandeau Tarifs avec fil d’Ariane */
+.igh{background:radial-gradient(40% 70% at 0% 0%,rgba(120,45,10,.75),rgba(10,10,10,0) 70%),radial-gradient(40% 70% at 100% 100%,rgba(120,45,10,.75),rgba(10,10,10,0) 70%),#0b0b0b}
+.igh .tfh-w{width:min(1080px,100% - 32px)}
+.igh .igh-crumb{margin:0 0 clamp(14px,1.6vw,24px);font-size:clamp(14px,1.1vw,18px);color:#fff}
+.igh .igh-crumb a{color:#F98C07;text-decoration:underline;text-underline-offset:5px}
+.igh .igh-crumb a:hover{color:#fff}
+.igh .tfh-h1{font-size:clamp(28px,2.9vw,52px);line-height:1.15}
+.igh .tfh-lead{max-width:66ch;font-size:clamp(15px,1.3vw,22px);line-height:1.7}
+@media (max-width:640px){.igh{background:radial-gradient(60% 40% at 100% 100%,rgba(120,45,10,.75),rgba(10,10,10,0) 70%),#0b0b0b}}
