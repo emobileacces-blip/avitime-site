@@ -107,7 +107,7 @@ GUIDE = {
 <tr><td>Semaine 4</td><td>Créer votre fiche Google Business, demander des liens à vos fournisseurs et partenaires.</td></tr>
 <tr><td>Ensuite</td><td>Chaque mois : un contenu utile, et un coup d’œil à vos chiffres dans la Search Console.</td></tr>
 </tbody></table></div>
-<p>Pour la semaine 3, Avitime fait tester vos produits par de vrais consommateurs, qui publient sur vos fiches des avis détaillés avec la mention « Produit offert pour test ».</p>
+<p>Pour la semaine 3, Avitime fait tester vos produits par de vrais consommateurs, qui publient sur vos fiches des avis détaillés avec la mention « Avis de testeur · produit offert ».</p>
 
 <h2 id="sources">Sources</h2>
 <ul class="gd-src">

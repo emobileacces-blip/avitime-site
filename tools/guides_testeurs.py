@@ -97,7 +97,7 @@ GUIDES_TESTEURS = [
 <h3>Doit-on forcément donner une bonne note ?</h3>
 <p>Non, et un programme sérieux ne vous le demandera jamais. Amazon Vine attend des avis « positifs, neutres ou négatifs » ; chez Avitime, toutes les notes de 1 à 5 sont publiées.</p>
 <h3>Mon avis doit-il dire que le produit était offert ?</h3>
-<p>Oui. Un avis obtenu avec une contrepartie doit l’indiquer clairement, pour ne pas tromper les autres clients. Sur Amazon, un badge « Avis client Vine sur un produit gratuit » s’affiche ; chez Avitime, la mention « Produit offert pour test » (voir <a href="/guides/faux-avis-loi.html">ce que dit la loi</a>).</p>
+<p>Oui. Un avis obtenu avec une contrepartie doit l’indiquer clairement, pour ne pas tromper les autres clients. Sur Amazon, un badge « Avis client Vine sur un produit gratuit » s’affiche ; chez Avitime, la mention « Avis de testeur · produit offert » (voir <a href="/guides/faux-avis-loi.html">ce que dit la loi</a>).</p>
 
 <h2 id="sources">Sources</h2>
 <ul class="gd-src">
@@ -164,7 +164,7 @@ GUIDES_TESTEURS = [
 <li>inscription gratuite, pour les personnes majeures qui résident en France ;</li>
 <li>vous candidatez aux produits qui vous intéressent, et c’est Avitime qui sélectionne, jamais la boutique ;</li>
 <li>vous commandez le produit à 0 €, livraison comprise, et il est à vous ;</li>
-<li>vous publiez un avis honnête sous 21 jours, sur la fiche du produit, avec la mention « Produit offert pour test ».</li>
+<li>vous publiez un avis honnête sous 21 jours, sur la fiche du produit, avec la mention « Avis de testeur · produit offert ».</li>
 </ul>
 <p>Le parcours complet, avec les captures de l’espace testeur : <a href="/devenir-testeur">Devenir testeur Avitime en 7 étapes</a>.</p>
 
