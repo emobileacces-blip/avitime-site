@@ -46,7 +46,7 @@ ICON_MAIL = ('<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rec
 T = {
     "fr": dict(
         home="/", logo_alt="Avitime, accueil",
-        pitch="De vrais avis clients, écrits par de vrais testeurs. Chaque avis porte la mention « Produit offert pour test ».",
+        pitch="De vrais avis clients, écrits par de vrais testeurs. Chaque avis porte la mention « Avis de testeur · produit offert ».",
         compat="Compatible avec", col1="Avitime", col2="Informations légales", col3="Suivez-nous",
         links1=[("/a-propos.html", "À propos", ""), ("/a-propos.html#methode", "Méthode de vérification", ""),
                 ("/guides/", "Guides", ""), ("/pionniers", "Tests offerts", ""), ("/audit-seo", "Audit SEO gratuit", ""), ("/produits-numeriques", "Produits numériques", ""), ("/contact", "Contact", ""), ("/devenir-testeur", "Devenir testeur", ""),
@@ -60,7 +60,7 @@ T = {
     ),
     "en": dict(
         home="/en/", logo_alt="Avitime, home",
-        pitch="Real customer reviews, written by real testers. Every review is labelled “Free product for testing”.",
+        pitch="Real customer reviews, written by real testers. Every review is labelled “Tester review · free product”.",
         compat="Works with", col1="Avitime", col2="Legal", col3="Follow us",
         links1=[("/a-propos.html", "About (FR)", 'hreflang="fr"'), ("/guides/", "Guides (FR)", 'hreflang="fr"'),
                 ("/en/contact", "Contact", ""), ("/en/become-tester", "Become a tester", ""),

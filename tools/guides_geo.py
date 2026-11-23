@@ -119,7 +119,7 @@ GUIDES_GEO = [
 <li>Votre identité est claire et cohérente : mentions légales, page « À propos », auteur des contenus, réseaux sociaux.</li>
 <li>Vous testez régulièrement : posez à ChatGPT ou Perplexity les questions de vos clients, et regardez qui est cité.</li>
 </ol>
-<p>Avitime s’occupe du point 5 : des testeurs sélectionnés par Avitime publient des avis argumentés sur vos fiches produits, avec la mention « Produit offert pour test », et le module ajoute automatiquement le balisage des avis. Aucun classement n’est garanti, ni dans Google ni dans les IA : personne ne peut le promettre.</p>
+<p>Avitime s’occupe du point 5 : des testeurs sélectionnés par Avitime publient des avis argumentés sur vos fiches produits, avec la mention « Avis de testeur · produit offert », et le module ajoute automatiquement le balisage des avis. Aucun classement n’est garanti, ni dans Google ni dans les IA : personne ne peut le promettre.</p>
 
 <h2 id="faq">8. Questions fréquentes</h2>
 <h3>Quelle est la différence entre SEO et GEO ?</h3>
@@ -200,7 +200,7 @@ GUIDES_GEO = [
 <h2 id="avis">5. Les avis clients, preuve d’expérience</h2>
 <p>Les avis clients sont la forme la plus directe d’« expérience » sur une boutique. Google donne d’ailleurs, pour les contenus d’avis, des conseils qui s’appliquent aussi aux avis de vos clients et testeurs : montrer l’usage réel avec des <b>photos ou des vidéos</b>, donner des <b>mesures concrètes</b>, citer les <b>avantages et les inconvénients</b> tirés de l’expérience, préciser <b>pour qui</b> le produit est fait.</p>
 <p>Une nuance importante : le « système d’avis » de Google évalue les <b>articles et pages d’avis éditoriaux</b> (tests, comparatifs), pas les avis clients laissés sur les fiches produits. Les avis clients agissent autrement : ils enrichissent la fiche de faits d’usage, rassurent l’acheteur, et nourrissent les résumés que font les assistants IA à partir des avis publics (voir <a href="/guides/avis-clients-ia.html">Avis clients et IA</a>).</p>
-<p>C’est pourquoi un avis Avitime suit une structure précise : contexte et durée d’utilisation, points forts, points faibles, « pour qui ? », et photos. Il est publié sur votre fiche avec la mention « Produit offert pour test — Testeur Avitime vérifié », quelle que soit la note.</p>
+<p>C’est pourquoi un avis Avitime suit une structure précise : contexte et durée d’utilisation, points forts, points faibles, « pour qui ? », et photos. Il est publié sur votre fiche avec la mention « Avis de testeur · produit offert », quelle que soit la note.</p>
 
 <h2 id="checklist">6. La checklist</h2>
 <ol>

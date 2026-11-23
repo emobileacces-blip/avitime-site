@@ -94,7 +94,7 @@ GUIDES_BOUTIQUES = [
 </ul>
 
 <h2 id="aucun-client">7. Et quand on n’a pas encore de clients ?</h2>
-<p>La demande d’avis tourne à vide tant que les commandes sont rares. Pour amorcer, la solution honnête est de faire <b><a href="/pourquoi-faire-tester-vos-produits">tester vos produits</a></b> par de vrais consommateurs, avec la mention de la contrepartie : voir <a href="/guides/premiers-avis-clients.html">Obtenir ses premiers avis clients</a> et <a href="/guides/echantillonnage-produit.html">l’échantillonnage produit</a>. C’est ce que fait Avitime : des testeurs sélectionnés par Avitime commandent le produit à 0 € sur votre boutique et publient un avis argumenté, avec la mention « Produit offert pour test ».</p>
+<p>La demande d’avis tourne à vide tant que les commandes sont rares. Pour amorcer, la solution honnête est de faire <b><a href="/pourquoi-faire-tester-vos-produits">tester vos produits</a></b> par de vrais consommateurs, avec la mention de la contrepartie : voir <a href="/guides/premiers-avis-clients.html">Obtenir ses premiers avis clients</a> et <a href="/guides/echantillonnage-produit.html">l’échantillonnage produit</a>. C’est ce que fait Avitime : des testeurs sélectionnés par Avitime commandent le produit à 0 € sur votre boutique et publient un avis argumenté, avec la mention « Avis de testeur · produit offert ».</p>
 
 <h2 id="sources">Sources</h2>
 <ul class="gd-src">
@@ -297,7 +297,7 @@ GUIDES_BOUTIQUES = [
 <h3>Étape 2 : préparer la fiche produit</h3>
 <p>Titre clair, photos en situation, description utile, prix, délai et frais de livraison visibles. La méthode complète : <a href="/guides/fiche-produit-e-commerce.html">Fiche produit e-commerce</a>.</p>
 <h3>Étape 3 : obtenir les premiers avis avant le lancement</h3>
-<p>Un produit avec cinq avis a une probabilité d’achat 270 % plus élevée qu’un produit sans avis (Spiegel Research Center). Faites tester le produit par quelques consommateurs avant l’annonce : c’est l’<a href="/guides/echantillonnage-produit.html">échantillonnage produit</a>. Leurs avis, signalés comme « produit offert pour test », seront en ligne le jour J.</p>
+<p>Un produit avec cinq avis a une probabilité d’achat 270 % plus élevée qu’un produit sans avis (Spiegel Research Center). Faites tester le produit par quelques consommateurs avant l’annonce : c’est l’<a href="/guides/echantillonnage-produit.html">échantillonnage produit</a>. Leurs avis, signalés comme « avis de testeur · produit offert », seront en ligne le jour J.</p>
 <h3>Étape 4 : préparer l’annonce</h3>
 <p>Prévenez ceux qui vous connaissent déjà : clients, abonnés à la newsletter (s’ils ont accepté de la recevoir), réseaux sociaux. Préparez deux ou trois visuels et un message court.</p>
 <h3>Étape 5 : lancer</h3>
@@ -389,7 +389,7 @@ GUIDES_BOUTIQUES = [
 <li><b>L’avis reste libre</b> : aucune note imposée, aucune pression, aucun tri des avis négatifs. La DGCCRF range parmi les pratiques trompeuses le fait de publier ou faire publier de faux avis, et met en garde les particuliers démarchés pour des avis positifs contre un produit gratuit.</li>
 <li><b>La contrepartie est signalée</b> : le Code de la consommation impose d’informer le lecteur lorsqu’un avis a donné lieu à une contrepartie. Les mentions à afficher sont détaillées dans <a href="/guides/faux-avis-loi.html#obligations">ce qu’une boutique doit afficher</a>.</li>
 </ul>
-<p>Chez Avitime, chaque avis porte la mention « Produit offert pour test — Testeur Avitime vérifié », toutes les notes de 1 à 5 sont publiées, et la boutique ne peut ni modifier ni supprimer un avis.</p>
+<p>Chez Avitime, chaque avis porte la mention « Avis de testeur · produit offert », toutes les notes de 1 à 5 sont publiées, et la boutique ne peut ni modifier ni supprimer un avis.</p>
 
 <h2 id="cout">6. Le coût</h2>
 <p>Le coût d’un test produit, c’est d’abord le produit offert et sa livraison, puis la plateforme si vous en utilisez une. Comparez-le à ce que coûte une fiche sans avis : des visiteurs qui repartent. Avec la limite de rentabilité relevée par l’étude du <i>Journal of Retailing</i> en tête, réservez l’échantillonnage aux produits où un avis change vraiment la décision : produits phares, nouveautés, produits chers.</p>

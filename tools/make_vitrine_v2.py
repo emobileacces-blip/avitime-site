@@ -138,7 +138,7 @@ ACCUEIL = f'''<main id="contenu">
 <div>
 <h1 class="v2-h1">{H1}</h1>
 <p class="v2-lead">Avitime est un service de tests produits pour les boutiques en ligne qui livrent en France, compatible avec PrestaShop et WooCommerce, et Shopify en cours de validation.</p>
-<p class="v2-lead-2">Des consommateurs sélectionnés par Avitime commandent à 0 € sur votre boutique, testent chez eux, puis publient leur avis sur votre fiche, note basse comprise, avec la mention « Produit offert pour test ». Vos 5 premiers tests sont offerts&nbsp;: il vous reste à payer le produit et le port.</p>
+<p class="v2-lead-2">Des consommateurs sélectionnés par Avitime commandent à 0 € sur votre boutique, testent chez eux, puis publient leur avis sur votre fiche, note basse comprise, avec la mention « Avis de testeur · produit offert ». Vos 5 premiers tests sont offerts&nbsp;: il vous reste à payer le produit et le port.</p>
 {FORM}
 <div class="v2-links"><a href="/devenir-commercant">Lancer mes 5 tests offerts</a><a href="/tarifs">Voir les tarifs</a><a href="https://cal.com/avitime/15min" target="_blank" rel="noopener">Réserver un appel de 15 min</a></div>
 <p id="nb-testeurs" class="v2-mono v2-compat" hidden><b></b> testeurs inscrits</p>
@@ -149,7 +149,7 @@ ACCUEIL = f'''<main id="contenu">
 <hr>
 <p class="v2-hand">« Le café reste chaud toute la matinée. Rien ne fuit dans le sac. »</p>
 <p class="v2-pros">+ garde bien la chaleur · − un peu lourde pleine</p>
-<span class="v2-stamp">Produit offert pour test</span>
+<span class="v2-stamp">Avis de testeur · produit offert</span>
 </div></div>
 <figcaption class="v2-cap">Exemple illustratif</figcaption>
 </figure>
@@ -159,7 +159,7 @@ ACCUEIL = f'''<main id="contenu">
 <li>Une vraie commande à 0 € sur votre boutique</li>
 <li>Des testeurs sélectionnés par Avitime</li>
 <li>Tous les avis sont publiés, même les mitigés</li>
-<li>La mention « Produit offert pour test » sur chaque avis</li>
+<li>La mention « Avis de testeur · produit offert » sur chaque avis</li>
 </ul></div></section>
 
 <section class="v2-band" id="probleme"><div class="v2-w v2-split">
@@ -173,8 +173,8 @@ ACCUEIL = f'''<main id="contenu">
 <div class="v2-compare">
 <div class="v2-fiche"><span class="v2-mono">AVANT</span><h3>Gourde isotherme 500 ml</h3><p>24,90 €</p><p class="v2-sm" style="margin-top:8px">Aucun avis pour le moment.</p></div>
 <div class="v2-fiche"><span class="v2-mono">APRÈS UNE CAMPAGNE</span><h3>Gourde isotherme 500 ml</h3><p>24,90 €</p><p class="v2-sm"><span class="v2-stars" aria-hidden="true">★★★★☆</span> 4,2 · <span class="v2-count">5</span> avis de testeurs</p>
-<div class="v2-review"><b>Julie M.</b> · 5/5 · 3 semaines d’usage<br>« Le café reste chaud toute la matinée. »<span class="v2-mention">Produit offert pour test — Testeur Avitime vérifié</span></div>
-<div class="v2-review"><b>Karim B.</b> · 2/5 · 2 semaines d’usage<br>« Bonne gourde, mais le bouchon est dur à dévisser avec des gants. »<span class="v2-mention">Produit offert pour test — Testeur Avitime vérifié</span></div>
+<div class="v2-review"><b>Julie M.</b> · 5/5 · 3 semaines d’usage<br>« Le café reste chaud toute la matinée. »<span class="v2-mention">Avis de testeur · produit offert</span></div>
+<div class="v2-review"><b>Karim B.</b> · 2/5 · 2 semaines d’usage<br>« Bonne gourde, mais le bouchon est dur à dévisser avec des gants. »<span class="v2-mention">Avis de testeur · produit offert</span></div>
 </div>
 </div>
 <figcaption class="v2-fine" style="margin-top:10px">Exemple illustratif : boutique, produit et avis fictifs. Aucun volume d’avis n’est garanti.</figcaption>
@@ -248,7 +248,7 @@ ACCUEIL = f'''<main id="contenu">
 <p class="v2-lead" style="margin-top:14px">Les avis s’affichent sur vos fiches produits. Ils sont aussi publiés dans un format que Google et les assistants IA savent lire, mais ce sont eux qui décident de les reprendre.</p>
 <div class="v2-gains">
 <article>
-<div class="v2-fiche v2-gain-vis" aria-hidden="true"><b>Coussin renard</b><p class="v2-sm"><span class="v2-stars">★★★★★</span> 4,6/5 · 32 avis</p><div class="v2-review">« Tissu très doux, couleurs fidèles. »<span class="v2-mention">Produit offert pour test</span></div></div>
+<div class="v2-fiche v2-gain-vis" aria-hidden="true"><b>Coussin renard</b><p class="v2-sm"><span class="v2-stars">★★★★★</span> 4,6/5 · 32 avis</p><div class="v2-review">« Tissu très doux, couleurs fidèles. »<span class="v2-mention">Avis de testeur · produit offert</span></div></div>
 <h3 class="v2-h3">De vrais avis sur vos fiches</h3><p>Avec photos, points forts et points faibles, affichés automatiquement par le module.</p>
 </article>
 <article>
@@ -296,7 +296,7 @@ ACCUEIL = f'''<main id="contenu">
 <div class="v2-law-nums"><div><b>300 000 €</b><span>d’amende au maximum</span></div><div><b>2 ans</b><span>d’emprisonnement au maximum</span></div><div><b>10 %</b><span>du chiffre d’affaires annuel moyen, plafond possible de l’amende</span></div></div>
 <div class="v2-law-grid">
 <div><h3 class="v2-h3">Ce qui est interdit</h3><ul><li>Publier de faux avis, ou les faire publier.</li><li>Se faire passer pour un consommateur.</li><li>Présenter des avis comme vérifiés sans les vérifier.</li><li>Cacher qu’un avis a été obtenu contre un avantage.</li></ul></div>
-<div><h3 class="v2-h3">Ce que fait Avitime</h3><ul><li>Une vraie commande et une livraison tracées pour chaque avis.</li><li>Des testeurs sélectionnés par Avitime, jamais par la boutique.</li><li>Toutes les notes de 1 à 5 publiées, si l’avis est authentique.</li><li>La mention « Produit offert pour test » sur chaque avis.</li></ul></div>
+<div><h3 class="v2-h3">Ce que fait Avitime</h3><ul><li>Une vraie commande et une livraison tracées pour chaque avis.</li><li>Des testeurs sélectionnés par Avitime, jamais par la boutique.</li><li>Toutes les notes de 1 à 5 publiées, si l’avis est authentique.</li><li>La mention « Avis de testeur · produit offert » sur chaque avis.</li></ul></div>
 </div>
 <p class="v2-fine" style="margin-top:24px"><a href="/a-propos.html#methode">Notre méthode de vérification</a>. Source : DGCCRF, Code de la consommation, art. L.121-2 à L.121-4. Ces informations ne constituent pas un conseil juridique.</p>
 </div></section>
@@ -441,11 +441,11 @@ PERS_ID = AP_URL + "#fondateur"
 FAQ_AP = [
     ("Qui a créé Avitime ?", "Cyril Quémy, concepteur de sites e-commerce depuis 2020, a créé Avitime après avoir vu ses clients perdre des ventes faute de premiers avis. Il dirige la société éditrice, SPARKMOTION AGENCY LTD."),
     ("Avitime est-il une société française ?", "Non. Avitime est édité par SPARKMOTION AGENCY LTD, société de droit anglais (Companies House n° 16880032). Le service est proposé en français, aux boutiques en ligne qui livrent en France."),
-    ("Avitime est-il fiable ?", "Avitime est un service récent, lancé en octobre 2026. Sa méthode, ses règles et ses conditions sont publiques : les testeurs ne paient jamais rien, la boutique ne choisit pas les testeurs, toutes les notes sont publiées et chaque avis porte la mention « Produit offert pour test ». Avitime ne promet aucun classement."),
+    ("Avitime est-il fiable ?", "Avitime est un service récent, lancé en octobre 2026. Sa méthode, ses règles et ses conditions sont publiques : les testeurs ne paient jamais rien, la boutique ne choisit pas les testeurs, toutes les notes sont publiées et chaque avis porte la mention « Avis de testeur · produit offert ». Avitime ne promet aucun classement."),
     ("Les testeurs Avitime sont-ils payés ?", "Non. Ils reçoivent le produit gratuitement, livraison comprise, et le gardent quel que soit leur avis. Ils ne reçoivent ni argent ni bonus lié à la note."),
     ("Qui choisit les testeurs ?", "Avitime. La boutique définit les critères de sa campagne, mais la sélection finale est faite par Avitime, avec un tirage au sort entre profils comparables."),
     ("Tous les avis sont-ils publiés ?", "Oui. Tout avis authentique et conforme aux règles de modération est publié."),
-    ("Comment reconnaître un avis Avitime ?", "Chaque avis porte la mention « Produit offert pour test — Testeur Avitime vérifié », affichée à côté de l’avis sur la fiche produit."),
+    ("Comment reconnaître un avis Avitime ?", "Chaque avis porte la mention « Avis de testeur · produit offert », affichée à côté de l’avis sur la fiche produit."),
     ("L’IA écrit-elle les avis ?", "Non. Une aide peut poser des questions et proposer une reformulation à partir des propos du testeur. Elle n’invente aucune expérience, et le testeur valide toujours le texte final."),
     ("Avitime garantit-il des étoiles sur Google ?", "Non. Avitime ne promet ni volume d’avis, ni classement, ni affichage d’étoiles dans les résultats de recherche."),
 ]
@@ -462,7 +462,7 @@ ld_ap = {"@context": "https://schema.org", "@graph": [
      "uploadDate": "2026-10-27T12:00:00+01:00", "duration": "PT1M11S", "inLanguage": "fr-FR", "author": {"@id": PERS_ID}},
     {"@type": "Organization", "@id": ORG_ID, "name": "Avitime",
      "disambiguatingDescription": "Service de tests produits et d’avis consommateurs pour boutiques en ligne (avitime.fr), sans lien avec d’autres logiciels portant un nom proche.",
-     "description": "Service de tests produits et d’avis consommateurs pour les boutiques en ligne qui livrent en France : des testeurs sélectionnés reçoivent un produit offert via une commande réelle à 0 €, l’utilisent, puis publient un avis affiché avec la mention « Produit offert pour test — Testeur Avitime vérifié ».",
+     "description": "Service de tests produits et d’avis consommateurs pour les boutiques en ligne qui livrent en France : des testeurs sélectionnés reçoivent un produit offert via une commande réelle à 0 €, l’utilisent, puis publient un avis affiché avec la mention « Avis de testeur · produit offert ».",
      "areaServed": "FR", "knowsAbout": ["avis consommateurs", "tests produits", "e-commerce", "PrestaShop", "WooCommerce", "Shopify"],
      "url": "https://avitime.fr/", "logo": "https://avitime.fr/assets/img/icon-512.png", "email": "contact@avitime.fr",
      "sameAs": ld_org["@graph"][1]["sameAs"], "founder": {"@id": PERS_ID},

@@ -52,7 +52,7 @@ BODY = f"""<article>
 <div class="pi-col"><h3>Ce que vous recevez</h3><ul>
 <li><b>5 tests offerts</b>, sans abonnement : jusqu’à 5 testeurs, sur une seule campagne ou répartis sur plusieurs.</li>
 <li><b>Des testeurs sélectionnés par Avitime</b>, qui reçoivent votre produit, l’utilisent puis donnent leur avis.</li>
-<li><b>Les avis des testeurs</b>, publiés sur vos fiches avec la mention « Produit offert pour test », quelle que soit la note.</li>
+<li><b>Les avis des testeurs</b>, publiés sur vos fiches avec la mention « Avis de testeur · produit offert », quelle que soit la note.</li>
 </ul></div>
 <div class="pi-col"><h3>Ce qui reste à votre charge</h3><ul>
 <li><b>Les produits envoyés aux testeurs</b> : c’est vous qui les offrez et les expédiez, comme pour toute campagne Avitime.</li>
