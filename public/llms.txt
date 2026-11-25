@@ -19,6 +19,7 @@ Informations clés :
 - [Pourquoi faire tester vos produits](https://avitime.fr/pourquoi-faire-tester-vos-produits): premiers avis, Google et IA, publicité, loi sur les faux avis, règles de transparence
 - [Tarifs](https://avitime.fr/tarifs): 5 premiers tests offerts, puis Starter à 29,90 € HT/mois (20 unités) et Pro à 39,90 € HT/mois (50 unités), sans engagement ; prix fidélité −2 € HT par trimestre jusqu’à 21,90 € et 31,90 € HT/mois ; annuel au prix final
 - [Intégrations](https://avitime.fr/integrations): module PrestaShop, extension WooCommerce, application Shopify, connecteur Systeme.io, et site sur mesure ou autre plateforme sans module (Lovable, Bolt, Next.js, Webflow, Wix…) : produits physiques expédiés par le commerçant ou produits numériques, avis affichés par bloc à copier-coller ou par clé API
+- [Application Shopify](https://avitime.fr/shopify): application Avitime sur le Shopify App Store (apps.shopify.com/avitime) : installation, commandes testeurs à 0 €, bloc d'avis et étoiles, prix (29,90 € HT/mois, 33,90 $ sur la fiche), FAQ ; version anglaise : https://avitime.fr/en/shopify
 - [FAQ Avitime](https://avitime.fr/faq): 37 questions fréquentes (boutiques, testeurs, avis, loi et Google)
 - [Vos 5 premiers tests offerts](https://avitime.fr/pionniers): l'offre en cours, 5 tests offerts à toute nouvelle boutique, sans abonnement
 
