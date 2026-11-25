@@ -36,7 +36,7 @@
   <url><loc>https://avitime.fr/guides/tester-produits-a-domicile.html</loc></url>
   <url><loc>https://avitime.fr/guides/testeur-produits-par-categorie.html</loc></url>
   <url><loc>https://avitime.fr/guides/avis-clients-prestashop.html</loc></url>
-  <url><loc>https://avitime.fr/guides/avis-clients-shopify.html</loc></url>
+  <url><loc>https://avitime.fr/guides/avis-clients-shopify.html</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://avitime.fr/guides/avis-clients-woocommerce.html</loc></url>
   <url><loc>https://avitime.fr/guides/combien-avis-clients.html</loc></url>
   <url><loc>https://avitime.fr/guides/repondre-avis-negatifs.html</loc></url>
@@ -48,7 +48,7 @@
   <url><loc>https://avitime.fr/guides/obtenir-avis-clients-boutique-en-ligne.html</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://avitime.fr/guides/preuve-sociale-ecommerce-conversions.html</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://avitime.fr/guides/etoiles-google-shopping-avis-produits.html</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://avitime.fr/guides/avis-clients-shopify-gratuit.html</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://avitime.fr/guides/avis-clients-shopify-gratuit.html</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://avitime.fr/guides/widget-avis-clients.html</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://avitime.fr/guides/etude-seo-petites-boutiques-2026.html</loc><lastmod>2026-11-05</lastmod></url>
   <url><loc>https://avitime.fr/guides/statistiques-avis-clients.html</loc></url>
@@ -65,4 +65,6 @@
   <url><loc>https://avitime.fr/guides/avis-formation-systeme-io.html</loc><video:video><video:thumbnail_loc>https://avitime.fr/assets/video/tuto-systeme-io-poster.jpg</video:thumbnail_loc><video:title>Faire tester votre formation Systeme.io, sans boutique : la démo pas à pas</video:title><video:description>Démonstration filmée : créer la clé API dans Systeme.io, la connecter à Avitime, choisir la formation, lancer la campagne de test, l’inscription automatique du testeur sélectionné, puis le bloc d’avis à coller sur la page de vente. Avitime sélectionne les testeurs. Voix de synthèse.</video:description><video:content_loc>https://avitime.fr/assets/video/tuto-systeme-io.mp4</video:content_loc><video:duration>95</video:duration><video:family_friendly>yes</video:family_friendly></video:video></url>
   <url><loc>https://avitime.fr/guides/tester-formations-logiciels-gratuitement.html</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://avitime.fr/guides/avis-site-sur-mesure-api.html</loc></url>
+  <url><loc>https://avitime.fr/shopify</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://avitime.fr/en/shopify</loc><lastmod>2026-11-25</lastmod></url>
 </urlset>
