@@ -288,6 +288,9 @@
 .px-bar li{display:flex;align-items:center;gap:12px;padding:4px clamp(12px,1.15vw,24px);font-weight:700;font-size:clamp(14.5px,1vw,17px);white-space:nowrap}
 .px-bar li+li{border-left:1.5px solid rgba(249,140,7,.45)}
 .px-bar svg{flex:none;width:30px;height:30px;color:var(--px-o)}
+.px .px-ent{display:flex;align-items:center;gap:14px;max-width:880px;margin:clamp(22px,2.4vw,34px) auto 0;padding:14px 22px;border-radius:18px;background:#fff;border:1.5px dashed rgba(249,140,7,.55);text-align:left;font-size:clamp(14.5px,1.1vw,17px);line-height:1.5;color:#1d1d22}
+.px-ent svg{flex:none;width:30px;height:30px;color:var(--px-o)}
+.px .px-ent a{color:#E86F00;font-weight:600;text-decoration:underline;text-underline-offset:3px;margin-left:4px;white-space:nowrap}
 .px .px-foot{margin:clamp(20px,2.2vw,32px) 0 0;font-size:clamp(14.5px,1.1vw,17.5px);line-height:1.5;color:#1d1d22}
 .px .px-foot a{color:#E86F00;font-weight:500;text-decoration:underline;text-underline-offset:3px;margin-left:6px}
 @media (max-width:1000px){
