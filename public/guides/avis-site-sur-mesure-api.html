@@ -188,7 +188,7 @@ Authorization: Bearer avt_votre_cle</code></pre>
 <ul>
 <li><code>product</code>&nbsp;: le n°, le nom, l’adresse et l’image du produit&nbsp;;</li>
 <li><code>count</code> et <code>average</code>&nbsp;: le nombre d’avis et la note moyenne sur 5&nbsp;;</li>
-<li><code>notice</code>&nbsp;: la phrase à afficher une fois en tête du bloc d’avis («&nbsp;Les testeurs Avitime reçoivent le produit gratuitement pour le tester et donnent leur avis en toute liberté.&nbsp;»)&nbsp;;</li>
+<li><code>notice</code>&nbsp;: la ligne à afficher une fois en tête du bloc d’avis («&nbsp;Testeurs sélectionnés par Avitime · produit fourni&nbsp;»)&nbsp;;</li>
 <li><code>label</code>&nbsp;: la mention à afficher sur chaque avis, «&nbsp;Avis de testeur&nbsp;»&nbsp;;</li>
 <li><code>reviews</code>&nbsp;: les avis publiés, du plus récent au plus ancien, avec la note (<code>rating</code>), le titre, le texte (<code>body</code>), les points forts et les points faibles (<code>pros</code>, <code>cons</code>), la date (<code>published_at</code>), le nom affiché du testeur (<code>tester.display_name</code>, par exemple «&nbsp;Julie B.&nbsp;»), les photos (<code>media</code>), la vidéo éventuelle (<code>video</code>) et votre réponse (<code>merchant_reply</code>)&nbsp;;</li>
 <li><code>jsonld</code>&nbsp;: les données structurées schema.org (Product, note moyenne et avis), prêtes à mettre telles quelles dans une balise <code>&lt;script type="application/ld+json"&gt;</code>.</li>
@@ -264,7 +264,7 @@ if ($avis &amp;&amp; $avis['count'] &gt; 0) {
 <ul>
 <li><b>Les avis doivent être visibles sur la page</b>, pas seulement dans les données structurées. Google ignore, voire sanctionne, des notes que le visiteur ne voit pas.</li>
 <li><b>Une seule source de note par produit</b>&nbsp;: si votre page contient déjà une note issue d’un autre outil d’avis, n’en ajoutez pas une deuxième sur le même produit.</li>
-<li><b>Affichez la mention « Avis de testeur » et l’indication que le produit a été reçu gratuitement</b>&nbsp;: la loi impose d’indiquer qu’un avis a été donné en échange d’un produit offert. Le champ <code>notice</code> vous la donne.</li>
+<li><b>Affichez la mention « Avis de testeur » et l’indication « produit fourni »</b>&nbsp;: la loi impose d’indiquer qu’un avis a été donné en échange d’un produit offert. Le champ <code>notice</code> vous la donne.</li>
 <li><b>N’ajoutez jamais d’avis inventés</b> et n’en retirez aucun&nbsp;: tous les avis sont publiés, positifs comme négatifs. Vous pouvez répondre publiquement à chacun depuis votre espace.</li>
 </ul>
 <p>Même avec des données parfaites, <b>c’est Google qui décide</b> d’afficher ou non les étoiles dans ses résultats, et quand. Avitime ne peut rien promettre sur ce point&nbsp;: les données structurées lui donnent simplement ce qu’il demande. Vous pouvez vérifier votre page avec le test des résultats enrichis de Google (lien dans les sources).</p>
@@ -304,7 +304,7 @@ else n.addEventListener('click',function(){navigator.share({title:t,url:u}).catc
 <div class="foot-grid">
 <div class="foot-brand">
 <a class="foot-logo" href="/"><img src="/assets/img/avitime-logo-96.png" alt="Avitime, accueil" width="168" height="40" loading="lazy"></a>
-<p>De vrais avis clients, écrits par de vrais testeurs. Chaque avis porte la mention « Avis de testeur », et le bloc d’avis indique que le produit a été reçu gratuitement.</p>
+<p>De vrais avis clients, écrits par de vrais testeurs. Chaque avis porte la mention « Avis de testeur », et le bloc d’avis indique « produit fourni ».</p>
 <ul class="foot-compat" aria-label="Compatible avec"><li>PrestaShop</li><li>WooCommerce</li><li>Shopify</li></ul>
 </div>
 <nav class="foot-col" aria-label="Avitime"><p class="foot-h">Avitime</p><ul><li><a href="/a-propos.html">À propos</a></li><li><a href="/a-propos.html#methode">Méthode de vérification</a></li><li><a href="/guides/">Guides</a></li><li><a href="/pourquoi-faire-tester-vos-produits">Pourquoi faire tester</a></li><li><a href="/tarifs">Tarifs</a></li><li><a href="/pionniers">Tests offerts</a></li><li><a href="/audit-seo">Audit SEO gratuit</a></li><li><a href="/produits-numeriques">Produits numériques</a></li><li><a href="/contact">Contact</a></li><li><a href="/devenir-testeur">Devenir testeur</a></li><li><a href="/espace-commercant">Espace commerçant</a></li></ul></nav>
